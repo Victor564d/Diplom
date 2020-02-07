@@ -75,3 +75,26 @@ C:\Users\iaros\Desktop\Диплом тест (бэкап 30.11.2019)\тесто�
 C:\Users\iaros\Desktop\Диплом тест (бэкап 30.11.2019)\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\iaros\Desktop\Диплом тест (бэкап 30.11.2019)\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\iaros\Desktop\Диплом тест (бэкап 30.11.2019)\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Sample_Record_Form.resources
+E:\Diplom\Диплом с формами\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+E:\Diplom\Диплом с формами\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+E:\Diplom\Диплом с формами\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+E:\Diplom\Диплом с формами\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+E:\Diplom\Диплом с формами\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.BA.resources
+E:\Diplom\Диплом с формами\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.BAOOBR.resources
+E:\Diplom\Диплом с формами\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Catch_Record_Form.resources
+E:\Diplom\Диплом с формами\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ErrAnal.resources
+E:\Diplom\Диплом с формами\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltBA.resources
+E:\Diplom\Диплом с формами\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltProbSize.resources
+E:\Diplom\Диплом с формами\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltrBAPGS.resources
+E:\Diplom\Диплом с формами\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltrsYL.resources
+E:\Diplom\Диплом с формами\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltrYLR.resources
+E:\Diplom\Диплом с формами\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Sample_Record_Form.resources
+E:\Diplom\Диплом с формами\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Vibor.resources
+E:\Diplom\Диплом с формами\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.OtobrProb.resources
+E:\Diplom\Диплом с формами\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Hamsa.resources
+E:\Diplom\Диплом с формами\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SettingsУл.resources
+E:\Diplom\Диплом с формами\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Proby.resources
+E:\Diplom\Диплом с формами\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+E:\Diplom\Диплом с формами\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+E:\Diplom\Диплом с формами\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+E:\Diplom\Диплом с формами\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
