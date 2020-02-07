@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{45944D09-68F1-4DAC-BC6A-39770F4B69E6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BA.Designer.cs">
+      <DependentUpon>BA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BAOOBR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BAOOBR.Designer.cs">
+      <DependentUpon>BAOOBR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catch Record Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catch Record Form.Designer.cs">
+      <DependentUpon>Catch Record Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrAnal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrAnal.Designer.cs">
+      <DependentUpon>ErrAnal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FiltBA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FiltBA.Designer.cs">
+      <DependentUpon>FiltBA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FiltProbSize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FiltProbSize.Designer.cs">
+      <DependentUpon>FiltProbSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FiltrBAPGS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FiltrBAPGS.Designer.cs">
+      <DependentUpon>FiltrBAPGS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FiltrsYL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FiltrsYL.Designer.cs">
+      <DependentUpon>FiltrsYL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FiltrYLR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FiltrYLR.Designer.cs">
+      <DependentUpon>FiltrYLR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sample Record Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample Record Form.Designer.cs">
+      <DependentUpon>Sample Record Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtobrProb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtobrProb.Designer.cs">
+      <DependentUpon>OtobrProb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ylov.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ylov.Designer.cs">
+      <DependentUpon>Ylov.cs</DependentUpon>
+    </Compile>
+    <Compile Include="otobYlov.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="otobYlov.Designer.cs">
+      <DependentUpon>otobYlov.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Proby.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proby.Designer.cs">
+      <DependentUpon>Proby.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Тестовая_бд_DataSet.cs">
+      <DependentUpon>Тестовая_бд_DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Тестовая_бд_DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Тестовая_бд_DataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BA.resx">
+      <DependentUpon>BA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BAOOBR.resx">
+      <DependentUpon>BAOOBR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catch Record Form.resx">
+      <DependentUpon>Catch Record Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrAnal.resx">
+      <DependentUpon>ErrAnal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FiltBA.resx">
+      <DependentUpon>FiltBA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FiltProbSize.resx">
+      <DependentUpon>FiltProbSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FiltrBAPGS.resx">
+      <DependentUpon>FiltrBAPGS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FiltrsYL.resx">
+      <DependentUpon>FiltrsYL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FiltrYLR.resx">
+      <DependentUpon>FiltrYLR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample Record Form.resx">
+      <DependentUpon>Sample Record Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtobrProb.resx">
+      <DependentUpon>OtobrProb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ylov.resx">
+      <DependentUpon>Ylov.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="otobYlov.resx">
+      <DependentUpon>otobYlov.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proby.resx">
+      <DependentUpon>Proby.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Тестовая_бд_DataSet.xsc">
+      <DependentUpon>Тестовая_бд_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Тестовая_бд_DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Тестовая_бд_DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Тестовая_бд_DataSet.xss">
+      <DependentUpon>Тестовая_бд_DataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Рисунок1.jpg" />
+    <Content Include="БДРЫБА.mdb" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
