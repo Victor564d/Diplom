@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.IO;
 using System.Collections;
+using System.IO;
+using System.Text;
+using System.Windows.Forms;
 //using System.
 
 namespace WindowsFormsApp1
@@ -20,38 +14,40 @@ namespace WindowsFormsApp1
         public Vibor mainform;
         public Vibor()
         {
-                InitializeComponent();
+            InitializeComponent();
         }
         public ArrayList indt = new ArrayList();
         private void Form1_Load(object sender, EventArgs e) // выполняется при загрузке формы 
         {
             string f = "БДРЫБА.mdb"; //"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = " + f);
-            
+
             string ll = "";
             try // начало попытки считывания файла , в котором хранятся настройки индентификаторов.
             {
                 StreamReader sr = new StreamReader("Settings.dat", Encoding.Default); //Считыватель
-                while ((ll = sr.ReadLine())!= null) // пока есть линии - считываем 
+                while ((ll = sr.ReadLine()) != null) // пока есть линии - считываем 
                 {
                     if (ll == "Identificators") // Если мы нашли ключевое слово 
                     {
                         listBox1.Items.Clear(); // Чистим список идентификаторов
-                        while ((ll= sr.ReadLine())!= "End indf") //пока не будет найдено следующее ключевое слово
+                        while ((ll = sr.ReadLine()) != "End indf") //пока не будет найдено следующее ключевое слово
                         {
-                            string item = "" ; // временная переменная 
+                            string item = ""; // временная переменная 
                             bool str = false; //
                             listBox1.Items.Add(ll);
                             for (int i = 0; i < ll.Length; i++)
                             {
                                 if ((ll[i] == '*') && (str == false)) //если находим звездочку, а до этого ее не находили
                                 {
-                                    str = true;     
-                                } else if ((ll[i] == '*') && (str == true)) //если нашли звездочку, при этом до этого тоже она была
+                                    str = true;
+                                }
+                                else if ((ll[i] == '*') && (str == true)) //если нашли звездочку, при этом до этого тоже она была
                                 {
                                     str = false;
-                                } else  if (str == true) //Побуквенное считывание 
+                                }
+                                else if (str == true) //Побуквенное считывание 
                                 {
-                                  item = item + ll[i];
+                                    item = item + ll[i];
                                 }
                             }
                             indt.Add(item + "%"); //Записываем индентификатор в массив идентификаторов
@@ -73,12 +69,12 @@ namespace WindowsFormsApp1
                 listBox1.Items.Add("Шпроты\t\t*S*");
                 listBox1.Items.Add("Ставрида\t\t*T*");
             }
-            if(listBox1.Items.Count == 0) //если все считалось , но идентификаторы все же не загрузились 
+            if (listBox1.Items.Count == 0) //если все считалось , но идентификаторы все же не загрузились 
             {
                 listBox1.Items.Clear();
                 MessageBox.Show("Файл настроек не найден либо повреждён.Создайте новый либо восстановите путем копирования бекапа из папки \"bacup\". Будут загруженны стандартные настройки ! ", "Ошибка");
                 listBox1.Items.Add("Хамса\t\t*A*"); //выдали сообщение об ошибке , очистили список выводимый на экран 
-                listBox1.Items.Add("Шпроты\t\t*S*"); 
+                listBox1.Items.Add("Шпроты\t\t*S*");
                 listBox1.Items.Add("Ставрида\t\t*T*");
                 indt.Add("A%");//записываем в массив идентификаторов стандарные значения
                 indt.Add("S%");
@@ -87,16 +83,18 @@ namespace WindowsFormsApp1
 
             }
             //WindowsFormsApp1.Properties.Settings.Default.Соединение =
-            try // попытка считывания файла хранещего ссылку на БД
+            StreamReader sk;
+            try {  } catch { }   // инициализация считывателя
+            try // попытка считывания файла хранещего ссылку на БД 
             {
-                StreamReader sk = new StreamReader("Db.dat", Encoding.Default); // инициализация считывателя
+                sk = new StreamReader("Db.dat", Encoding.Default);
                 ll = sk.ReadLine(); //считываем линию
                 string table = ""; bool ld = false; //временные переменные
                 for (int i = 0; i < ll.Length; i++) // цыкл побуквенного считывания 
                 {
                     if (ll[i] == '^')  // если нашли кавычку , переключаем значение переменной ld
-                    { 
-                        if (ld == false) ld = true; else ld = false; 
+                    {
+                        if (ld == false) ld = true; else ld = false;
                     }
                     else
                     {
@@ -108,14 +106,15 @@ namespace WindowsFormsApp1
                 }
                 sk.Close(); // закрываем файл
                 f = table; // получили переменную подключения
-               
-            conn = "Provider = Microsoft.Jet.OLEDB.4.0; Data Source = " + f; // создаем строку подключения
+
+                conn = "Provider = Microsoft.Jet.OLEDB.4.0; Data Source = " + f; // создаем строку подключения
             }
             catch // если не удалось считать файл настройки, 
             {
+               
                 MessageBox.Show("Не удалось найти файл БД . Откройте новый файл "); //выдаем сообщение об ошибке
                 openFileDialog1.Filter = "mbd files (*.mdb)|*.mdb|All files (*.*)|*.*"; // вызываем окно выбора файла  
-                if (openFileDialog1.ShowDialog()== DialogResult.OK) // если результат вернулся успешно 
+                if (openFileDialog1.ShowDialog() == DialogResult.OK) // если результат вернулся успешно 
                 {
                     conn = "Provider = Microsoft.Jet.OLEDB.4.0; Data Source = " + openFileDialog1.FileName; // формируем строку подключения
                     f = openFileDialog1.FileName; // запоминаем ссылку на файл
@@ -124,10 +123,10 @@ namespace WindowsFormsApp1
                         sw.WriteLine("FileBD  ^" + openFileDialog1.FileName + "^"); // записываем в новый файл переменную ссылки на бд
                         sw.Close();
                     }
-                 
+
                 }
             }
-            if (System.IO.File.Exists(f)==false ) // если же файл не доступен (файл не найден)
+            if (System.IO.File.Exists(f) == false) // если же файл не доступен (файл не найден)
             {
                 MessageBox.Show("Не удалось найти файл БД . Откройте новый файл "); // выдаем сообщение об ошибке 
                 openFileDialog1.Filter = "mbd files (*.mdb)|*.mdb|All files (*.*)|*.*"; // вызываем окно выбора файла  
@@ -140,14 +139,14 @@ namespace WindowsFormsApp1
                         sw.WriteLine("FileBD  ^" + openFileDialog1.FileName + "^");   // записываем в новый файл переменную ссылки на бд
                         sw.Close();
                     }
-                  
+
                 }
             }
         }
 
         private void бАBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-          
+
         }
 
         private void уловыBindingSource_CurrentChanged(object sender, EventArgs e)
@@ -162,7 +161,7 @@ namespace WindowsFormsApp1
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void уловыDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -172,12 +171,12 @@ namespace WindowsFormsApp1
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void button1_Click(object sender, EventArgs e) //Код открытия формы уловов 
         {
-           
+
             Hamsa subForm = new Hamsa(this);
             subForm.Show();
             this.Visible = false;
@@ -187,7 +186,7 @@ namespace WindowsFormsApp1
 
         private void Vibor_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
+
 
         }
 
@@ -203,7 +202,7 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button4_Click(object sender, EventArgs e) //Кнопка отмены создания нового индентификатора
@@ -245,28 +244,32 @@ namespace WindowsFormsApp1
                         sw.Close();
                     }
 
-                // конец кода добавления индентификатора 
-                } if (oper == 0) // Изменение существующего индентификатора 
+                    // конец кода добавления индентификатора 
+                }
+                if (oper == 0) // Изменение существующего индентификатора 
                 {
-                    string kls="";
+                    string kls = "";
                     int col = 0;
-                    for(int i = 0; i < textBox1.Text.Length; i++)
+                    for (int i = 0; i < textBox1.Text.Length; i++)
                     {
-                        if ((textBox1.Text[i]!=' ') || (textBox1.Text[i] != '\t')){
+                        if ((textBox1.Text[i] != ' ') || (textBox1.Text[i] != '\t'))
+                        {
                             col++;
                             kls += textBox1.Text[i];
-                        }else
+                        }
+                        else
                         {
-                            break; 
+                            break;
                         }
                     }
                     textBox1.Text = kls;
-                        if (col <= 7)
-                            textBox1.Text += "\t\t";
-                        else if(col <= 14)
-                        {
-                            textBox1.Text += "\t";
-                        } else
+                    if (col <= 7)
+                        textBox1.Text += "\t\t";
+                    else if (col <= 14)
+                    {
+                        textBox1.Text += "\t";
+                    }
+                    else
                     {
                         for (int k = col; k <= 18; k++)
                         {
@@ -274,7 +277,7 @@ namespace WindowsFormsApp1
                         }
                     }
 
-                    string ll = textBox1.Text  + "*" + textBox2.Text + "*";
+                    string ll = textBox1.Text + "*" + textBox2.Text + "*";
                     indt[listBox1.SelectedIndex] = (textBox2.Text + "%");
                     listBox1.Items[listBox1.SelectedIndex] = (ll);
                     label3.Visible = false;
@@ -298,7 +301,7 @@ namespace WindowsFormsApp1
                 } //конец изменения индентификатора 
             }
             else
-                MessageBox.Show("Одно из полей пустое либо не правильно указанно ","Ошибка",MessageBoxButtons.OK);
+                MessageBox.Show("Одно из полей пустое либо не правильно указанно ", "Ошибка", MessageBoxButtons.OK);
         }
         public int idnt;
         private void добавитьИндентификаторToolStripMenuItem_Click(object sender, EventArgs e)
@@ -317,23 +320,24 @@ namespace WindowsFormsApp1
         {
             Boolean bl = false;
             string ll = Convert.ToString(listBox1.SelectedItem);
-            string kl="",sl = "";
+            string kl = "", sl = "";
             for (int i = 0; i < ll.Length; i++)
             {
-                if ((ll[i] != '*')&&(bl == false ))
+                if ((ll[i] != '*') && (bl == false))
                 {
                     kl += ll[i];
-                } else
+                }
+                else
                 {
                     bl = true;
                 }
-                if ((bl== true )&&(ll[i]!= '*'))
+                if ((bl == true) && (ll[i] != '*'))
                 {
                     sl += ll[i];
                 }
             }
             textBox1.Text = null;
-            for (int i = 0;i< kl.Length; i++)
+            for (int i = 0; i < kl.Length; i++)
             {
                 if ((kl[i]) != Convert.ToChar("\t"))
                 {
@@ -357,9 +361,9 @@ namespace WindowsFormsApp1
 
         private void удалитьИндентификаторToolStripMenuItem_Click(object sender, EventArgs e)// удаление индентификатора 
         {
-             if (Convert.ToString(MessageBox.Show("Вы действительно хотите удалить индентификатор \n " + listBox1.SelectedItem, "Подтверждение", MessageBoxButtons.YesNo,MessageBoxIcon.Exclamation))== "Yes")
+            if (Convert.ToString(MessageBox.Show("Вы действительно хотите удалить индентификатор \n " + listBox1.SelectedItem, "Подтверждение", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation)) == "Yes")
             {
-                
+
                 indt.RemoveAt(listBox1.SelectedIndex);
                 listBox1.Items.RemoveAt(listBox1.SelectedIndex);
                 using (StreamWriter sw = new StreamWriter("Settings.dat", false, System.Text.Encoding.Default))

@@ -211,22 +211,22 @@ namespace WindowsFormsApp1
 
                     try
                     {
-                        бАTableAdapter.Insert(Convert.ToString(lines[0]),
+                       бАTableAdapter.Insert(Convert.ToString(lines[0]),
                                                  Convert.ToString(lines[1]),
                                                  Convert.ToInt16(lines[2]),
                                                  Convert.ToString(lines[3]),
                                                  Convert.ToString(lines[4]),
-                                                 Convert.ToDouble(lines[5]),
-                                                 Convert.ToDouble(lines[6]),
-                                                 Convert.ToDouble(lines[7]),
-                                                 Convert.ToDouble(lines[8]),
+                                                 Convert.ToDecimal(lines[5]),
+                                                 Convert.ToDecimal(lines[6]),
+                                                 Convert.ToDecimal(lines[7]),
+                                                 Convert.ToDecimal(lines[8]),
                                                  Convert.ToString(lines[9]),
                                                  Convert.ToInt16(lines[10]),
                                                  Convert.ToInt16(lines[11]),
-                                                 Convert.ToDouble(lines[12]),
+                                                 Convert.ToDecimal(lines[12]),
                                                  Convert.ToString(lines[13]),
-                                                 Convert.ToDouble(lines[14]),
-                                                 Convert.ToDouble(lines[15]),
+                                                 Convert.ToDecimal(lines[14]),
+                                                 Convert.ToDecimal(lines[15]),
                                                  Convert.ToString(lines[16]),
                                                  Convert.ToString(lines[17]),
                                                  Convert.ToString(lines[18]),
@@ -238,10 +238,13 @@ namespace WindowsFormsApp1
                                                  Convert.ToString(lines[24]),
                                                  Convert.ToString(lines[25])
                                                  );
-
+                    //ТУУУУУУУУУУУУУУУУУУТТТТ гдееееееее-то косяк, я хз в чем ошибка , не работает загрузка в бд всего , ошибка в типах данных. при этом , сама ошибка не отображается тут и сейчас , как это фиксить - я хз (
+                    //Вотс , исправить ее я так и не смог 
+                   //ошибка возникает только с импортом в старую базу , при импорте в текущую базу , все работает нормально (в базу которая БДРЫБА, лежит в этой же папке )
                     }
                     catch (System.Exception ex)
                     {
+                        MessageBox.Show(ex.ToString());
                         erll.Add("Ошибка записи в поле " + Convert.ToString(li) + ", RecordlID = \"" + lines[1] + "\"" + " исходная строка : \n");
                         erlli.Add("{" + ll + "}");
 

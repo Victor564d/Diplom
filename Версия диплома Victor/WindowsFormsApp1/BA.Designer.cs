@@ -613,7 +613,7 @@
             this.tableAdapterManager.UpdateOrder = WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.БАTableAdapter = this.бАTableAdapter;
             this.tableAdapterManager.ПробыTableAdapter = null;
-            this.tableAdapterManager.УловыTableAdapter = null;
+            this.tableAdapterManager.уловыTableAdapter = null;
             // 
             // BA
             // 

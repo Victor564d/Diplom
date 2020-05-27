@@ -49,7 +49,7 @@
             this.бАTableAdapter = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.БАTableAdapter();
             this.tableAdapterManager = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.TableAdapterManager();
             this.пробыTableAdapter = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.ПробыTableAdapter();
-            this.уловыTableAdapter = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.УловыTableAdapter();
+            this.уловыTableAdapter = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.уловыTableAdapter();
             this.тестовая_бд_DataSet = new WindowsFormsApp1.Тестовая_бд_DataSet();
             this.cathIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.samplIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -369,7 +369,7 @@
             this.tableAdapterManager.UpdateOrder = WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.БАTableAdapter = this.бАTableAdapter;
             this.tableAdapterManager.ПробыTableAdapter = this.пробыTableAdapter;
-            this.tableAdapterManager.УловыTableAdapter = this.уловыTableAdapter;
+            this.tableAdapterManager.уловыTableAdapter = this.уловыTableAdapter;
             // 
             // пробыTableAdapter
             // 
@@ -1025,7 +1025,7 @@
         private Тестовая_бд_DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private Тестовая_бд_DataSetTableAdapters.ПробыTableAdapter пробыTableAdapter;
         private System.Windows.Forms.BindingSource пробыBindingSource;
-        private Тестовая_бд_DataSetTableAdapters.УловыTableAdapter уловыTableAdapter;
+        private Тестовая_бд_DataSetTableAdapters.уловыTableAdapter уловыTableAdapter;
         private System.Windows.Forms.DataGridView пробыDataGridView;
         private System.Windows.Forms.BindingSource уловыBindingSource;
         private System.Windows.Forms.DataGridView уловыDataGridView;

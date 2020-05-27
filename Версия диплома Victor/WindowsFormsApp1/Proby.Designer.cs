@@ -463,7 +463,7 @@
             this.tableAdapterManager.UpdateOrder = WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.БАTableAdapter = null;
             this.tableAdapterManager.ПробыTableAdapter = this.пробыTableAdapter;
-            this.tableAdapterManager.УловыTableAdapter = null;
+            this.tableAdapterManager.уловыTableAdapter = null;
             // 
             // видToolStripMenuItem
             // 

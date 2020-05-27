@@ -107,7 +107,7 @@
             this.фильтрПоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.датеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.регионуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.уловыTableAdapter = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.УловыTableAdapter();
+            this.уловыTableAdapter = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.уловыTableAdapter();
             this.tableAdapterManager = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.TableAdapterManager();
             this.открытьВсеУловыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.уловыBindingNavigator)).BeginInit();
@@ -723,7 +723,7 @@
             this.tableAdapterManager.UpdateOrder = WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.БАTableAdapter = null;
             this.tableAdapterManager.ПробыTableAdapter = null;
-            this.tableAdapterManager.УловыTableAdapter = this.уловыTableAdapter;
+            this.tableAdapterManager.уловыTableAdapter = this.уловыTableAdapter;
             // 
             // открытьВсеУловыToolStripMenuItem
             // 
@@ -780,7 +780,7 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton уловыBindingNavigatorSaveItem;
         public System.Windows.Forms.DataGridView уловыDataGridView;
-        public Тестовая_бд_DataSetTableAdapters.УловыTableAdapter уловыTableAdapter;
+        public Тестовая_бд_DataSetTableAdapters.уловыTableAdapter уловыTableAdapter;
         private System.Windows.Forms.OpenFileDialog OpFile;
         private System.Windows.Forms.SaveFileDialog SaveFile;
         private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
