@@ -30,7 +30,6 @@ namespace WindowsFormsApp1
             //MessageBox.Show(this.уловыTableAdapter.Adapter.SelectCommand.CommandText);
            // string query = "SELECT  CathID, SamplID, DD, MM, YYYY, Region, Area, Location, Latitude, Longitude, Depth, WaterTemperature, Gear, Vessel, Catch, DateOfProc, Condition, LengthRange, Mode, MeanLength, [Number of ind], [WetWeight, g],[MeanWW, g], MeanDW, [Mean_TL %], [Calculated_TL %], SizeClasses, DW_Samples, TL_Samples, DW_Ind, TL_Ind, BioAnalyses_Ind, Comments, DataSource, DataFile FROM Уловы WHERE(CathID LIKE ?)";
             // this.tableAdapterManager.УловыTableAdapter.Adapter.SelectCommand.CommandText = query;
-
             //this.уловыTableAdapter.Adapter.Fill((this.тестовая_бд_DataSet.Уловы));
             this.уловыTableAdapter.FillBy(this.тестовая_бд_DataSet.Уловы, Convert.ToString(mainform.indt[mainform.idnt]));//вызываем sql с параметром идентификатора
             try { cells.Add(Convert.ToString(уловыDataGridView[1, уловыDataGridView.CurrentCell.RowIndex].Value)); } //пытаемся считать значение catchid для дальнейшего открытия каких-либо запросов с базой 
@@ -38,7 +37,6 @@ namespace WindowsFormsApp1
             for (int i = 1; i <= 80; i++) //остальные значения заполняем 999999 да бы они не влияли на условия 
                 cells.Add(999999);
             idnt = Convert.ToString(mainform.indt[mainform.idnt]);// на всякий , получаем идентификатор с предыдушей формы.
-
         }
 
         private void Hamsa_FormClosing(object sender, FormClosingEventArgs e) // при закрытии формы открыть придыдущую 
@@ -46,12 +44,8 @@ namespace WindowsFormsApp1
             Vibor vibors = new Vibor(); //задаем предыдушую форму 
             vibors.Show(); //открываем ее 
         }
-
-
-
         private void уловыDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
 
 
@@ -61,30 +55,24 @@ namespace WindowsFormsApp1
             this.Validate(); // я хз шо це
             this.уловыBindingSource.EndEdit(); //завершаем изменения 
             this.tableAdapterManager.UpdateAll(this.тестовая_бд_DataSet);//сохраняем обновления в базу
-
         }
 
         private void Hamsa_ResizeEnd(object sender, EventArgs e) //Это подгон размера таблицы под размер формы 
         {
-
             уловыDataGridView.Width = this.Width - 36; //Это подгон размера таблицы 
             уловыDataGridView.Height = this.Height - 74; //Это подгон размера таблицы 
-
         }
 
         private void toolStripLabel1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void toolStripComboBox1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void уловыDataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-
         }
 
         private void toolStripComboBox1_SelectedIndexChanged(object sender, EventArgs e)

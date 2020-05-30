@@ -146,32 +146,26 @@ namespace WindowsFormsApp1
 
         private void бАBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-
         }
 
         private void уловыBindingSource_CurrentChanged(object sender, EventArgs e)
         {
-
         }
 
         private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
         {
-
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void уловыDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-
         }
 
         private void button1_Click(object sender, EventArgs e) //Код открытия формы уловов 
@@ -180,14 +174,10 @@ namespace WindowsFormsApp1
             Hamsa subForm = new Hamsa(this);
             subForm.Show();
             this.Visible = false;
-
-
         }
 
         private void Vibor_FormClosing(object sender, FormClosingEventArgs e)
         {
-
-
         }
 
         private void Vibor_FormClosed(object sender, FormClosedEventArgs e)
@@ -202,7 +192,6 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-
         }
 
         private void button4_Click(object sender, EventArgs e) //Кнопка отмены создания нового индентификатора

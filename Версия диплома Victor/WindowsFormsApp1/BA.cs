@@ -136,21 +136,12 @@ namespace WindowsFormsApp1
 
         private void fillByToolStripButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                //     this.бАTableAdapter.FillBy(this.тестовая_бд_DataSet.БА, sampleIDToolStripTextBox.Text, sampleID1ToolStripTextBox.Text, sampleID2ToolStripTextBox.Text, sampleID3ToolStripTextBox.Text, sampleID4ToolStripTextBox.Text, sampleID5ToolStripTextBox.Text, sampleID6ToolStripTextBox.Text, sampleID7ToolStripTextBox.Text, sampleID8ToolStripTextBox.Text, sampleID9ToolStripTextBox.Text, sampleID10ToolStripTextBox.Text, sampleID11ToolStripTextBox.Text, sampleID12ToolStripTextBox.Text, sampleID13ToolStripTextBox.Text, sampleID14ToolStripTextBox.Text, sampleID15ToolStripTextBox.Text, sampleID16ToolStripTextBox.Text, sampleID17ToolStripTextBox.Text, sampleID18ToolStripTextBox.Text, sampleID19ToolStripTextBox.Text, sampleID20ToolStripTextBox.Text, sampleID21ToolStripTextBox.Text, sampleID22ToolStripTextBox.Text, sampleID23ToolStripTextBox.Text, sampleID24ToolStripTextBox.Text, sampleID25ToolStripTextBox.Text, sampleID26ToolStripTextBox.Text, sampleID27ToolStripTextBox.Text, sampleID28ToolStripTextBox.Text, sampleID29ToolStripTextBox.Text, sampleID30ToolStripTextBox.Text, sampleID31ToolStripTextBox.Text, sampleID32ToolStripTextBox.Text, sampleID33ToolStripTextBox.Text, sampleID34ToolStripTextBox.Text, sampleID35ToolStripTextBox.Text, sampleID36ToolStripTextBox.Text, sampleID37ToolStripTextBox.Text, sampleID38ToolStripTextBox.Text, sampleID39ToolStripTextBox.Text, sampleID40ToolStripTextBox.Text, sampleID41ToolStripTextBox.Text, sampleID42ToolStripTextBox.Text, sampleID43ToolStripTextBox.Text, sampleID44ToolStripTextBox.Text, sampleID45ToolStripTextBox.Text, sampleID46ToolStripTextBox.Text, sampleID47ToolStripTextBox.Text, sampleID48ToolStripTextBox.Text, sampleID49ToolStripTextBox.Text, sampleID50ToolStripTextBox.Text, sampleID51ToolStripTextBox.Text, sampleID52ToolStripTextBox.Text, sampleID53ToolStripTextBox.Text, sampleID54ToolStripTextBox.Text, sampleID55ToolStripTextBox.Text, sampleID56ToolStripTextBox.Text, sampleID57ToolStripTextBox.Text, sampleID58ToolStripTextBox.Text, sampleID59ToolStripTextBox.Text, sampleID60ToolStripTextBox.Text, sampleID61ToolStripTextBox.Text, sampleID62ToolStripTextBox.Text, sampleID63ToolStripTextBox.Text, sampleID64ToolStripTextBox.Text, sampleID65ToolStripTextBox.Text, sampleID66ToolStripTextBox.Text, sampleID67ToolStripTextBox.Text, sampleID68ToolStripTextBox.Text, sampleID69ToolStripTextBox.Text, sampleID70ToolStripTextBox.Text, sampleID71ToolStripTextBox.Text, sampleID72ToolStripTextBox.Text, sampleID73ToolStripTextBox.Text, sampleID74ToolStripTextBox.Text, sampleID75ToolStripTextBox.Text, sampleID76ToolStripTextBox.Text, sampleID77ToolStripTextBox.Text, sampleID78ToolStripTextBox.Text, sampleID79ToolStripTextBox.Text);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
         }
 
         private void бАDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
+
         public string Error = "";
         public bool bl = false;
         
