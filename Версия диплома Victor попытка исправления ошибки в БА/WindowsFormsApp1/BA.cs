@@ -186,8 +186,8 @@ namespace WindowsFormsApp1
                     {
                         if (lines[2] == null) lines[2] = -999;
                         if (lines[5] == null) lines[5] = -999;
-                        if (lines[3] == null) lines[2] = -999;
-                        if (lines[4] == null) lines[5] = -999;
+                        if (lines[3] == null) lines[3] = -999;
+                        if (lines[4] == null) lines[4] = -999;
                         if (lines[6] == null) lines[6] = -999;
                         if (lines[7] == null) lines[7] = -999;
                         if (lines[8] == null) lines[8] = -999;

@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WindowsFormsApp1.exe" size="4364768">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WindowsFormsApp1.exe" size="4370400">
       <assemblyIdentity name="WindowsFormsApp1" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>1UBGEzAONsvNiEJFsFw/qOSF2HCv468lZGqTzRkNZmg=</dsig:DigestValue>
+        <dsig:DigestValue>OtvJUAFhwLh7fB++kX40Z3aRNLZp2Sth0iD0c3Jqb0k=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,13 +62,13 @@
       <dsig:DigestValue>fv84lY+ntrEkaPYeJw3UtT3tHjXp/OYaP/GzU5IYPr8=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="БДРЫБА.mdb" size="1114112" writeableType="applicationData">
+  <file name="БДРЫБА.mdb" size="2936832" writeableType="applicationData">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>4MNMoQqLJkYBIrRxpxYAk+z+QT5LZ1WdqUQj4L1Hq3g=</dsig:DigestValue>
+      <dsig:DigestValue>UOtkpstCdlhAdyVjzFaBQzwiGOyP8CYU8f6ZmVN1Ins=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
