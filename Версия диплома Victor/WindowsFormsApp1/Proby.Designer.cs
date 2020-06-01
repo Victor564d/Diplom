@@ -29,27 +29,33 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Proby));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.пробыBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.пробыBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.тестовая_бд_DataSet = new WindowsFormsApp1.Тестовая_бд_DataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
+            this.пробыBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.пробыDataGridView = new System.Windows.Forms.DataGridView();
             this.sampleIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.recordIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,17 +85,11 @@
             this.фильтрыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поРазмернымГруппаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отключитьФильтрToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.пробыTableAdapter = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.ПробыTableAdapter();
-            this.tableAdapterManager = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.TableAdapterManager();
             this.видToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.настройкиОтображенияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.пробыBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.пробыTableAdapter = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.ПробыTableAdapter();
+            this.tableAdapterManager = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.TableAdapterManager();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.пробыBindingNavigator)).BeginInit();
             this.пробыBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.пробыBindingSource1)).BeginInit();
@@ -117,8 +117,7 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.пробыBindingNavigatorSaveItem,
-            this.toolStripComboBox1});
+            this.пробыBindingNavigatorSaveItem});
             this.пробыBindingNavigator.Location = new System.Drawing.Point(0, 442);
             this.пробыBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.пробыBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -129,6 +128,15 @@
             this.пробыBindingNavigator.Size = new System.Drawing.Size(832, 25);
             this.пробыBindingNavigator.TabIndex = 0;
             this.пробыBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
             // 
             // пробыBindingSource1
             // 
@@ -147,6 +155,33 @@
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
             this.bindingNavigatorCountItem.Text = "для {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
             // 
             // bindingNavigatorSeparator
             // 
@@ -167,20 +202,37 @@
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
+            // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripComboBox1
+            // пробыBindingNavigatorSaveItem
             // 
-            this.toolStripComboBox1.Items.AddRange(new object[] {
-            "Отобразить по выбранной записи",
-            "Отобразить все записи "});
-            this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 25);
-            this.toolStripComboBox1.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBox1_SelectedIndexChanged);
-            this.toolStripComboBox1.Click += new System.EventHandler(this.toolStripComboBox1_Click);
+            this.пробыBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.пробыBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("пробыBindingNavigatorSaveItem.Image")));
+            this.пробыBindingNavigatorSaveItem.Name = "пробыBindingNavigatorSaveItem";
+            this.пробыBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.пробыBindingNavigatorSaveItem.Text = "Сохранить данные";
+            this.пробыBindingNavigatorSaveItem.Click += new System.EventHandler(this.пробыBindingNavigatorSaveItem_Click);
             // 
             // пробыDataGridView
             // 
@@ -214,6 +266,7 @@
             this.пробыDataGridView.Size = new System.Drawing.Size(800, 412);
             this.пробыDataGridView.TabIndex = 1;
             this.пробыDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.пробыDataGridView_CellContentClick);
+            this.пробыDataGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.пробыDataGridView_CellContentDoubleClick);
             // 
             // sampleIDDataGridViewTextBoxColumn
             // 
@@ -260,8 +313,8 @@
             // fishNumberDataGridViewTextBoxColumn
             // 
             this.fishNumberDataGridViewTextBoxColumn.DataPropertyName = "FishNumber";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            this.fishNumberDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.fishNumberDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.fishNumberDataGridViewTextBoxColumn.HeaderText = "Количество рыб";
             this.fishNumberDataGridViewTextBoxColumn.Name = "fishNumberDataGridViewTextBoxColumn";
             this.fishNumberDataGridViewTextBoxColumn.Width = 105;
@@ -269,10 +322,10 @@
             // wetWeighDataGridViewTextBoxColumn
             // 
             this.wetWeighDataGridViewTextBoxColumn.DataPropertyName = "WetWeigh";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle13.Format = "N2";
-            dataGridViewCellStyle13.NullValue = null;
-            this.wetWeighDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.wetWeighDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.wetWeighDataGridViewTextBoxColumn.HeaderText = "Масса";
             this.wetWeighDataGridViewTextBoxColumn.Name = "wetWeighDataGridViewTextBoxColumn";
             this.wetWeighDataGridViewTextBoxColumn.Width = 65;
@@ -280,10 +333,10 @@
             // meanWWDataGridViewTextBoxColumn
             // 
             this.meanWWDataGridViewTextBoxColumn.DataPropertyName = "MeanWW";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle14.Format = "N3";
-            dataGridViewCellStyle14.NullValue = "NULL";
-            this.meanWWDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle3.Format = "N3";
+            dataGridViewCellStyle3.NullValue = "NULL";
+            this.meanWWDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.meanWWDataGridViewTextBoxColumn.HeaderText = "Средняя масса";
             this.meanWWDataGridViewTextBoxColumn.Name = "meanWWDataGridViewTextBoxColumn";
             this.meanWWDataGridViewTextBoxColumn.Width = 101;
@@ -298,10 +351,10 @@
             // boxWeightDataGridViewTextBoxColumn
             // 
             this.boxWeightDataGridViewTextBoxColumn.DataPropertyName = "BoxWeight";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle15.Format = "N3";
-            dataGridViewCellStyle15.NullValue = null;
-            this.boxWeightDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle4.Format = "N3";
+            dataGridViewCellStyle4.NullValue = null;
+            this.boxWeightDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.boxWeightDataGridViewTextBoxColumn.HeaderText = "Вес бюкса";
             this.boxWeightDataGridViewTextBoxColumn.Name = "boxWeightDataGridViewTextBoxColumn";
             this.boxWeightDataGridViewTextBoxColumn.Width = 79;
@@ -309,10 +362,10 @@
             // grossWWDataGridViewTextBoxColumn
             // 
             this.grossWWDataGridViewTextBoxColumn.DataPropertyName = "GrossWW";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle16.Format = "N3";
-            dataGridViewCellStyle16.NullValue = null;
-            this.grossWWDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle5.Format = "N3";
+            dataGridViewCellStyle5.NullValue = null;
+            this.grossWWDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
             this.grossWWDataGridViewTextBoxColumn.HeaderText = "Вес бюкса с сырой навеской";
             this.grossWWDataGridViewTextBoxColumn.Name = "grossWWDataGridViewTextBoxColumn";
             this.grossWWDataGridViewTextBoxColumn.Width = 122;
@@ -320,10 +373,10 @@
             // netWWDataGridViewTextBoxColumn
             // 
             this.netWWDataGridViewTextBoxColumn.DataPropertyName = "NetWW";
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle17.Format = "N3";
-            dataGridViewCellStyle17.NullValue = null;
-            this.netWWDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle6.Format = "N3";
+            dataGridViewCellStyle6.NullValue = null;
+            this.netWWDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
             this.netWWDataGridViewTextBoxColumn.HeaderText = "Вес навески";
             this.netWWDataGridViewTextBoxColumn.Name = "netWWDataGridViewTextBoxColumn";
             this.netWWDataGridViewTextBoxColumn.Width = 88;
@@ -331,10 +384,10 @@
             // grossDWDataGridViewTextBoxColumn
             // 
             this.grossDWDataGridViewTextBoxColumn.DataPropertyName = "GrossDW";
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle18.Format = "N3";
-            dataGridViewCellStyle18.NullValue = null;
-            this.grossDWDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle7.Format = "N3";
+            dataGridViewCellStyle7.NullValue = null;
+            this.grossDWDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
             this.grossDWDataGridViewTextBoxColumn.HeaderText = "Вес бюкса с сухой навеской";
             this.grossDWDataGridViewTextBoxColumn.Name = "grossDWDataGridViewTextBoxColumn";
             this.grossDWDataGridViewTextBoxColumn.Width = 118;
@@ -342,10 +395,10 @@
             // netDWDataGridViewTextBoxColumn
             // 
             this.netDWDataGridViewTextBoxColumn.DataPropertyName = "NetDW";
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle19.Format = "N3";
-            dataGridViewCellStyle19.NullValue = null;
-            this.netDWDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle8.Format = "N3";
+            dataGridViewCellStyle8.NullValue = null;
+            this.netDWDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
             this.netDWDataGridViewTextBoxColumn.HeaderText = "Вес сухой навески";
             this.netDWDataGridViewTextBoxColumn.Name = "netDWDataGridViewTextBoxColumn";
             this.netDWDataGridViewTextBoxColumn.Width = 116;
@@ -353,10 +406,10 @@
             // dWDataGridViewTextBoxColumn
             // 
             this.dWDataGridViewTextBoxColumn.DataPropertyName = "DW%";
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle20.Format = "N3";
-            dataGridViewCellStyle20.NullValue = null;
-            this.dWDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle9.Format = "N3";
+            dataGridViewCellStyle9.NullValue = null;
+            this.dWDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
             this.dWDataGridViewTextBoxColumn.HeaderText = "Содержание СВ%";
             this.dWDataGridViewTextBoxColumn.Name = "dWDataGridViewTextBoxColumn";
             this.dWDataGridViewTextBoxColumn.Width = 110;
@@ -364,10 +417,10 @@
             // tLWWDataGridViewTextBoxColumn
             // 
             this.tLWWDataGridViewTextBoxColumn.DataPropertyName = "TL%WW";
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle21.Format = "N3";
-            dataGridViewCellStyle21.NullValue = "Null";
-            this.tLWWDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle10.Format = "N3";
+            dataGridViewCellStyle10.NullValue = "Null";
+            this.tLWWDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
             this.tLWWDataGridViewTextBoxColumn.HeaderText = "Содержание СЛ%";
             this.tLWWDataGridViewTextBoxColumn.Name = "tLWWDataGridViewTextBoxColumn";
             this.tLWWDataGridViewTextBoxColumn.Width = 111;
@@ -375,10 +428,10 @@
             // calculatedTL2017DataGridViewTextBoxColumn
             // 
             this.calculatedTL2017DataGridViewTextBoxColumn.DataPropertyName = "Calculated TL% 2017";
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle22.Format = "N3";
-            dataGridViewCellStyle22.NullValue = null;
-            this.calculatedTL2017DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle11.Format = "N3";
+            dataGridViewCellStyle11.NullValue = null;
+            this.calculatedTL2017DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
             this.calculatedTL2017DataGridViewTextBoxColumn.HeaderText = "Расчетное СЛ%";
             this.calculatedTL2017DataGridViewTextBoxColumn.Name = "calculatedTL2017DataGridViewTextBoxColumn";
             this.calculatedTL2017DataGridViewTextBoxColumn.Width = 102;
@@ -453,18 +506,6 @@
             this.отключитьФильтрToolStripMenuItem.Text = "Отключить фильтр";
             this.отключитьФильтрToolStripMenuItem.Click += new System.EventHandler(this.отключитьФильтрToolStripMenuItem_Click);
             // 
-            // пробыTableAdapter
-            // 
-            this.пробыTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.UpdateOrder = WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.БАTableAdapter = null;
-            this.tableAdapterManager.ПробыTableAdapter = this.пробыTableAdapter;
-            this.tableAdapterManager.УловыTableAdapter = null;
-            // 
             // видToolStripMenuItem
             // 
             this.видToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -480,74 +521,34 @@
             this.настройкиОтображенияToolStripMenuItem.Text = "Настройки отображения ";
             this.настройкиОтображенияToolStripMenuItem.Click += new System.EventHandler(this.настройкиОтображенияToolStripMenuItem_Click);
             // 
-            // bindingNavigatorAddNewItem
+            // пробыTableAdapter
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
+            this.пробыTableAdapter.ClearBeforeFill = true;
             // 
-            // bindingNavigatorDeleteItem
+            // tableAdapterManager
             // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.UpdateOrder = WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.БАTableAdapter = null;
+            this.tableAdapterManager.ПробыTableAdapter = this.пробыTableAdapter;
+            this.tableAdapterManager.уловыTableAdapter = null;
             // 
-            // bindingNavigatorMoveFirstItem
+            // button1
             // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
-            // 
-            // пробыBindingNavigatorSaveItem
-            // 
-            this.пробыBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.пробыBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("пробыBindingNavigatorSaveItem.Image")));
-            this.пробыBindingNavigatorSaveItem.Name = "пробыBindingNavigatorSaveItem";
-            this.пробыBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.пробыBindingNavigatorSaveItem.Text = "Сохранить данные";
-            this.пробыBindingNavigatorSaveItem.Click += new System.EventHandler(this.пробыBindingNavigatorSaveItem_Click);
+            this.button1.Location = new System.Drawing.Point(287, 442);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Добавить";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Proby
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 467);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.пробыDataGridView);
             this.Controls.Add(this.пробыBindingNavigator);
             this.Controls.Add(this.menuStrip1);
@@ -585,7 +586,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton пробыBindingNavigatorSaveItem;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
         private System.Windows.Forms.SaveFileDialog SaveFile;
         private System.Windows.Forms.OpenFileDialog OpFile;
         private System.Windows.Forms.BindingSource пробыBindingSource1;
@@ -621,5 +621,6 @@
         private System.Windows.Forms.ToolStripMenuItem видToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem настройкиОтображенияToolStripMenuItem;
         public System.Windows.Forms.DataGridView пробыDataGridView;
+        private System.Windows.Forms.Button button1;
     }
 }
