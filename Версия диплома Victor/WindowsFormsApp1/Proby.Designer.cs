@@ -266,6 +266,7 @@
             this.пробыDataGridView.Size = new System.Drawing.Size(800, 412);
             this.пробыDataGridView.TabIndex = 1;
             this.пробыDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.пробыDataGridView_CellContentClick);
+            this.пробыDataGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.пробыDataGridView_CellContentDoubleClick);
             // 
             // sampleIDDataGridViewTextBoxColumn
             // 

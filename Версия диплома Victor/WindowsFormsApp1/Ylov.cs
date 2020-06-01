@@ -633,7 +633,9 @@ namespace WindowsFormsApp1
             for (int j = 0; j <= 34; j++) // цикл вывода полей 
             {
                 {
-                    zapis.Add(Convert.ToString(уловыDataGridView[j, уловыDataGridView.CurrentCell.RowIndex].Value));
+                    if (Convert.ToString(уловыDataGridView[j, уловыDataGridView.CurrentCell.RowIndex].Value) != "-999")
+                        zapis.Add(Convert.ToString(уловыDataGridView[j, уловыDataGridView.CurrentCell.RowIndex].Value));
+                    else zapis.Add("");
                 }
             }
 
