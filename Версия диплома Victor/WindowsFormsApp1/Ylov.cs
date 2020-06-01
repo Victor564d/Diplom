@@ -9,7 +9,7 @@ namespace WindowsFormsApp1
 {
     public partial class Hamsa : Form
     {
-        public void ins(ArrayList lines, ArrayList orig) // эт для вставки 
+        public void upd(ArrayList lines, ArrayList orig) // эт для вставки 
         {
             try // проверяем те значения которые являются числом, если оно пустое, то запишем туда -999
             {
@@ -36,7 +36,7 @@ namespace WindowsFormsApp1
             try //пытаемся вставить поля в таблицу бд, конертируя соответствующие данные в нужный тип 
             {
                 уловыTableAdapter.Delete(Convert.ToString(orig[0]));
-                this.уловыTableAdapter.Update(this.тестовая_бд_DataSet);
+                
                 уловыTableAdapter.Insert(Convert.ToString(lines[0]),
                                          Convert.ToString(lines[1]),
                                          Convert.ToInt16(lines[2]),
@@ -75,6 +75,84 @@ namespace WindowsFormsApp1
                                          );
                 this.уловыTableAdapter.Update(this.тестовая_бд_DataSet);//сохраняем обновления в базу
                 this.уловыTableAdapter.FillBy(this.тестовая_бд_DataSet.Уловы, Convert.ToString(idnt));
+            }
+            catch (System.Exception ex) // если возникла ошибка 
+            {
+                MessageBox.Show("Возникла ошибка записи, проверьте поля. Текст ошибки: " + ex.Message, "Ошибка записи", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            try
+            {
+                this.уловыTableAdapter.FillBy(this.тестовая_бд_DataSet.Уловы, Convert.ToString(idnt)); //обновляем список на экране
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message, "Ошибка"); //если возникла ошибка при обновлении 
+            }
+        }
+
+        public void ins(ArrayList lines)
+        {
+            try // проверяем те значения которые являются числом, если оно пустое, то запишем туда -999
+            {
+                if (Convert.ToString(lines[2]) == "") lines[2] = -999;
+                if (Convert.ToString(lines[3]) == "") lines[3] = -999;
+                if (Convert.ToString(lines[4]) == "") lines[4] = -999;
+                if (Convert.ToString(lines[10]) == "") lines[10] = -999;
+                if (Convert.ToString(lines[11]) == "") lines[11] = -999;
+                if (Convert.ToString(lines[14]) == "") lines[14] = -999;
+                if (Convert.ToString(lines[19]) == "") lines[19] = -999;
+                if (Convert.ToString(lines[20]) == "") lines[20] = -999;
+                if (Convert.ToString(lines[21]) == "") lines[21] = -999;
+                if (Convert.ToString(lines[22]) == "") lines[22] = -999;
+                if (Convert.ToString(lines[23]) == "") lines[23] = -999;
+                if (Convert.ToString(lines[24]) == "") lines[24] = -999;
+                if (Convert.ToString(lines[25]) == "") lines[25] = -999;
+                if (Convert.ToString(lines[26]) == "") lines[26] = -999;
+                if (Convert.ToString(lines[27]) == "") lines[27] = -999;
+                if (Convert.ToString(lines[28]) == "") lines[28] = -999;
+                if (Convert.ToString(lines[31]) == "") lines[31] = -999;
+            }
+            catch
+            { }
+            try //пытаемся вставить поля в таблицу бд, конертируя соответствующие данные в нужный тип 
+            {
+                уловыTableAdapter.Insert(Convert.ToString(lines[0]),
+                                         Convert.ToString(lines[1]),
+                                         Convert.ToInt16(lines[2]),
+                                         Convert.ToInt16(lines[3]),
+                                         Convert.ToInt16(lines[4]),
+                                         Convert.ToString(lines[5]),
+                                         Convert.ToString(lines[6]),
+                                         Convert.ToString(lines[7]),
+                                         Convert.ToString(lines[8]),
+                                         Convert.ToString(lines[9]),
+                                         Convert.ToDouble(lines[10]),
+                                         Convert.ToDouble(lines[11]),
+                                         Convert.ToString(lines[12]),
+                                         Convert.ToString(lines[13]),
+                                         Convert.ToDouble(lines[14]),
+                                         Convert.ToDateTime(lines[15]),
+                                         Convert.ToString(lines[16]),
+                                         Convert.ToString(lines[17]),
+                                         Convert.ToString(lines[18]),
+                                         Convert.ToDouble(lines[19]),
+                                         Convert.ToDouble(lines[20]),
+                                         Convert.ToDouble(lines[21]),
+                                         Convert.ToDouble(lines[22]),
+                                         Convert.ToDouble(lines[23]),
+                                         Convert.ToDouble(lines[24]),
+                                         Convert.ToDouble(lines[25]),
+                                         Convert.ToDouble(lines[26]),
+                                         Convert.ToDouble(lines[27]),
+                                         Convert.ToDouble(lines[28]),
+                                         Convert.ToString(lines[29]),
+                                         Convert.ToString(lines[30]),
+                                         Convert.ToDouble(lines[31]),
+                                         Convert.ToString(lines[32]),
+                                         Convert.ToString(lines[33]),
+                                         Convert.ToString(lines[34])//Ниже идет оригинальная запись
+                                         );
+                this.уловыTableAdapter.Update(this.тестовая_бд_DataSet);//сохраняем обновления в базу
             }
             catch (System.Exception ex) // если возникла ошибка 
             {
@@ -532,11 +610,20 @@ namespace WindowsFormsApp1
 
         private void button1_Click_3(object sender, EventArgs e)
         {
+            ArrayList zapis = new ArrayList();
+
+            for (int j = 0; j <= 34; j++) // цикл вывода полей 
+            {
+                {
+                    zapis.Add(null);
+                }
+            }
             Catch_Record_Form newForm = new Catch_Record_Form(this);
-            newForm.Show();
             newForm.operation = "New";
-            newForm.orig.Clear();
-            newForm.zapis.Clear();
+            newForm.zapis = zapis;
+            newForm.orig = zapis;
+            newForm.Show();
+            
         }
 
         private void уловыDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -546,9 +633,7 @@ namespace WindowsFormsApp1
             for (int j = 0; j <= 34; j++) // цикл вывода полей 
             {
                 {
-
                     zapis.Add(Convert.ToString(уловыDataGridView[j, уловыDataGridView.CurrentCell.RowIndex].Value));
-
                 }
             }
 

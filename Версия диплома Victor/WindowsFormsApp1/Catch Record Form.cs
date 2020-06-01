@@ -220,14 +220,14 @@ namespace WindowsFormsApp1
                 zapis[12] = textBox15.Text;
                 zapis[13] = textBox16.Text;
                 zapis[14] = textBox17.Text;
-                zapis[15] = textBox18.Text;
+                if (textBox18.Text != "")
+                    zapis[15] = textBox18.Text;
+                else zapis[15] = (null);
+                if (Convert.ToString(orig[15]) == "")
+                    orig[15] = (null);
                 zapis[16] = textBox19.Text;
                 zapis[17] = textBox31.Text;
-                if (textBox18.Text != "")
-                    zapis[18] = textBox12.Text;
-                else zapis[18] = null;
-                if (Convert.ToString(orig[18]) == "")
-                    orig[18] = null;
+                zapis[18] = textBox12.Text;
                 zapis[19] = textBox24.Text;
                 zapis[20] = textBox25.Text;
                 zapis[21] = textBox23.Text;
@@ -246,7 +246,8 @@ namespace WindowsFormsApp1
                 zapis[34] = textBox11.Text;
               
             }
-            if (operation == "Redact") mainform.ins(zapis, orig);
+            if (operation == "Redact") mainform.upd(zapis, orig);
+            if (operation == "New") mainform.ins(zapis);
         }
 
         private void label39_Click(object sender, EventArgs e)
