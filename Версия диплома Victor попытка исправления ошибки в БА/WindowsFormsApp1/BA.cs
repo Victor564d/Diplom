@@ -186,6 +186,8 @@ namespace WindowsFormsApp1
                     {
                         if (lines[2] == null) lines[2] = -999;
                         if (lines[5] == null) lines[5] = -999;
+                        if (lines[3] == null) lines[2] = -999;
+                        if (lines[4] == null) lines[5] = -999;
                         if (lines[6] == null) lines[6] = -999;
                         if (lines[7] == null) lines[7] = -999;
                         if (lines[8] == null) lines[8] = -999;
@@ -194,19 +196,28 @@ namespace WindowsFormsApp1
                         if (lines[12] == null) lines[12] = -999;
                         if (lines[14] == null) lines[14] = -999;
                         if (lines[15] == null) lines[15] = -999;
+                        if (lines[1] == null) lines[1] = -999;
+                        if (lines[13] == null) lines[13] = -999;
+                        if (lines[17] == null) lines[17] = -999;
+                        if (lines[18] == null) lines[18] = -999;
+                        if (lines[19] == null) lines[19] = -999;
+                        if (lines[20] == null) lines[20] = -999;
+                        if (lines[21] == null) lines[21] = -999;
+                        if (lines[22] == null) lines[22] = -999;
+                        if (lines[23] == null) lines[23] = -999;
+                        if (lines[24] == null) lines[24] = -999;
 
 
                     }
                     catch
                     { }
-
                     try
                     {
                        бАTableAdapter.Insert(Convert.ToString(lines[0]),
                                                  Convert.ToString(lines[1]),
                                                  Convert.ToInt16(lines[2]),
-                                                 Convert.ToString(lines[3]),
-                                                 Convert.ToString(lines[4]),
+                                                 Convert.ToInt16(lines[3]),
+                                                 Convert.ToInt16(lines[4]),
                                                  Convert.ToDecimal(lines[5]),
                                                  Convert.ToDecimal(lines[6]),
                                                  Convert.ToDecimal(lines[7]),
@@ -214,19 +225,19 @@ namespace WindowsFormsApp1
                                                  Convert.ToString(lines[9]),
                                                  Convert.ToInt16(lines[10]),
                                                  Convert.ToInt16(lines[11]),
-                                                 Convert.ToDecimal(lines[12]),
-                                                 Convert.ToString(lines[13]),
+                                                 Convert.ToString(lines[12]),
+                                                 Convert.ToDecimal(lines[13]),
                                                  Convert.ToDecimal(lines[14]),
                                                  Convert.ToDecimal(lines[15]),
                                                  Convert.ToString(lines[16]),
-                                                 Convert.ToString(lines[17]),
-                                                 Convert.ToString(lines[18]),
-                                                 Convert.ToString(lines[19]),
-                                                 Convert.ToString(lines[20]),
-                                                 Convert.ToString(lines[21]),
-                                                 Convert.ToString(lines[22]),
-                                                 Convert.ToString(lines[23]),
-                                                 Convert.ToString(lines[24]),
+                                                 Convert.ToDouble(lines[17]),
+                                                 Convert.ToDouble(lines[18]),
+                                                 Convert.ToDouble(lines[19]),
+                                                 Convert.ToDouble(lines[20]),
+                                                 Convert.ToDouble(lines[21]),
+                                                 Convert.ToDouble(lines[22]),
+                                                 Convert.ToDouble(lines[23]),
+                                                 Convert.ToDouble(lines[24]),
                                                  Convert.ToString(lines[25])
                                                  );
                     //ТУУУУУУУУУУУУУУУУУУТТТТ гдееееееее-то косяк, я хз в чем ошибка , не работает загрузка в бд всего , ошибка в типах данных. при этом , сама ошибка не отображается тут и сейчас , как это фиксить - я хз (

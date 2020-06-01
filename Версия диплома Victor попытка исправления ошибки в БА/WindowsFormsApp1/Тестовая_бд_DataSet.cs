@@ -4,6 +4,9 @@
 
     partial class Тестовая_бд_DataSet
     {
+        partial class БАDataTable
+        {
+        }
     }
 }
 

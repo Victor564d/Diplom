@@ -697,8 +697,8 @@ namespace WindowsFormsApp1 {
                         УловыRow parentУловыRowByУловыБА, 
                         string IndID, 
                         short No, 
-                        string Size1, 
-                        string Size2, 
+                        short Size1, 
+                        short Size2, 
                         double TL, 
                         double FL, 
                         double SL, 
@@ -711,14 +711,14 @@ namespace WindowsFormsApp1 {
                         double _Corr__Age, 
                         double Generation, 
                         string Box_number, 
-                        string Box_weight, 
-                        string Gross_WW, 
-                        string Net_WW, 
-                        string Gross_DW, 
-                        string Net_DW, 
-                        string _DW_, 
-                        string _TL_WW, 
-                        string _Calculated_TL__2015, 
+                        double Box_weight, 
+                        double Gross_WW, 
+                        double Net_WW, 
+                        double Gross_DW, 
+                        double Net_DW, 
+                        double _DW_, 
+                        double _TL_WW, 
+                        double _Calculated_TL__2015, 
                         string Comments) {
                 БАRow rowБАRow = ((БАRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
@@ -810,9 +810,9 @@ namespace WindowsFormsApp1 {
                 base.Columns.Add(this.columnIndID);
                 this.columnNo = new global::System.Data.DataColumn("No", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNo);
-                this.columnSize1 = new global::System.Data.DataColumn("Size1", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnSize1 = new global::System.Data.DataColumn("Size1", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSize1);
-                this.columnSize2 = new global::System.Data.DataColumn("Size2", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnSize2 = new global::System.Data.DataColumn("Size2", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSize2);
                 this.columnTL = new global::System.Data.DataColumn("TL", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTL);
@@ -842,25 +842,25 @@ namespace WindowsFormsApp1 {
                 base.Columns.Add(this.columnGeneration);
                 this.columnBox_number = new global::System.Data.DataColumn("Box number", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBox_number);
-                this.columnBox_weight = new global::System.Data.DataColumn("Box weight", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnBox_weight = new global::System.Data.DataColumn("Box weight", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBox_weight);
-                this.columnGross_WW = new global::System.Data.DataColumn("Gross WW", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnGross_WW = new global::System.Data.DataColumn("Gross WW", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGross_WW);
-                this.columnNet_WW = new global::System.Data.DataColumn("Net WW", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnNet_WW = new global::System.Data.DataColumn("Net WW", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNet_WW);
-                this.columnGross_DW = new global::System.Data.DataColumn("Gross DW", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnGross_DW = new global::System.Data.DataColumn("Gross DW", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGross_DW);
-                this.columnNet_DW = new global::System.Data.DataColumn("Net DW", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnNet_DW = new global::System.Data.DataColumn("Net DW", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNet_DW);
-                this._columnDW_ = new global::System.Data.DataColumn("DW%", typeof(string), null, global::System.Data.MappingType.Element);
+                this._columnDW_ = new global::System.Data.DataColumn("DW%", typeof(double), null, global::System.Data.MappingType.Element);
                 this._columnDW_.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnDW_");
                 this._columnDW_.ExtendedProperties.Add("Generator_UserColumnName", "DW%");
                 base.Columns.Add(this._columnDW_);
-                this._columnTL_WW = new global::System.Data.DataColumn("TL%WW", typeof(string), null, global::System.Data.MappingType.Element);
+                this._columnTL_WW = new global::System.Data.DataColumn("TL%WW", typeof(double), null, global::System.Data.MappingType.Element);
                 this._columnTL_WW.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnTL_WW");
                 this._columnTL_WW.ExtendedProperties.Add("Generator_UserColumnName", "TL%WW");
                 base.Columns.Add(this._columnTL_WW);
-                this._columnCalculated_TL__2015 = new global::System.Data.DataColumn("Calculated TL% 2015", typeof(string), null, global::System.Data.MappingType.Element);
+                this._columnCalculated_TL__2015 = new global::System.Data.DataColumn("Calculated TL% 2015", typeof(double), null, global::System.Data.MappingType.Element);
                 this._columnCalculated_TL__2015.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnCalculated_TL__2015");
                 this._columnCalculated_TL__2015.ExtendedProperties.Add("Generator_UserColumnName", "Calculated TL% 2015");
                 base.Columns.Add(this._columnCalculated_TL__2015);
@@ -872,19 +872,8 @@ namespace WindowsFormsApp1 {
                 this.columnIndID.AllowDBNull = false;
                 this.columnIndID.Unique = true;
                 this.columnIndID.MaxLength = 255;
-                this.columnSize1.MaxLength = 255;
-                this.columnSize2.MaxLength = 255;
                 this.columnSex.MaxLength = 255;
                 this.columnAge_.MaxLength = 255;
-                this.columnBox_number.MaxLength = 255;
-                this.columnBox_weight.MaxLength = 255;
-                this.columnGross_WW.MaxLength = 255;
-                this.columnNet_WW.MaxLength = 255;
-                this.columnGross_DW.MaxLength = 255;
-                this.columnNet_DW.MaxLength = 255;
-                this._columnDW_.MaxLength = 255;
-                this._columnTL_WW.MaxLength = 255;
-                this._columnCalculated_TL__2015.MaxLength = 255;
                 this.columnComments.MaxLength = 255;
             }
             
@@ -2409,10 +2398,10 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Size1 {
+            public short Size1 {
                 get {
                     try {
-                        return ((string)(this[this.tableБА.Size1Column]));
+                        return ((short)(this[this.tableБА.Size1Column]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'Size1\' в таблице \'БА\' равно DBNull.", e);
@@ -2425,10 +2414,10 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Size2 {
+            public short Size2 {
                 get {
                     try {
-                        return ((string)(this[this.tableБА.Size2Column]));
+                        return ((short)(this[this.tableБА.Size2Column]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'Size2\' в таблице \'БА\' равно DBNull.", e);
@@ -2633,10 +2622,10 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Box_weight {
+            public double Box_weight {
                 get {
                     try {
-                        return ((string)(this[this.tableБА.Box_weightColumn]));
+                        return ((double)(this[this.tableБА.Box_weightColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'Box weight\' в таблице \'БА\' равно DBNull.", e);
@@ -2649,10 +2638,10 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Gross_WW {
+            public double Gross_WW {
                 get {
                     try {
-                        return ((string)(this[this.tableБА.Gross_WWColumn]));
+                        return ((double)(this[this.tableБА.Gross_WWColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'Gross WW\' в таблице \'БА\' равно DBNull.", e);
@@ -2665,10 +2654,10 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Net_WW {
+            public double Net_WW {
                 get {
                     try {
-                        return ((string)(this[this.tableБА.Net_WWColumn]));
+                        return ((double)(this[this.tableБА.Net_WWColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'Net WW\' в таблице \'БА\' равно DBNull.", e);
@@ -2681,10 +2670,10 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Gross_DW {
+            public double Gross_DW {
                 get {
                     try {
-                        return ((string)(this[this.tableБА.Gross_DWColumn]));
+                        return ((double)(this[this.tableБА.Gross_DWColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'Gross DW\' в таблице \'БА\' равно DBNull.", e);
@@ -2697,10 +2686,10 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Net_DW {
+            public double Net_DW {
                 get {
                     try {
-                        return ((string)(this[this.tableБА.Net_DWColumn]));
+                        return ((double)(this[this.tableБА.Net_DWColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'Net DW\' в таблице \'БА\' равно DBNull.", e);
@@ -2713,10 +2702,10 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string _DW_ {
+            public double _DW_ {
                 get {
                     try {
-                        return ((string)(this[this.tableБА._DW_Column]));
+                        return ((double)(this[this.tableБА._DW_Column]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'DW%\' в таблице \'БА\' равно DBNull.", e);
@@ -2729,10 +2718,10 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string _TL_WW {
+            public double _TL_WW {
                 get {
                     try {
-                        return ((string)(this[this.tableБА._TL_WWColumn]));
+                        return ((double)(this[this.tableБА._TL_WWColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'TL%WW\' в таблице \'БА\' равно DBNull.", e);
@@ -2745,10 +2734,10 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string _Calculated_TL__2015 {
+            public double _Calculated_TL__2015 {
                 get {
                     try {
-                        return ((string)(this[this.tableБА._Calculated_TL__2015Column]));
+                        return ((double)(this[this.tableБА._Calculated_TL__2015Column]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'Calculated TL% 2015\' в таблице \'БА\' равно DBNull.", e);
@@ -4890,15 +4879,15 @@ namespace WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters {
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = @"INSERT INTO БА
-                         (SampleID, IndID, [No], Size1, Size2, TL, FL, SL, [WetWeight,_g], Sex, Stage, Fatness, CF, [Age ], [Corr# Age], Generation, [Box number], [Box weight], [Gross WW], [Net WW], [Gross DW], [Net DW], [DW%], [TL%WW], 
+                         (SampleID, IndID, [No], Size1, Size2, TL, FL, SL, [WetWeight,_g], Sex, Stage, Fatness, [Age ], CF, [Corr# Age], Generation, [Box number], [Box weight], [Gross WW], [Net WW], [Gross DW], [Net DW], [DW%], [TL%WW], 
                          [Calculated TL% 2015], Comments)
 VALUES        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SampleID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SampleID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IndID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IndID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("No", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "No", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Size1", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Size1", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Size2", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Size2", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Size1", global::System.Data.OleDb.OleDbType.SmallInt, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Size1", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Size2", global::System.Data.OleDb.OleDbType.SmallInt, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Size2", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TL", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "TL", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("FL", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "FL", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SL", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "SL", global::System.Data.DataRowVersion.Current, false, null));
@@ -4906,19 +4895,19 @@ VALUES        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Sex", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Sex", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Stage", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Stage", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Fatness", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Fatness", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CF", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "CF", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Age_", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Age ", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CF", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "CF", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Corr__Age", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "Corr# Age", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Generation", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "Generation", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Box_number", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Box number", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Box_weight", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Box weight", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Gross_WW", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Gross WW", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Net_WW", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Net WW", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Gross_DW", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Gross DW", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Net_DW", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Net DW", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DW_", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DW%", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TL_WW", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TL%WW", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Calculated_TL__2015", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Calculated TL% 2015", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Box_weight", global::System.Data.OleDb.OleDbType.Double, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Box weight", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Gross_WW", global::System.Data.OleDb.OleDbType.Double, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Gross WW", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Net_WW", global::System.Data.OleDb.OleDbType.Double, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Net WW", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Gross_DW", global::System.Data.OleDb.OleDbType.Double, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Gross DW", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Net_DW", global::System.Data.OleDb.OleDbType.Double, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Net DW", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DW_", global::System.Data.OleDb.OleDbType.Double, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DW%", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TL_WW", global::System.Data.OleDb.OleDbType.Double, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TL%WW", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Calculated_TL__2015", global::System.Data.OleDb.OleDbType.Double, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Calculated TL% 2015", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Comments", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Comments", global::System.Data.DataRowVersion.Current, false, null));
         }
         
@@ -10572,8 +10561,8 @@ WHERE        (SampleID LIKE ?)";
                     string SampleID, 
                     string IndID, 
                     global::System.Nullable<short> No, 
-                    string Size1, 
-                    string Size2, 
+                    global::System.Nullable<short> Size1, 
+                    global::System.Nullable<short> Size2, 
                     global::System.Nullable<decimal> TL, 
                     global::System.Nullable<decimal> FL, 
                     global::System.Nullable<decimal> SL, 
@@ -10581,19 +10570,19 @@ WHERE        (SampleID LIKE ?)";
                     string Sex, 
                     global::System.Nullable<short> Stage, 
                     global::System.Nullable<short> Fatness, 
-                    global::System.Nullable<decimal> CF, 
                     string Age_, 
+                    global::System.Nullable<decimal> CF, 
                     global::System.Nullable<decimal> Corr__Age, 
                     global::System.Nullable<decimal> Generation, 
                     string Box_number, 
-                    string Box_weight, 
-                    string Gross_WW, 
-                    string Net_WW, 
-                    string Gross_DW, 
-                    string Net_DW, 
-                    string DW_, 
-                    string TL_WW, 
-                    string Calculated_TL__2015, 
+                    global::System.Nullable<double> Box_weight, 
+                    global::System.Nullable<double> Gross_WW, 
+                    global::System.Nullable<double> Net_WW, 
+                    global::System.Nullable<double> Gross_DW, 
+                    global::System.Nullable<double> Net_DW, 
+                    global::System.Nullable<double> DW_, 
+                    global::System.Nullable<double> TL_WW, 
+                    global::System.Nullable<double> Calculated_TL__2015, 
                     string Comments) {
             if ((SampleID == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -10613,17 +10602,17 @@ WHERE        (SampleID LIKE ?)";
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Size1 == null)) {
+            if ((Size1.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((short)(Size1.Value));
+            }
+            else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Size1));
+            if ((Size2.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((short)(Size2.Value));
             }
-            if ((Size2 == null)) {
+            else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Size2));
             }
             if ((TL.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = ((decimal)(TL.Value));
@@ -10667,17 +10656,17 @@ WHERE        (SampleID LIKE ?)";
             else {
                 this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((CF.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((decimal)(CF.Value));
-            }
-            else {
+            if ((Age_ == null)) {
                 this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((Age_ == null)) {
-                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(Age_));
+            }
+            if ((CF.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((decimal)(CF.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(Age_));
+                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             if ((Corr__Age.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[14].Value = ((decimal)(Corr__Age.Value));
@@ -10697,53 +10686,53 @@ WHERE        (SampleID LIKE ?)";
             else {
                 this.Adapter.InsertCommand.Parameters[16].Value = ((string)(Box_number));
             }
-            if ((Box_weight == null)) {
+            if ((Box_weight.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[17].Value = ((double)(Box_weight.Value));
+            }
+            else {
                 this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[17].Value = ((string)(Box_weight));
+            if ((Gross_WW.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[18].Value = ((double)(Gross_WW.Value));
             }
-            if ((Gross_WW == null)) {
+            else {
                 this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[18].Value = ((string)(Gross_WW));
+            if ((Net_WW.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[19].Value = ((double)(Net_WW.Value));
             }
-            if ((Net_WW == null)) {
+            else {
                 this.Adapter.InsertCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[19].Value = ((string)(Net_WW));
+            if ((Gross_DW.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[20].Value = ((double)(Gross_DW.Value));
             }
-            if ((Gross_DW == null)) {
+            else {
                 this.Adapter.InsertCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[20].Value = ((string)(Gross_DW));
+            if ((Net_DW.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[21].Value = ((double)(Net_DW.Value));
             }
-            if ((Net_DW == null)) {
+            else {
                 this.Adapter.InsertCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[21].Value = ((string)(Net_DW));
+            if ((DW_.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[22].Value = ((double)(DW_.Value));
             }
-            if ((DW_ == null)) {
+            else {
                 this.Adapter.InsertCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[22].Value = ((string)(DW_));
+            if ((TL_WW.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[23].Value = ((double)(TL_WW.Value));
             }
-            if ((TL_WW == null)) {
+            else {
                 this.Adapter.InsertCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[23].Value = ((string)(TL_WW));
+            if ((Calculated_TL__2015.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[24].Value = ((double)(Calculated_TL__2015.Value));
             }
-            if ((Calculated_TL__2015 == null)) {
+            else {
                 this.Adapter.InsertCommand.Parameters[24].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[24].Value = ((string)(Calculated_TL__2015));
             }
             if ((Comments == null)) {
                 this.Adapter.InsertCommand.Parameters[25].Value = global::System.DBNull.Value;
@@ -10911,43 +10900,9 @@ WHERE        (SampleID LIKE ?)";
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Пробы` WHERE (((? = 1 AND `SampleID` IS NULL) OR (`SampleID` = ?)) AND (`RecordID` = ?) AND ((? = 1 AND `No` IS NULL) OR (`No` = ?)) AND ((? = 1 AND `MidSize` IS NULL) OR (`MidSize` = ?)) AND ((? = 1 AND `Size1` IS NULL) OR (`Size1` = ?)) AND ((? = 1 AND `Size2` IS NULL) OR (`Size2` = ?)) AND ((? = 1 AND `FishNumber` IS NULL) OR (`FishNumber` = ?)) AND ((? = 1 AND `WetWeigh` IS NULL) OR (`WetWeigh` = ?)) AND ((? = 1 AND `MeanWW` IS NULL) OR (`MeanWW` = ?)) AND ((? = 1 AND `BoxNo` IS NULL) OR (`BoxNo` = ?)) AND ((? = 1 AND `BoxWeight` IS NULL) OR (`BoxWeight` = ?)) AND ((? = 1 AND `GrossWW` IS NULL) OR (`GrossWW` = ?)) AND ((? = 1 AND `NetWW` IS NULL) OR (`NetWW` = ?)) AND ((? = 1 AND `GrossDW` IS NULL) OR (`GrossDW` = ?)) AND ((? = 1 AND `NetDW` IS NULL) OR (`NetDW` = ?)) AND ((? = 1 AND `DW%` IS NULL) OR (`DW%` = ?)) AND ((? = 1 AND `TL%WW` IS NULL) OR (`TL%WW` = ?)) AND ((? = 1 AND `Calculated TL% 2017` IS NULL) OR (`Calculated TL% 2017` = ?)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM Пробы\r\nWHERE        (RecordID = ?)";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SampleID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SampleID", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SampleID1", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SampleID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RecordID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RecordID", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("No", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "No", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("No1", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "No", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("MidSize", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "MidSize", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("MidSize1", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "MidSize", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Size1", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Size1", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Size11", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Size1", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Size2", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Size2", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Size21", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Size2", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("FishNumber", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FishNumber", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("FishNumber1", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FishNumber", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("WetWeigh", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "WetWeigh", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("WetWeigh1", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "WetWeigh", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("MeanWW", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "MeanWW", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("MeanWW1", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "MeanWW", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("BoxNo", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BoxNo", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("BoxNo1", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BoxNo", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("BoxWeight", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "BoxWeight", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("BoxWeight1", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "BoxWeight", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("GrossWW", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "GrossWW", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("GrossWW1", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "GrossWW", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("NetWW", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "NetWW", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("NetWW1", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "NetWW", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("GrossDW", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "GrossDW", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("GrossDW1", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "GrossDW", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("NetDW", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "NetDW", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("NetDW1", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "NetDW", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DW_", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "DW%", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DW_1", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "DW%", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TL_WW", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "TL%WW", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TL_WW1", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "TL%WW", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Calculated_TL__2017", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "Calculated TL% 2017", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Calculated_TL__20171", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "Calculated TL% 2017", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = @"INSERT INTO `Пробы` (`SampleID`, `RecordID`, `No`, `MidSize`, `Size1`, `Size2`, `FishNumber`, `WetWeigh`, `MeanWW`, `BoxNo`, `BoxWeight`, `GrossWW`, `NetWW`, `GrossDW`, `NetDW`, `DW%`, `TL%WW`, `Calculated TL% 2017`, `Comments`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -11013,59 +10968,33 @@ WHERE        (RecordID = ?)";
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[3];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT SampleID, RecordID, [No], MidSize, Size1, Size2, FishNumber, WetWeigh, Mea" +
-                "nWW, BoxNo, BoxWeight, GrossWW, NetWW, GrossDW, NetDW, [DW%], [TL%WW], [Calculat" +
-                "ed TL% 2017], Comments FROM Пробы";
+            this._commandCollection[0].CommandText = "SELECT        SampleID, RecordID, [No], MidSize, Size1, Size2, FishNumber, WetWei" +
+                "gh, MeanWW, BoxNo, BoxWeight, GrossWW, NetWW, GrossDW, NetDW, [DW%], [TL%WW], [C" +
+                "alculated TL% 2017], Comments\r\nFROM            Пробы";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        SampleID, RecordID, [No], MidSize, Size1, Size2, FishNumber, WetWei" +
-                "gh, MeanWW, BoxNo, BoxWeight, GrossWW, NetWW, GrossDW, NetDW, [DW%], [TL%WW], [C" +
-                "alculated TL% 2017], Comments\r\nFROM            Пробы\r\nWHERE        (SampleID LIK" +
-                "E ?) OR\r\n                         (SampleID = ?) OR\r\n                         (S" +
-                "ampleID = ?) OR\r\n                         (SampleID = ?) OR\r\n                   " +
-                "      (SampleID = ?) OR\r\n                         (SampleID = ?) OR\r\n           " +
-                "              (SampleID = ?) OR\r\n                         (SampleID = ?) OR\r\n   " +
-                "                      (SampleID = ?) OR\r\n                         (SampleID = ?)" +
-                " OR\r\n                         (SampleID = ?) OR\r\n                         (Sampl" +
-                "eID = ?) OR\r\n                         (SampleID = ?) OR\r\n                       " +
-                "  (SampleID = ?) OR\r\n                         (SampleID = ?) OR\r\n               " +
-                "          (SampleID = ?) OR\r\n                         (SampleID = ?) OR\r\n       " +
-                "                  (SampleID = ?) OR\r\n                         (SampleID = ?) OR\r" +
-                "\n                         (SampleID = ?) OR\r\n                         (SampleID " +
-                "= ?) OR\r\n                         (SampleID = ?) OR\r\n                         (S" +
-                "ampleID = ?) OR\r\n                         (SampleID = ?) OR\r\n                   " +
-                "      (SampleID = ?) OR\r\n                         (SampleID = ?) OR\r\n           " +
-                "              (SampleID = ?) OR\r\n                         (SampleID = ?) OR\r\n   " +
-                "                      (SampleID = ?) OR\r\n                         (SampleID = ?)" +
-                " OR\r\n                         (SampleID = ?) OR\r\n                         (Sampl" +
-                "eID = ?) OR\r\n                         (SampleID = ?) OR\r\n                       " +
-                "  (SampleID = ?) OR\r\n                         (SampleID = ?) OR\r\n               " +
-                "          (SampleID = ?) OR\r\n                         (SampleID = ?) OR\r\n       " +
-                "                  (SampleID = ?) OR\r\n                         (SampleID = ?) OR\r" +
-                "\n                         (SampleID = ?) OR\r\n                         (SampleID " +
-                "= ?) OR\r\n                         (SampleID = ?) OR\r\n                         (S" +
-                "ampleID = ?) OR\r\n                         (SampleID = ?) OR\r\n                   " +
-                "      (SampleID = ?) OR\r\n                         (SampleID = ?) OR\r\n           " +
-                "              (SampleID = ?) OR\r\n                         (SampleID = ?) OR\r\n   " +
-                "                      (SampleID = ?) OR\r\n                         (SampleID = ?)" +
-                " OR\r\n                         (SampleID = ?) OR\r\n                         (Sampl" +
-                "eID = ?) OR\r\n                         (SampleID = ?) OR\r\n                       " +
-                "  (SampleID = ?) OR\r\n                         (SampleID = ?) OR\r\n               " +
-                "          (SampleID = ?) OR\r\n                         (SampleID = ?) OR\r\n       " +
-                "                  (SampleID = ?) OR\r\n                         (SampleID = ?) OR\r" +
-                "\n                         (SampleID = ?) OR\r\n                         (SampleID " +
-                "= ?) OR\r\n                         (SampleID = ?) OR\r\n                         (S" +
-                "ampleID = ?) OR\r\n                         (SampleID = ?) OR\r\n                   " +
-                "      (SampleID = ?) OR\r\n                         (SampleID = ?) OR\r\n           " +
-                "              (SampleID = ?) OR\r\n                         (SampleID = ?) OR\r\n   " +
-                "                      (SampleID = ?) OR\r\n                         (SampleID = ?)" +
-                " OR\r\n                         (SampleID = ?) OR\r\n                         (Sampl" +
-                "eID = ?) OR\r\n                         (SampleID = ?) OR\r\n                       " +
-                "  (SampleID = ?) OR\r\n                         (SampleID = ?) OR\r\n               " +
-                "          (SampleID = ?) OR\r\n                         (SampleID = ?) OR\r\n       " +
-                "                  (SampleID = ?) OR\r\n                         (SampleID = ?) OR\r" +
-                "\n                         (SampleID = ?)";
+            this._commandCollection[1].CommandText = "SELECT BoxNo, BoxWeight, [Calculated TL% 2017], Comments, [DW%], FishNumber, Gros" +
+                "sDW, GrossWW, MeanWW, MidSize, NetDW, NetWW, [No], RecordID, SampleID, Size1, Si" +
+                "ze2, [TL%WW], WetWeigh FROM Пробы WHERE (SampleID LIKE ?) OR (SampleID = ?) OR (" +
+                "SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (SampleID" +
+                " = ?) OR (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR" +
+                " (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (Sample" +
+                "ID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) " +
+                "OR (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (Samp" +
+                "leID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?" +
+                ") OR (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (Sa" +
+                "mpleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (SampleID =" +
+                " ?) OR (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (" +
+                "SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (SampleID" +
+                " = ?) OR (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR" +
+                " (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (Sample" +
+                "ID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) " +
+                "OR (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (Samp" +
+                "leID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?" +
+                ") OR (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (Sa" +
+                "mpleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (SampleID = ?) OR (SampleID =" +
+                " ?) OR (SampleID = ?) OR (SampleID = ?)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SampleID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SampleID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SampleID1", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SampleID", global::System.Data.DataRowVersion.Current, false, null));
@@ -11149,87 +11078,61 @@ WHERE        (RecordID = ?)";
             this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SampleID79", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SampleID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT        SampleID, RecordID, [No], MidSize, Size1, Size2, FishNumber, WetWei" +
-                "gh, MeanWW, BoxNo, BoxWeight, GrossWW, NetWW, GrossDW, NetDW, [DW%], [TL%WW], [C" +
-                "alculated TL% 2017], Comments\r\nFROM            Пробы\r\nWHERE        (SampleID = ?" +
-                ") AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n                         (SampleID = ?) " +
-                "AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n                         (SampleID = ?) AN" +
-                "D (Size1 >= ?) AND (Size2 <= ?) OR\r\n                         (SampleID = ?) AND " +
-                "(Size1 >= ?) AND (Size2 <= ?) OR\r\n                         (SampleID = ?) AND (S" +
-                "ize1 >= ?) AND (Size2 <= ?) OR\r\n                         (SampleID = ?) AND (Siz" +
-                "e1 >= ?) AND (Size2 <= ?) OR\r\n                         (SampleID = ?) AND (Size1" +
-                " >= ?) AND (Size2 <= ?) OR\r\n                         (SampleID = ?) AND (Size1 >" +
-                "= ?) AND (Size2 <= ?) OR\r\n                         (SampleID = ?) AND (Size1 >= " +
-                "?) AND (Size2 <= ?) OR\r\n                         (SampleID = ?) AND (Size1 >= ?)" +
-                " AND (Size2 <= ?) OR\r\n                         (SampleID = ?) AND (Size1 >= ?) A" +
-                "ND (Size2 <= ?) OR\r\n                         (SampleID = ?) AND (Size1 >= ?) AND" +
-                " (Size2 <= ?) OR\r\n                         (SampleID = ?) AND (Size1 >= ?) AND (" +
-                "Size2 <= ?) OR\r\n                         (SampleID = ?) AND (Size1 >= ?) AND (Si" +
-                "ze2 <= ?) OR\r\n                         (SampleID = ?) AND (Size1 >= ?) AND (Size" +
-                "2 <= ?) OR\r\n                         (SampleID = ?) AND (Size1 >= ?) AND (Size2 " +
-                "<= ?) OR\r\n                         (SampleID = ?) AND (Size1 >= ?) AND (Size2 <=" +
-                " ?) OR\r\n                         (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?" +
-                ") OR\r\n                         (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) " +
-                "OR\r\n                         (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR" +
-                "\r\n                         (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n" +
-                "                         (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n  " +
-                "                       (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n    " +
-                "                     (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n      " +
-                "                   (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n        " +
-                "                 (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n          " +
-                "               (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n            " +
-                "             (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n              " +
-                "           (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n                " +
-                "         (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n                  " +
-                "       (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n                    " +
-                "     (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n                      " +
-                "   (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n                        " +
-                " (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n                         (" +
-                "SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n                         (Sa" +
-                "mpleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n                         (Samp" +
-                "leID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n                         (Sample" +
-                "ID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n                         (SampleID" +
-                " = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n                         (SampleID =" +
-                " ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n                         (SampleID = ?" +
-                ") AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n                         (SampleID = ?) " +
-                "AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n                         (SampleID = ?) AN" +
-                "D (Size1 >= ?) AND (Size2 <= ?) OR\r\n                         (SampleID = ?) AND " +
-                "(Size1 >= ?) AND (Size2 <= ?) OR\r\n                         (SampleID = ?) AND (S" +
-                "ize1 >= ?) AND (Size2 <= ?) OR\r\n                         (SampleID = ?) AND (Siz" +
-                "e1 >= ?) AND (Size2 <= ?) OR\r\n                         (SampleID = ?) AND (Size1" +
-                " >= ?) AND (Size2 <= ?) OR\r\n                         (SampleID = ?) AND (Size1 >" +
-                "= ?) AND (Size2 <= ?) OR\r\n                         (SampleID = ?) AND (Size1 >= " +
-                "?) AND (Size2 <= ?) OR\r\n                         (SampleID = ?) AND (Size1 >= ?)" +
-                " AND (Size2 <= ?) OR\r\n                         (SampleID = ?) AND (Size1 >= ?) A" +
-                "ND (Size2 <= ?) OR\r\n                         (SampleID = ?) AND (Size1 >= ?) AND" +
-                " (Size2 <= ?) OR\r\n                         (SampleID = ?) AND (Size1 >= ?) AND (" +
-                "Size2 <= ?) OR\r\n                         (SampleID = ?) AND (Size1 >= ?) AND (Si" +
-                "ze2 <= ?) OR\r\n                         (SampleID = ?) AND (Size1 >= ?) AND (Size" +
-                "2 <= ?) OR\r\n                         (SampleID = ?) AND (Size1 >= ?) AND (Size2 " +
-                "<= ?) OR\r\n                         (SampleID = ?) AND (Size1 >= ?) AND (Size2 <=" +
-                " ?) OR\r\n                         (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?" +
-                ") OR\r\n                         (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) " +
-                "OR\r\n                         (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR" +
-                "\r\n                         (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n" +
-                "                         (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n  " +
-                "                       (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n    " +
-                "                     (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n      " +
-                "                   (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n        " +
-                "                 (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n          " +
-                "               (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n            " +
-                "             (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n              " +
-                "           (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n                " +
-                "         (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n                  " +
-                "       (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n                    " +
-                "     (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n                      " +
-                "   (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n                        " +
-                " (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n                         (" +
-                "SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n                         (Sa" +
-                "mpleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n                         (Samp" +
-                "leID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n                         (Sample" +
-                "ID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n                         (SampleID" +
-                " = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR\r\n                         (SampleID =" +
-                " ?) AND (Size1 >= ?) AND (Size2 <= ?)";
+            this._commandCollection[2].CommandText = "SELECT BoxNo, BoxWeight, [Calculated TL% 2017], Comments, [DW%], FishNumber, Gros" +
+                "sDW, GrossWW, MeanWW, MidSize, NetDW, NetWW, [No], RecordID, SampleID, Size1, Si" +
+                "ze2, [TL%WW], WetWeigh FROM Пробы WHERE (SampleID = ?) AND (Size1 >= ?) AND (Siz" +
+                "e2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) A" +
+                "ND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <" +
+                "= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (" +
+                "Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?)" +
+                " OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size" +
+                "1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR " +
+                "(SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >=" +
+                " ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (Sam" +
+                "pleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) " +
+                "AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleI" +
+                "D = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND " +
+                "(Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = " +
+                "?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Siz" +
+                "e2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) A" +
+                "ND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <" +
+                "= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (" +
+                "Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?)" +
+                " OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size" +
+                "1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR " +
+                "(SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >=" +
+                " ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (Sam" +
+                "pleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) " +
+                "AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleI" +
+                "D = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND " +
+                "(Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = " +
+                "?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Siz" +
+                "e2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) A" +
+                "ND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <" +
+                "= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (" +
+                "Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?)" +
+                " OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size" +
+                "1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR " +
+                "(SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >=" +
+                " ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (Sam" +
+                "pleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) " +
+                "AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleI" +
+                "D = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND " +
+                "(Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = " +
+                "?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Siz" +
+                "e2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) A" +
+                "ND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <" +
+                "= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (" +
+                "Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?)" +
+                " OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size" +
+                "1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR " +
+                "(SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >=" +
+                " ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (Sam" +
+                "pleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) " +
+                "AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleI" +
+                "D = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND " +
+                "(Size2 <= ?) OR (SampleID = ?) AND (Size1 >= ?) AND (Size2 <= ?) OR (SampleID = " +
+                "?) AND (Size1 >= ?) AND (Size2 <= ?)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SampleID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SampleID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Size1", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Size1", global::System.Data.DataRowVersion.Current, false, null));
@@ -16060,251 +15963,12 @@ WHERE        (RecordID = ?)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(
-                    string SampleID, 
-                    string SampleID1, 
-                    string RecordID, 
-                    global::System.Nullable<decimal> No, 
-                    global::System.Nullable<decimal> No1, 
-                    global::System.Nullable<decimal> MidSize, 
-                    global::System.Nullable<decimal> MidSize1, 
-                    global::System.Nullable<short> Size1, 
-                    global::System.Nullable<short> Size11, 
-                    global::System.Nullable<short> Size2, 
-                    global::System.Nullable<short> Size21, 
-                    global::System.Nullable<short> FishNumber, 
-                    global::System.Nullable<short> FishNumber1, 
-                    global::System.Nullable<decimal> WetWeigh, 
-                    global::System.Nullable<decimal> WetWeigh1, 
-                    global::System.Nullable<decimal> MeanWW, 
-                    global::System.Nullable<decimal> MeanWW1, 
-                    string BoxNo, 
-                    string BoxNo1, 
-                    global::System.Nullable<decimal> BoxWeight, 
-                    global::System.Nullable<decimal> BoxWeight1, 
-                    global::System.Nullable<decimal> GrossWW, 
-                    global::System.Nullable<decimal> GrossWW1, 
-                    global::System.Nullable<decimal> NetWW, 
-                    global::System.Nullable<decimal> NetWW1, 
-                    global::System.Nullable<decimal> GrossDW, 
-                    global::System.Nullable<decimal> GrossDW1, 
-                    global::System.Nullable<decimal> NetDW, 
-                    global::System.Nullable<decimal> NetDW1, 
-                    global::System.Nullable<decimal> DW_, 
-                    global::System.Nullable<decimal> DW_1, 
-                    global::System.Nullable<decimal> TL_WW, 
-                    global::System.Nullable<decimal> TL_WW1, 
-                    global::System.Nullable<decimal> Calculated_TL__2017, 
-                    global::System.Nullable<decimal> Calculated_TL__20171) {
-            if ((SampleID == null)) {
-                this.Adapter.DeleteCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(SampleID));
-            }
-            if ((SampleID1 == null)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(SampleID1));
-            }
+        public virtual int Delete(string RecordID) {
             if ((RecordID == null)) {
                 throw new global::System.ArgumentNullException("RecordID");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(RecordID));
-            }
-            if ((No.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((decimal)(No.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            if ((No1.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((decimal)(No1.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((MidSize.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((decimal)(MidSize.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((MidSize1.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((decimal)(MidSize1.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((Size1.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((short)(Size1.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((Size11.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((short)(Size11.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            if ((Size2.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((short)(Size2.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((Size21.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((short)(Size21.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((FishNumber.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((short)(FishNumber.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            if ((FishNumber1.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((short)(FishNumber1.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            if ((WetWeigh.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((decimal)(WetWeigh.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            if ((WetWeigh1.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((decimal)(WetWeigh1.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            if ((MeanWW.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((decimal)(MeanWW.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            if ((MeanWW1.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((decimal)(MeanWW1.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            if ((BoxNo == null)) {
-                this.Adapter.DeleteCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((string)(BoxNo));
-            }
-            if ((BoxNo1 == null)) {
-                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(BoxNo1));
-            }
-            if ((BoxWeight.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((decimal)(BoxWeight.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[19].Value = global::System.DBNull.Value;
-            }
-            if ((BoxWeight1.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((decimal)(BoxWeight1.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
-            }
-            if ((GrossWW.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[21].Value = ((decimal)(GrossWW.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[21].Value = global::System.DBNull.Value;
-            }
-            if ((GrossWW1.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((decimal)(GrossWW1.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
-            }
-            if ((NetWW.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[23].Value = ((decimal)(NetWW.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[23].Value = global::System.DBNull.Value;
-            }
-            if ((NetWW1.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[24].Value = ((decimal)(NetWW1.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
-            }
-            if ((GrossDW.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[25].Value = ((decimal)(GrossDW.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[25].Value = global::System.DBNull.Value;
-            }
-            if ((GrossDW1.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[26].Value = ((decimal)(GrossDW1.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[26].Value = global::System.DBNull.Value;
-            }
-            if ((NetDW.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[27].Value = ((decimal)(NetDW.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[27].Value = global::System.DBNull.Value;
-            }
-            if ((NetDW1.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[28].Value = ((decimal)(NetDW1.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[28].Value = global::System.DBNull.Value;
-            }
-            if ((DW_.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[29].Value = ((decimal)(DW_.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[29].Value = global::System.DBNull.Value;
-            }
-            if ((DW_1.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[30].Value = ((decimal)(DW_1.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[30].Value = global::System.DBNull.Value;
-            }
-            if ((TL_WW.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[31].Value = ((decimal)(TL_WW.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[31].Value = global::System.DBNull.Value;
-            }
-            if ((TL_WW1.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[32].Value = ((decimal)(TL_WW1.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[32].Value = global::System.DBNull.Value;
-            }
-            if ((Calculated_TL__2017.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[33].Value = ((decimal)(Calculated_TL__2017.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[33].Value = global::System.DBNull.Value;
-            }
-            if ((Calculated_TL__20171.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[34].Value = ((decimal)(Calculated_TL__20171.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[34].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(RecordID));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
