@@ -1,0 +1,141 @@
+C:\Users\Gsiyj\Desktop\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Gsiyj\Desktop\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Gsiyj\Desktop\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\Gsiyj\Desktop\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\Gsiyj\Desktop\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Gsiyj\Desktop\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\Gsiyj\Desktop\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Gsiyj\Desktop\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Gsiyj\Desktop\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Vibor.resources
+C:\Users\Gsiyj\Desktop\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Hamsa.resources
+C:\Users\Gsiyj\Desktop\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SettingsУл.resources
+C:\Users\Gsiyj\Desktop\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Proby.resources
+C:\Users\Gsiyj\Desktop\Все что дипломэ\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Gsiyj\Desktop\Все что дипломэ\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Gsiyj\Desktop\Все что дипломэ\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\Gsiyj\Desktop\Все что дипломэ\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Vibor.resources
+C:\Users\Gsiyj\Desktop\Все что дипломэ\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Hamsa.resources
+C:\Users\Gsiyj\Desktop\Все что дипломэ\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SettingsУл.resources
+C:\Users\Gsiyj\Desktop\Все что дипломэ\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Proby.resources
+C:\Users\Gsiyj\Desktop\Все что дипломэ\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Gsiyj\Desktop\Все что дипломэ\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\Gsiyj\Desktop\Все что дипломэ\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Gsiyj\Desktop\Все что дипломэ\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Gsiyj\Desktop\Все что дипломэ\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltrsYL.resources
+C:\Users\Gsiyj\Desktop\Все что дипломэ\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.BA.resources
+C:\Users\Gsiyj\Desktop\Все что дипломэ\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltrYLR.resources
+C:\Users\Gsiyj\Desktop\Все что дипломэ\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltProbSize.resources
+C:\Users\Gsiyj\Desktop\Все что дипломэ\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltBA.resources
+C:\Users\Gsiyj\Desktop\Все что дипломэ\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\Gsiyj\Desktop\Все что дипломэ\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltrBAPGS.resources
+C:\Users\Gsiyj\Desktop\Все что дипломэ\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.OtobrProb.resources
+C:\Users\Gsiyj\Desktop\Все что дипломэ\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.BAOOBR.resources
+C:\Users\Gsiyj\Desktop\Все что дипломэ\Диплом тест\тестовая прога\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ErrAnal.resources
+F:\Репозитории\TEst\Версия диплома Victor\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+F:\Репозитории\TEst\Версия диплома Victor\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+F:\Репозитории\TEst\Версия диплома Victor\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+F:\Репозитории\TEst\Версия диплома Victor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+F:\Репозитории\TEst\Версия диплома Victor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.BA.resources
+F:\Репозитории\TEst\Версия диплома Victor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.BAOOBR.resources
+F:\Репозитории\TEst\Версия диплома Victor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ErrAnal.resources
+F:\Репозитории\TEst\Версия диплома Victor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltBA.resources
+F:\Репозитории\TEst\Версия диплома Victor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltProbSize.resources
+F:\Репозитории\TEst\Версия диплома Victor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltrBAPGS.resources
+F:\Репозитории\TEst\Версия диплома Victor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltrsYL.resources
+F:\Репозитории\TEst\Версия диплома Victor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltrYLR.resources
+F:\Репозитории\TEst\Версия диплома Victor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Vibor.resources
+F:\Репозитории\TEst\Версия диплома Victor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.OtobrProb.resources
+F:\Репозитории\TEst\Версия диплома Victor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Hamsa.resources
+F:\Репозитории\TEst\Версия диплома Victor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SettingsУл.resources
+F:\Репозитории\TEst\Версия диплома Victor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Proby.resources
+F:\Репозитории\TEst\Версия диплома Victor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+F:\Репозитории\TEst\Версия диплома Victor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+F:\Репозитории\TEst\Версия диплома Victor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+F:\Репозитории\TEst\Версия диплома Victor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+F:\Репозитории\TEst\Версия диплома Victor\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.manifest
+F:\Репозитории\TEst\Версия диплома Victor\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.application
+F:\Репозитории\TEst\Версия диплома Victor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe.manifest
+F:\Репозитории\TEst\Версия диплома Victor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.application
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.manifest
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.application
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.BA.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.BAOOBR.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Catch_Record_Form.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ErrAnal.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltBA.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltProbSize.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltrBAPGS.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltrsYL.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltrYLR.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Sample_Record_Form.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Vibor.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.OtobrProb.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Hamsa.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SettingsУл.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Proby.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe.manifest
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.application
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\Версия 2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\Версия 2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.manifest
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\Версия 2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.application
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\Версия 2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\Версия 2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\Версия 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\Версия 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.BA.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\Версия 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.BAOOBR.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\Версия 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Catch_Record_Form.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\Версия 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ErrAnal.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\Версия 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltBA.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\Версия 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltProbSize.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\Версия 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltrBAPGS.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\Версия 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltrsYL.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\Версия 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltrYLR.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\Версия 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Sample_Record_Form.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\Версия 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Vibor.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\Версия 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.OtobrProb.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\Версия 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Hamsa.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\Версия 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SettingsУл.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\Версия 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Proby.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\Версия 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\Версия 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\Версия 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe.manifest
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\Версия 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.application
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\Версия 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+F:\Репозитории\TEst\Версия диплома Victor - попытка внедрить формы\Версия 2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+F:\Репозитории\TEst\Версия диплома Victor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Catch_Record_Form.resources
+F:\Репозитории\TEst\Версия диплома Victor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Sample_Record_Form.resources
+F:\Репозитории\TEst\Версия диплома Victor попытка исправления ошибки в БА\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+F:\Репозитории\TEst\Версия диплома Victor попытка исправления ошибки в БА\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.manifest
+F:\Репозитории\TEst\Версия диплома Victor попытка исправления ошибки в БА\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.application
+F:\Репозитории\TEst\Версия диплома Victor попытка исправления ошибки в БА\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+F:\Репозитории\TEst\Версия диплома Victor попытка исправления ошибки в БА\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+F:\Репозитории\TEst\Версия диплома Victor попытка исправления ошибки в БА\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+F:\Репозитории\TEst\Версия диплома Victor попытка исправления ошибки в БА\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.BA.resources
+F:\Репозитории\TEst\Версия диплома Victor попытка исправления ошибки в БА\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.BAOOBR.resources
+F:\Репозитории\TEst\Версия диплома Victor попытка исправления ошибки в БА\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Catch_Record_Form.resources
+F:\Репозитории\TEst\Версия диплома Victor попытка исправления ошибки в БА\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ErrAnal.resources
+F:\Репозитории\TEst\Версия диплома Victor попытка исправления ошибки в БА\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltBA.resources
+F:\Репозитории\TEst\Версия диплома Victor попытка исправления ошибки в БА\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltProbSize.resources
+F:\Репозитории\TEst\Версия диплома Victor попытка исправления ошибки в БА\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltrBAPGS.resources
+F:\Репозитории\TEst\Версия диплома Victor попытка исправления ошибки в БА\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltrsYL.resources
+F:\Репозитории\TEst\Версия диплома Victor попытка исправления ошибки в БА\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltrYLR.resources
+F:\Репозитории\TEst\Версия диплома Victor попытка исправления ошибки в БА\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Sample_Record_Form.resources
+F:\Репозитории\TEst\Версия диплома Victor попытка исправления ошибки в БА\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Vibor.resources
+F:\Репозитории\TEst\Версия диплома Victor попытка исправления ошибки в БА\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.OtobrProb.resources
+F:\Репозитории\TEst\Версия диплома Victor попытка исправления ошибки в БА\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Hamsa.resources
+F:\Репозитории\TEst\Версия диплома Victor попытка исправления ошибки в БА\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SettingsУл.resources
+F:\Репозитории\TEst\Версия диплома Victor попытка исправления ошибки в БА\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Proby.resources
+F:\Репозитории\TEst\Версия диплома Victor попытка исправления ошибки в БА\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+F:\Репозитории\TEst\Версия диплома Victor попытка исправления ошибки в БА\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+F:\Репозитории\TEst\Версия диплома Victor попытка исправления ошибки в БА\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe.manifest
+F:\Репозитории\TEst\Версия диплома Victor попытка исправления ошибки в БА\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.application
+F:\Репозитории\TEst\Версия диплома Victor попытка исправления ошибки в БА\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+F:\Репозитории\TEst\Версия диплома Victor попытка исправления ошибки в БА\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
