@@ -156,6 +156,12 @@
     <Compile Include="Sample Record Form.designer.cs">
       <DependentUpon>Sample Record Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="SettingsIDNTF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsIDNTF.Designer.cs">
+      <DependentUpon>SettingsIDNTF.cs</DependentUpon>
+    </Compile>
     <Compile Include="Start.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sample Record Form.resx">
       <DependentUpon>Sample Record Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsIDNTF.resx">
+      <DependentUpon>SettingsIDNTF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Start.resx">
       <DependentUpon>Start.cs</DependentUpon>

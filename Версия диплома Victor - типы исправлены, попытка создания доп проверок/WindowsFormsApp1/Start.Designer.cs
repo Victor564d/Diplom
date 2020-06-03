@@ -47,6 +47,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.button6 = new System.Windows.Forms.Button();
             label1 = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -93,7 +94,7 @@
             "Ставрида \t*T*"});
             this.listBox1.Location = new System.Drawing.Point(12, 117);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(263, 214);
+            this.listBox1.Size = new System.Drawing.Size(263, 172);
             this.listBox1.TabIndex = 2;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             this.listBox1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBox1_MouseDoubleClick);
@@ -233,6 +234,19 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button6.Location = new System.Drawing.Point(12, 295);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(263, 35);
+            this.button6.TabIndex = 13;
+            this.button6.Text = "Настройки правил проверки данных";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // Vibor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,6 +255,7 @@
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Рисунок1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(705, 363);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button4);
@@ -286,6 +301,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button button6;
     }
 }
 

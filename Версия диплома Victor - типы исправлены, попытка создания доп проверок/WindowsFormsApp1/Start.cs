@@ -394,5 +394,12 @@ namespace WindowsFormsApp1
             subForm.Show();
             this.Visible = false;
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            SettingsIDNTF subform = new SettingsIDNTF(this);
+            subform.Show();
+            this.Hide();
+        }
     }
 }
