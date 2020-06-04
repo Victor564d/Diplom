@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace WindowsFormsApp1
 {
@@ -18,6 +19,9 @@ namespace WindowsFormsApp1
         String data;
         String dd, mm, gg;
         public string operation;
+        idntf ogr = new idntf();
+        string file = "IDNTFParams.dat";
+        ArrayList pars;
         //-------------------------------------------конец Области переменных ---------------------------------------------------//
         private Proby mainform;
         public Sample_Record_Form(Proby mainform)
@@ -100,30 +104,58 @@ namespace WindowsFormsApp1
             if (groupBox8.Visible == false) { groupBox8.Visible = true; }
             else { groupBox8.Visible = false; }
         }
-
+        string idnt ;
         private void Sample_Record_Form_Load(object sender, EventArgs e)
         {
-            textBox1.Text = Convert.ToString(zapis[0]);
-            textBox2.Text = Convert.ToString(zapis[1]);
-            textBox5.Text = Convert.ToString(zapis[2]);
-            textBox9.Text = Convert.ToString(zapis[3]);
-            textBox3.Text = Convert.ToString(zapis[4]);
-            textBox4.Text = Convert.ToString(zapis[5]);
-            textBox7.Text = Convert.ToString(zapis[6]);
-            textBox6.Text = Convert.ToString(zapis[7]);
-            textBox8.Text = Convert.ToString(zapis[8]);
-            textBox13.Text = Convert.ToString(zapis[9]);
-            textBox14.Text = Convert.ToString(zapis[10]);
-            textBox15.Text = Convert.ToString(zapis[11]);
-            textBox17.Text = Convert.ToString(zapis[12]);
+            textBox1.Text = Convert.ToString(zapis[0]); //ид пробы
+            textBox2.Text = Convert.ToString(zapis[1]);// ид записи
+            textBox5.Text = Convert.ToString(zapis[2]);//порядковый номер
+            textBox9.Text = Convert.ToString(zapis[3]); //средняя длина 
+            textBox3.Text = Convert.ToString(zapis[4]); //минимальный размер
+            textBox4.Text = Convert.ToString(zapis[5]); //максимальный размер
+            textBox7.Text = Convert.ToString(zapis[6]); //количество рыб
+            textBox6.Text = Convert.ToString(zapis[7]); //масса рыбы
+            textBox8.Text = Convert.ToString(zapis[8]); //средняя масса рыбы
+            textBox13.Text = Convert.ToString(zapis[9]); //номер бюкса
+            textBox14.Text = Convert.ToString(zapis[10]); //вес бюкса
+            textBox15.Text = Convert.ToString(zapis[11]); //сырая масса бюкса с навеской
+            textBox17.Text = Convert.ToString(zapis[12]); //масса навески
+            textBox16.Text = Convert.ToString(zapis[13]); //сухая масса бюкса с навеской 
+            textBox18.Text = Convert.ToString(zapis[14]);  //масса сухой навески
+            textBox11.Text = Convert.ToString(zapis[15]); //содержание СВ
+            textBox10.Text = Convert.ToString(zapis[16]); //содержание липидов
+            textBox12.Text = Convert.ToString(zapis[17]); //содержание липидов расчетное
+            richTextBox1.Text = Convert.ToString(zapis[18]); //комментарий 
+            idnt =  mainform.idnt;
+            try
+            {
+                using (StreamReader sr = new StreamReader(file, System.Text.Encoding.Default))
+                {
+                    string line; string str;
+                    while ((line = sr.ReadLine()) != null)
+                    {
 
-            textBox16.Text = Convert.ToString(zapis[13]);
+                        if (line == Convert.ToString(idnt))
+                        {
+                            ogr = new idntf(line, Convert.ToDouble(sr.ReadLine()), Convert.ToDouble(sr.ReadLine()), Convert.ToDouble(sr.ReadLine()), Convert.ToDouble(sr.ReadLine()),
+                             Convert.ToDouble(sr.ReadLine()), Convert.ToDouble(sr.ReadLine()), Convert.ToDouble(sr.ReadLine()), Convert.ToDouble(sr.ReadLine()), Convert.ToDouble(sr.ReadLine()),
+                             Convert.ToDouble(sr.ReadLine()), Convert.ToDouble(sr.ReadLine()), Convert.ToDouble(sr.ReadLine()), Convert.ToDouble(sr.ReadLine()), Convert.ToDouble(sr.ReadLine()), Convert.ToDouble(sr.ReadLine()),
+                             Convert.ToDouble(sr.ReadLine()), Convert.ToDouble(sr.ReadLine()), Convert.ToDouble(sr.ReadLine()));
+                            break;
+                        }
+                        else
+                        {
+                            //ram = new idntf();
+                            //mas[i] = new idntf();
+                        }
 
-            textBox18.Text = Convert.ToString(zapis[14]);
-            textBox11.Text = Convert.ToString(zapis[15]);
-            textBox10.Text = Convert.ToString(zapis[16]);
-            textBox12.Text = Convert.ToString(zapis[17]);
-            richTextBox1.Text = Convert.ToString(zapis[18]);
+                    }
+                }
+                pars = ogr.GetIdnt();
+            } catch (Exception ex)
+            {
+                MessageBox.Show("При открытии формы произошла ошибка загруски установленых ограничений, ограничения не будут учитыватся дальше. Код ошибки: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

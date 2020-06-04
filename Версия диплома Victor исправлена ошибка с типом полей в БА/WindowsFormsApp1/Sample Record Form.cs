@@ -19,7 +19,8 @@ namespace WindowsFormsApp1
         String dd, mm, gg;
         public string operation;
         string file = "IDNTFParams.dat";
-        idntf ogr = new idntf();           
+        idntf ogr = new idntf();
+        string idnt = mainfor.idnt;
         //-------------------------------------------конец Области переменных ---------------------------------------------------//
         private Proby mainform;
         public Sample_Record_Form(Proby mainform)
@@ -124,6 +125,30 @@ namespace WindowsFormsApp1
             textBox10.Text = Convert.ToString(zapis[16]); //содержание липидов
             textBox12.Text = Convert.ToString(zapis[17]); //содержание липидов расчетное
             richTextBox1.Text = Convert.ToString(zapis[18]); //комментарий 
+            using (StreamReader sr = new StreamReader(file, System.Text.Encoding.Default))
+            {
+                string line; string str;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    for (int i = 0; i < indt.Count; i++)
+                    {
+                        if (line == Convert.ToString(indt[i]))
+                        {
+                            mas[i] = new idntf(line, Convert.ToDouble(sr.ReadLine()), Convert.ToDouble(sr.ReadLine()), Convert.ToDouble(sr.ReadLine()), Convert.ToDouble(sr.ReadLine()),
+                             Convert.ToDouble(sr.ReadLine()), Convert.ToDouble(sr.ReadLine()), Convert.ToDouble(sr.ReadLine()), Convert.ToDouble(sr.ReadLine()), Convert.ToDouble(sr.ReadLine()),
+                             Convert.ToDouble(sr.ReadLine()), Convert.ToDouble(sr.ReadLine()), Convert.ToDouble(sr.ReadLine()), Convert.ToDouble(sr.ReadLine()), Convert.ToDouble(sr.ReadLine()), Convert.ToDouble(sr.ReadLine()),
+                             Convert.ToDouble(sr.ReadLine()), Convert.ToDouble(sr.ReadLine()), Convert.ToDouble(sr.ReadLine()));
+                            count++;
+                            break;
+                        }
+                        else
+                        {
+                            //ram = new idntf();
+                            //mas[i] = new idntf();
+                        }
+                    }
+                }
+            }
         }
     }
     public class idntf
