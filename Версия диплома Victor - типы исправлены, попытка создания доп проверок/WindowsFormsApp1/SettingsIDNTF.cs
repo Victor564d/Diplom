@@ -18,7 +18,9 @@ namespace WindowsFormsApp1
         idntf[] mas = new idntf[200];
         idntf ram = new idntf();
         public ArrayList indt = new ArrayList();
-            
+        string file = "IDNTFParams.dat";
+
+
 
         public SettingsIDNTF(Vibor mainform)
         {
