@@ -54,30 +54,111 @@ namespace WindowsFormsApp1
         {
             this.Close();
         }
-
+        // if (Convert.ToString(MessageBox.Show("Вы действительно хотите начать анализ ошибок? При обработке ошибок работа с основной программой будет заблокирована", "Предуприждение !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)) == "Yes")
+        bool err = false;
+        string errs = "";
         private void записатьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            zapis[0] = textBox1.Text;
-            zapis[1] = textBox2.Text;
-            zapis[2] = textBox5.Text;
-            zapis[3] = textBox9.Text;
-            zapis[4] = textBox3.Text;
-            zapis[5] = textBox4.Text;
-            zapis[6] = textBox7.Text;
-            zapis[7] = textBox6.Text;
-            zapis[8] = textBox8.Text;
-            zapis[9] = textBox13.Text;
-            zapis[10] = textBox14.Text;
-            zapis[11] = textBox15.Text;
-            zapis[12] = textBox17.Text;
-            zapis[13] = textBox16.Text;
-            zapis[14] = textBox18.Text;
-            zapis[15] = textBox11.Text;
-            zapis[16] = textBox10.Text;
-            zapis[17] = textBox12.Text;
-            zapis[18] = richTextBox1.Text;
-            if (operation == "Redact") mainform.upd(zapis, orig);
-            if (operation == "New") mainform.ins(zapis);
+            err = false;
+            errs = "";
+            if(textBox3.Text!="")
+             if((Convert.ToDouble(textBox3.Text) > Convert.ToDouble(pars[1])) ||((Convert.ToDouble(textBox3.Text) < Convert.ToDouble(pars[2])))){
+                err = true;
+                errs += "Поле 'Минимальная длина' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[1]) + ", мин значение - " + Convert.ToString(pars[2])+Convert.ToChar(13);
+                }
+            if (textBox4.Text != "")
+                if ((Convert.ToDouble(textBox4.Text) > Convert.ToDouble(pars[1])) || ((Convert.ToDouble(textBox4.Text) < Convert.ToDouble(pars[2]))))
+            {
+                err = true;
+                errs += "Поле 'Максимальная длина' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[1]) + ", мин значение - " + Convert.ToString(pars[2]) + Convert.ToChar(13);
+            }
+            if (textBox11.Text != "")
+                if ((Convert.ToDouble(textBox11.Text) > Convert.ToDouble(pars[13])) || ((Convert.ToDouble(textBox11.Text) < Convert.ToDouble(pars[14]))))
+            {
+                err = true;
+                errs += "Поле 'Содержание СВ' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[13]) + ", мин значение - " + Convert.ToString(pars[14]) + Convert.ToChar(13);
+            }
+            if (textBox10.Text != "")
+                if ((Convert.ToDouble(textBox10.Text) > Convert.ToDouble(pars[15])) || ((Convert.ToDouble(textBox10.Text) < Convert.ToDouble(pars[16]))))
+            {
+                err = true;
+                errs += "Поле 'Содержание липидов' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[15]) + ", мин значение - " + Convert.ToString(pars[16]) + Convert.ToChar(13);
+            }
+            if (textBox12.Text != "")
+                if ((Convert.ToDouble(textBox12.Text) > Convert.ToDouble(pars[15])) || ((Convert.ToDouble(textBox12.Text) < Convert.ToDouble(pars[16]))))
+            {
+                err = true;
+                errs += "Поле 'Расчетное содержание липидов' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[15]) + ", мин значение - " + Convert.ToString(pars[16]) + Convert.ToChar(13);
+            }
+            if (textBox14.Text != "")
+                if ((Convert.ToDouble(textBox14.Text) > Convert.ToDouble(pars[7])) || ((Convert.ToDouble(textBox14.Text) < Convert.ToDouble(pars[8]))))
+            {
+                err = true;
+                errs += "Поле 'Содержание липидов' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[7]) + ", мин значение - " + Convert.ToString(pars[8]) + Convert.ToChar(13);
+            }
+            if (textBox15.Text != "")
+                if ((Convert.ToDouble(textBox15.Text) > Convert.ToDouble(pars[9])) || ((Convert.ToDouble(textBox15.Text) < Convert.ToDouble(pars[10]))))
+            {
+                err = true;
+                errs += "Поле 'Содержание липидов' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[9]) + ", мин значение - " + Convert.ToString(pars[10]) + Convert.ToChar(13);
+            }
+            if (textBox16.Text != "")
+                if ((Convert.ToDouble(textBox16.Text) > Convert.ToDouble(pars[11])) || ((Convert.ToDouble(textBox16.Text) < Convert.ToDouble(pars[12]))))
+            {
+                err = true;
+                errs += "Поле 'Содержание липидов' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[11]) + ", мин значение - " + Convert.ToString(pars[12]) + Convert.ToChar(13);
+            }
+            if (err)
+            {
+                if (Convert.ToString(MessageBox.Show("Одно или несколько полей не соответствует ограничениям, проигнорировать ограничения? "+errs, "Предуприждение !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)) == "Yes") 
+                         err = false;
+            }
+            if (!err)
+            {
+                zapis[0] = textBox1.Text;//ид пробы
+                zapis[1] = textBox2.Text;// ид записи
+                zapis[2] = textBox5.Text;//порядковый номер
+                zapis[3] = textBox9.Text;//средняя длина 
+                zapis[4] = textBox3.Text;//минимальный размер
+                zapis[5] = textBox4.Text;//максимальный размер
+                zapis[6] = textBox7.Text;//количество рыб
+                zapis[7] = textBox6.Text;//масса рыбы
+                zapis[8] = textBox8.Text;//средняя масса рыбы
+                zapis[9] = textBox13.Text;//номер бюкса
+                zapis[10] = textBox14.Text;//вес бюкса
+                zapis[11] = textBox15.Text;//сырая масса бюкса с навеской
+                zapis[12] = textBox17.Text;//масса навески
+                zapis[13] = textBox16.Text;//сухая масса бюкса с навеской 
+                zapis[14] = textBox18.Text;//масса сухой навески
+                zapis[15] = textBox11.Text;//содержание СВ
+                zapis[16] = textBox10.Text;//содержание липидов
+                zapis[17] = textBox12.Text;//содержание липидов расчетное
+                zapis[18] = richTextBox1.Text;//комментарий  
+                if (operation == "Redact") mainform.upd(zapis, orig);
+                if (operation == "New") mainform.ins(zapis);
+                this.Close();
+            }
+            /*
+             idntparams.Add(idnt);
+            idntparams.Add(SizeMax);
+            idntparams.Add(SizeMin);
+            idntparams.Add(MaxTLFLSL);
+            idntparams.Add(MinTLFLSL);
+            idntparams.Add(MaxWetWeight);
+            idntparams.Add(MinWetWeight);
+            idntparams.Add(MaxBoxWeight);
+            idntparams.Add(MinBoxWeight);
+            idntparams.Add(MaxGrosWW);
+            idntparams.Add(MinGrosWW);
+            idntparams.Add(MaxGrosDW);
+            idntparams.Add(MinGrosDW);
+            idntparams.Add(MaxDW);
+            idntparams.Add(MinDW);
+            idntparams.Add(MaxTL);
+            idntparams.Add(MinTL);
+            idntparams.Add(x1);
+            idntparams.Add(x2);             
+             */
         }
 
         private void выполнитьРасчетПараметровToolStripMenuItem_Click(object sender, EventArgs e)
@@ -92,6 +173,8 @@ namespace WindowsFormsApp1
                     textBox17.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) - Convert.ToDouble(textBox14.Text));
                 if (textBox3.Text != "" && textBox4.Text != "")
                     textBox9.Text = Convert.ToString((Convert.ToDouble(textBox3.Text) + Convert.ToDouble(textBox4.Text)) / 2);
+                if (textBox11.Text != "")
+                textBox12.Text = Convert.ToString(Convert.ToDouble(textBox11.Text) * Convert.ToDouble(pars[17]) - Convert.ToDouble(pars[18]));
             }
             catch (System.Exception ex)
             {
@@ -159,4 +242,4 @@ namespace WindowsFormsApp1
         }
     }
 }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
