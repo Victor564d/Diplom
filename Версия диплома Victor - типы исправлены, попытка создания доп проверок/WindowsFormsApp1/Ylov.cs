@@ -182,7 +182,7 @@ namespace WindowsFormsApp1
         public string idnt; //идентификатор формы
         private void Hamsa_Load(object sender, EventArgs e)
         {
-
+            
             // TODO: данная строка кода позволяет загрузить данные в таблицу "тестовая_бд_DataSet1.Уловы". При необходимости она может быть перемещена или удалена.
             string f = "БДРЫБА.mdb"; //"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = " + f);
             Conn = mainform.conn; //получение строки подключения к базе

@@ -239,7 +239,7 @@ namespace WindowsFormsApp1
 
 
 
-
+        public string idnt;
         public Hamsa mainform;
         public Proby(Hamsa mainform) //переменная формы (необходима для ссыллок на предыдущую форму)
         {
@@ -256,6 +256,7 @@ namespace WindowsFormsApp1
 
         private void Form4_Load(object sender, EventArgs e)// выполняется при загрузке
         {
+            idnt = mainform.idnt;
             cells = mainform.cells; //получение значения ячеек для соответствующей фильтрации записей
             tableAdapterManager.Connection.ConnectionString = mainform.Conn; //полуыение строки подключения к базе
              try //попытка выполнить sql запрос на фильтрацию

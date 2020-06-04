@@ -207,7 +207,7 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)  //Кнопка сохранения индентификатора 
         {
-            if ((textBox1.Text != "") && (textBox2.Text != ""))
+           if ((textBox1.Text != "") && (textBox2.Text != ""))
             {
                 if (oper == 1) // код добавления нового индентификатора 
                 {
