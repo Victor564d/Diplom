@@ -74,8 +74,8 @@ namespace WindowsFormsApp1
                     err = true;
                     errs += "Поле 'Стандартная длина' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[1]) + ", мин значение - " + Convert.ToString(pars[2]) + Convert.ToChar(13);
                 }
-            if (textBox6.Text != "")
-                if ((Convert.ToDouble(textBox6.Text) > Convert.ToDouble(pars[7])) || ((Convert.ToDouble(textBox6.Text) < Convert.ToDouble(pars[8]))))
+            if (textBox22.Text != "")
+                if ((Convert.ToDouble(textBox22.Text) > Convert.ToDouble(pars[7])) || ((Convert.ToDouble(textBox22.Text) < Convert.ToDouble(pars[8]))))
                 {
                     err = true;
                     errs += "Поле 'Вес бюкса' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[7]) + ", мин значение - " + Convert.ToString(pars[8]) + Convert.ToChar(13);
