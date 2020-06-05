@@ -13,7 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\Gsiyj\Desktop\Новая папка %283%29\</PublishUrl>
+    <PublishUrl>E:\Диплом\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -107,6 +107,12 @@
     </Compile>
     <Compile Include="BAOOBR.Designer.cs">
       <DependentUpon>BAOOBR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Biological analysis Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Biological analysis Form.Designer.cs">
+      <DependentUpon>Biological analysis Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Catch Record Form.cs">
       <SubType>Form</SubType>
@@ -201,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BAOOBR.resx">
       <DependentUpon>BAOOBR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Biological analysis Form.resx">
+      <DependentUpon>Biological analysis Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catch Record Form.resx">
       <DependentUpon>Catch Record Form.cs</DependentUpon>

@@ -74,6 +74,7 @@ namespace WindowsFormsApp1
             zapis[18] = richTextBox1.Text;
             if (operation == "Redact") mainform.upd(zapis, orig);
             if (operation == "New") mainform.ins(zapis);
+            this.Close();
         }
 
         private void выполнитьРасчетПараметровToolStripMenuItem_Click(object sender, EventArgs e)

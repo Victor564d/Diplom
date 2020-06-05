@@ -248,6 +248,7 @@ namespace WindowsFormsApp1
             }
             if (operation == "Redact") mainform.upd(zapis, orig);
             if (operation == "New") mainform.ins(zapis);
+            this.Close();
         }
 
         private void label39_Click(object sender, EventArgs e)

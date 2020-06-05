@@ -55,6 +55,8 @@
             this.записатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.видToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вводДополнительныхДанныхToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отменаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выполнитьРасчетПараметровToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
@@ -77,8 +79,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.отменаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.выполнитьРасчетПараметровToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -98,6 +98,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(9, 25);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox1.Name = "groupBox1";
@@ -110,7 +111,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(11, 94);
+            this.label5.Location = new System.Drawing.Point(11, 89);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(106, 16);
@@ -252,7 +253,7 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(160, 86);
+            this.textBox7.Location = new System.Drawing.Point(160, 27);
             this.textBox7.Margin = new System.Windows.Forms.Padding(4);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(100, 22);
@@ -261,7 +262,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 89);
+            this.label6.Location = new System.Drawing.Point(8, 30);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(114, 16);
@@ -270,7 +271,7 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(160, 56);
+            this.textBox8.Location = new System.Drawing.Point(160, 87);
             this.textBox8.Margin = new System.Windows.Forms.Padding(4);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(100, 22);
@@ -279,7 +280,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(8, 58);
+            this.label8.Location = new System.Drawing.Point(8, 89);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(133, 16);
@@ -288,7 +289,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(160, 26);
+            this.textBox6.Location = new System.Drawing.Point(160, 57);
             this.textBox6.Margin = new System.Windows.Forms.Padding(4);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(100, 22);
@@ -297,7 +298,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 30);
+            this.label7.Location = new System.Drawing.Point(8, 61);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 16);
@@ -362,6 +363,20 @@
             this.вводДополнительныхДанныхToolStripMenuItem.Size = new System.Drawing.Size(255, 22);
             this.вводДополнительныхДанныхToolStripMenuItem.Text = "Ввод дополнительных данных";
             this.вводДополнительныхДанныхToolStripMenuItem.Click += new System.EventHandler(this.вводДополнительныхДанныхToolStripMenuItem_Click);
+            // 
+            // отменаToolStripMenuItem
+            // 
+            this.отменаToolStripMenuItem.Name = "отменаToolStripMenuItem";
+            this.отменаToolStripMenuItem.Size = new System.Drawing.Size(65, 21);
+            this.отменаToolStripMenuItem.Text = "Отмена";
+            this.отменаToolStripMenuItem.Click += new System.EventHandler(this.отменаToolStripMenuItem_Click);
+            // 
+            // выполнитьРасчетПараметровToolStripMenuItem
+            // 
+            this.выполнитьРасчетПараметровToolStripMenuItem.Name = "выполнитьРасчетПараметровToolStripMenuItem";
+            this.выполнитьРасчетПараметровToolStripMenuItem.Size = new System.Drawing.Size(209, 21);
+            this.выполнитьРасчетПараметровToolStripMenuItem.Text = "Выполнить расчет параметров ";
+            this.выполнитьРасчетПараметровToolStripMenuItem.Click += new System.EventHandler(this.выполнитьРасчетПараметровToolStripMenuItem_Click);
             // 
             // groupBox5
             // 
@@ -586,20 +601,6 @@
             this.label9.Size = new System.Drawing.Size(65, 16);
             this.label9.TabIndex = 6;
             this.label9.Text = "№ бюкса";
-            // 
-            // отменаToolStripMenuItem
-            // 
-            this.отменаToolStripMenuItem.Name = "отменаToolStripMenuItem";
-            this.отменаToolStripMenuItem.Size = new System.Drawing.Size(65, 21);
-            this.отменаToolStripMenuItem.Text = "Отмена";
-            this.отменаToolStripMenuItem.Click += new System.EventHandler(this.отменаToolStripMenuItem_Click);
-            // 
-            // выполнитьРасчетПараметровToolStripMenuItem
-            // 
-            this.выполнитьРасчетПараметровToolStripMenuItem.Name = "выполнитьРасчетПараметровToolStripMenuItem";
-            this.выполнитьРасчетПараметровToolStripMenuItem.Size = new System.Drawing.Size(209, 21);
-            this.выполнитьРасчетПараметровToolStripMenuItem.Text = "Выполнить расчет параметров ";
-            this.выполнитьРасчетПараметровToolStripMenuItem.Click += new System.EventHandler(this.выполнитьРасчетПараметровToolStripMenuItem_Click);
             // 
             // Sample_Record_Form
             // 

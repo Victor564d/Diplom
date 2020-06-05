@@ -109,11 +109,13 @@
             this.видToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вводДополнительныхДанныхToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.просмотрДополнительныхДанныхToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отменаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.отменаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -313,6 +315,8 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.maskedTextBox2);
+            this.groupBox4.Controls.Add(this.maskedTextBox1);
             this.groupBox4.Controls.Add(this.textBox10);
             this.groupBox4.Controls.Add(this.textBox9);
             this.groupBox4.Controls.Add(this.label10);
@@ -870,6 +874,13 @@
             this.просмотрДополнительныхДанныхToolStripMenuItem.Text = "Просмотр дополнительных данных";
             this.просмотрДополнительныхДанныхToolStripMenuItem.Click += new System.EventHandler(this.просмотрДополнительныхДанныхToolStripMenuItem_Click);
             // 
+            // отменаToolStripMenuItem
+            // 
+            this.отменаToolStripMenuItem.Name = "отменаToolStripMenuItem";
+            this.отменаToolStripMenuItem.Size = new System.Drawing.Size(65, 21);
+            this.отменаToolStripMenuItem.Text = "Отмена";
+            this.отменаToolStripMenuItem.Click += new System.EventHandler(this.отменаToolStripMenuItem_Click);
+            // 
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.groupBox11);
@@ -928,12 +939,21 @@
             this.groupBox9.Text = "Данные о судне:";
             this.groupBox9.Enter += new System.EventHandler(this.groupBox9_Enter);
             // 
-            // отменаToolStripMenuItem
+            // maskedTextBox1
             // 
-            this.отменаToolStripMenuItem.Name = "отменаToolStripMenuItem";
-            this.отменаToolStripMenuItem.Size = new System.Drawing.Size(65, 21);
-            this.отменаToolStripMenuItem.Text = "Отмена";
-            this.отменаToolStripMenuItem.Click += new System.EventHandler(this.отменаToolStripMenuItem_Click);
+            this.maskedTextBox1.Location = new System.Drawing.Point(70, 25);
+            this.maskedTextBox1.Mask = "00° 00\' L.ш.";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(86, 22);
+            this.maskedTextBox1.TabIndex = 10;
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Location = new System.Drawing.Point(70, 53);
+            this.maskedTextBox2.Mask = "00° 00\' L.д.";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(86, 22);
+            this.maskedTextBox2.TabIndex = 11;
             // 
             // Catch_Record_Form
             // 
@@ -1067,5 +1087,7 @@
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.ToolStripMenuItem отменаToolStripMenuItem;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
     }
 }
