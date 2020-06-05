@@ -21,6 +21,260 @@ namespace WindowsFormsApp1
             this.mainform = mainform;
             InitializeComponent();
         }
+
+        private void reload()
+        {
+            this.бАTableAdapter.FillBy(this.тестовая_бд_DataSet.БА,
+                    Convert.ToString(mainform.cells[0]),
+                    Convert.ToString(mainform.cells[1]),
+                    Convert.ToString(mainform.cells[2]),
+                    Convert.ToString(mainform.cells[3]),
+                    Convert.ToString(mainform.cells[4]),
+                    Convert.ToString(mainform.cells[5]),
+                    Convert.ToString(mainform.cells[6]),
+                    Convert.ToString(mainform.cells[7]),
+                    Convert.ToString(mainform.cells[8]),
+                    Convert.ToString(mainform.cells[9]),
+                    Convert.ToString(mainform.cells[10]),
+                    Convert.ToString(mainform.cells[11]),
+                    Convert.ToString(mainform.cells[12]),
+                    Convert.ToString(mainform.cells[13]),
+                    Convert.ToString(mainform.cells[14]),
+                    Convert.ToString(mainform.cells[15]),
+                    Convert.ToString(mainform.cells[16]),
+                    Convert.ToString(mainform.cells[17]),
+                    Convert.ToString(mainform.cells[18]),
+                    Convert.ToString(mainform.cells[19]),
+                    Convert.ToString(mainform.cells[20]),
+                    Convert.ToString(mainform.cells[21]),
+                    Convert.ToString(mainform.cells[22]),
+                    Convert.ToString(mainform.cells[23]),
+                    Convert.ToString(mainform.cells[24]),
+                    Convert.ToString(mainform.cells[25]),
+                    Convert.ToString(mainform.cells[26]),
+                    Convert.ToString(mainform.cells[27]),
+                    Convert.ToString(mainform.cells[28]),
+                    Convert.ToString(mainform.cells[29]),
+                    Convert.ToString(mainform.cells[30]),
+                    Convert.ToString(mainform.cells[31]),
+                    Convert.ToString(mainform.cells[32]),
+                    Convert.ToString(mainform.cells[33]),
+                    Convert.ToString(mainform.cells[34]),
+                    Convert.ToString(mainform.cells[35]),
+                    Convert.ToString(mainform.cells[36]),
+                    Convert.ToString(mainform.cells[37]),
+                    Convert.ToString(mainform.cells[38]),
+                    Convert.ToString(mainform.cells[39]),
+                    Convert.ToString(mainform.cells[40]),
+                    Convert.ToString(mainform.cells[41]),
+                    Convert.ToString(mainform.cells[42]),
+                    Convert.ToString(mainform.cells[43]),
+                    Convert.ToString(mainform.cells[44]),
+                    Convert.ToString(mainform.cells[45]),
+                    Convert.ToString(mainform.cells[46]),
+                    Convert.ToString(mainform.cells[47]),
+                    Convert.ToString(mainform.cells[48]),
+                    Convert.ToString(mainform.cells[49]),
+                    Convert.ToString(mainform.cells[50]),
+                    Convert.ToString(mainform.cells[51]),
+                    Convert.ToString(mainform.cells[52]),
+                    Convert.ToString(mainform.cells[53]),
+                    Convert.ToString(mainform.cells[54]),
+                    Convert.ToString(mainform.cells[55]),
+                    Convert.ToString(mainform.cells[56]),
+                    Convert.ToString(mainform.cells[57]),
+                    Convert.ToString(mainform.cells[58]),
+                    Convert.ToString(mainform.cells[59]),
+                    Convert.ToString(mainform.cells[60]),
+                    Convert.ToString(mainform.cells[61]),
+                    Convert.ToString(mainform.cells[62]),
+                    Convert.ToString(mainform.cells[63]),
+                    Convert.ToString(mainform.cells[64]),
+                    Convert.ToString(mainform.cells[65]),
+                    Convert.ToString(mainform.cells[66]),
+                    Convert.ToString(mainform.cells[67]),
+                    Convert.ToString(mainform.cells[68]),
+                    Convert.ToString(mainform.cells[69]),
+                    Convert.ToString(mainform.cells[70]),
+                    Convert.ToString(mainform.cells[71]),
+                    Convert.ToString(mainform.cells[72]),
+                    Convert.ToString(mainform.cells[73]),
+                    Convert.ToString(mainform.cells[74]),
+                    Convert.ToString(mainform.cells[75]),
+                    Convert.ToString(mainform.cells[76]),
+                    Convert.ToString(mainform.cells[77]),
+                    Convert.ToString(mainform.cells[78]),
+                    Convert.ToString(mainform.cells[79]));
+        }
+
+
+        public void upd(ArrayList lines, ArrayList orig) // эт для вставки 
+        {
+            try // проверяем те значения которые являются числом, если оно пустое, то запишем туда -999
+            {
+                if (lines[2] == null) lines[2] = -999;
+                if (lines[5] == null) lines[5] = -999;
+                if (lines[3] == null) lines[3] = -999;
+                if (lines[4] == null) lines[4] = -999;
+                if (lines[6] == null) lines[6] = -999;
+                if (lines[7] == null) lines[7] = -999;
+                if (lines[8] == null) lines[8] = -999;
+                if (lines[10] == null) lines[10] = -999;
+                if (lines[11] == null) lines[11] = -999;
+                if (lines[12] == null) lines[12] = -999;
+                if (lines[14] == null) lines[14] = -999;
+                if (lines[15] == null) lines[15] = -999;
+                if (lines[1] == null) lines[1] = -999;
+                if (lines[13] == null) lines[13] = -999;
+                if (lines[17] == null) lines[17] = -999;
+                if (lines[18] == null) lines[18] = -999;
+                if (lines[19] == null) lines[19] = -999;
+                if (lines[20] == null) lines[20] = -999;
+                if (lines[21] == null) lines[21] = -999;
+                if (lines[22] == null) lines[22] = -999;
+                if (lines[23] == null) lines[23] = -999;
+                if (lines[24] == null) lines[24] = -999;
+            }
+            catch
+            { }
+            try //пытаемся вставить поля в таблицу бд, конертируя соответствующие данные в нужный тип 
+            {
+                this.бАTableAdapter.Update(Convert.ToString(lines[0]),
+                                                 Convert.ToString(lines[1]),
+                                                 Convert.ToInt16(lines[2]),
+                                                 Convert.ToInt16(lines[3]),
+                                                 Convert.ToInt16(lines[4]),
+                                                 Convert.ToDecimal(lines[5]),
+                                                 Convert.ToDecimal(lines[6]),
+                                                 Convert.ToDecimal(lines[7]),
+                                                 Convert.ToDecimal(lines[8]),
+                                                 Convert.ToString(lines[9]),
+                                                 Convert.ToInt16(lines[10]),
+                                                 Convert.ToInt16(lines[11]),
+                                                 Convert.ToDecimal(lines[12]),
+                                                 Convert.ToString(lines[13]),
+                                                 Convert.ToDecimal(lines[14]),
+                                                 Convert.ToDecimal(lines[15]),
+                                                 Convert.ToString(lines[16]),
+                                                 Convert.ToDecimal(lines[17]),
+                                                 Convert.ToDecimal(lines[18]),
+                                                 Convert.ToDecimal(lines[19]),
+                                                 Convert.ToDecimal(lines[20]),
+                                                 Convert.ToDecimal(lines[21]),
+                                                 Convert.ToDecimal(lines[22]),
+                                                 Convert.ToDecimal(lines[23]),
+                                                 Convert.ToDecimal(lines[24]),
+                                                 Convert.ToString(lines[25]),
+                                                       Convert.ToString(orig[1]));
+                this.бАTableAdapter.Update(this.тестовая_бд_DataSet);
+
+            }
+            catch (System.Exception ex) // если возникла ошибка 
+            {
+                MessageBox.Show("Возникла ошибка записи, проверьте поля. Текст ошибки: " + ex.Message, "Ошибка записи", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string errr = "";
+                for (int i = 0; i <= 18; i++)
+                {
+                    errr += Convert.ToString(i) + "     :" + lines[i];
+
+                }
+                errr = errr + "    orig    " + orig[0] + "     orig   " + orig[1];
+                MessageBox.Show(errr);
+            }
+            try
+            {
+                reload();
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message, "Ошибка"); //если возникла ошибка при обновлении 
+            }
+        }
+
+        public void ins(ArrayList lines)
+        {
+            try // проверяем те значения которые являются числом, если оно пустое, то запишем туда -999
+            {
+                if (lines[2] == null) lines[2] = -999;
+                if (lines[5] == null) lines[5] = -999;
+                if (lines[3] == null) lines[3] = -999;
+                if (lines[4] == null) lines[4] = -999;
+                if (lines[6] == null) lines[6] = -999;
+                if (lines[7] == null) lines[7] = -999;
+                if (lines[8] == null) lines[8] = -999;
+                if (lines[10] == null) lines[10] = -999;
+                if (lines[11] == null) lines[11] = -999;
+                if (lines[12] == null) lines[12] = -999;
+                if (lines[14] == null) lines[14] = -999;
+                if (lines[15] == null) lines[15] = -999;
+                if (lines[1] == null) lines[1] = -999;
+                if (lines[13] == null) lines[13] = -999;
+                if (lines[17] == null) lines[17] = -999;
+                if (lines[18] == null) lines[18] = -999;
+                if (lines[19] == null) lines[19] = -999;
+                if (lines[20] == null) lines[20] = -999;
+                if (lines[21] == null) lines[21] = -999;
+                if (lines[22] == null) lines[22] = -999;
+                if (lines[23] == null) lines[23] = -999;
+                if (lines[24] == null) lines[24] = -999;
+            }
+            catch
+            { }
+            try //пытаемся вставить поля в таблицу бд, конертируя соответствующие данные в нужный тип 
+            {
+                бАTableAdapter.Insert(Convert.ToString(lines[0]),
+                                                 Convert.ToString(lines[1]),
+                                                 Convert.ToInt16(lines[2]),
+                                                 Convert.ToInt16(lines[3]),
+                                                 Convert.ToInt16(lines[4]),
+                                                 Convert.ToDecimal(lines[5]),
+                                                 Convert.ToDecimal(lines[6]),
+                                                 Convert.ToDecimal(lines[7]),
+                                                 Convert.ToDecimal(lines[8]),
+                                                 Convert.ToString(lines[9]),
+                                                 Convert.ToInt16(lines[10]),
+                                                 Convert.ToInt16(lines[11]),
+                                                 Convert.ToString(lines[12]),
+                                                 Convert.ToDecimal(lines[13]),
+                                                 Convert.ToDecimal(lines[14]),
+                                                 Convert.ToDecimal(lines[15]),
+                                                 Convert.ToString(lines[16]),
+                                                 Convert.ToDouble(lines[17]),
+                                                 Convert.ToDouble(lines[18]),
+                                                 Convert.ToDouble(lines[19]),
+                                                 Convert.ToDouble(lines[20]),
+                                                 Convert.ToDouble(lines[21]),
+                                                 Convert.ToDouble(lines[22]),
+                                                 Convert.ToDouble(lines[23]),
+                                                 Convert.ToDouble(lines[24]),
+                                                 Convert.ToString(lines[25]));
+                this.бАTableAdapter.Update(this.тестовая_бд_DataSet);
+            }
+            catch (System.Exception ex) // если возникла ошибка 
+            {
+                MessageBox.Show("Возникла ошибка записи, проверьте поля. Текст ошибки: " + ex.Message, "Ошибка записи", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string errr = "";
+                for (int i = 0; i <= 18; i++)
+                {
+                    errr = errr + Convert.ToString(i) + "     :" + lines[i];
+
+                }
+
+                MessageBox.Show(errr);
+            }
+            try
+            {
+                reload();
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message, "Ошибка"); //если возникла ошибка при обновлении 
+            }
+        }
+
+
+
+
         public ArrayList cells;
         private void бАBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -29,13 +283,14 @@ namespace WindowsFormsApp1
             this.tableAdapterManager.UpdateAll(this.тестовая_бд_DataSet);
 
         }
+        public string idnt;
         ArrayList erlli = new ArrayList();
         ArrayList erll = new ArrayList();
         private void BA_Load(object sender, EventArgs e)
         {
             cells = mainform.cells;
             tableAdapterManager.Connection.ConnectionString = mainform.Conn;
-
+            idnt = mainform.idnt;
 
             try
             {
@@ -550,6 +805,23 @@ namespace WindowsFormsApp1
             newForm.zapis = zapis;
             newForm.orig = zapis;
             newForm.operation = "New";
+            newForm.Show();
+        }
+
+        private void бАDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ArrayList zapis = new ArrayList();
+
+            for (int j = 0; j <= 25; j++) // цикл вывода полей 
+            {
+                if (Convert.ToString(бАDataGridView[j, бАDataGridView.CurrentCell.RowIndex].Value) != "-999")
+                    zapis.Add(Convert.ToString(бАDataGridView[j, бАDataGridView.CurrentCell.RowIndex].Value));
+                else zapis.Add("");
+            }
+            Biological_analysis_form newForm = new Biological_analysis_form(this);
+            newForm.zapis = zapis;
+            newForm.orig = zapis;
+            newForm.operation = "Redact";
             newForm.Show();
         }
     }
