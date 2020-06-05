@@ -93,6 +93,7 @@
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.выполнитьРасчетПараметровToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -111,11 +112,12 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.записатьToolStripMenuItem,
             this.видToolStripMenuItem,
-            this.отменаToolStripMenuItem});
+            this.отменаToolStripMenuItem,
+            this.выполнитьРасчетПараметровToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1053, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(943, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -160,6 +162,7 @@
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Основные данные";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // groupBox8
             // 
@@ -173,7 +176,7 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(11, 21);
+            this.richTextBox1.Location = new System.Drawing.Point(16, 13);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(526, 96);
             this.richTextBox1.TabIndex = 28;
@@ -390,7 +393,7 @@
             // 
             this.label10.Location = new System.Drawing.Point(6, 58);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(127, 16);
+            this.label10.Size = new System.Drawing.Size(127, 19);
             this.label10.TabIndex = 26;
             this.label10.Text = "Возрастной класс";
             // 
@@ -601,6 +604,7 @@
             this.label22.Size = new System.Drawing.Size(94, 48);
             this.label22.TabIndex = 14;
             this.label22.Text = "Сырая масса бюкса с навеской";
+            this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
             // textBox22
             // 
@@ -727,13 +731,20 @@
             this.label14.TabIndex = 6;
             this.label14.Text = "Максимальная длина";
             // 
+            // выполнитьРасчетПараметровToolStripMenuItem
+            // 
+            this.выполнитьРасчетПараметровToolStripMenuItem.Name = "выполнитьРасчетПараметровToolStripMenuItem";
+            this.выполнитьРасчетПараметровToolStripMenuItem.Size = new System.Drawing.Size(209, 21);
+            this.выполнитьРасчетПараметровToolStripMenuItem.Text = "Выполнить расчет параметров ";
+            this.выполнитьРасчетПараметровToolStripMenuItem.Click += new System.EventHandler(this.выполнитьРасчетПараметровToolStripMenuItem_Click);
+            // 
             // Biological_analysis_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1053, 554);
+            this.ClientSize = new System.Drawing.Size(943, 554);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.menuStrip1);
@@ -742,6 +753,7 @@
             this.Name = "Biological_analysis_form";
             this.ShowIcon = false;
             this.Text = "Биологический анализ";
+            this.Load += new System.EventHandler(this.Biological_analysis_form_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -832,5 +844,6 @@
         private System.Windows.Forms.TextBox textBox23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ToolStripMenuItem вводДополнительныхДанныхToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem выполнитьРасчетПараметровToolStripMenuItem;
     }
 }

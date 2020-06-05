@@ -125,22 +125,26 @@ namespace WindowsFormsApp1
             try
             {
                 ram = mas[listBox1.SelectedIndex];
-                mas[listBox1.SelectedIndex] = new idntf(Convert.ToString(indt[listBox1.SelectedIndex]), Convert.ToDouble(textBox1.Text),
+                mas[listBox1.SelectedIndex] = new idntf(Convert.ToString(indt[listBox1.SelectedIndex]),
+                        Convert.ToDouble(textBox1.Text),
                         Convert.ToDouble(textBox2.Text),
-                        Convert.ToDouble(textBox3.Text),
-                        Convert.ToDouble(textBox4.Text),
+                        Convert.ToDouble(textBox1.Text),
+                        Convert.ToDouble(textBox2.Text),
                         Convert.ToDouble(textBox5.Text),
                         Convert.ToDouble(textBox6.Text),
-                        Convert.ToDouble(textBox7.Text),
-                        Convert.ToDouble(textBox8.Text),
-                        Convert.ToDouble(textBox9.Text),
-                        Convert.ToDouble(textBox10.Text),
-                        Convert.ToDouble(textBox11.Text),
-                        Convert.ToDouble(textBox12.Text),
+                        Convert.ToDouble(textBox5.Text),
+                        Convert.ToDouble(textBox6.Text),
+                        Convert.ToDouble(textBox5.Text),
+                        Convert.ToDouble(textBox6.Text),
+                        Convert.ToDouble(textBox5.Text),
+                        Convert.ToDouble(textBox6.Text),
+
                         Convert.ToDouble(textBox13.Text),
                         Convert.ToDouble(textBox14.Text),
+
                         Convert.ToDouble(textBox15.Text),
                         Convert.ToDouble(textBox16.Text),
+
                         Convert.ToDouble(textBox17.Text),
                         Convert.ToDouble(textBox18.Text)
                         );
@@ -172,16 +176,16 @@ namespace WindowsFormsApp1
             parms = mas[listBox1.SelectedIndex].GetIdnt();
             textBox1.Text = parms[1].ToString();
             textBox2.Text = parms[2].ToString();
-            textBox3.Text = parms[3].ToString();
-            textBox4.Text = parms[4].ToString();
+            //textBox3.Text = parms[3].ToString();
+            //textBox4.Text = parms[4].ToString();
             textBox5.Text = parms[5].ToString();
             textBox6.Text = parms[6].ToString();
-            textBox7.Text = parms[7].ToString();
-            textBox8.Text = parms[8].ToString();
-            textBox9.Text = parms[9].ToString();
-            textBox10.Text = parms[10].ToString();
-            textBox11.Text = parms[11].ToString();
-            textBox12.Text = parms[12].ToString();
+            //textBox7.Text = parms[7].ToString();
+            //textBox8.Text = parms[8].ToString();
+            //textBox9.Text = parms[9].ToString();
+            //textBox10.Text = parms[10].ToString();
+            //textBox11.Text = parms[11].ToString();
+            //textBox12.Text = parms[12].ToString();
             textBox13.Text = parms[13].ToString();
             textBox14.Text = parms[14].ToString();
             textBox15.Text = parms[15].ToString();
@@ -257,16 +261,17 @@ namespace WindowsFormsApp1
                 parms = mas[listBox1.SelectedIndex].GetIdnt();
                 textBox1.Text = parms[1].ToString();
                 textBox2.Text = parms[2].ToString();
-                textBox3.Text = parms[3].ToString();
-                textBox4.Text = parms[4].ToString();
+                textBox1.Text = parms[3].ToString();
+                textBox2.Text = parms[4].ToString();
                 textBox5.Text = parms[5].ToString();
                 textBox6.Text = parms[6].ToString();
-                textBox7.Text = parms[7].ToString();
-                textBox8.Text = parms[8].ToString();
-                textBox9.Text = parms[9].ToString();
-                textBox10.Text = parms[10].ToString();
-                textBox11.Text = parms[11].ToString();
-                textBox12.Text = parms[12].ToString();
+                textBox5.Text = parms[7].ToString();
+                textBox6.Text = parms[8].ToString();
+                textBox5.Text = parms[9].ToString();
+                textBox6.Text = parms[10].ToString();
+                textBox5.Text = parms[11].ToString();
+                textBox6.Text = parms[12].ToString();
+
                 textBox13.Text = parms[13].ToString();
                 textBox14.Text = parms[14].ToString();
                 textBox15.Text = parms[15].ToString();
@@ -275,6 +280,71 @@ namespace WindowsFormsApp1
                 textBox18.Text = parms[18].ToString();
             }
             catch { }
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void textBox12_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox11_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
         }
     }
     public class idntf

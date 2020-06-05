@@ -66,15 +66,15 @@ namespace WindowsFormsApp1
                 indt.Add("T%");
                 indt.Add("%");
                 listBox1.Items.Add("Хамса\t\t*A*"); // выводим в лист бокс список текущих идентификаторов
-                listBox1.Items.Add("Шпроты\t\t*S*");
+                listBox1.Items.Add("Шпрот\t\t*S*");
                 listBox1.Items.Add("Ставрида\t\t*T*");
             }
             if (listBox1.Items.Count == 0) //если все считалось , но идентификаторы все же не загрузились 
             {
                 listBox1.Items.Clear();
-                MessageBox.Show("Файл настроек не найден либо повреждён.Создайте новый либо восстановите путем копирования бекапа из папки \"bacup\". Будут загруженны стандартные настройки ! ", "Ошибка");
+                MessageBox.Show("Файл настроек не найден либо повреждён. Создайте новый либо восстановите путем копирования бекапа из папки \"bacup\". Будут загруженны стандартные настройки ! ", "Ошибка");
                 listBox1.Items.Add("Хамса\t\t*A*"); //выдали сообщение об ошибке , очистили список выводимый на экран 
-                listBox1.Items.Add("Шпроты\t\t*S*");
+                listBox1.Items.Add("Шпрот\t\t*S*");
                 listBox1.Items.Add("Ставрида\t\t*T*");
                 indt.Add("A%");//записываем в массив идентификаторов стандарные значения
                 indt.Add("S%");
@@ -178,11 +178,19 @@ namespace WindowsFormsApp1
 
         private void Vibor_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (Convert.ToString(MessageBox.Show("Вы действительно хотите выйти из программы ?", "Предуприждение", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)) == "Yes")
+            {
+                System.Diagnostics.Process.GetCurrentProcess().Kill();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
         }
 
         private void Vibor_FormClosed(object sender, FormClosedEventArgs e)
         {
-            System.Diagnostics.Process.GetCurrentProcess().Kill();
+            
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -400,6 +408,11 @@ namespace WindowsFormsApp1
             SettingsIDNTF subform = new SettingsIDNTF(this);
             subform.Show();
             this.Hide();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
