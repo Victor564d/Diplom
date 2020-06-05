@@ -68,6 +68,7 @@
             label1.Text = "      ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ НАУКИ \r\n                  " +
     "           ФЕДЕРАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ ЦЕНТР\r\n\"ИНСТИТУТ БИОЛОГИИ ЮЖНЫХ МОРЕЙ И" +
     "МЕНИ А.О. КОВАЛЕВСКОГО РАН\"";
+            label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
@@ -273,7 +274,7 @@
             this.MinimumSize = new System.Drawing.Size(721, 402);
             this.Name = "Vibor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Менеджер работы индентификаторами";
+            this.Text = "Менеджер";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Vibor_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Vibor_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);

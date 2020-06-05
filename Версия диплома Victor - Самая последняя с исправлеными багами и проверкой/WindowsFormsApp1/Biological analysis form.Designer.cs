@@ -390,7 +390,7 @@
             // 
             this.label10.Location = new System.Drawing.Point(6, 58);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(127, 16);
+            this.label10.Size = new System.Drawing.Size(127, 19);
             this.label10.TabIndex = 26;
             this.label10.Text = "Возрастной класс";
             // 

@@ -42,15 +42,28 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.пробыDataGridView = new System.Windows.Forms.DataGridView();
-            this.уловыDataGridView = new System.Windows.Forms.DataGridView();
-            this.уловыBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sampleIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.recordIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.midSizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.size1DataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.size2DataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fishNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wetWeighDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.meanWWDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.boxNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.boxWeightDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grossWWDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.netWWDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grossDWDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.netDWDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dWDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tLWWDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calculatedTL2017DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.commentsDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.пробыBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.бАDataGridView = new System.Windows.Forms.DataGridView();
-            this.бАTableAdapter = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.БАTableAdapter();
-            this.tableAdapterManager = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.TableAdapterManager();
-            this.пробыTableAdapter = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.ПробыTableAdapter();
-            this.уловыTableAdapter = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.уловыTableAdapter();
             this.тестовая_бд_DataSet = new WindowsFormsApp1.Тестовая_бд_DataSet();
+            this.уловыDataGridView = new System.Windows.Forms.DataGridView();
             this.cathIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.samplIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,26 +99,8 @@
             this.commentsDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataSourceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataFileDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sampleIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.recordIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.midSizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.size1DataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.size2DataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fishNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.wetWeighDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.meanWWDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.boxNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.boxWeightDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grossWWDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.netWWDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grossDWDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.netDWDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dWDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tLWWDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.calculatedTL2017DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.commentsDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.бАBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.уловыBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.бАDataGridView = new System.Windows.Forms.DataGridView();
             this.sampleIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.indIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -132,12 +127,17 @@
             this.tLWWDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.calculatedTL2015DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.commentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.бАBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.бАTableAdapter = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.БАTableAdapter();
+            this.tableAdapterManager = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.TableAdapterManager();
+            this.пробыTableAdapter = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.ПробыTableAdapter();
+            this.уловыTableAdapter = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.уловыTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.пробыDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.пробыBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.тестовая_бд_DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.уловыDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.уловыBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.пробыBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.бАDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.тестовая_бд_DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.бАBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -258,6 +258,149 @@
             this.пробыDataGridView.TabIndex = 12;
             this.пробыDataGridView.Visible = false;
             // 
+            // sampleIDDataGridViewTextBoxColumn1
+            // 
+            this.sampleIDDataGridViewTextBoxColumn1.DataPropertyName = "SampleID";
+            this.sampleIDDataGridViewTextBoxColumn1.HeaderText = "SampleID";
+            this.sampleIDDataGridViewTextBoxColumn1.Name = "sampleIDDataGridViewTextBoxColumn1";
+            this.sampleIDDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // recordIDDataGridViewTextBoxColumn
+            // 
+            this.recordIDDataGridViewTextBoxColumn.DataPropertyName = "RecordID";
+            this.recordIDDataGridViewTextBoxColumn.HeaderText = "RecordID";
+            this.recordIDDataGridViewTextBoxColumn.Name = "recordIDDataGridViewTextBoxColumn";
+            this.recordIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // noDataGridViewTextBoxColumn1
+            // 
+            this.noDataGridViewTextBoxColumn1.DataPropertyName = "No";
+            this.noDataGridViewTextBoxColumn1.HeaderText = "No";
+            this.noDataGridViewTextBoxColumn1.Name = "noDataGridViewTextBoxColumn1";
+            this.noDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // midSizeDataGridViewTextBoxColumn
+            // 
+            this.midSizeDataGridViewTextBoxColumn.DataPropertyName = "MidSize";
+            this.midSizeDataGridViewTextBoxColumn.HeaderText = "MidSize";
+            this.midSizeDataGridViewTextBoxColumn.Name = "midSizeDataGridViewTextBoxColumn";
+            this.midSizeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // size1DataGridViewTextBoxColumn1
+            // 
+            this.size1DataGridViewTextBoxColumn1.DataPropertyName = "Size1";
+            this.size1DataGridViewTextBoxColumn1.HeaderText = "Size1";
+            this.size1DataGridViewTextBoxColumn1.Name = "size1DataGridViewTextBoxColumn1";
+            this.size1DataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // size2DataGridViewTextBoxColumn1
+            // 
+            this.size2DataGridViewTextBoxColumn1.DataPropertyName = "Size2";
+            this.size2DataGridViewTextBoxColumn1.HeaderText = "Size2";
+            this.size2DataGridViewTextBoxColumn1.Name = "size2DataGridViewTextBoxColumn1";
+            this.size2DataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // fishNumberDataGridViewTextBoxColumn
+            // 
+            this.fishNumberDataGridViewTextBoxColumn.DataPropertyName = "FishNumber";
+            this.fishNumberDataGridViewTextBoxColumn.HeaderText = "FishNumber";
+            this.fishNumberDataGridViewTextBoxColumn.Name = "fishNumberDataGridViewTextBoxColumn";
+            this.fishNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // wetWeighDataGridViewTextBoxColumn
+            // 
+            this.wetWeighDataGridViewTextBoxColumn.DataPropertyName = "WetWeigh";
+            this.wetWeighDataGridViewTextBoxColumn.HeaderText = "WetWeigh";
+            this.wetWeighDataGridViewTextBoxColumn.Name = "wetWeighDataGridViewTextBoxColumn";
+            this.wetWeighDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // meanWWDataGridViewTextBoxColumn
+            // 
+            this.meanWWDataGridViewTextBoxColumn.DataPropertyName = "MeanWW";
+            this.meanWWDataGridViewTextBoxColumn.HeaderText = "MeanWW";
+            this.meanWWDataGridViewTextBoxColumn.Name = "meanWWDataGridViewTextBoxColumn";
+            this.meanWWDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // boxNoDataGridViewTextBoxColumn
+            // 
+            this.boxNoDataGridViewTextBoxColumn.DataPropertyName = "BoxNo";
+            this.boxNoDataGridViewTextBoxColumn.HeaderText = "BoxNo";
+            this.boxNoDataGridViewTextBoxColumn.Name = "boxNoDataGridViewTextBoxColumn";
+            this.boxNoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // boxWeightDataGridViewTextBoxColumn1
+            // 
+            this.boxWeightDataGridViewTextBoxColumn1.DataPropertyName = "BoxWeight";
+            this.boxWeightDataGridViewTextBoxColumn1.HeaderText = "BoxWeight";
+            this.boxWeightDataGridViewTextBoxColumn1.Name = "boxWeightDataGridViewTextBoxColumn1";
+            this.boxWeightDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // grossWWDataGridViewTextBoxColumn1
+            // 
+            this.grossWWDataGridViewTextBoxColumn1.DataPropertyName = "GrossWW";
+            this.grossWWDataGridViewTextBoxColumn1.HeaderText = "GrossWW";
+            this.grossWWDataGridViewTextBoxColumn1.Name = "grossWWDataGridViewTextBoxColumn1";
+            this.grossWWDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // netWWDataGridViewTextBoxColumn1
+            // 
+            this.netWWDataGridViewTextBoxColumn1.DataPropertyName = "NetWW";
+            this.netWWDataGridViewTextBoxColumn1.HeaderText = "NetWW";
+            this.netWWDataGridViewTextBoxColumn1.Name = "netWWDataGridViewTextBoxColumn1";
+            this.netWWDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // grossDWDataGridViewTextBoxColumn1
+            // 
+            this.grossDWDataGridViewTextBoxColumn1.DataPropertyName = "GrossDW";
+            this.grossDWDataGridViewTextBoxColumn1.HeaderText = "GrossDW";
+            this.grossDWDataGridViewTextBoxColumn1.Name = "grossDWDataGridViewTextBoxColumn1";
+            this.grossDWDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // netDWDataGridViewTextBoxColumn1
+            // 
+            this.netDWDataGridViewTextBoxColumn1.DataPropertyName = "NetDW";
+            this.netDWDataGridViewTextBoxColumn1.HeaderText = "NetDW";
+            this.netDWDataGridViewTextBoxColumn1.Name = "netDWDataGridViewTextBoxColumn1";
+            this.netDWDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dWDataGridViewTextBoxColumn1
+            // 
+            this.dWDataGridViewTextBoxColumn1.DataPropertyName = "DW%";
+            this.dWDataGridViewTextBoxColumn1.HeaderText = "DW%";
+            this.dWDataGridViewTextBoxColumn1.Name = "dWDataGridViewTextBoxColumn1";
+            this.dWDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // tLWWDataGridViewTextBoxColumn1
+            // 
+            this.tLWWDataGridViewTextBoxColumn1.DataPropertyName = "TL%WW";
+            this.tLWWDataGridViewTextBoxColumn1.HeaderText = "TL%WW";
+            this.tLWWDataGridViewTextBoxColumn1.Name = "tLWWDataGridViewTextBoxColumn1";
+            this.tLWWDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // calculatedTL2017DataGridViewTextBoxColumn
+            // 
+            this.calculatedTL2017DataGridViewTextBoxColumn.DataPropertyName = "Calculated TL% 2017";
+            this.calculatedTL2017DataGridViewTextBoxColumn.HeaderText = "Calculated TL% 2017";
+            this.calculatedTL2017DataGridViewTextBoxColumn.Name = "calculatedTL2017DataGridViewTextBoxColumn";
+            this.calculatedTL2017DataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // commentsDataGridViewTextBoxColumn2
+            // 
+            this.commentsDataGridViewTextBoxColumn2.DataPropertyName = "Comments";
+            this.commentsDataGridViewTextBoxColumn2.HeaderText = "Comments";
+            this.commentsDataGridViewTextBoxColumn2.Name = "commentsDataGridViewTextBoxColumn2";
+            this.commentsDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // пробыBindingSource
+            // 
+            this.пробыBindingSource.DataMember = "Пробы";
+            this.пробыBindingSource.DataSource = this.тестовая_бд_DataSet;
+            // 
+            // тестовая_бд_DataSet
+            // 
+            this.тестовая_бд_DataSet.DataSetName = "Тестовая_бд_DataSet";
+            this.тестовая_бд_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // уловыDataGridView
             // 
             this.уловыDataGridView.AllowUserToDeleteRows = false;
@@ -306,83 +449,6 @@
             this.уловыDataGridView.Size = new System.Drawing.Size(300, 220);
             this.уловыDataGridView.TabIndex = 12;
             this.уловыDataGridView.Visible = false;
-            // 
-            // уловыBindingSource
-            // 
-            this.уловыBindingSource.DataMember = "Уловы";
-            this.уловыBindingSource.DataSource = this.тестовая_бд_DataSet;
-            // 
-            // пробыBindingSource
-            // 
-            this.пробыBindingSource.DataMember = "Пробы";
-            this.пробыBindingSource.DataSource = this.тестовая_бд_DataSet;
-            // 
-            // бАDataGridView
-            // 
-            this.бАDataGridView.AllowUserToDeleteRows = false;
-            this.бАDataGridView.AutoGenerateColumns = false;
-            this.бАDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.бАDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.бАDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.бАDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.sampleIDDataGridViewTextBoxColumn,
-            this.indIDDataGridViewTextBoxColumn,
-            this.noDataGridViewTextBoxColumn,
-            this.size1DataGridViewTextBoxColumn,
-            this.size2DataGridViewTextBoxColumn,
-            this.tLDataGridViewTextBoxColumn,
-            this.fLDataGridViewTextBoxColumn,
-            this.sLDataGridViewTextBoxColumn,
-            this.wetWeightgDataGridViewTextBoxColumn,
-            this.sexDataGridViewTextBoxColumn,
-            this.stageDataGridViewTextBoxColumn,
-            this.fatnessDataGridViewTextBoxColumn,
-            this.cFDataGridViewTextBoxColumn,
-            this.ageDataGridViewTextBoxColumn,
-            this.corrAgeDataGridViewTextBoxColumn,
-            this.generationDataGridViewTextBoxColumn,
-            this.boxNumberDataGridViewTextBoxColumn,
-            this.boxWeightDataGridViewTextBoxColumn,
-            this.grossWWDataGridViewTextBoxColumn,
-            this.netWWDataGridViewTextBoxColumn,
-            this.grossDWDataGridViewTextBoxColumn,
-            this.netDWDataGridViewTextBoxColumn,
-            this.dWDataGridViewTextBoxColumn,
-            this.tLWWDataGridViewTextBoxColumn,
-            this.calculatedTL2015DataGridViewTextBoxColumn,
-            this.commentsDataGridViewTextBoxColumn});
-            this.бАDataGridView.DataSource = this.бАBindingSource;
-            this.бАDataGridView.Location = new System.Drawing.Point(203, 59);
-            this.бАDataGridView.Name = "бАDataGridView";
-            this.бАDataGridView.ReadOnly = true;
-            this.бАDataGridView.Size = new System.Drawing.Size(618, 324);
-            this.бАDataGridView.TabIndex = 13;
-            this.бАDataGridView.Visible = false;
-            // 
-            // бАTableAdapter
-            // 
-            this.бАTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.UpdateOrder = WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.БАTableAdapter = this.бАTableAdapter;
-            this.tableAdapterManager.ПробыTableAdapter = this.пробыTableAdapter;
-            this.tableAdapterManager.уловыTableAdapter = this.уловыTableAdapter;
-            // 
-            // пробыTableAdapter
-            // 
-            this.пробыTableAdapter.ClearBeforeFill = true;
-            // 
-            // уловыTableAdapter
-            // 
-            this.уловыTableAdapter.ClearBeforeFill = true;
-            // 
-            // тестовая_бд_DataSet
-            // 
-            this.тестовая_бд_DataSet.DataSetName = "Тестовая_бд_DataSet";
-            this.тестовая_бд_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cathIDDataGridViewTextBoxColumn
             // 
@@ -629,143 +695,52 @@
             this.dataFileDataGridViewTextBoxColumn.Name = "dataFileDataGridViewTextBoxColumn";
             this.dataFileDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // sampleIDDataGridViewTextBoxColumn1
+            // уловыBindingSource
             // 
-            this.sampleIDDataGridViewTextBoxColumn1.DataPropertyName = "SampleID";
-            this.sampleIDDataGridViewTextBoxColumn1.HeaderText = "SampleID";
-            this.sampleIDDataGridViewTextBoxColumn1.Name = "sampleIDDataGridViewTextBoxColumn1";
-            this.sampleIDDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.уловыBindingSource.DataMember = "Уловы";
+            this.уловыBindingSource.DataSource = this.тестовая_бд_DataSet;
             // 
-            // recordIDDataGridViewTextBoxColumn
+            // бАDataGridView
             // 
-            this.recordIDDataGridViewTextBoxColumn.DataPropertyName = "RecordID";
-            this.recordIDDataGridViewTextBoxColumn.HeaderText = "RecordID";
-            this.recordIDDataGridViewTextBoxColumn.Name = "recordIDDataGridViewTextBoxColumn";
-            this.recordIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // noDataGridViewTextBoxColumn1
-            // 
-            this.noDataGridViewTextBoxColumn1.DataPropertyName = "No";
-            this.noDataGridViewTextBoxColumn1.HeaderText = "No";
-            this.noDataGridViewTextBoxColumn1.Name = "noDataGridViewTextBoxColumn1";
-            this.noDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // midSizeDataGridViewTextBoxColumn
-            // 
-            this.midSizeDataGridViewTextBoxColumn.DataPropertyName = "MidSize";
-            this.midSizeDataGridViewTextBoxColumn.HeaderText = "MidSize";
-            this.midSizeDataGridViewTextBoxColumn.Name = "midSizeDataGridViewTextBoxColumn";
-            this.midSizeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // size1DataGridViewTextBoxColumn1
-            // 
-            this.size1DataGridViewTextBoxColumn1.DataPropertyName = "Size1";
-            this.size1DataGridViewTextBoxColumn1.HeaderText = "Size1";
-            this.size1DataGridViewTextBoxColumn1.Name = "size1DataGridViewTextBoxColumn1";
-            this.size1DataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // size2DataGridViewTextBoxColumn1
-            // 
-            this.size2DataGridViewTextBoxColumn1.DataPropertyName = "Size2";
-            this.size2DataGridViewTextBoxColumn1.HeaderText = "Size2";
-            this.size2DataGridViewTextBoxColumn1.Name = "size2DataGridViewTextBoxColumn1";
-            this.size2DataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // fishNumberDataGridViewTextBoxColumn
-            // 
-            this.fishNumberDataGridViewTextBoxColumn.DataPropertyName = "FishNumber";
-            this.fishNumberDataGridViewTextBoxColumn.HeaderText = "FishNumber";
-            this.fishNumberDataGridViewTextBoxColumn.Name = "fishNumberDataGridViewTextBoxColumn";
-            this.fishNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // wetWeighDataGridViewTextBoxColumn
-            // 
-            this.wetWeighDataGridViewTextBoxColumn.DataPropertyName = "WetWeigh";
-            this.wetWeighDataGridViewTextBoxColumn.HeaderText = "WetWeigh";
-            this.wetWeighDataGridViewTextBoxColumn.Name = "wetWeighDataGridViewTextBoxColumn";
-            this.wetWeighDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // meanWWDataGridViewTextBoxColumn
-            // 
-            this.meanWWDataGridViewTextBoxColumn.DataPropertyName = "MeanWW";
-            this.meanWWDataGridViewTextBoxColumn.HeaderText = "MeanWW";
-            this.meanWWDataGridViewTextBoxColumn.Name = "meanWWDataGridViewTextBoxColumn";
-            this.meanWWDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // boxNoDataGridViewTextBoxColumn
-            // 
-            this.boxNoDataGridViewTextBoxColumn.DataPropertyName = "BoxNo";
-            this.boxNoDataGridViewTextBoxColumn.HeaderText = "BoxNo";
-            this.boxNoDataGridViewTextBoxColumn.Name = "boxNoDataGridViewTextBoxColumn";
-            this.boxNoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // boxWeightDataGridViewTextBoxColumn1
-            // 
-            this.boxWeightDataGridViewTextBoxColumn1.DataPropertyName = "BoxWeight";
-            this.boxWeightDataGridViewTextBoxColumn1.HeaderText = "BoxWeight";
-            this.boxWeightDataGridViewTextBoxColumn1.Name = "boxWeightDataGridViewTextBoxColumn1";
-            this.boxWeightDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // grossWWDataGridViewTextBoxColumn1
-            // 
-            this.grossWWDataGridViewTextBoxColumn1.DataPropertyName = "GrossWW";
-            this.grossWWDataGridViewTextBoxColumn1.HeaderText = "GrossWW";
-            this.grossWWDataGridViewTextBoxColumn1.Name = "grossWWDataGridViewTextBoxColumn1";
-            this.grossWWDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // netWWDataGridViewTextBoxColumn1
-            // 
-            this.netWWDataGridViewTextBoxColumn1.DataPropertyName = "NetWW";
-            this.netWWDataGridViewTextBoxColumn1.HeaderText = "NetWW";
-            this.netWWDataGridViewTextBoxColumn1.Name = "netWWDataGridViewTextBoxColumn1";
-            this.netWWDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // grossDWDataGridViewTextBoxColumn1
-            // 
-            this.grossDWDataGridViewTextBoxColumn1.DataPropertyName = "GrossDW";
-            this.grossDWDataGridViewTextBoxColumn1.HeaderText = "GrossDW";
-            this.grossDWDataGridViewTextBoxColumn1.Name = "grossDWDataGridViewTextBoxColumn1";
-            this.grossDWDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // netDWDataGridViewTextBoxColumn1
-            // 
-            this.netDWDataGridViewTextBoxColumn1.DataPropertyName = "NetDW";
-            this.netDWDataGridViewTextBoxColumn1.HeaderText = "NetDW";
-            this.netDWDataGridViewTextBoxColumn1.Name = "netDWDataGridViewTextBoxColumn1";
-            this.netDWDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dWDataGridViewTextBoxColumn1
-            // 
-            this.dWDataGridViewTextBoxColumn1.DataPropertyName = "DW%";
-            this.dWDataGridViewTextBoxColumn1.HeaderText = "DW%";
-            this.dWDataGridViewTextBoxColumn1.Name = "dWDataGridViewTextBoxColumn1";
-            this.dWDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // tLWWDataGridViewTextBoxColumn1
-            // 
-            this.tLWWDataGridViewTextBoxColumn1.DataPropertyName = "TL%WW";
-            this.tLWWDataGridViewTextBoxColumn1.HeaderText = "TL%WW";
-            this.tLWWDataGridViewTextBoxColumn1.Name = "tLWWDataGridViewTextBoxColumn1";
-            this.tLWWDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // calculatedTL2017DataGridViewTextBoxColumn
-            // 
-            this.calculatedTL2017DataGridViewTextBoxColumn.DataPropertyName = "Calculated TL% 2017";
-            this.calculatedTL2017DataGridViewTextBoxColumn.HeaderText = "Calculated TL% 2017";
-            this.calculatedTL2017DataGridViewTextBoxColumn.Name = "calculatedTL2017DataGridViewTextBoxColumn";
-            this.calculatedTL2017DataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // commentsDataGridViewTextBoxColumn2
-            // 
-            this.commentsDataGridViewTextBoxColumn2.DataPropertyName = "Comments";
-            this.commentsDataGridViewTextBoxColumn2.HeaderText = "Comments";
-            this.commentsDataGridViewTextBoxColumn2.Name = "commentsDataGridViewTextBoxColumn2";
-            this.commentsDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // бАBindingSource
-            // 
-            this.бАBindingSource.DataMember = "БА";
-            this.бАBindingSource.DataSource = this.тестовая_бд_DataSet;
+            this.бАDataGridView.AllowUserToDeleteRows = false;
+            this.бАDataGridView.AutoGenerateColumns = false;
+            this.бАDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.бАDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.бАDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.бАDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.sampleIDDataGridViewTextBoxColumn,
+            this.indIDDataGridViewTextBoxColumn,
+            this.noDataGridViewTextBoxColumn,
+            this.size1DataGridViewTextBoxColumn,
+            this.size2DataGridViewTextBoxColumn,
+            this.tLDataGridViewTextBoxColumn,
+            this.fLDataGridViewTextBoxColumn,
+            this.sLDataGridViewTextBoxColumn,
+            this.wetWeightgDataGridViewTextBoxColumn,
+            this.sexDataGridViewTextBoxColumn,
+            this.stageDataGridViewTextBoxColumn,
+            this.fatnessDataGridViewTextBoxColumn,
+            this.cFDataGridViewTextBoxColumn,
+            this.ageDataGridViewTextBoxColumn,
+            this.corrAgeDataGridViewTextBoxColumn,
+            this.generationDataGridViewTextBoxColumn,
+            this.boxNumberDataGridViewTextBoxColumn,
+            this.boxWeightDataGridViewTextBoxColumn,
+            this.grossWWDataGridViewTextBoxColumn,
+            this.netWWDataGridViewTextBoxColumn,
+            this.grossDWDataGridViewTextBoxColumn,
+            this.netDWDataGridViewTextBoxColumn,
+            this.dWDataGridViewTextBoxColumn,
+            this.tLWWDataGridViewTextBoxColumn,
+            this.calculatedTL2015DataGridViewTextBoxColumn,
+            this.commentsDataGridViewTextBoxColumn});
+            this.бАDataGridView.DataSource = this.бАBindingSource;
+            this.бАDataGridView.Location = new System.Drawing.Point(203, 59);
+            this.бАDataGridView.Name = "бАDataGridView";
+            this.бАDataGridView.ReadOnly = true;
+            this.бАDataGridView.Size = new System.Drawing.Size(618, 324);
+            this.бАDataGridView.TabIndex = 13;
+            this.бАDataGridView.Visible = false;
             // 
             // sampleIDDataGridViewTextBoxColumn
             // 
@@ -885,7 +860,7 @@
             this.corrAgeDataGridViewTextBoxColumn.HeaderText = "Corr# Age";
             this.corrAgeDataGridViewTextBoxColumn.Name = "corrAgeDataGridViewTextBoxColumn";
             this.corrAgeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.corrAgeDataGridViewTextBoxColumn.Width = 80;
+            this.corrAgeDataGridViewTextBoxColumn.Width = 74;
             // 
             // generationDataGridViewTextBoxColumn
             // 
@@ -901,7 +876,7 @@
             this.boxNumberDataGridViewTextBoxColumn.HeaderText = "Box number";
             this.boxNumberDataGridViewTextBoxColumn.Name = "boxNumberDataGridViewTextBoxColumn";
             this.boxNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            this.boxNumberDataGridViewTextBoxColumn.Width = 88;
+            this.boxNumberDataGridViewTextBoxColumn.Width = 81;
             // 
             // boxWeightDataGridViewTextBoxColumn
             // 
@@ -909,7 +884,7 @@
             this.boxWeightDataGridViewTextBoxColumn.HeaderText = "Box weight";
             this.boxWeightDataGridViewTextBoxColumn.Name = "boxWeightDataGridViewTextBoxColumn";
             this.boxWeightDataGridViewTextBoxColumn.ReadOnly = true;
-            this.boxWeightDataGridViewTextBoxColumn.Width = 84;
+            this.boxWeightDataGridViewTextBoxColumn.Width = 78;
             // 
             // grossWWDataGridViewTextBoxColumn
             // 
@@ -917,7 +892,7 @@
             this.grossWWDataGridViewTextBoxColumn.HeaderText = "Gross WW";
             this.grossWWDataGridViewTextBoxColumn.Name = "grossWWDataGridViewTextBoxColumn";
             this.grossWWDataGridViewTextBoxColumn.ReadOnly = true;
-            this.grossWWDataGridViewTextBoxColumn.Width = 84;
+            this.grossWWDataGridViewTextBoxColumn.Width = 78;
             // 
             // netWWDataGridViewTextBoxColumn
             // 
@@ -925,7 +900,7 @@
             this.netWWDataGridViewTextBoxColumn.HeaderText = "Net WW";
             this.netWWDataGridViewTextBoxColumn.Name = "netWWDataGridViewTextBoxColumn";
             this.netWWDataGridViewTextBoxColumn.ReadOnly = true;
-            this.netWWDataGridViewTextBoxColumn.Width = 74;
+            this.netWWDataGridViewTextBoxColumn.Width = 69;
             // 
             // grossDWDataGridViewTextBoxColumn
             // 
@@ -933,7 +908,7 @@
             this.grossDWDataGridViewTextBoxColumn.HeaderText = "Gross DW";
             this.grossDWDataGridViewTextBoxColumn.Name = "grossDWDataGridViewTextBoxColumn";
             this.grossDWDataGridViewTextBoxColumn.ReadOnly = true;
-            this.grossDWDataGridViewTextBoxColumn.Width = 81;
+            this.grossDWDataGridViewTextBoxColumn.Width = 75;
             // 
             // netDWDataGridViewTextBoxColumn
             // 
@@ -941,7 +916,7 @@
             this.netDWDataGridViewTextBoxColumn.HeaderText = "Net DW";
             this.netDWDataGridViewTextBoxColumn.Name = "netDWDataGridViewTextBoxColumn";
             this.netDWDataGridViewTextBoxColumn.ReadOnly = true;
-            this.netDWDataGridViewTextBoxColumn.Width = 71;
+            this.netDWDataGridViewTextBoxColumn.Width = 66;
             // 
             // dWDataGridViewTextBoxColumn
             // 
@@ -974,6 +949,31 @@
             this.commentsDataGridViewTextBoxColumn.ReadOnly = true;
             this.commentsDataGridViewTextBoxColumn.Width = 81;
             // 
+            // бАBindingSource
+            // 
+            this.бАBindingSource.DataMember = "БА";
+            this.бАBindingSource.DataSource = this.тестовая_бд_DataSet;
+            // 
+            // бАTableAdapter
+            // 
+            this.бАTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.UpdateOrder = WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.БАTableAdapter = this.бАTableAdapter;
+            this.tableAdapterManager.ПробыTableAdapter = this.пробыTableAdapter;
+            this.tableAdapterManager.уловыTableAdapter = this.уловыTableAdapter;
+            // 
+            // пробыTableAdapter
+            // 
+            this.пробыTableAdapter.ClearBeforeFill = true;
+            // 
+            // уловыTableAdapter
+            // 
+            this.уловыTableAdapter.ClearBeforeFill = true;
+            // 
             // ErrAnal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -994,15 +994,15 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ErrAnal";
-            this.Text = "Анализатор ошибок импорта ";
+            this.Text = "Анализатор ошибок ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ErrAnal_FormClosing);
             this.Load += new System.EventHandler(this.ErrAnal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.пробыDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.пробыBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.тестовая_бд_DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.уловыDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.уловыBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.пробыBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.бАDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.тестовая_бд_DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.бАBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
