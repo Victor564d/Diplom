@@ -524,5 +524,22 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ArrayList zapis = new ArrayList();
+
+            for (int j = 0; j <= 25; j++) // цикл вывода полей 
+            {
+                {
+                    zapis.Add(Convert.ToString(null));
+                }
+            }
+            Biological_analysis_form newForm = new Biological_analysis_form(this);
+            newForm.zapis = zapis;
+            newForm.orig = zapis;
+            newForm.operation = "New";
+            newForm.Show();
+        }
     }
 }

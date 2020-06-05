@@ -99,6 +99,7 @@
             this.SaveFile = new System.Windows.Forms.SaveFileDialog();
             this.бАTableAdapter = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.БАTableAdapter();
             this.tableAdapterManager = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.TableAdapterManager();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.бАBindingNavigator)).BeginInit();
             this.бАBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.бАBindingSource)).BeginInit();
@@ -200,6 +201,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -615,11 +617,22 @@
             this.tableAdapterManager.ПробыTableAdapter = null;
             this.tableAdapterManager.уловыTableAdapter = null;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(281, 441);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Добавить";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // BA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1195, 466);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.бАDataGridView);
             this.Controls.Add(this.бАBindingNavigator);
             this.Controls.Add(this.menuStrip1);
@@ -704,5 +717,6 @@
         public System.Windows.Forms.DataGridView бАDataGridView;
         private System.Windows.Forms.ToolStripMenuItem видToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem настройкиОтображенияToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
     }
 }
