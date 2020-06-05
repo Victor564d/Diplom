@@ -140,3 +140,4 @@ E:\Diplom\Версия диплома Victor\WindowsFormsApp1\obj\Debug\WindowsF
 E:\Diplom\Версия диплома Victor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 E:\Diplom\Версия диплома Victor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 E:\Diplom\Версия диплома Victor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Biological_analysis_form.resources
+F:\Репозитории\TEst\Версия диплома Victor\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Biological_analysis_form.resources

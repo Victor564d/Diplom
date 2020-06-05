@@ -19,14 +19,21 @@ namespace WindowsFormsApp1
         String data;
         String dd, mm, gg;
         public string operation;
+        BA mainform;
         //-------------------------------------------конец Области переменных ---------------------------------------------------//
 
-        public Biological_analysis_form(BA bA)
+        public Biological_analysis_form(BA mainform)
         {
+            this.mainform = mainform;
             InitializeComponent();
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void записатьToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

@@ -115,7 +115,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1076, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1053, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -124,6 +124,7 @@
             this.записатьToolStripMenuItem.Name = "записатьToolStripMenuItem";
             this.записатьToolStripMenuItem.Size = new System.Drawing.Size(73, 21);
             this.записатьToolStripMenuItem.Text = "Записать";
+            this.записатьToolStripMenuItem.Click += new System.EventHandler(this.записатьToolStripMenuItem_Click);
             // 
             // видToolStripMenuItem
             // 
@@ -731,7 +732,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1076, 554);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(1053, 554);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.menuStrip1);

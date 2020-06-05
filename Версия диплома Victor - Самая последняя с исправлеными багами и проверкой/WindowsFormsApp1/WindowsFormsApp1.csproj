@@ -108,6 +108,12 @@
     <Compile Include="BAOOBR.Designer.cs">
       <DependentUpon>BAOOBR.cs</DependentUpon>
     </Compile>
+    <Compile Include="Biological analysis form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Biological analysis form.designer.cs">
+      <DependentUpon>Biological analysis form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catch Record Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BAOOBR.resx">
       <DependentUpon>BAOOBR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Biological analysis form.resx">
+      <DependentUpon>Biological analysis form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catch Record Form.resx">
       <DependentUpon>Catch Record Form.cs</DependentUpon>
