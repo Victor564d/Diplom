@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hamsa));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -40,6 +40,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             this.уловыBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.уловыBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -213,6 +224,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -303,21 +315,21 @@
             this.dataGridViewTextBoxColumn34,
             this.dataGridViewTextBoxColumn35});
             this.уловыDataGridView.DataSource = this.уловыBindingSource;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle9.Format = "N2";
-            dataGridViewCellStyle9.NullValue = null;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.уловыDataGridView.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle20.Format = "N2";
+            dataGridViewCellStyle20.NullValue = null;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.уловыDataGridView.DefaultCellStyle = dataGridViewCellStyle20;
             this.уловыDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.уловыDataGridView.Location = new System.Drawing.Point(0, 24);
             this.уловыDataGridView.Name = "уловыDataGridView";
-            dataGridViewCellStyle10.NullValue = null;
-            this.уловыDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle21.NullValue = null;
+            this.уловыDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle21;
             this.уловыDataGridView.RowTemplate.ErrorText = "Неизвестная ошибка";
             this.уловыDataGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.уловыDataGridView.Size = new System.Drawing.Size(1285, 441);
@@ -575,6 +587,8 @@
             // 
             this.dataGridViewTextBoxColumn12.DataPropertyName = "WaterTemperature";
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle7.Format = "N1";
+            dataGridViewCellStyle7.NullValue = null;
             this.dataGridViewTextBoxColumn12.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewTextBoxColumn12.HeaderText = "Температура воды";
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
@@ -635,6 +649,9 @@
             // dataGridViewTextBoxColumn20
             // 
             this.dataGridViewTextBoxColumn20.DataPropertyName = "MeanLength";
+            dataGridViewCellStyle9.Format = "N1";
+            dataGridViewCellStyle9.NullValue = null;
+            this.dataGridViewTextBoxColumn20.DefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridViewTextBoxColumn20.HeaderText = "Средняя длина";
             this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
             this.dataGridViewTextBoxColumn20.Width = 99;
@@ -642,6 +659,9 @@
             // dataGridViewTextBoxColumn21
             // 
             this.dataGridViewTextBoxColumn21.DataPropertyName = "Number of ind";
+            dataGridViewCellStyle10.Format = "N0";
+            dataGridViewCellStyle10.NullValue = null;
+            this.dataGridViewTextBoxColumn21.DefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridViewTextBoxColumn21.HeaderText = "Количество рыб";
             this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
             this.dataGridViewTextBoxColumn21.Width = 105;
@@ -649,6 +669,9 @@
             // dataGridViewTextBoxColumn22
             // 
             this.dataGridViewTextBoxColumn22.DataPropertyName = "WetWeight, g";
+            dataGridViewCellStyle11.Format = "N3";
+            dataGridViewCellStyle11.NullValue = null;
+            this.dataGridViewTextBoxColumn22.DefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridViewTextBoxColumn22.HeaderText = "Масса, г";
             this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
             this.dataGridViewTextBoxColumn22.Width = 70;
@@ -656,6 +679,9 @@
             // dataGridViewTextBoxColumn23
             // 
             this.dataGridViewTextBoxColumn23.DataPropertyName = "MeanWW, g";
+            dataGridViewCellStyle12.Format = "N3";
+            dataGridViewCellStyle12.NullValue = null;
+            this.dataGridViewTextBoxColumn23.DefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridViewTextBoxColumn23.HeaderText = "Средняя масса, г";
             this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
             this.dataGridViewTextBoxColumn23.Width = 111;
@@ -663,6 +689,9 @@
             // dataGridViewTextBoxColumn24
             // 
             this.dataGridViewTextBoxColumn24.DataPropertyName = "MeanDW";
+            dataGridViewCellStyle13.Format = "N1";
+            dataGridViewCellStyle13.NullValue = null;
+            this.dataGridViewTextBoxColumn24.DefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridViewTextBoxColumn24.HeaderText = "Среднее СВ%";
             this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
             this.dataGridViewTextBoxColumn24.Width = 92;
@@ -670,6 +699,9 @@
             // dataGridViewTextBoxColumn25
             // 
             this.dataGridViewTextBoxColumn25.DataPropertyName = "Mean_TL%";
+            dataGridViewCellStyle14.Format = "N1";
+            dataGridViewCellStyle14.NullValue = null;
+            this.dataGridViewTextBoxColumn25.DefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridViewTextBoxColumn25.HeaderText = "Среднее СЛ%";
             this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
             this.dataGridViewTextBoxColumn25.Width = 93;
@@ -677,6 +709,9 @@
             // dataGridViewTextBoxColumn26
             // 
             this.dataGridViewTextBoxColumn26.DataPropertyName = "Calculated_TL%";
+            dataGridViewCellStyle15.Format = "N1";
+            dataGridViewCellStyle15.NullValue = null;
+            this.dataGridViewTextBoxColumn26.DefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridViewTextBoxColumn26.HeaderText = "Расчётное СЛ%";
             this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
             this.dataGridViewTextBoxColumn26.Width = 102;
@@ -684,6 +719,9 @@
             // dataGridViewTextBoxColumn27
             // 
             this.dataGridViewTextBoxColumn27.DataPropertyName = "SizeClasses";
+            dataGridViewCellStyle16.Format = "N0";
+            dataGridViewCellStyle16.NullValue = null;
+            this.dataGridViewTextBoxColumn27.DefaultCellStyle = dataGridViewCellStyle16;
             this.dataGridViewTextBoxColumn27.HeaderText = "Количество размерных групп";
             this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
             this.dataGridViewTextBoxColumn27.Width = 141;
@@ -691,6 +729,9 @@
             // dataGridViewTextBoxColumn28
             // 
             this.dataGridViewTextBoxColumn28.DataPropertyName = "DW_Samples";
+            dataGridViewCellStyle17.Format = "N0";
+            dataGridViewCellStyle17.NullValue = null;
+            this.dataGridViewTextBoxColumn28.DefaultCellStyle = dataGridViewCellStyle17;
             this.dataGridViewTextBoxColumn28.HeaderText = "Количество проб на СВ";
             this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
             this.dataGridViewTextBoxColumn28.Width = 111;
@@ -698,6 +739,9 @@
             // dataGridViewTextBoxColumn29
             // 
             this.dataGridViewTextBoxColumn29.DataPropertyName = "TL_Samples";
+            dataGridViewCellStyle18.Format = "N0";
+            dataGridViewCellStyle18.NullValue = null;
+            this.dataGridViewTextBoxColumn29.DefaultCellStyle = dataGridViewCellStyle18;
             this.dataGridViewTextBoxColumn29.HeaderText = "Количество проб на СЛ";
             this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
             this.dataGridViewTextBoxColumn29.Width = 111;
@@ -719,6 +763,9 @@
             // dataGridViewTextBoxColumn32
             // 
             this.dataGridViewTextBoxColumn32.DataPropertyName = "BioAnalyses_Ind";
+            dataGridViewCellStyle19.Format = "N0";
+            dataGridViewCellStyle19.NullValue = null;
+            this.dataGridViewTextBoxColumn32.DefaultCellStyle = dataGridViewCellStyle19;
             this.dataGridViewTextBoxColumn32.HeaderText = "Количество рыб на БА";
             this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
             this.dataGridViewTextBoxColumn32.Width = 107;

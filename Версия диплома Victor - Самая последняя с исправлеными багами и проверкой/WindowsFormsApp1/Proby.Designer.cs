@@ -41,6 +41,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.пробыBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.пробыBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -57,6 +60,20 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.пробыBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.пробыDataGridView = new System.Windows.Forms.DataGridView();
+            this.SaveFile = new System.Windows.Forms.SaveFileDialog();
+            this.OpFile = new System.Windows.Forms.OpenFileDialog();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.импортToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.экспортToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.фильтрыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.поРазмернымГруппаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отключитьФильтрToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.видToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.настройкиОтображенияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.пробыTableAdapter = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.ПробыTableAdapter();
+            this.tableAdapterManager = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.TableAdapterManager();
+            this.button1 = new System.Windows.Forms.Button();
             this.sampleIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.recordIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,20 +93,6 @@
             this.tLWWDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.calculatedTL2017DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.commentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SaveFile = new System.Windows.Forms.SaveFileDialog();
-            this.OpFile = new System.Windows.Forms.OpenFileDialog();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.импортToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.экспортToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.фильтрыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.поРазмернымГруппаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отключитьФильтрToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.видToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.настройкиОтображенияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.пробыTableAdapter = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.ПробыTableAdapter();
-            this.tableAdapterManager = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.TableAdapterManager();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.пробыBindingNavigator)).BeginInit();
             this.пробыBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.пробыBindingSource1)).BeginInit();
@@ -268,181 +271,6 @@
             this.пробыDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.пробыDataGridView_CellContentClick);
             this.пробыDataGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.пробыDataGridView_CellContentDoubleClick);
             // 
-            // sampleIDDataGridViewTextBoxColumn
-            // 
-            this.sampleIDDataGridViewTextBoxColumn.DataPropertyName = "SampleID";
-            this.sampleIDDataGridViewTextBoxColumn.HeaderText = "ИД пробы";
-            this.sampleIDDataGridViewTextBoxColumn.Name = "sampleIDDataGridViewTextBoxColumn";
-            this.sampleIDDataGridViewTextBoxColumn.Width = 78;
-            // 
-            // recordIDDataGridViewTextBoxColumn
-            // 
-            this.recordIDDataGridViewTextBoxColumn.DataPropertyName = "RecordID";
-            this.recordIDDataGridViewTextBoxColumn.HeaderText = "ИД записи";
-            this.recordIDDataGridViewTextBoxColumn.Name = "recordIDDataGridViewTextBoxColumn";
-            this.recordIDDataGridViewTextBoxColumn.Width = 81;
-            // 
-            // noDataGridViewTextBoxColumn
-            // 
-            this.noDataGridViewTextBoxColumn.DataPropertyName = "No";
-            this.noDataGridViewTextBoxColumn.HeaderText = "Порядковый номер";
-            this.noDataGridViewTextBoxColumn.Name = "noDataGridViewTextBoxColumn";
-            this.noDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // midSizeDataGridViewTextBoxColumn
-            // 
-            this.midSizeDataGridViewTextBoxColumn.DataPropertyName = "MidSize";
-            this.midSizeDataGridViewTextBoxColumn.HeaderText = "Средняя длина";
-            this.midSizeDataGridViewTextBoxColumn.Name = "midSizeDataGridViewTextBoxColumn";
-            this.midSizeDataGridViewTextBoxColumn.Width = 99;
-            // 
-            // size1DataGridViewTextBoxColumn
-            // 
-            this.size1DataGridViewTextBoxColumn.DataPropertyName = "Size1";
-            this.size1DataGridViewTextBoxColumn.HeaderText = "Size 1";
-            this.size1DataGridViewTextBoxColumn.Name = "size1DataGridViewTextBoxColumn";
-            this.size1DataGridViewTextBoxColumn.Width = 57;
-            // 
-            // size2DataGridViewTextBoxColumn
-            // 
-            this.size2DataGridViewTextBoxColumn.DataPropertyName = "Size2";
-            this.size2DataGridViewTextBoxColumn.HeaderText = "Size2";
-            this.size2DataGridViewTextBoxColumn.Name = "size2DataGridViewTextBoxColumn";
-            this.size2DataGridViewTextBoxColumn.Width = 58;
-            // 
-            // fishNumberDataGridViewTextBoxColumn
-            // 
-            this.fishNumberDataGridViewTextBoxColumn.DataPropertyName = "FishNumber";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            this.fishNumberDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
-            this.fishNumberDataGridViewTextBoxColumn.HeaderText = "Количество рыб";
-            this.fishNumberDataGridViewTextBoxColumn.Name = "fishNumberDataGridViewTextBoxColumn";
-            this.fishNumberDataGridViewTextBoxColumn.Width = 105;
-            // 
-            // wetWeighDataGridViewTextBoxColumn
-            // 
-            this.wetWeighDataGridViewTextBoxColumn.DataPropertyName = "WetWeigh";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.wetWeighDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.wetWeighDataGridViewTextBoxColumn.HeaderText = "Масса";
-            this.wetWeighDataGridViewTextBoxColumn.Name = "wetWeighDataGridViewTextBoxColumn";
-            this.wetWeighDataGridViewTextBoxColumn.Width = 65;
-            // 
-            // meanWWDataGridViewTextBoxColumn
-            // 
-            this.meanWWDataGridViewTextBoxColumn.DataPropertyName = "MeanWW";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle3.Format = "N3";
-            dataGridViewCellStyle3.NullValue = "NULL";
-            this.meanWWDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
-            this.meanWWDataGridViewTextBoxColumn.HeaderText = "Средняя масса";
-            this.meanWWDataGridViewTextBoxColumn.Name = "meanWWDataGridViewTextBoxColumn";
-            this.meanWWDataGridViewTextBoxColumn.Width = 101;
-            // 
-            // boxNoDataGridViewTextBoxColumn
-            // 
-            this.boxNoDataGridViewTextBoxColumn.DataPropertyName = "BoxNo";
-            this.boxNoDataGridViewTextBoxColumn.HeaderText = "№ бюкса";
-            this.boxNoDataGridViewTextBoxColumn.Name = "boxNoDataGridViewTextBoxColumn";
-            this.boxNoDataGridViewTextBoxColumn.Width = 72;
-            // 
-            // boxWeightDataGridViewTextBoxColumn
-            // 
-            this.boxWeightDataGridViewTextBoxColumn.DataPropertyName = "BoxWeight";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle4.Format = "N3";
-            dataGridViewCellStyle4.NullValue = null;
-            this.boxWeightDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
-            this.boxWeightDataGridViewTextBoxColumn.HeaderText = "Вес бюкса";
-            this.boxWeightDataGridViewTextBoxColumn.Name = "boxWeightDataGridViewTextBoxColumn";
-            this.boxWeightDataGridViewTextBoxColumn.Width = 79;
-            // 
-            // grossWWDataGridViewTextBoxColumn
-            // 
-            this.grossWWDataGridViewTextBoxColumn.DataPropertyName = "GrossWW";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle5.Format = "N3";
-            dataGridViewCellStyle5.NullValue = null;
-            this.grossWWDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
-            this.grossWWDataGridViewTextBoxColumn.HeaderText = "Вес бюкса с сырой навеской";
-            this.grossWWDataGridViewTextBoxColumn.Name = "grossWWDataGridViewTextBoxColumn";
-            this.grossWWDataGridViewTextBoxColumn.Width = 122;
-            // 
-            // netWWDataGridViewTextBoxColumn
-            // 
-            this.netWWDataGridViewTextBoxColumn.DataPropertyName = "NetWW";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle6.Format = "N3";
-            dataGridViewCellStyle6.NullValue = null;
-            this.netWWDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
-            this.netWWDataGridViewTextBoxColumn.HeaderText = "Вес навески";
-            this.netWWDataGridViewTextBoxColumn.Name = "netWWDataGridViewTextBoxColumn";
-            this.netWWDataGridViewTextBoxColumn.Width = 88;
-            // 
-            // grossDWDataGridViewTextBoxColumn
-            // 
-            this.grossDWDataGridViewTextBoxColumn.DataPropertyName = "GrossDW";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle7.Format = "N3";
-            dataGridViewCellStyle7.NullValue = null;
-            this.grossDWDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
-            this.grossDWDataGridViewTextBoxColumn.HeaderText = "Вес бюкса с сухой навеской";
-            this.grossDWDataGridViewTextBoxColumn.Name = "grossDWDataGridViewTextBoxColumn";
-            this.grossDWDataGridViewTextBoxColumn.Width = 118;
-            // 
-            // netDWDataGridViewTextBoxColumn
-            // 
-            this.netDWDataGridViewTextBoxColumn.DataPropertyName = "NetDW";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle8.Format = "N3";
-            dataGridViewCellStyle8.NullValue = null;
-            this.netDWDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
-            this.netDWDataGridViewTextBoxColumn.HeaderText = "Вес сухой навески";
-            this.netDWDataGridViewTextBoxColumn.Name = "netDWDataGridViewTextBoxColumn";
-            this.netDWDataGridViewTextBoxColumn.Width = 116;
-            // 
-            // dWDataGridViewTextBoxColumn
-            // 
-            this.dWDataGridViewTextBoxColumn.DataPropertyName = "DW%";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle9.Format = "N3";
-            dataGridViewCellStyle9.NullValue = null;
-            this.dWDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
-            this.dWDataGridViewTextBoxColumn.HeaderText = "Содержание СВ%";
-            this.dWDataGridViewTextBoxColumn.Name = "dWDataGridViewTextBoxColumn";
-            this.dWDataGridViewTextBoxColumn.Width = 110;
-            // 
-            // tLWWDataGridViewTextBoxColumn
-            // 
-            this.tLWWDataGridViewTextBoxColumn.DataPropertyName = "TL%WW";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle10.Format = "N3";
-            dataGridViewCellStyle10.NullValue = "Null";
-            this.tLWWDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
-            this.tLWWDataGridViewTextBoxColumn.HeaderText = "Содержание СЛ%";
-            this.tLWWDataGridViewTextBoxColumn.Name = "tLWWDataGridViewTextBoxColumn";
-            this.tLWWDataGridViewTextBoxColumn.Width = 111;
-            // 
-            // calculatedTL2017DataGridViewTextBoxColumn
-            // 
-            this.calculatedTL2017DataGridViewTextBoxColumn.DataPropertyName = "Calculated TL% 2017";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle11.Format = "N3";
-            dataGridViewCellStyle11.NullValue = null;
-            this.calculatedTL2017DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
-            this.calculatedTL2017DataGridViewTextBoxColumn.HeaderText = "Расчетное СЛ%";
-            this.calculatedTL2017DataGridViewTextBoxColumn.Name = "calculatedTL2017DataGridViewTextBoxColumn";
-            this.calculatedTL2017DataGridViewTextBoxColumn.Width = 102;
-            // 
-            // commentsDataGridViewTextBoxColumn
-            // 
-            this.commentsDataGridViewTextBoxColumn.DataPropertyName = "Comments";
-            this.commentsDataGridViewTextBoxColumn.HeaderText = "Коментарий";
-            this.commentsDataGridViewTextBoxColumn.Name = "commentsDataGridViewTextBoxColumn";
-            this.commentsDataGridViewTextBoxColumn.Width = 94;
-            // 
             // OpFile
             // 
             this.OpFile.FileName = "opFile";
@@ -543,6 +371,192 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // sampleIDDataGridViewTextBoxColumn
+            // 
+            this.sampleIDDataGridViewTextBoxColumn.DataPropertyName = "SampleID";
+            this.sampleIDDataGridViewTextBoxColumn.HeaderText = "Код пробы";
+            this.sampleIDDataGridViewTextBoxColumn.Name = "sampleIDDataGridViewTextBoxColumn";
+            this.sampleIDDataGridViewTextBoxColumn.Width = 86;
+            // 
+            // recordIDDataGridViewTextBoxColumn
+            // 
+            this.recordIDDataGridViewTextBoxColumn.DataPropertyName = "RecordID";
+            this.recordIDDataGridViewTextBoxColumn.HeaderText = "Код записи";
+            this.recordIDDataGridViewTextBoxColumn.Name = "recordIDDataGridViewTextBoxColumn";
+            this.recordIDDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // noDataGridViewTextBoxColumn
+            // 
+            this.noDataGridViewTextBoxColumn.DataPropertyName = "No";
+            this.noDataGridViewTextBoxColumn.HeaderText = "Порядковый номер";
+            this.noDataGridViewTextBoxColumn.Name = "noDataGridViewTextBoxColumn";
+            this.noDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // midSizeDataGridViewTextBoxColumn
+            // 
+            this.midSizeDataGridViewTextBoxColumn.DataPropertyName = "MidSize";
+            dataGridViewCellStyle1.Format = "N1";
+            dataGridViewCellStyle1.NullValue = null;
+            this.midSizeDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            this.midSizeDataGridViewTextBoxColumn.HeaderText = "Средняя длина";
+            this.midSizeDataGridViewTextBoxColumn.Name = "midSizeDataGridViewTextBoxColumn";
+            this.midSizeDataGridViewTextBoxColumn.Width = 99;
+            // 
+            // size1DataGridViewTextBoxColumn
+            // 
+            this.size1DataGridViewTextBoxColumn.DataPropertyName = "Size1";
+            dataGridViewCellStyle2.Format = "N0";
+            dataGridViewCellStyle2.NullValue = null;
+            this.size1DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.size1DataGridViewTextBoxColumn.HeaderText = "Size 1";
+            this.size1DataGridViewTextBoxColumn.Name = "size1DataGridViewTextBoxColumn";
+            this.size1DataGridViewTextBoxColumn.Width = 57;
+            // 
+            // size2DataGridViewTextBoxColumn
+            // 
+            this.size2DataGridViewTextBoxColumn.DataPropertyName = "Size2";
+            dataGridViewCellStyle3.Format = "N0";
+            dataGridViewCellStyle3.NullValue = null;
+            this.size2DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.size2DataGridViewTextBoxColumn.HeaderText = "Size2";
+            this.size2DataGridViewTextBoxColumn.Name = "size2DataGridViewTextBoxColumn";
+            this.size2DataGridViewTextBoxColumn.Width = 58;
+            // 
+            // fishNumberDataGridViewTextBoxColumn
+            // 
+            this.fishNumberDataGridViewTextBoxColumn.DataPropertyName = "FishNumber";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle4.Format = "N0";
+            dataGridViewCellStyle4.NullValue = null;
+            this.fishNumberDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.fishNumberDataGridViewTextBoxColumn.HeaderText = "Количество рыб";
+            this.fishNumberDataGridViewTextBoxColumn.Name = "fishNumberDataGridViewTextBoxColumn";
+            this.fishNumberDataGridViewTextBoxColumn.Width = 105;
+            // 
+            // wetWeighDataGridViewTextBoxColumn
+            // 
+            this.wetWeighDataGridViewTextBoxColumn.DataPropertyName = "WetWeigh";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle5.Format = "N3";
+            dataGridViewCellStyle5.NullValue = null;
+            this.wetWeighDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            this.wetWeighDataGridViewTextBoxColumn.HeaderText = "Масса";
+            this.wetWeighDataGridViewTextBoxColumn.Name = "wetWeighDataGridViewTextBoxColumn";
+            this.wetWeighDataGridViewTextBoxColumn.Width = 65;
+            // 
+            // meanWWDataGridViewTextBoxColumn
+            // 
+            this.meanWWDataGridViewTextBoxColumn.DataPropertyName = "MeanWW";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle6.Format = "N3";
+            dataGridViewCellStyle6.NullValue = "NULL";
+            this.meanWWDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            this.meanWWDataGridViewTextBoxColumn.HeaderText = "Средняя масса";
+            this.meanWWDataGridViewTextBoxColumn.Name = "meanWWDataGridViewTextBoxColumn";
+            this.meanWWDataGridViewTextBoxColumn.Width = 101;
+            // 
+            // boxNoDataGridViewTextBoxColumn
+            // 
+            this.boxNoDataGridViewTextBoxColumn.DataPropertyName = "BoxNo";
+            this.boxNoDataGridViewTextBoxColumn.HeaderText = "№ бюкса";
+            this.boxNoDataGridViewTextBoxColumn.Name = "boxNoDataGridViewTextBoxColumn";
+            this.boxNoDataGridViewTextBoxColumn.Width = 72;
+            // 
+            // boxWeightDataGridViewTextBoxColumn
+            // 
+            this.boxWeightDataGridViewTextBoxColumn.DataPropertyName = "BoxWeight";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle7.Format = "N3";
+            dataGridViewCellStyle7.NullValue = null;
+            this.boxWeightDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            this.boxWeightDataGridViewTextBoxColumn.HeaderText = "Вес бюкса";
+            this.boxWeightDataGridViewTextBoxColumn.Name = "boxWeightDataGridViewTextBoxColumn";
+            this.boxWeightDataGridViewTextBoxColumn.Width = 79;
+            // 
+            // grossWWDataGridViewTextBoxColumn
+            // 
+            this.grossWWDataGridViewTextBoxColumn.DataPropertyName = "GrossWW";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle8.Format = "N3";
+            dataGridViewCellStyle8.NullValue = null;
+            this.grossWWDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            this.grossWWDataGridViewTextBoxColumn.HeaderText = "Вес бюкса с сырой навеской";
+            this.grossWWDataGridViewTextBoxColumn.Name = "grossWWDataGridViewTextBoxColumn";
+            this.grossWWDataGridViewTextBoxColumn.Width = 122;
+            // 
+            // netWWDataGridViewTextBoxColumn
+            // 
+            this.netWWDataGridViewTextBoxColumn.DataPropertyName = "NetWW";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle9.Format = "N3";
+            dataGridViewCellStyle9.NullValue = null;
+            this.netWWDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
+            this.netWWDataGridViewTextBoxColumn.HeaderText = "Вес навески";
+            this.netWWDataGridViewTextBoxColumn.Name = "netWWDataGridViewTextBoxColumn";
+            this.netWWDataGridViewTextBoxColumn.Width = 88;
+            // 
+            // grossDWDataGridViewTextBoxColumn
+            // 
+            this.grossDWDataGridViewTextBoxColumn.DataPropertyName = "GrossDW";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle10.Format = "N3";
+            dataGridViewCellStyle10.NullValue = null;
+            this.grossDWDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
+            this.grossDWDataGridViewTextBoxColumn.HeaderText = "Вес бюкса с сухой навеской";
+            this.grossDWDataGridViewTextBoxColumn.Name = "grossDWDataGridViewTextBoxColumn";
+            this.grossDWDataGridViewTextBoxColumn.Width = 118;
+            // 
+            // netDWDataGridViewTextBoxColumn
+            // 
+            this.netDWDataGridViewTextBoxColumn.DataPropertyName = "NetDW";
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle11.Format = "N3";
+            dataGridViewCellStyle11.NullValue = null;
+            this.netDWDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
+            this.netDWDataGridViewTextBoxColumn.HeaderText = "Вес сухой навески";
+            this.netDWDataGridViewTextBoxColumn.Name = "netDWDataGridViewTextBoxColumn";
+            this.netDWDataGridViewTextBoxColumn.Width = 116;
+            // 
+            // dWDataGridViewTextBoxColumn
+            // 
+            this.dWDataGridViewTextBoxColumn.DataPropertyName = "DW%";
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle12.Format = "N1";
+            dataGridViewCellStyle12.NullValue = null;
+            this.dWDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
+            this.dWDataGridViewTextBoxColumn.HeaderText = "Содержание СВ%";
+            this.dWDataGridViewTextBoxColumn.Name = "dWDataGridViewTextBoxColumn";
+            this.dWDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // tLWWDataGridViewTextBoxColumn
+            // 
+            this.tLWWDataGridViewTextBoxColumn.DataPropertyName = "TL%WW";
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle13.Format = "N1";
+            dataGridViewCellStyle13.NullValue = "Null";
+            this.tLWWDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle13;
+            this.tLWWDataGridViewTextBoxColumn.HeaderText = "Содержание СЛ%";
+            this.tLWWDataGridViewTextBoxColumn.Name = "tLWWDataGridViewTextBoxColumn";
+            this.tLWWDataGridViewTextBoxColumn.Width = 111;
+            // 
+            // calculatedTL2017DataGridViewTextBoxColumn
+            // 
+            this.calculatedTL2017DataGridViewTextBoxColumn.DataPropertyName = "Calculated TL% 2017";
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle14.Format = "N1";
+            dataGridViewCellStyle14.NullValue = null;
+            this.calculatedTL2017DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle14;
+            this.calculatedTL2017DataGridViewTextBoxColumn.HeaderText = "Расчетное СЛ%";
+            this.calculatedTL2017DataGridViewTextBoxColumn.Name = "calculatedTL2017DataGridViewTextBoxColumn";
+            this.calculatedTL2017DataGridViewTextBoxColumn.Width = 102;
+            // 
+            // commentsDataGridViewTextBoxColumn
+            // 
+            this.commentsDataGridViewTextBoxColumn.DataPropertyName = "Comments";
+            this.commentsDataGridViewTextBoxColumn.HeaderText = "Коментарий";
+            this.commentsDataGridViewTextBoxColumn.Name = "commentsDataGridViewTextBoxColumn";
+            this.commentsDataGridViewTextBoxColumn.Width = 94;
+            // 
             // Proby
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -599,6 +613,10 @@
         public Тестовая_бд_DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         public Тестовая_бд_DataSet тестовая_бд_DataSet;
         public System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem видToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem настройкиОтображенияToolStripMenuItem;
+        public System.Windows.Forms.DataGridView пробыDataGridView;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn sampleIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn recordIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn noDataGridViewTextBoxColumn;
@@ -618,9 +636,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tLWWDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn calculatedTL2017DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn commentsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ToolStripMenuItem видToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem настройкиОтображенияToolStripMenuItem;
-        public System.Windows.Forms.DataGridView пробыDataGridView;
-        private System.Windows.Forms.Button button1;
     }
 }
