@@ -112,7 +112,7 @@ namespace WindowsFormsApp1
                 zapis[6] = textBox4.Text;//Длина до развилки	
                 zapis[7] = textBox17.Text;//Стандартная длина	
                 zapis[8] = textBox6.Text;//Вес	
-                zapis[9] = comboBox1.SelectedValue;//пол	
+                zapis[9] = comboBox1.Text;//пол	
                 zapis[10] = textBox8.Text;//стадия зрелости	
                 zapis[11] = textBox9.Text;//Ожирение	
                 zapis[12] = textBox24.Text;//К упитонности	
