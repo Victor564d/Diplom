@@ -169,18 +169,20 @@ namespace WindowsFormsApp1
                 this.бАTableAdapter.Update(this.тестовая_бд_DataSet);
 
             }
+           
             catch (System.Exception ex) // если возникла ошибка 
             {
                 MessageBox.Show("Возникла ошибка записи, проверьте поля. Текст ошибки: " + ex.Message, "Ошибка записи", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 string errr = "";
-                for (int i = 0; i <= 18; i++)
+                for (int i = 0; i <= 25; i++)
                 {
-                    errr += Convert.ToString(i) + "     :" + lines[i];
+                    errr += Convert.ToString(i) + "     :" + lines[i] + " @ ";
 
                 }
                 errr = errr + "    orig    " + orig[0] + "     orig   " + orig[1];
                 MessageBox.Show(errr);
             }
+            
             try
             {
                 reload();
@@ -256,7 +258,7 @@ namespace WindowsFormsApp1
                 string errr = "";
                 for (int i = 0; i <= 18; i++)
                 {
-                    errr = errr + Convert.ToString(i) + "     :" + lines[i];
+                    errr = errr + Convert.ToString(i) + "     :" + lines[i] + " @ ";
 
                 }
 
