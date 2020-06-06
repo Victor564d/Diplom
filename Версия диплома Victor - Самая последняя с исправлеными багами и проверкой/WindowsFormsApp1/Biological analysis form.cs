@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
+
 namespace WindowsFormsApp1
 {
     public partial class Biological_analysis_form : Form
@@ -216,7 +217,27 @@ namespace WindowsFormsApp1
 
         private void выполнитьРасчетПараметровToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            try
+            {
+                
+                if (textBox21.Text != "" && textBox22.Text != "")
+                    textBox19.Text = Convert.ToString(Convert.ToDouble(textBox21.Text) - Convert.ToDouble(textBox22.Text));
+                if (textBox20.Text != "" && textBox22.Text != "")
+                    textBox18.Text = Convert.ToString(Convert.ToDouble(textBox20.Text) - Convert.ToDouble(textBox22.Text));
 
+                if (textBox6.Text != "" && textBox7.Text != "")
+                    textBox24.Text = Convert.ToString(100*Convert.ToDouble(textBox6.Text)  / Math.Pow((Convert.ToDouble(textBox7.Text)/10),3));//вфвфвфв
+
+                if (textBox18.Text != "" && textBox19.Text != "")
+                    textBox15.Text = Convert.ToString(Convert.ToDouble(textBox18.Text)*100 / Convert.ToDouble(textBox19.Text));//вфвфвфв
+
+                if (textBox15.Text != "")
+                    textBox14.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * Convert.ToDouble(pars[17]) - Convert.ToDouble(pars[18]));
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("При расчете возникла ошибка, проверьте все поля.   Причина ошибки: " + ex.Message, "Ошибка расчета", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void label12_Click(object sender, EventArgs e)

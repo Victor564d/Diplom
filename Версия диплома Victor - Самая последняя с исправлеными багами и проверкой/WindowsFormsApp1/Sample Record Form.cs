@@ -173,6 +173,10 @@ namespace WindowsFormsApp1
                     textBox17.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) - Convert.ToDouble(textBox14.Text));
                 if (textBox3.Text != "" && textBox4.Text != "")
                     textBox9.Text = Convert.ToString((Convert.ToDouble(textBox3.Text) + Convert.ToDouble(textBox4.Text)) / 2);
+
+                if (textBox18.Text != "" && textBox17.Text != "")
+                    textBox11.Text = Convert.ToString(Convert.ToDouble(textBox18.Text) * 100 / Convert.ToDouble(textBox17.Text));//‚Ù‚Ù‚Ù‚
+
                 if (textBox11.Text != "")
                 textBox12.Text = Convert.ToString(Convert.ToDouble(textBox11.Text) * Convert.ToDouble(pars[17]) - Convert.ToDouble(pars[18]));
             }

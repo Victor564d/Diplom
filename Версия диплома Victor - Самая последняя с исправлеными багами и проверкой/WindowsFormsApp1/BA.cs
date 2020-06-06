@@ -112,31 +112,58 @@ namespace WindowsFormsApp1
         {
             try // проверяем те значения которые являются числом, если оно пустое, то запишем туда -999
             {
-                if (lines[2] == null) lines[2] = -999;
-                if (lines[5] == null) lines[5] = -999;
-                if (lines[3] == null) lines[3] = -999;
-                if (lines[4] == null) lines[4] = -999;
-                if (lines[6] == null) lines[6] = -999;
-                if (lines[7] == null) lines[7] = -999;
-                if (lines[8] == null) lines[8] = -999;
-                if (lines[10] == null) lines[10] = -999;
-                if (lines[11] == null) lines[11] = -999;
-                if (lines[12] == null) lines[12] = -999;
-                if (lines[14] == null) lines[14] = -999;
-                if (lines[15] == null) lines[15] = -999;
-                if (lines[1] == null) lines[1] = -999;
-                if (lines[13] == null) lines[13] = -999;
-                if (lines[17] == null) lines[17] = -999;
-                if (lines[18] == null) lines[18] = -999;
-                if (lines[19] == null) lines[19] = -999;
-                if (lines[20] == null) lines[20] = -999;
-                if (lines[21] == null) lines[21] = -999;
-                if (lines[22] == null) lines[22] = -999;
-                if (lines[23] == null) lines[23] = -999;
-                if (lines[24] == null) lines[24] = -999;
+                //if (lines[1] == null) lines[1] = -999;
+                if (Convert.ToString(lines[2]) == "") lines[2] = -999;
+                if (Convert.ToString(lines[3]) == "") lines[3] = -999;
+                if (Convert.ToString(lines[4]) == "") lines[4] = -999;
+                if (Convert.ToString(lines[5]) == "") lines[5] = -999;  
+                if (Convert.ToString(lines[6]) == "") lines[6] = -999;
+                if (Convert.ToString(lines[7]) == "") lines[7] = -999;
+                if (Convert.ToString(lines[8]) == "") lines[8] = -999;
+                if (Convert.ToString(lines[10]) == "") lines[10] = -999;
+                if (Convert.ToString(lines[11])== "") lines[11] = -999;
+                if (Convert.ToString(lines[12]) == "") lines[12] = -999;
+    //            if (lines[13] == null) lines[13] = -999;
+                if (Convert.ToString(lines[14]) == "") lines[14] = -999;
+                if (Convert.ToString(lines[15]) == "") lines[15] = -999;
+                if (Convert.ToString(lines[17]) == "") lines[17] = -999;
+                if (Convert.ToString(lines[18]) == "") lines[18] = -999;
+                if (Convert.ToString(lines[19]) == "") lines[19] = -999;
+                if (Convert.ToString(lines[20]) == "") lines[20] = -999;
+                if (Convert.ToString(lines[21]) == "") lines[21] = -999;
+                if (Convert.ToString(lines[22]) == "") lines[22] = -999;
+                if (Convert.ToString(lines[23]) == "") lines[23] = -999;
+                if (Convert.ToString(lines[24]) == "") lines[24] = -999;
             }
             catch
             { }
+           /* Convert.ToString(lines[0]);
+            Convert.ToString(lines[1]);
+            Convert.ToInt16(lines[2]);
+            Convert.ToInt16(lines[3]);
+            Convert.ToInt16(lines[4]);
+            Convert.ToDecimal(lines[5]);
+            Convert.ToDecimal(lines[6]);
+            Convert.ToDecimal(lines[7]);
+            Convert.ToDecimal(lines[8]);
+            Convert.ToString(lines[9]);
+            Convert.ToInt16(lines[10]);
+            Convert.ToInt16(lines[11]);
+            Convert.ToString(lines[12]);
+            Convert.ToDecimal(lines[13]);
+            Convert.ToDecimal(lines[14]);
+            Convert.ToDecimal(lines[15]);
+            Convert.ToString(lines[16]);
+            Convert.ToDouble(lines[17]);
+            Convert.ToDouble(lines[18]);
+            Convert.ToDouble(lines[19]);
+            Convert.ToDouble(lines[20]);
+            Convert.ToDouble(lines[21]);
+            Convert.ToDouble(lines[22]);
+            MessageBox.Show(Convert.ToString(lines[23]));
+            Convert.ToDouble(lines[23]);
+            Convert.ToDouble(lines[24]);
+            Convert.ToString(lines[25]);*/
             try //пытаемся вставить поля в таблицу бд, конертируя соответствующие данные в нужный тип 
             {
                 this.бАTableAdapter.Update(Convert.ToString(lines[0]),
@@ -197,31 +224,31 @@ namespace WindowsFormsApp1
         {
             try // проверяем те значения которые являются числом, если оно пустое, то запишем туда -999
             {
-                if (lines[2] == null) lines[2] = -999;
-                if (lines[5] == null) lines[5] = -999;
-                if (lines[3] == null) lines[3] = -999;
-                if (lines[4] == null) lines[4] = -999;
-                if (lines[6] == null) lines[6] = -999;
-                if (lines[7] == null) lines[7] = -999;
-                if (lines[8] == null) lines[8] = -999;
-                if (lines[10] == null) lines[10] = -999;
-                if (lines[11] == null) lines[11] = -999;
-                if (lines[12] == null) lines[12] = -999;
-                if (lines[14] == null) lines[14] = -999;
-                if (lines[15] == null) lines[15] = -999;
-                if (lines[1] == null) lines[1] = -999;
-                if (lines[13] == null) lines[13] = -999;
-                if (lines[17] == null) lines[17] = -999;
-                if (lines[18] == null) lines[18] = -999;
-                if (lines[19] == null) lines[19] = -999;
-                if (lines[20] == null) lines[20] = -999;
-                if (lines[21] == null) lines[21] = -999;
-                if (lines[22] == null) lines[22] = -999;
-                if (lines[23] == null) lines[23] = -999;
-                if (lines[24] == null) lines[24] = -999;
+                if (Convert.ToString(lines[2]) == "") lines[2] = -999;
+                if (Convert.ToString(lines[3]) == "") lines[3] = -999;
+                if (Convert.ToString(lines[4]) == "") lines[4] = -999;
+                if (Convert.ToString(lines[5]) == "") lines[5] = -999;
+                if (Convert.ToString(lines[6]) == "") lines[6] = -999;
+                if (Convert.ToString(lines[7]) == "") lines[7] = -999;
+                if (Convert.ToString(lines[8]) == "") lines[8] = -999;
+                if (Convert.ToString(lines[10]) == "") lines[10] = -999;
+                if (Convert.ToString(lines[11]) == "") lines[11] = -999;
+                if (Convert.ToString(lines[12]) == "") lines[12] = -999;
+                //            if (lines[13] == null) lines[13] = -999;
+                if (Convert.ToString(lines[14]) == "") lines[14] = -999;
+                if (Convert.ToString(lines[15]) == "") lines[15] = -999;
+                if (Convert.ToString(lines[17]) == "") lines[17] = -999;
+                if (Convert.ToString(lines[18]) == "") lines[18] = -999;
+                if (Convert.ToString(lines[19]) == "") lines[19] = -999;
+                if (Convert.ToString(lines[20]) == "") lines[20] = -999;
+                if (Convert.ToString(lines[21]) == "") lines[21] = -999;
+                if (Convert.ToString(lines[22]) == "") lines[22] = -999;
+                if (Convert.ToString(lines[23]) == "") lines[23] = -999;
+                if (Convert.ToString(lines[24]) == "") lines[24] = -999;
             }
             catch
             { }
+
             try //пытаемся вставить поля в таблицу бд, конертируя соответствующие данные в нужный тип 
             {
                 бАTableAdapter.Insert(Convert.ToString(lines[0]),
