@@ -75,7 +75,7 @@ namespace WindowsFormsApp1
                 }
                 //  ram = mas[1];
                 //MessageBox.Show(ram.IDent());
-                MessageBox.Show(Convert.ToString(count));
+               // MessageBox.Show(Convert.ToString(count));
                 //parms = mas[0].GetIdnt();
                 //MessageBox.Show(Convert.ToString(parms[0]));
                 try
@@ -132,19 +132,16 @@ namespace WindowsFormsApp1
                         Convert.ToDouble(textBox2.Text),
                         Convert.ToDouble(textBox5.Text),
                         Convert.ToDouble(textBox6.Text),
+                        Convert.ToDouble(35),  //Вес бюкса макс   textBox5.Text
+                        Convert.ToDouble(17), //Вес бюкса  мин   textBox6.Text
                         Convert.ToDouble(textBox5.Text),
                         Convert.ToDouble(textBox6.Text),
                         Convert.ToDouble(textBox5.Text),
                         Convert.ToDouble(textBox6.Text),
-                        Convert.ToDouble(textBox5.Text),
-                        Convert.ToDouble(textBox6.Text),
-
                         Convert.ToDouble(textBox13.Text),
                         Convert.ToDouble(textBox14.Text),
-
                         Convert.ToDouble(textBox15.Text),
                         Convert.ToDouble(textBox16.Text),
-
                         Convert.ToDouble(textBox17.Text),
                         Convert.ToDouble(textBox18.Text)
                         );
@@ -343,6 +340,11 @@ namespace WindowsFormsApp1
         }
 
         private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
         {
 
         }
