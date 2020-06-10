@@ -119,7 +119,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 16);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Длина рыб. мм";
+            this.label2.Text = "Длина рыб, мм";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
@@ -148,7 +148,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(89, 16);
             this.label6.TabIndex = 15;
-            this.label6.Text = "Масса рыб. г";
+            this.label6.Text = "Масса рыб, г";
             // 
             // textBox5
             // 
@@ -226,7 +226,7 @@
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(214, 16);
             this.label16.TabIndex = 37;
-            this.label16.Text = "Содержание липилов (TL%) в %";
+            this.label16.Text = "Содержание липидов (TL%) в %";
             this.label16.Visible = false;
             this.label16.Click += new System.EventHandler(this.label16_Click);
             // 

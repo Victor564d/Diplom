@@ -61,52 +61,63 @@ namespace WindowsFormsApp1
         {
             err = false;
             errs = "";
-            if(textBox3.Text!="")
-             if((Convert.ToDouble(textBox3.Text) > Convert.ToDouble(pars[1])) ||((Convert.ToDouble(textBox3.Text) < Convert.ToDouble(pars[2])))){
-                err = true;
-                errs += "Поле 'Минимальная длина' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[1]) + ", мин значение - " + Convert.ToString(pars[2])+Convert.ToChar(13);
+            if (comboBox1.Text != "")
+            {
+                if (Convert.ToDouble(comboBox1.Text) > Convert.ToDouble(comboBox2.Text)) { errs += "Минимальный размер не может привышать максимальный ! "; } // проверка размеров рыбы (Я)
+                
+                if ((Convert.ToDouble(comboBox1.Text) > Convert.ToDouble(pars[1])) || ((Convert.ToDouble(comboBox1.Text) < Convert.ToDouble(pars[2])))) 
+                {
+                    err = true;
+                    errs += "Поле 'Минимальная длина' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[1]) + ", мин значение - " + Convert.ToString(pars[2]) + Convert.ToChar(13);
                 }
-            if (textBox4.Text != "")
-                if ((Convert.ToDouble(textBox4.Text) > Convert.ToDouble(pars[1])) || ((Convert.ToDouble(textBox4.Text) < Convert.ToDouble(pars[2]))))
+            }
+            if (comboBox2.Text != "")
+                if ((Convert.ToDouble(comboBox2.Text) > Convert.ToDouble(pars[1])) || ((Convert.ToDouble(comboBox2.Text) < Convert.ToDouble(pars[2]))))
             {
                 err = true;
                 errs += "Поле 'Максимальная длина' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[1]) + ", мин значение - " + Convert.ToString(pars[2]) + Convert.ToChar(13);
             }
-           /* if (textBox11.Text != "")
-                if ((Convert.ToDouble(textBox11.Text) > Convert.ToDouble(pars[13])) || ((Convert.ToDouble(textBox11.Text) < Convert.ToDouble(pars[14]))))
-            {
-                err = true;
-                errs += "Поле 'Содержание СВ' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[13]) + ", мин значение - " + Convert.ToString(pars[14]) + Convert.ToChar(13);
-            }
-            if (textBox10.Text != "")
-                if ((Convert.ToDouble(textBox10.Text) > Convert.ToDouble(pars[15])) || ((Convert.ToDouble(textBox10.Text) < Convert.ToDouble(pars[16]))))
-            {
-                err = true;
-                errs += "Поле 'Содержание липидов' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[15]) + ", мин значение - " + Convert.ToString(pars[16]) + Convert.ToChar(13);
-            }
-            if (textBox12.Text != "")
-                if ((Convert.ToDouble(textBox12.Text) > Convert.ToDouble(pars[15])) || ((Convert.ToDouble(textBox12.Text) < Convert.ToDouble(pars[16]))))
-            {
-                err = true;
-                errs += "Поле 'Расчетное содержание липидов' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[15]) + ", мин значение - " + Convert.ToString(pars[16]) + Convert.ToChar(13);
-            }*/
+            /* if (textBox11.Text != "")
+                 if ((Convert.ToDouble(textBox11.Text) > Convert.ToDouble(pars[13])) || ((Convert.ToDouble(textBox11.Text) < Convert.ToDouble(pars[14]))))
+             {
+                 err = true;
+                 errs += "Поле 'Содержание СВ' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[13]) + ", мин значение - " + Convert.ToString(pars[14]) + Convert.ToChar(13);
+             }
+             if (textBox10.Text != "")
+                 if ((Convert.ToDouble(textBox10.Text) > Convert.ToDouble(pars[15])) || ((Convert.ToDouble(textBox10.Text) < Convert.ToDouble(pars[16]))))
+             {
+                 err = true;
+                 errs += "Поле 'Содержание липидов' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[15]) + ", мин значение - " + Convert.ToString(pars[16]) + Convert.ToChar(13);
+             }
+             if (textBox12.Text != "")
+                 if ((Convert.ToDouble(textBox12.Text) > Convert.ToDouble(pars[15])) || ((Convert.ToDouble(textBox12.Text) < Convert.ToDouble(pars[16]))))
+             {
+                 err = true;
+                 errs += "Поле 'Расчетное содержание липидов' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[15]) + ", мин значение - " + Convert.ToString(pars[16]) + Convert.ToChar(13);
+             }*/
             if (textBox14.Text != "")
-                if ((Convert.ToDouble(textBox14.Text) > Convert.ToDouble(pars[7])) || ((Convert.ToDouble(textBox14.Text) < Convert.ToDouble(pars[8]))))
             {
-                err = true;
-                errs += "Поле 'Содержание липидов' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[7]) + ", мин значение - " + Convert.ToString(pars[8]) + Convert.ToChar(13);
+                // проверка веса бюкса (Я)
+                if ((Convert.ToDouble(textBox14.Text) >= Convert.ToDouble(textBox15.Text)) || (Convert.ToDouble(textBox14.Text) >= Convert.ToDouble(textBox16.Text))) { errs += "Вес пустого бюкса не может быть больше веса бюкса с сырой навеской или Бюкса с сухой навеской ! "; }
+                if (Convert.ToDouble(textBox16.Text) >= Convert.ToDouble(textBox15.Text)) { errs += "Вес бюкса с сухой навеской не может быть больше веса бюкса с сырой навеской ! "; }
+
+                if ((Convert.ToDouble(textBox14.Text) > Convert.ToDouble(pars[7])) || ((Convert.ToDouble(textBox14.Text) < Convert.ToDouble(pars[8]))))
+                {
+                    err = true;
+                    errs += "Поле 'Вес бюкса' не соответствует ограничениям (макс значение - " + Convert.ToString(pars[7]) + ", мин значение - " + Convert.ToString(pars[8]) + ")" + Convert.ToChar(13);
+                }
             }
             if (textBox15.Text != "")
-                if ((Convert.ToDouble(textBox15.Text) > Convert.ToDouble(pars[9])) || ((Convert.ToDouble(textBox15.Text) < Convert.ToDouble(pars[10]))))
+                if (((Convert.ToDouble(textBox15.Text) - Convert.ToDouble(textBox14.Text)) > Convert.ToDouble(pars[9])) || ((Convert.ToDouble(textBox15.Text) - Convert.ToDouble(textBox15.Text)) < Convert.ToDouble(pars[10])))
             {
                 err = true;
-                errs += "Поле 'Содержание липидов' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[9]) + ", мин значение - " + Convert.ToString(pars[10]) + Convert.ToChar(13);
+                errs += "Поле 'Сырая масса бюкса с навеской' не соответствует ограничениям (макс значение - " + Convert.ToString(pars[9]) + ", мин значение - " + Convert.ToString(pars[10]) + ")" + Convert.ToChar(13);
             }
             if (textBox16.Text != "")
-                if ((Convert.ToDouble(textBox16.Text) > Convert.ToDouble(pars[11])) || ((Convert.ToDouble(textBox16.Text) < Convert.ToDouble(pars[12]))))
+                if (((Convert.ToDouble(textBox16.Text) - Convert.ToDouble(textBox14.Text)) > Convert.ToDouble(pars[11])) || ((Convert.ToDouble(textBox16.Text) - (Convert.ToDouble(textBox14.Text)) < Convert.ToDouble(pars[12]))))
             {
                 err = true;
-                errs += "Поле 'Содержание липидов' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[11]) + ", мин значение - " + Convert.ToString(pars[12]) + Convert.ToChar(13);
+                errs += "Поле 'Сухая масса бюкса с навеской' не соответствует ограничениям (макс значение - " + Convert.ToString(pars[11]) + ", мин значение - " + Convert.ToString(pars[12]) + ")" + Convert.ToChar(13);
             }
             if (err)
             {
@@ -119,8 +130,8 @@ namespace WindowsFormsApp1
                 zapis[1] = textBox2.Text;// ид записи
                 zapis[2] = textBox5.Text;//порядковый номер
                 zapis[3] = textBox9.Text;//средняя длина 
-                zapis[4] = textBox3.Text;//минимальный размер
-                zapis[5] = textBox4.Text;//максимальный размер
+                zapis[4] = comboBox1.Text;//минимальный размер
+                zapis[5] = comboBox2.Text;//максимальный размер
                 zapis[6] = textBox7.Text;//количество рыб
                 zapis[7] = textBox6.Text;//масса рыбы
                 zapis[8] = textBox8.Text;//средняя масса рыбы
@@ -171,8 +182,8 @@ namespace WindowsFormsApp1
                     textBox18.Text = Convert.ToString(Convert.ToDouble(textBox16.Text) - Convert.ToDouble(textBox14.Text));
                 if (textBox15.Text != "" && textBox14.Text != "")
                     textBox17.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) - Convert.ToDouble(textBox14.Text));
-                if (textBox3.Text != "" && textBox4.Text != "")
-                    textBox9.Text = Convert.ToString((Convert.ToDouble(textBox3.Text) + Convert.ToDouble(textBox4.Text)) / 2);
+                if (comboBox1.Text != "" && comboBox2.Text != "")
+                    textBox9.Text = Convert.ToString((Convert.ToDouble(comboBox1.Text) + Convert.ToDouble(comboBox2.Text)) / 2);
 
                 if (textBox18.Text != "" && textBox17.Text != "")
                     textBox11.Text = Convert.ToString(Convert.ToDouble(textBox18.Text) * 100 / Convert.ToDouble(textBox17.Text));//вфвфвфв
@@ -198,8 +209,8 @@ namespace WindowsFormsApp1
             textBox2.Text = Convert.ToString(zapis[1]);// ид записи
             textBox5.Text = Convert.ToString(zapis[2]);//порядковый номер
             textBox9.Text = Convert.ToString(zapis[3]); //средняя длина 
-            textBox3.Text = Convert.ToString(zapis[4]); //минимальный размер
-            textBox4.Text = Convert.ToString(zapis[5]); //максимальный размер
+            comboBox1.Text = Convert.ToString(zapis[4]); //минимальный размер
+            comboBox2.Text = Convert.ToString(zapis[5]); //максимальный размер
             textBox7.Text = Convert.ToString(zapis[6]); //количество рыб
             textBox6.Text = Convert.ToString(zapis[7]); //масса рыбы
             textBox8.Text = Convert.ToString(zapis[8]); //средняя масса рыбы

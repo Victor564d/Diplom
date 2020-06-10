@@ -76,11 +76,17 @@ namespace WindowsFormsApp1
                     errs += "Поле 'Стандартная длина' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[1]) + ", мин значение - " + Convert.ToString(pars[2]) + Convert.ToChar(13);
                 }
             if (textBox22.Text != "")
+            {
+                // проверка веса бюкса (Я)
+                if ((Convert.ToDouble(textBox22.Text) >= Convert.ToDouble(textBox21.Text)) || (Convert.ToDouble(textBox22.Text) >= Convert.ToDouble(textBox20.Text))) { errs += "Вес пустого бюкса не может быть больше веса бюкса с сырой навеской или Бюкса с сухой навеской ! "; }
+                if (Convert.ToDouble(textBox20.Text) >= Convert.ToDouble(textBox21.Text)) { errs += "Вес бюкса с сухой навеской не может быть больше веса бюкса с сырой навеской ! "; }
+
                 if ((Convert.ToDouble(textBox22.Text) > Convert.ToDouble(pars[7])) || ((Convert.ToDouble(textBox22.Text) < Convert.ToDouble(pars[8]))))
                 {
                     err = true;
                     errs += "Поле 'Вес бюкса' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[7]) + ", мин значение - " + Convert.ToString(pars[8]) + Convert.ToChar(13);
                 }
+            }
             if (textBox21.Text != "")
                 if ((Convert.ToDouble(textBox21.Text) > Convert.ToDouble(pars[5])) || ((Convert.ToDouble(textBox21.Text) < Convert.ToDouble(pars[6]))))
                 {
@@ -201,7 +207,7 @@ namespace WindowsFormsApp1
             }
             catch (Exception ex)
             {
-                MessageBox.Show("При открытии формы произошла ошибка загруски установленых ограничений, ограничения не будут учитыватся дальше. Код ошибки: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("При открытии формы произошла ошибка загрузки установленых ограничений, ограничения не будут учитыватся дальше. Код ошибки: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -238,6 +244,11 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("При расчете возникла ошибка, проверьте все поля.   Причина ошибки: " + ex.Message, "Ошибка расчета", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void видToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void label12_Click(object sender, EventArgs e)

@@ -109,11 +109,11 @@
             this.видToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вводДополнительныхДанныхToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.просмотрДополнительныхДанныхToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отменаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.отменаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -582,7 +582,6 @@
             this.groupBox6.TabIndex = 33;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Дополнительные расчётные данные";
-            this.groupBox6.Visible = false;
             // 
             // textBox32
             // 
@@ -859,16 +858,23 @@
             // вводДополнительныхДанныхToolStripMenuItem
             // 
             this.вводДополнительныхДанныхToolStripMenuItem.Name = "вводДополнительныхДанныхToolStripMenuItem";
-            this.вводДополнительныхДанныхToolStripMenuItem.Size = new System.Drawing.Size(287, 22);
-            this.вводДополнительныхДанныхToolStripMenuItem.Text = "Ввод дополнительных данных";
+            this.вводДополнительныхДанныхToolStripMenuItem.Size = new System.Drawing.Size(329, 22);
+            this.вводДополнительныхДанныхToolStripMenuItem.Text = "Показать/скрыть дополнительные данные";
             this.вводДополнительныхДанныхToolStripMenuItem.Click += new System.EventHandler(this.вводДополнительныхДанныхToolStripMenuItem_Click);
             // 
             // просмотрДополнительныхДанныхToolStripMenuItem
             // 
             this.просмотрДополнительныхДанныхToolStripMenuItem.Name = "просмотрДополнительныхДанныхToolStripMenuItem";
-            this.просмотрДополнительныхДанныхToolStripMenuItem.Size = new System.Drawing.Size(287, 22);
-            this.просмотрДополнительныхДанныхToolStripMenuItem.Text = "Просмотр дополнительных данных";
+            this.просмотрДополнительныхДанныхToolStripMenuItem.Size = new System.Drawing.Size(396, 22);
+            this.просмотрДополнительныхДанныхToolStripMenuItem.Text = "Показать/скрыть дополнительные расчетные данные";
             this.просмотрДополнительныхДанныхToolStripMenuItem.Click += new System.EventHandler(this.просмотрДополнительныхДанныхToolStripMenuItem_Click);
+            // 
+            // отменаToolStripMenuItem
+            // 
+            this.отменаToolStripMenuItem.Name = "отменаToolStripMenuItem";
+            this.отменаToolStripMenuItem.Size = new System.Drawing.Size(65, 21);
+            this.отменаToolStripMenuItem.Text = "Отмена";
+            this.отменаToolStripMenuItem.Click += new System.EventHandler(this.отменаToolStripMenuItem_Click);
             // 
             // groupBox8
             // 
@@ -886,7 +892,6 @@
             this.groupBox8.TabIndex = 35;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Дополнительные данные";
-            this.groupBox8.Visible = false;
             // 
             // groupBox11
             // 
@@ -927,13 +932,6 @@
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Данные о судне:";
             this.groupBox9.Enter += new System.EventHandler(this.groupBox9_Enter);
-            // 
-            // отменаToolStripMenuItem
-            // 
-            this.отменаToolStripMenuItem.Name = "отменаToolStripMenuItem";
-            this.отменаToolStripMenuItem.Size = new System.Drawing.Size(65, 21);
-            this.отменаToolStripMenuItem.Text = "Отмена";
-            this.отменаToolStripMenuItem.Click += new System.EventHandler(this.отменаToolStripMenuItem_Click);
             // 
             // Catch_Record_Form
             // 

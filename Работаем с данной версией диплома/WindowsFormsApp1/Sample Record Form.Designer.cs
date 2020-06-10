@@ -35,13 +35,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -55,6 +53,8 @@
             this.записатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.видToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вводДополнительныхДанныхToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отменаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выполнитьРасчетПараметровToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
@@ -77,8 +77,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.отменаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.выполнитьРасчетПараметровToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -161,14 +161,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Пробы";
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(172, 26);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 4;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -193,10 +185,10 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.comboBox2);
+            this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.textBox9);
             this.groupBox2.Controls.Add(this.label20);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.textBox3);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(9, 156);
@@ -224,14 +216,6 @@
             this.label20.Size = new System.Drawing.Size(106, 16);
             this.label20.TabIndex = 6;
             this.label20.Text = "Средняя длина";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(172, 58);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 8;
             // 
             // groupBox3
             // 
@@ -359,9 +343,23 @@
             // вводДополнительныхДанныхToolStripMenuItem
             // 
             this.вводДополнительныхДанныхToolStripMenuItem.Name = "вводДополнительныхДанныхToolStripMenuItem";
-            this.вводДополнительныхДанныхToolStripMenuItem.Size = new System.Drawing.Size(255, 22);
-            this.вводДополнительныхДанныхToolStripMenuItem.Text = "Ввод дополнительных данных";
+            this.вводДополнительныхДанныхToolStripMenuItem.Size = new System.Drawing.Size(329, 22);
+            this.вводДополнительныхДанныхToolStripMenuItem.Text = "Показать/скрыть дополнительные данные";
             this.вводДополнительныхДанныхToolStripMenuItem.Click += new System.EventHandler(this.вводДополнительныхДанныхToolStripMenuItem_Click);
+            // 
+            // отменаToolStripMenuItem
+            // 
+            this.отменаToolStripMenuItem.Name = "отменаToolStripMenuItem";
+            this.отменаToolStripMenuItem.Size = new System.Drawing.Size(65, 21);
+            this.отменаToolStripMenuItem.Text = "Отмена";
+            this.отменаToolStripMenuItem.Click += new System.EventHandler(this.отменаToolStripMenuItem_Click);
+            // 
+            // выполнитьРасчетПараметровToolStripMenuItem
+            // 
+            this.выполнитьРасчетПараметровToolStripMenuItem.Name = "выполнитьРасчетПараметровToolStripMenuItem";
+            this.выполнитьРасчетПараметровToolStripMenuItem.Size = new System.Drawing.Size(209, 21);
+            this.выполнитьРасчетПараметровToolStripMenuItem.Text = "Выполнить расчет параметров ";
+            this.выполнитьРасчетПараметровToolStripMenuItem.Click += new System.EventHandler(this.выполнитьРасчетПараметровToolStripMenuItem_Click);
             // 
             // groupBox5
             // 
@@ -460,7 +458,6 @@
             this.groupBox8.TabIndex = 39;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Дополнительные данные";
-            this.groupBox8.Visible = false;
             // 
             // groupBox9
             // 
@@ -587,19 +584,111 @@
             this.label9.TabIndex = 6;
             this.label9.Text = "№ бюкса";
             // 
-            // отменаToolStripMenuItem
+            // comboBox1
             // 
-            this.отменаToolStripMenuItem.Name = "отменаToolStripMenuItem";
-            this.отменаToolStripMenuItem.Size = new System.Drawing.Size(65, 21);
-            this.отменаToolStripMenuItem.Text = "Отмена";
-            this.отменаToolStripMenuItem.Click += new System.EventHandler(this.отменаToolStripMenuItem_Click);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "0",
+            "5",
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "35",
+            "40",
+            "45",
+            "50",
+            "55",
+            "60",
+            "65",
+            "70",
+            "75",
+            "80",
+            "85",
+            "90",
+            "95",
+            "100",
+            "105",
+            "110",
+            "115",
+            "120",
+            "125",
+            "130",
+            "135",
+            "140",
+            "145",
+            "150",
+            "155",
+            "160",
+            "165",
+            "170",
+            "175",
+            "180",
+            "185",
+            "190",
+            "195",
+            "200",
+            "205",
+            "210",
+            "215"});
+            this.comboBox1.Location = new System.Drawing.Point(172, 26);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(100, 24);
+            this.comboBox1.TabIndex = 12;
             // 
-            // выполнитьРасчетПараметровToolStripMenuItem
+            // comboBox2
             // 
-            this.выполнитьРасчетПараметровToolStripMenuItem.Name = "выполнитьРасчетПараметровToolStripMenuItem";
-            this.выполнитьРасчетПараметровToolStripMenuItem.Size = new System.Drawing.Size(209, 21);
-            this.выполнитьРасчетПараметровToolStripMenuItem.Text = "Выполнить расчет параметров ";
-            this.выполнитьРасчетПараметровToolStripMenuItem.Click += new System.EventHandler(this.выполнитьРасчетПараметровToolStripMenuItem_Click);
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "0",
+            "5",
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "35",
+            "40",
+            "45",
+            "50",
+            "55",
+            "60",
+            "65",
+            "70",
+            "75",
+            "80",
+            "85",
+            "90",
+            "95",
+            "100",
+            "105",
+            "110",
+            "115",
+            "120",
+            "125",
+            "130",
+            "135",
+            "140",
+            "145",
+            "150",
+            "155",
+            "160",
+            "165",
+            "170",
+            "175",
+            "180",
+            "185",
+            "190",
+            "195",
+            "200",
+            "205",
+            "210",
+            "215"});
+            this.comboBox2.Location = new System.Drawing.Point(172, 58);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(100, 24);
+            this.comboBox2.TabIndex = 13;
             // 
             // Sample_Record_Form
             // 
@@ -644,11 +733,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -690,5 +777,7 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ToolStripMenuItem отменаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выполнитьРасчетПараметровToolStripMenuItem;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

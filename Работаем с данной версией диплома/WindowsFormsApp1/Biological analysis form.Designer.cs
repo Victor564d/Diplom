@@ -33,6 +33,7 @@
             this.видToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вводДополнительныхДанныхToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отменаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выполнитьРасчетПараметровToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -93,7 +94,6 @@
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.выполнитьРасчетПараметровToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -135,12 +135,13 @@
             this.видToolStripMenuItem.Name = "видToolStripMenuItem";
             this.видToolStripMenuItem.Size = new System.Drawing.Size(41, 21);
             this.видToolStripMenuItem.Text = "Вид";
+            this.видToolStripMenuItem.Click += new System.EventHandler(this.видToolStripMenuItem_Click);
             // 
             // вводДополнительныхДанныхToolStripMenuItem
             // 
             this.вводДополнительныхДанныхToolStripMenuItem.Name = "вводДополнительныхДанныхToolStripMenuItem";
-            this.вводДополнительныхДанныхToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
-            this.вводДополнительныхДанныхToolStripMenuItem.Text = "Дополнительные данные";
+            this.вводДополнительныхДанныхToolStripMenuItem.Size = new System.Drawing.Size(329, 22);
+            this.вводДополнительныхДанныхToolStripMenuItem.Text = "Показать/скрыть дополнительные данные";
             this.вводДополнительныхДанныхToolStripMenuItem.Click += new System.EventHandler(this.вводДополнительныхДанныхToolStripMenuItem_Click);
             // 
             // отменаToolStripMenuItem
@@ -148,6 +149,13 @@
             this.отменаToolStripMenuItem.Name = "отменаToolStripMenuItem";
             this.отменаToolStripMenuItem.Size = new System.Drawing.Size(65, 21);
             this.отменаToolStripMenuItem.Text = "Отмена";
+            // 
+            // выполнитьРасчетПараметровToolStripMenuItem
+            // 
+            this.выполнитьРасчетПараметровToolStripMenuItem.Name = "выполнитьРасчетПараметровToolStripMenuItem";
+            this.выполнитьРасчетПараметровToolStripMenuItem.Size = new System.Drawing.Size(209, 21);
+            this.выполнитьРасчетПараметровToolStripMenuItem.Text = "Выполнить расчет параметров ";
+            this.выполнитьРасчетПараметровToolStripMenuItem.Click += new System.EventHandler(this.выполнитьРасчетПараметровToolStripMenuItem_Click);
             // 
             // groupBox2
             // 
@@ -176,7 +184,7 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(16, 13);
+            this.richTextBox1.Location = new System.Drawing.Point(12, 22);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(526, 96);
             this.richTextBox1.TabIndex = 28;
@@ -730,13 +738,6 @@
             this.label14.Size = new System.Drawing.Size(147, 16);
             this.label14.TabIndex = 6;
             this.label14.Text = "Максимальная длина";
-            // 
-            // выполнитьРасчетПараметровToolStripMenuItem
-            // 
-            this.выполнитьРасчетПараметровToolStripMenuItem.Name = "выполнитьРасчетПараметровToolStripMenuItem";
-            this.выполнитьРасчетПараметровToolStripMenuItem.Size = new System.Drawing.Size(209, 21);
-            this.выполнитьРасчетПараметровToolStripMenuItem.Text = "Выполнить расчет параметров ";
-            this.выполнитьРасчетПараметровToolStripMenuItem.Click += new System.EventHandler(this.выполнитьРасчетПараметровToolStripMenuItem_Click);
             // 
             // Biological_analysis_form
             // 
