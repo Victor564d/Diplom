@@ -232,7 +232,7 @@ namespace WindowsFormsApp1
                     textBox15.Text = Convert.ToString(Convert.ToDouble(textBox18.Text)*100 / Convert.ToDouble(textBox19.Text));//вфвфвфв
 
                 if (textBox15.Text != "")
-                    textBox14.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * Convert.ToDouble(pars[17]) - Convert.ToDouble(pars[18]));
+                    textBox14.Text = Convert.ToString(Convert.ToDouble(textBox15.Text) * Convert.ToDouble(pars[17]) + Convert.ToDouble(pars[18]));
             }
             catch (System.Exception ex)
             {

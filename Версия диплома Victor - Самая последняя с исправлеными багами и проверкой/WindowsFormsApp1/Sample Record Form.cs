@@ -72,7 +72,7 @@ namespace WindowsFormsApp1
                 err = true;
                 errs += "Поле 'Максимальная длина' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[1]) + ", мин значение - " + Convert.ToString(pars[2]) + Convert.ToChar(13);
             }
-            if (textBox11.Text != "")
+           /* if (textBox11.Text != "")
                 if ((Convert.ToDouble(textBox11.Text) > Convert.ToDouble(pars[13])) || ((Convert.ToDouble(textBox11.Text) < Convert.ToDouble(pars[14]))))
             {
                 err = true;
@@ -89,7 +89,7 @@ namespace WindowsFormsApp1
             {
                 err = true;
                 errs += "Поле 'Расчетное содержание липидов' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[15]) + ", мин значение - " + Convert.ToString(pars[16]) + Convert.ToChar(13);
-            }
+            }*/
             if (textBox14.Text != "")
                 if ((Convert.ToDouble(textBox14.Text) > Convert.ToDouble(pars[7])) || ((Convert.ToDouble(textBox14.Text) < Convert.ToDouble(pars[8]))))
             {
@@ -178,7 +178,7 @@ namespace WindowsFormsApp1
                     textBox11.Text = Convert.ToString(Convert.ToDouble(textBox18.Text) * 100 / Convert.ToDouble(textBox17.Text));//вфвфвфв
 
                 if (textBox11.Text != "")
-                textBox12.Text = Convert.ToString(Convert.ToDouble(textBox11.Text) * Convert.ToDouble(pars[17]) - Convert.ToDouble(pars[18]));
+                textBox12.Text = Convert.ToString(Convert.ToDouble(textBox11.Text) * Convert.ToDouble(pars[17]) + Convert.ToDouble(pars[18]));
             }
             catch (System.Exception ex)
             {

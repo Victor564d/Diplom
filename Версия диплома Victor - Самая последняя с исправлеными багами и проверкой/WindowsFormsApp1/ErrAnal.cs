@@ -33,14 +33,17 @@ namespace WindowsFormsApp1
                 if (countlin == 35)
                 {
                     er += "Возможно данные данные из таблицы \"Уловы\"";
+                    counterr++;
                 }
                 if (countlin == 19)
                 {
                     er += "Возможно данные данные из таблицы \"Пробы\"";
+                    counterr++;
                 }
                 if (countlin == 26)
                 {
                     er += "Возможно данные данные из таблицы \"БА\"";
+                    counterr++;
                 }
             }
             else
@@ -197,15 +200,56 @@ namespace WindowsFormsApp1
                             er += "Запись с ключевым полем \"" + Convert.ToString(lines[1]) + "\" уже существует ";
                         }
                     }
+                    for (int j = 2; j <= 4; j++) // 2 3 4 
+                    {
+                        try
+                        {
+                            double kl = Convert.ToInt16(lines[j]);
+                        }
+                        catch (Exception ex)
+                        {
+                            er = "Ошибка в поле " + Convert.ToString(j) + " :" + ex.Message + ". ";
+                        }
+                    }
+                    for (int j = 5; j <= 8; j++) //5 6 7 8 
+                    {
+                        try
+                        {
+                            decimal kl = Convert.ToDecimal(lines[j]);
+                        }
+                        catch (Exception ex)
+                        {
+                            er = "Ошибка в поле " + Convert.ToString(j) + " :" + ex.Message + ". ";
+                        }
+                    }
                     try
                     {
-                        short kl = Convert.ToInt16(lines[2]);
+                        short kl = Convert.ToInt16(lines[10]); //10
                     }
                     catch (Exception ex)
                     {
-                        er = "Ошибка в поле 2 :" + ex.Message + ". ";
+                        er = "Ошибка в поле 10 :" + ex.Message + ". ";
                     }
-                    for (int j = 5; j <= 8; j++)
+                    try
+                    {
+                        short kl = Convert.ToInt16(lines[11]); //11
+                    }
+                    catch (Exception ex)
+                    {
+                        er = "Ошибка в поле 11 :" + ex.Message + ". ";
+                    }
+                    for (int j = 12; j <= 15; j++) //12 13 14 15 
+                    {
+                        try
+                        {
+                            decimal kl = Convert.ToDecimal(lines[j]);
+                        }
+                        catch (Exception ex)
+                        {
+                            er = "Ошибка в поле " + Convert.ToString(j) + " :" + ex.Message + ". ";
+                        }
+                    }
+                    for (int j = 17; j <= 24; j++) //12 13 14 15 
                     {
                         try
                         {
@@ -216,51 +260,12 @@ namespace WindowsFormsApp1
                             er = "Ошибка в поле " + Convert.ToString(j) + " :" + ex.Message + ". ";
                         }
                     }
-                    try
-                    {
-                        short kl = Convert.ToInt16(lines[10]);
-                    }
-                    catch (Exception ex)
-                    {
-                        er = "Ошибка в поле 10 :" + ex.Message + ". ";
-                    }
-                    try
-                    {
-                        short kl = Convert.ToInt16(lines[11]);
-                    }
-                    catch (Exception ex)
-                    {
-                        er = "Ошибка в поле 11 :" + ex.Message + ". ";
-                    }
-                    try
-                    {
-                        double kl = Convert.ToDouble(lines[12]);
-                    }
-                    catch (Exception ex)
-                    {
-                        er = "Ошибка в поле 12 :" + ex.Message + ". ";
-                    }
-                    try
-                    {
-                        double kl = Convert.ToDouble(lines[14]);
-                    }
-                    catch (Exception ex)
-                    {
-                        er = "Ошибка в поле 14 :" + ex.Message + ". ";
-                    }
-                    try
-                    {
-                        double kl = Convert.ToDouble(lines[15]);
-                    }
-                    catch (Exception ex)
-                    {
-                        er = "Ошибка в поле 15 :" + ex.Message + ". ";
-                    }
                 }
             }
             return(er);
         }
         ArrayList cells = new ArrayList();
+        public int counterr = 0;
         private void ErrAnal_Load(object sender, EventArgs e)
         {
             
@@ -312,6 +317,7 @@ namespace WindowsFormsApp1
             if (patch == null) { MessageBox.Show("Откройте файл для анализа", "Предуприждение"); }else 
             if (Convert.ToString(MessageBox.Show("Вы действительно хотите начать анализ ошибок? При обработке ошибок работа с основной программой будет заблокирована", "Предуприждение !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)) == "Yes")
             {
+                counterr = 0;
                 richTextBox1.Text = "";
                 ArrayList lines = new ArrayList();
                 string ll; string str = ""; int count = 0;
@@ -389,6 +395,14 @@ namespace WindowsFormsApp1
                         err = "";
                         count = 0;
                         lines.Clear();
+                        if (counterr >= 15)
+                        {
+                            if (Convert.ToString(MessageBox.Show("Найдено более 15 однотипных ошибок. Прекратить проверку файла на ошибки?", "Предуприждение !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)) == "Yes")
+                            {
+                                break;
+                            }
+
+                        }
                         
                     }
                     sw.Close();

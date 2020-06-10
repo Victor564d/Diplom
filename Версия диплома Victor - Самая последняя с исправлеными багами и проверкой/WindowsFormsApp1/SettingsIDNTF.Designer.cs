@@ -198,6 +198,7 @@
             this.label14.Size = new System.Drawing.Size(183, 16);
             this.label14.TabIndex = 33;
             this.label14.Text = "Содержание СВ (DW%) в %";
+            this.label14.Visible = false;
             // 
             // textBox13
             // 
@@ -206,6 +207,7 @@
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(102, 22);
             this.textBox13.TabIndex = 32;
+            this.textBox13.Visible = false;
             // 
             // textBox14
             // 
@@ -214,6 +216,7 @@
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(102, 22);
             this.textBox14.TabIndex = 34;
+            this.textBox14.Visible = false;
             // 
             // label16
             // 
@@ -224,6 +227,7 @@
             this.label16.Size = new System.Drawing.Size(214, 16);
             this.label16.TabIndex = 37;
             this.label16.Text = "Содержание липилов (TL%) в %";
+            this.label16.Visible = false;
             this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // textBox15
@@ -233,6 +237,7 @@
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(102, 22);
             this.textBox15.TabIndex = 36;
+            this.textBox15.Visible = false;
             this.textBox15.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
             // 
             // textBox16
@@ -242,6 +247,7 @@
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(102, 22);
             this.textBox16.TabIndex = 38;
+            this.textBox16.Visible = false;
             // 
             // label7
             // 
@@ -259,9 +265,9 @@
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label20.Location = new System.Drawing.Point(323, 239);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(123, 16);
+            this.label20.Size = new System.Drawing.Size(126, 16);
             this.label20.TabIndex = 50;
-            this.label20.Text = "TL% = A * DW% - B";
+            this.label20.Text = "TL% = A * DW% + B";
             this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
             // label22
