@@ -211,6 +211,8 @@ namespace WindowsFormsApp1
             button1.Enabled = true;
             button3.Visible = false;
             button4.Visible = false;
+            button9.Visible = true;
+            button1.Visible = true;
         }
 
         private void button3_Click(object sender, EventArgs e)  //Кнопка сохранения индентификатора 
@@ -229,6 +231,8 @@ namespace WindowsFormsApp1
                     button1.Enabled = true;
                     button3.Visible = false;
                     button4.Visible = false;
+                    button9.Visible = true;
+                    button1.Visible = true;
                     using (StreamWriter sw = new StreamWriter("Settings.dat", false, System.Text.Encoding.Default))
                     {
                         sw.WriteLine("Identificators");
@@ -310,6 +314,8 @@ namespace WindowsFormsApp1
             button1.Enabled = false;
             button3.Visible = true;
             button4.Visible = true;
+            button9.Visible = false;
+            button1.Visible = false;
             oper = 1;
         }
         public int oper;
@@ -353,6 +359,8 @@ namespace WindowsFormsApp1
             button1.Enabled = false;
             button3.Visible = true;
             button4.Visible = true;
+            button9.Visible = false;
+            button1.Visible = false;
 
         }
 
@@ -413,6 +421,39 @@ namespace WindowsFormsApp1
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            button7.Visible = false;
+            button8.Visible = false;
+            button5.Visible = false;
+            button2.Visible = false;
+            button6.Visible = false;
+            label2.Visible = true;
+            label5.Visible = false;
+            button1.Visible = true;
+            listBox1.Visible = true;
+            button9.Visible = true;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            button7.Visible = true;
+            button8.Visible = true;
+            button5.Visible = true;
+            button2.Visible = true;
+            button6.Visible = true;
+            label2.Visible = false;
+            label5.Visible = true;
+            button1.Visible = false;
+            listBox1.Visible = false;
+            button9.Visible = false;
         }
     }
 }

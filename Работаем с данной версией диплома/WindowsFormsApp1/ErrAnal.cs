@@ -56,6 +56,7 @@ namespace WindowsFormsApp1
                         if (Convert.ToString(lines[0])== Convert.ToString(уловыDataGridView[0,j].Value))
                         {
                             er += "Запись с ключевым полем \"" + Convert.ToString(lines[0]) + "\" уже существует ";
+                            counterr++;
                         }
                     }
                     try
@@ -143,6 +144,7 @@ namespace WindowsFormsApp1
                         if (Convert.ToString(lines[1]) == Convert.ToString(пробыDataGridView[1, j].Value))
                         {
                             er += "Запись с ключевым полем \"" + Convert.ToString(lines[1]) + "\" уже существует ";
+                            counterr++;
                         }
                     }
                     try
@@ -198,6 +200,7 @@ namespace WindowsFormsApp1
                         if (Convert.ToString(lines[1]) == Convert.ToString(бАDataGridView[1, j].Value))
                         {
                             er += "Запись с ключевым полем \"" + Convert.ToString(lines[1]) + "\" уже существует ";
+                            counterr++;
                         }
                     }
                     for (int j = 2; j <= 4; j++) // 2 3 4 
@@ -328,6 +331,7 @@ namespace WindowsFormsApp1
                 while ((ll = sr.ReadLine()) != null)
                 {
                     cornt++;
+                   //richTextBox1.Text += ll;
                 }
                 sr.Close();
                 progressBar1.Maximum = cornt;
@@ -382,10 +386,19 @@ namespace WindowsFormsApp1
                         count -= 1;
                         if (count >= 1)
                         {
+                            int i = 0;
                             label4.Text = ll;
                             err = ErDT(table, lines, count);
-                            richTextBox1.Text = richTextBox1.Text + "В строке " + ll;
-                            richTextBox1.Text = richTextBox1.Text + err + "\n";
+                            richTextBox1.Text += ll+"\n";
+                            i = richTextBox1.Text.IndexOf(ll, i);
+                            richTextBox1.SelectionStart = i;
+                            richTextBox1.SelectionLength = ll.Length;
+                            richTextBox1.SelectionColor = Color.Red;
+                            richTextBox1.SelectionColor = Color.Black;
+                            richTextBox1.Text = richTextBox1.Text +"Следующие ошибки: " +err + "\n";
+                            richTextBox1.Text += "------------------------------------------------------------------------------------------------------------------\n";
+                            // richTextBox1.Text = richTextBox1.Text + "В строке " + ll;
+                            // richTextBox1.Text = richTextBox1.Text + err + "\n";
                             sw.WriteLine("Строка :" + ll);
                             sw.WriteLine("Все ошибки в строке:");
                             sw.WriteLine(err);
@@ -400,6 +413,9 @@ namespace WindowsFormsApp1
                             if (Convert.ToString(MessageBox.Show("Найдено более 15 однотипных ошибок. Прекратить проверку файла на ошибки?", "Предуприждение !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)) == "Yes")
                             {
                                 break;
+                            } else
+                            {
+                                counterr = -999999999;
                             }
 
                         }

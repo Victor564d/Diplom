@@ -225,3 +225,32 @@ E:\Diplom\Версия диплома Victor - Самая последняя с 
 E:\Diplom\Версия диплома Victor - Самая последняя с исправлеными багами и проверкой\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.application
 E:\Diplom\Версия диплома Victor - Самая последняя с исправлеными багами и проверкой\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 E:\Diplom\Версия диплома Victor - Самая последняя с исправлеными багами и проверкой\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.manifest
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.application
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.BA.resources
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.BAOOBR.resources
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Biological_analysis_form.resources
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Catch_Record_Form.resources
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ErrAnal.resources
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltBA.resources
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltProbSize.resources
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltrBAPGS.resources
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltrsYL.resources
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FiltrYLR.resources
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Sample_Record_Form.resources
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SettingsIDNTF.resources
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Vibor.resources
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.OtobrProb.resources
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Hamsa.resources
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SettingsУл.resources
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Proby.resources
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe.manifest
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.application
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
