@@ -16925,15 +16925,15 @@ WHERE        (RecordID = ?)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[27];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[28];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT CathID, SamplID, DD, MM, YYYY, Region, Area, Location, Latitude, Longitude, Depth, WaterTemperature, Gear, Vessel, Catch, DateOfProc, Condition, LengthRange, Mode, MeanLength, [Number of ind], [WetWeight, g], [MeanWW, g], MeanDW, [Mean_TL%], [Calculated_TL%], SizeClasses, DW_Samples, TL_Samples, DW_Ind, TL_Ind, BioAnalyses_Ind, Comments, DataSource, DataFile FROM Уловы";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        SampleID, COUNT(IndID) AS Expr1\r\nFROM            БА\r\nGROUP BY Sampl" +
-                "eID\r\nHAVING        (SampleID = ?)";
+            this._commandCollection[1].CommandText = "SELECT        COUNT(IndID) AS Expr1\r\nFROM            БА\r\nGROUP BY SampleID\r\nHAVIN" +
+                "G        (SampleID = ?)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SampleID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SampleID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
@@ -17076,8 +17076,8 @@ WHERE        (Region LIKE ?) AND (Area LIKE ?) AND (Location LIKE ?) AND (CathID
             this._commandCollection[19].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SampleID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SampleID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[20] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[20].Connection = this.Connection;
-            this._commandCollection[20].CommandText = "SELECT        SampleID, SUM(FishNumber) AS Expr1\r\nFROM            Пробы\r\nGROUP BY" +
-                " SampleID\r\nHAVING        (SampleID = ?) AND (SUM(FishNumber) > 0)";
+            this._commandCollection[20].CommandText = "SELECT        SUM(FishNumber) AS Expr1\r\nFROM            Пробы\r\nGROUP BY SampleID\r" +
+                "\nHAVING        (SampleID = ?) AND (SUM(FishNumber) > 0)";
             this._commandCollection[20].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[20].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SampleID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SampleID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[21] = new global::System.Data.OleDb.OleDbCommand();
@@ -17106,16 +17106,39 @@ WHERE        (Region LIKE ?) AND (Area LIKE ?) AND (Location LIKE ?) AND (CathID
             this._commandCollection[24].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SampleID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SampleID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[25] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[25].Connection = this.Connection;
-            this._commandCollection[25].CommandText = "SELECT        SampleID, COUNT([TL%WW]) AS Expr1\r\nFROM            Пробы\r\nWHERE    " +
-                "    ([TL%WW] > 0)\r\nGROUP BY SampleID\r\nHAVING        (SampleID = ?)";
+            this._commandCollection[25].CommandText = "SELECT        COUNT([TL%WW]) AS Expr1\r\nFROM            Пробы\r\nWHERE        ([TL%W" +
+                "W] > 0)\r\nGROUP BY SampleID\r\nHAVING        (SampleID = ?)";
             this._commandCollection[25].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[25].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SampleID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SampleID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[26] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[26].Connection = this.Connection;
-            this._commandCollection[26].CommandText = "SELECT        SUM(WetWeigh) AS Expr1\r\nFROM            Пробы\r\nWHERE        (WetWei" +
-                "gh > 0)\r\nGROUP BY SampleID\r\nHAVING        (SampleID = ?)";
+            this._commandCollection[26].CommandText = @"UPDATE       Уловы
+SET                LengthRange = ?, Mode = ?, MeanLength = ?, [Number of ind] = ?, [WetWeight, g] = ?, [MeanWW, g] = ?, MeanDW = ?, [Mean_TL%] = ?, [Calculated_TL%] = ?, SizeClasses = ?, DW_Samples = ?, TL_Samples = ?, DW_Ind = ?, 
+                         TL_Ind = ?, BioAnalyses_Ind = ?
+WHERE        (CathID = ?)";
             this._commandCollection[26].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[26].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SampleID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SampleID", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[26].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("LengthRange", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LengthRange", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[26].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Mode", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Mode", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[26].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("MeanLength", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "MeanLength", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[26].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Number_of_ind", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "Number of ind", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[26].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("WetWeight__g", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "WetWeight, g", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[26].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("MeanWW__g", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "MeanWW, g", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[26].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("MeanDW", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "MeanDW", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[26].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Mean_TL_", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "Mean_TL%", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[26].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Calculated_TL_", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "Calculated_TL%", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[26].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SizeClasses", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "SizeClasses", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[26].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DW_Samples", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "DW_Samples", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[26].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TL_Samples", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "TL_Samples", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[26].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DW_Ind", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DW_Ind", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[26].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TL_Ind", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TL_Ind", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[26].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("BioAnalyses_Ind", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(15)), ((byte)(0)), "BioAnalyses_Ind", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[26].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_CathID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CathID", global::System.Data.DataRowVersion.Original, false, null));
+            this._commandCollection[27] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[27].Connection = this.Connection;
+            this._commandCollection[27].CommandText = "SELECT        SUM(WetWeigh) AS Expr1\r\nFROM            Пробы\r\nWHERE        (WetWei" +
+                "gh > 0)\r\nGROUP BY SampleID\r\nHAVING        (SampleID = ?)";
+            this._commandCollection[27].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[27].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SampleID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SampleID", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -18373,7 +18396,7 @@ WHERE        (Region LIKE ?) AND (Area LIKE ?) AND (Location LIKE ?) AND (CathID
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual string BioAnalysisInd(string SampleID) {
+        public virtual object BioAnalysisInd(string SampleID) {
             global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[1];
             if ((SampleID == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
@@ -18400,7 +18423,7 @@ WHERE        (Region LIKE ?) AND (Area LIKE ?) AND (Location LIKE ?) AND (CathID
                 return null;
             }
             else {
-                return ((string)(returnValue));
+                return ((object)(returnValue));
             }
         }
         
@@ -18861,7 +18884,7 @@ WHERE        (Region LIKE ?) AND (Area LIKE ?) AND (Location LIKE ?) AND (CathID
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual string TLSamples(string SampleID) {
+        public virtual object TLSamples(string SampleID) {
             global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[25];
             if ((SampleID == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
@@ -18888,15 +18911,150 @@ WHERE        (Region LIKE ?) AND (Area LIKE ?) AND (Location LIKE ?) AND (CathID
                 return null;
             }
             else {
-                return ((string)(returnValue));
+                return ((object)(returnValue));
             }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual object WetWEightPR(string SampleID) {
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int UpdStats(
+                    string LengthRange, 
+                    string Mode, 
+                    global::System.Nullable<decimal> MeanLength, 
+                    global::System.Nullable<decimal> Number_of_ind, 
+                    global::System.Nullable<decimal> WetWeight__g, 
+                    global::System.Nullable<decimal> MeanWW__g, 
+                    global::System.Nullable<decimal> MeanDW, 
+                    global::System.Nullable<decimal> Mean_TL_, 
+                    global::System.Nullable<decimal> Calculated_TL_, 
+                    global::System.Nullable<decimal> SizeClasses, 
+                    global::System.Nullable<decimal> DW_Samples, 
+                    global::System.Nullable<decimal> TL_Samples, 
+                    string DW_Ind, 
+                    string TL_Ind, 
+                    global::System.Nullable<decimal> BioAnalyses_Ind, 
+                    string Original_CathID) {
             global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[26];
+            if ((LengthRange == null)) {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[0].Value = ((string)(LengthRange));
+            }
+            if ((Mode == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(Mode));
+            }
+            if ((MeanLength.HasValue == true)) {
+                command.Parameters[2].Value = ((decimal)(MeanLength.Value));
+            }
+            else {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Number_of_ind.HasValue == true)) {
+                command.Parameters[3].Value = ((decimal)(Number_of_ind.Value));
+            }
+            else {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((WetWeight__g.HasValue == true)) {
+                command.Parameters[4].Value = ((decimal)(WetWeight__g.Value));
+            }
+            else {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((MeanWW__g.HasValue == true)) {
+                command.Parameters[5].Value = ((decimal)(MeanWW__g.Value));
+            }
+            else {
+                command.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((MeanDW.HasValue == true)) {
+                command.Parameters[6].Value = ((decimal)(MeanDW.Value));
+            }
+            else {
+                command.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Mean_TL_.HasValue == true)) {
+                command.Parameters[7].Value = ((decimal)(Mean_TL_.Value));
+            }
+            else {
+                command.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((Calculated_TL_.HasValue == true)) {
+                command.Parameters[8].Value = ((decimal)(Calculated_TL_.Value));
+            }
+            else {
+                command.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((SizeClasses.HasValue == true)) {
+                command.Parameters[9].Value = ((decimal)(SizeClasses.Value));
+            }
+            else {
+                command.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((DW_Samples.HasValue == true)) {
+                command.Parameters[10].Value = ((decimal)(DW_Samples.Value));
+            }
+            else {
+                command.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((TL_Samples.HasValue == true)) {
+                command.Parameters[11].Value = ((decimal)(TL_Samples.Value));
+            }
+            else {
+                command.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((DW_Ind == null)) {
+                command.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[12].Value = ((string)(DW_Ind));
+            }
+            if ((TL_Ind == null)) {
+                command.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[13].Value = ((string)(TL_Ind));
+            }
+            if ((BioAnalyses_Ind.HasValue == true)) {
+                command.Parameters[14].Value = ((decimal)(BioAnalyses_Ind.Value));
+            }
+            else {
+                command.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((Original_CathID == null)) {
+                throw new global::System.ArgumentNullException("Original_CathID");
+            }
+            else {
+                command.Parameters[15].Value = ((string)(Original_CathID));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual object WetWEightPR(string SampleID) {
+            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[27];
             if ((SampleID == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }

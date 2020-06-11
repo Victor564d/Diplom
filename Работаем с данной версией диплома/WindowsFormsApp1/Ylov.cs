@@ -646,6 +646,62 @@ namespace WindowsFormsApp1
             newForm.operation = "Redact";
             newForm.Show();
         }
+
+        private void обновитьВычесляемыеПараметрыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            for (int j = 0; j < уловыDataGridView.Rows.Count - 1; j++)
+            {
+                try
+                {
+                    //тут должен быть код обновления значений !!!!!!!!!!!!!
+                    string catc = Convert.ToString(уловыDataGridView[0, j].Value);
+                    string sample = Convert.ToString(уловыDataGridView[1, j].Value); //с 17 по 31.
+                    ArrayList znachs = new ArrayList();
+                    for (int i = 17; i <= 31; i++)
+                    {
+                        znachs.Add(Convert.ToString(уловыDataGridView[i, j].Value));
+                    }
+                    string lengthRange, mode;
+                    double MeanLength;
+                    Int16 NumberofInd;
+                    double WetWeight, MeanWW, MeanDw, MeanTL, CalculatedTL, SizeClases, DW_samples, TLSamples, DWInd, TLInd, BioanalisisInd;
+
+                    lengthRange = Convert.ToString(this.уловыTableAdapter.Size1(sample)) + " - " + Convert.ToString(this.уловыTableAdapter.Size2(sample));
+                    //MessageBox.Show(lengthRange);
+                    MeanLength = Convert.ToDouble(this.уловыTableAdapter.MeanLength(sample));
+                    Int16 MeanLengthInt = Convert.ToInt16(Math.Round(MeanLength));
+                    mode = Convert.ToString(this.уловыTableAdapter.ModaMin(MeanLengthInt, sample) + " - " + this.уловыTableAdapter.ModaMax(Convert.ToInt16(MeanLengthInt + 2), sample));
+                    //MessageBox.Show(mode);
+                    NumberofInd = Convert.ToInt16(this.уловыTableAdapter.NumOfInd(sample));
+                    //MessageBox.Show(Convert.ToString(NumberofInd));
+                    WetWeight = Convert.ToDouble(this.уловыTableAdapter.WetWEightPR(sample));
+                    MeanWW = WetWeight / NumberofInd;
+                    //MessageBox.Show(Convert.ToString(MeanWW));
+                    MeanDw = Convert.ToDouble(this.уловыTableAdapter.MeanDW(sample));
+                    MeanTL = Convert.ToDouble(this.уловыTableAdapter.MeanTL(sample));
+                    CalculatedTL = Convert.ToDouble(this.уловыTableAdapter.CalculTL(sample));
+                    SizeClases = Convert.ToDouble(this.уловыTableAdapter.SizeClasses(sample));
+                    DW_samples = Convert.ToDouble(this.уловыTableAdapter.DW_samples(sample));
+                    TLSamples = Convert.ToDouble(this.уловыTableAdapter.TLSamples(sample));
+                    DWInd = Convert.ToDouble(this.уловыTableAdapter.DWInd(sample));
+                    TLInd = Convert.ToDouble(this.уловыTableAdapter.TLind(sample));
+                    BioanalisisInd = Convert.ToDouble(this.уловыTableAdapter.BioAnalysisInd(sample));
+                    this.уловыTableAdapter.UpdStats(lengthRange, mode, Convert.ToDecimal(MeanLength), NumberofInd, Convert.ToDecimal(WetWeight), Convert.ToDecimal(MeanWW), Convert.ToDecimal(MeanDw), Convert.ToDecimal(MeanTL), Convert.ToDecimal(CalculatedTL),
+                        Convert.ToDecimal(SizeClases), Convert.ToDecimal(DW_samples), Convert.ToDecimal(TLSamples), Convert.ToString(DWInd), Convert.ToString(TLInd), Convert.ToDecimal(BioanalisisInd), catc);
+                    this.tableAdapterManager.UpdateAll(this.тестовая_бд_DataSet);
+                }
+                catch { };
+            }
+            try
+            {
+                this.уловыTableAdapter.FillBy(this.тестовая_бд_DataSet.Уловы, Convert.ToString(mainform.indt[mainform.listBox1.SelectedIndex])); //обновляем список на экране
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message, "Ошибка"); //если возникла ошибка при обновлении 
+            }
+
+        }
     }
 }
 

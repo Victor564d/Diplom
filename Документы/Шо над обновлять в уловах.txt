@@ -1,0 +1,14 @@
+BioAnalysisInd
+CalculTl
+Dw_Samples
+DWInd
+MeanDW
+MeanLength
+MeanTL
+Moda(Modamax,ModaMin)
+NumOfInd
+Size(size1, size2)
+sizeClasses
+TLInd
+TLSamples
+WetWeightPR

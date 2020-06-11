@@ -1519,10 +1519,10 @@ WHERE        (CathID = ?)</CommandText>
               <Mapping SourceColumn="DataFile" DataSetColumn="DataFile" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="БА" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="BioAnalysisInd" Modifier="Public" Name="BioAnalysisInd" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="BioAnalysisInd">
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="BioAnalysisInd" Modifier="Public" Name="BioAnalysisInd" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="BioAnalysisInd">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        SampleID, COUNT(IndID) AS Expr1
+                    <CommandText>SELECT        COUNT(IndID) AS Expr1
 FROM            БА
 GROUP BY SampleID
 HAVING        (SampleID = ?)</CommandText>
@@ -1781,10 +1781,10 @@ HAVING        (SampleID = ?) AND (MAX(Size1) &gt; 0)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="Пробы" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="NumOfInd" Modifier="Public" Name="NumOfInd" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy19" UserSourceName="NumOfInd">
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="NumOfInd" Modifier="Public" Name="NumOfInd" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy19" UserSourceName="NumOfInd">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        SampleID, SUM(FishNumber) AS Expr1
+                    <CommandText>SELECT        SUM(FishNumber) AS Expr1
 FROM            Пробы
 GROUP BY SampleID
 HAVING        (SampleID = ?) AND (SUM(FishNumber) &gt; 0)</CommandText>
@@ -1847,10 +1847,10 @@ HAVING        (SampleID = ?)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="Пробы" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="TLSamples" Modifier="Public" Name="TLSamples" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy24" UserSourceName="TLSamples">
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="TLSamples" Modifier="Public" Name="TLSamples" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy24" UserSourceName="TLSamples">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        SampleID, COUNT([TL%WW]) AS Expr1
+                    <CommandText>SELECT        COUNT([TL%WW]) AS Expr1
 FROM            Пробы
 WHERE        ([TL%WW] &gt; 0)
 GROUP BY SampleID
@@ -1860,6 +1860,34 @@ HAVING        (SampleID = ?)</CommandText>
                     </Parameters>
                   </DbCommand>
                 </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdStats" Modifier="Public" Name="UpdStats" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy26" UserSourceName="UpdStats">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE       Уловы
+SET                LengthRange = ?, Mode = ?, MeanLength = ?, [Number of ind] = ?, [WetWeight, g] = ?, [MeanWW, g] = ?, MeanDW = ?, [Mean_TL%] = ?, [Calculated_TL%] = ?, SizeClasses = ?, DW_Samples = ?, TL_Samples = ?, DW_Ind = ?, 
+                         TL_Ind = ?, BioAnalyses_Ind = ?
+WHERE        (CathID = ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="LengthRange" DataSourceName="Уловы" DataTypeServer="DbType.StringFixedLength(255)" DbType="String" Direction="Input" ParameterName="LengthRange" Precision="0" ProviderType="WChar" Scale="0" Size="255" SourceColumn="LengthRange" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="Mode" DataSourceName="Уловы" DataTypeServer="DbType.StringFixedLength(255)" DbType="String" Direction="Input" ParameterName="Mode" Precision="0" ProviderType="WChar" Scale="0" Size="255" SourceColumn="Mode" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param3" ColumnName="MeanLength" DataSourceName="Уловы" DataTypeServer="DbType.Double" DbType="Decimal" Direction="Input" ParameterName="MeanLength" Precision="15" ProviderType="Double" Scale="0" Size="0" SourceColumn="MeanLength" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param4" ColumnName="Number of ind" DataSourceName="Уловы" DataTypeServer="DbType.Double" DbType="Decimal" Direction="Input" ParameterName="Number_of_ind" Precision="15" ProviderType="Double" Scale="0" Size="0" SourceColumn="Number of ind" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param5" ColumnName="WetWeight, g" DataSourceName="Уловы" DataTypeServer="DbType.Double" DbType="Decimal" Direction="Input" ParameterName="WetWeight__g" Precision="15" ProviderType="Double" Scale="0" Size="0" SourceColumn="WetWeight, g" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param6" ColumnName="MeanWW, g" DataSourceName="Уловы" DataTypeServer="DbType.Double" DbType="Decimal" Direction="Input" ParameterName="MeanWW__g" Precision="15" ProviderType="Double" Scale="0" Size="0" SourceColumn="MeanWW, g" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param7" ColumnName="MeanDW" DataSourceName="Уловы" DataTypeServer="DbType.Double" DbType="Decimal" Direction="Input" ParameterName="MeanDW" Precision="15" ProviderType="Double" Scale="0" Size="0" SourceColumn="MeanDW" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param8" ColumnName="Mean_TL%" DataSourceName="Уловы" DataTypeServer="DbType.Double" DbType="Decimal" Direction="Input" ParameterName="Mean_TL_" Precision="15" ProviderType="Double" Scale="0" Size="0" SourceColumn="Mean_TL%" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param9" ColumnName="Calculated_TL%" DataSourceName="Уловы" DataTypeServer="DbType.Double" DbType="Decimal" Direction="Input" ParameterName="Calculated_TL_" Precision="15" ProviderType="Double" Scale="0" Size="0" SourceColumn="Calculated_TL%" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param10" ColumnName="SizeClasses" DataSourceName="Уловы" DataTypeServer="DbType.Double" DbType="Decimal" Direction="Input" ParameterName="SizeClasses" Precision="15" ProviderType="Double" Scale="0" Size="0" SourceColumn="SizeClasses" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param11" ColumnName="DW_Samples" DataSourceName="Уловы" DataTypeServer="DbType.Double" DbType="Decimal" Direction="Input" ParameterName="DW_Samples" Precision="15" ProviderType="Double" Scale="0" Size="0" SourceColumn="DW_Samples" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param12" ColumnName="TL_Samples" DataSourceName="Уловы" DataTypeServer="DbType.Double" DbType="Decimal" Direction="Input" ParameterName="TL_Samples" Precision="15" ProviderType="Double" Scale="0" Size="0" SourceColumn="TL_Samples" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param13" ColumnName="DW_Ind" DataSourceName="Уловы" DataTypeServer="DbType.StringFixedLength(255)" DbType="String" Direction="Input" ParameterName="DW_Ind" Precision="0" ProviderType="WChar" Scale="0" Size="255" SourceColumn="DW_Ind" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param14" ColumnName="TL_Ind" DataSourceName="Уловы" DataTypeServer="DbType.StringFixedLength(255)" DbType="String" Direction="Input" ParameterName="TL_Ind" Precision="0" ProviderType="WChar" Scale="0" Size="255" SourceColumn="TL_Ind" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param15" ColumnName="BioAnalyses_Ind" DataSourceName="Уловы" DataTypeServer="DbType.Double" DbType="Decimal" Direction="Input" ParameterName="BioAnalyses_Ind" Precision="15" ProviderType="Double" Scale="0" Size="0" SourceColumn="BioAnalyses_Ind" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param16" ColumnName="CathID" DataSourceName="Уловы" DataTypeServer="DbType.StringFixedLength(255)" DbType="String" Direction="Input" ParameterName="Original_CathID" Precision="0" ProviderType="WChar" Scale="0" Size="255" SourceColumn="CathID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
               </DbSource>
               <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="WetWEightPR" Modifier="Public" Name="WetWEightPR" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy25" UserSourceName="WetWEightPR">
                 <SelectCommand>
@@ -1885,7 +1913,7 @@ HAVING        (SampleID = ?)</CommandText>
   <xs:element name="Тестовая_бд_DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Тестовая_бд_DataSet" msprop:Generator_UserDSName="Тестовая_бд_DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="БА" msprop:Generator_TableClassName="БАDataTable" msprop:Generator_TableVarName="tableБА" msprop:Generator_TablePropName="БА" msprop:Generator_RowDeletingName="БАRowDeleting" msprop:Generator_RowChangingName="БАRowChanging" msprop:Generator_RowEvHandlerName="БАRowChangeEventHandler" msprop:Generator_RowDeletedName="БАRowDeleted" msprop:Generator_UserTableName="БА" msprop:Generator_RowChangedName="БАRowChanged" msprop:Generator_RowEvArgName="БАRowChangeEvent" msprop:Generator_RowClassName="БАRow">
+        <xs:element name="БА" msprop:Generator_TableClassName="БАDataTable" msprop:Generator_TableVarName="tableБА" msprop:Generator_RowChangedName="БАRowChanged" msprop:Generator_TablePropName="БА" msprop:Generator_RowDeletingName="БАRowDeleting" msprop:Generator_RowChangingName="БАRowChanging" msprop:Generator_RowEvHandlerName="БАRowChangeEventHandler" msprop:Generator_RowDeletedName="БАRowDeleted" msprop:Generator_RowClassName="БАRow" msprop:Generator_UserTableName="БА" msprop:Generator_RowEvArgName="БАRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="SampleID" msprop:Generator_ColumnVarNameInTable="columnSampleID" msprop:Generator_ColumnPropNameInRow="SampleID" msprop:Generator_ColumnPropNameInTable="SampleIDColumn" msprop:Generator_UserColumnName="SampleID" minOccurs="0">
@@ -1947,7 +1975,7 @@ HAVING        (SampleID = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Пробы" msprop:Generator_TableClassName="ПробыDataTable" msprop:Generator_TableVarName="tableПробы" msprop:Generator_TablePropName="Пробы" msprop:Generator_RowDeletingName="ПробыRowDeleting" msprop:Generator_RowChangingName="ПробыRowChanging" msprop:Generator_RowEvHandlerName="ПробыRowChangeEventHandler" msprop:Generator_RowDeletedName="ПробыRowDeleted" msprop:Generator_UserTableName="Пробы" msprop:Generator_RowChangedName="ПробыRowChanged" msprop:Generator_RowEvArgName="ПробыRowChangeEvent" msprop:Generator_RowClassName="ПробыRow">
+        <xs:element name="Пробы" msprop:Generator_TableClassName="ПробыDataTable" msprop:Generator_TableVarName="tableПробы" msprop:Generator_RowChangedName="ПробыRowChanged" msprop:Generator_TablePropName="Пробы" msprop:Generator_RowDeletingName="ПробыRowDeleting" msprop:Generator_RowChangingName="ПробыRowChanging" msprop:Generator_RowEvHandlerName="ПробыRowChangeEventHandler" msprop:Generator_RowDeletedName="ПробыRowDeleted" msprop:Generator_RowClassName="ПробыRow" msprop:Generator_UserTableName="Пробы" msprop:Generator_RowEvArgName="ПробыRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="SampleID" msprop:Generator_ColumnVarNameInTable="columnSampleID" msprop:Generator_ColumnPropNameInRow="SampleID" msprop:Generator_ColumnPropNameInTable="SampleIDColumn" msprop:Generator_UserColumnName="SampleID" minOccurs="0">
@@ -1996,7 +2024,7 @@ HAVING        (SampleID = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Уловы" msprop:Generator_TableClassName="УловыDataTable" msprop:Generator_TableVarName="tableУловы" msprop:Generator_TablePropName="Уловы" msprop:Generator_RowDeletingName="УловыRowDeleting" msprop:Generator_RowChangingName="УловыRowChanging" msprop:Generator_RowEvHandlerName="УловыRowChangeEventHandler" msprop:Generator_RowDeletedName="УловыRowDeleted" msprop:Generator_UserTableName="Уловы" msprop:Generator_RowChangedName="УловыRowChanged" msprop:Generator_RowEvArgName="УловыRowChangeEvent" msprop:Generator_RowClassName="УловыRow">
+        <xs:element name="Уловы" msprop:Generator_TableClassName="УловыDataTable" msprop:Generator_TableVarName="tableУловы" msprop:Generator_RowChangedName="УловыRowChanged" msprop:Generator_TablePropName="Уловы" msprop:Generator_RowDeletingName="УловыRowDeleting" msprop:Generator_RowChangingName="УловыRowChanging" msprop:Generator_RowEvHandlerName="УловыRowChangeEventHandler" msprop:Generator_RowDeletedName="УловыRowDeleted" msprop:Generator_RowClassName="УловыRow" msprop:Generator_UserTableName="Уловы" msprop:Generator_RowEvArgName="УловыRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CathID" msprop:Generator_ColumnVarNameInTable="columnCathID" msprop:Generator_ColumnPropNameInRow="CathID" msprop:Generator_ColumnPropNameInTable="CathIDColumn" msprop:Generator_UserColumnName="CathID">
@@ -2156,8 +2184,8 @@ HAVING        (SampleID = ?)</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="ПробыУловы" msdata:parent="Пробы" msdata:child="Уловы" msdata:parentkey="SampleID" msdata:childkey="SamplID" msprop:Generator_UserChildTable="Уловы" msprop:Generator_ChildPropName="GetУловыRows" msprop:Generator_UserRelationName="ПробыУловы" msprop:Generator_ParentPropName="ПробыRow" msprop:Generator_RelationVarName="relationПробыУловы" msprop:Generator_UserParentTable="Пробы" />
-      <msdata:Relationship name="УловыБА" msdata:parent="Уловы" msdata:child="БА" msdata:parentkey="CathID" msdata:childkey="SampleID" msprop:Generator_UserChildTable="БА" msprop:Generator_ChildPropName="GetБАRows" msprop:Generator_UserRelationName="УловыБА" msprop:Generator_RelationVarName="relationУловыБА" msprop:Generator_UserParentTable="Уловы" msprop:Generator_ParentPropName="УловыRow" />
+      <msdata:Relationship name="ПробыУловы" msdata:parent="Пробы" msdata:child="Уловы" msdata:parentkey="SampleID" msdata:childkey="SamplID" msprop:Generator_UserChildTable="Уловы" msprop:Generator_ChildPropName="GetУловыRows" msprop:Generator_UserRelationName="ПробыУловы" msprop:Generator_RelationVarName="relationПробыУловы" msprop:Generator_UserParentTable="Пробы" msprop:Generator_ParentPropName="ПробыRow" />
+      <msdata:Relationship name="УловыБА" msdata:parent="Уловы" msdata:child="БА" msdata:parentkey="CathID" msdata:childkey="SampleID" msprop:Generator_UserChildTable="БА" msprop:Generator_ChildPropName="GetБАRows" msprop:Generator_UserRelationName="УловыБА" msprop:Generator_ParentPropName="УловыRow" msprop:Generator_RelationVarName="relationУловыБА" msprop:Generator_UserParentTable="Уловы" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
