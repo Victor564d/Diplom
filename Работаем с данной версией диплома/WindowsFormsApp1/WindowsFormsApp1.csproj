@@ -85,6 +85,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -180,6 +181,18 @@
     <Compile Include="OtobrProb.Designer.cs">
       <DependentUpon>OtobrProb.cs</DependentUpon>
     </Compile>
+    <Compile Include="StatsMassFL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatsMassFL.Designer.cs">
+      <DependentUpon>StatsMassFL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatsTLDW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatsTLDW.Designer.cs">
+      <DependentUpon>StatsTLDW.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ylov.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +262,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OtobrProb.resx">
       <DependentUpon>OtobrProb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatsMassFL.resx">
+      <DependentUpon>StatsMassFL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatsTLDW.resx">
+      <DependentUpon>StatsTLDW.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ylov.resx">
       <DependentUpon>Ylov.cs</DependentUpon>

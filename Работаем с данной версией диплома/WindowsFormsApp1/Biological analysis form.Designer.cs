@@ -90,10 +90,10 @@
             this.label15 = new System.Windows.Forms.Label();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -650,12 +650,12 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.comboBox3);
+            this.groupBox7.Controls.Add(this.comboBox2);
             this.groupBox7.Controls.Add(this.label19);
             this.groupBox7.Controls.Add(this.label15);
             this.groupBox7.Controls.Add(this.textBox17);
             this.groupBox7.Controls.Add(this.textBox7);
-            this.groupBox7.Controls.Add(this.textBox12);
-            this.groupBox7.Controls.Add(this.textBox13);
             this.groupBox7.Controls.Add(this.label12);
             this.groupBox7.Controls.Add(this.label14);
             this.groupBox7.Location = new System.Drawing.Point(11, 20);
@@ -670,7 +670,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(11, 112);
+            this.label19.Location = new System.Drawing.Point(11, 116);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(137, 16);
@@ -680,7 +680,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(11, 84);
+            this.label15.Location = new System.Drawing.Point(11, 88);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(93, 16);
@@ -689,7 +689,7 @@
             // 
             // textBox17
             // 
-            this.textBox17.Location = new System.Drawing.Point(172, 109);
+            this.textBox17.Location = new System.Drawing.Point(172, 113);
             this.textBox17.Margin = new System.Windows.Forms.Padding(4);
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(100, 22);
@@ -697,27 +697,11 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(172, 81);
+            this.textBox7.Location = new System.Drawing.Point(172, 85);
             this.textBox7.Margin = new System.Windows.Forms.Padding(4);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(100, 22);
             this.textBox7.TabIndex = 9;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(172, 53);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 22);
-            this.textBox12.TabIndex = 8;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(172, 26);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(100, 22);
-            this.textBox13.TabIndex = 4;
             // 
             // label12
             // 
@@ -738,6 +722,112 @@
             this.label14.Size = new System.Drawing.Size(147, 16);
             this.label14.TabIndex = 6;
             this.label14.Text = "Максимальная длина";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "0",
+            "5",
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "35",
+            "40",
+            "45",
+            "50",
+            "55",
+            "60",
+            "65",
+            "70",
+            "75",
+            "80",
+            "85",
+            "90",
+            "95",
+            "100",
+            "105",
+            "110",
+            "115",
+            "120",
+            "125",
+            "130",
+            "135",
+            "140",
+            "145",
+            "150",
+            "155",
+            "160",
+            "165",
+            "170",
+            "175",
+            "180",
+            "185",
+            "190",
+            "195",
+            "200",
+            "205",
+            "210",
+            "215"});
+            this.comboBox2.Location = new System.Drawing.Point(172, 26);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(100, 24);
+            this.comboBox2.TabIndex = 13;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "0",
+            "5",
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "35",
+            "40",
+            "45",
+            "50",
+            "55",
+            "60",
+            "65",
+            "70",
+            "75",
+            "80",
+            "85",
+            "90",
+            "95",
+            "100",
+            "105",
+            "110",
+            "115",
+            "120",
+            "125",
+            "130",
+            "135",
+            "140",
+            "145",
+            "150",
+            "155",
+            "160",
+            "165",
+            "170",
+            "175",
+            "180",
+            "185",
+            "190",
+            "195",
+            "200",
+            "205",
+            "210",
+            "215"});
+            this.comboBox3.Location = new System.Drawing.Point(172, 55);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(100, 24);
+            this.comboBox3.TabIndex = 14;
             // 
             // Biological_analysis_form
             // 
@@ -820,8 +910,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label19;
@@ -846,5 +934,7 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ToolStripMenuItem вводДополнительныхДанныхToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выполнитьРасчетПараметровToolStripMenuItem;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

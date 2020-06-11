@@ -435,8 +435,9 @@ namespace WindowsFormsApp1
             button5.Visible = false;
             button2.Visible = false;
             button6.Visible = false;
+            button10.Visible = false;
             label2.Visible = true;
-            label5.Visible = false;
+            //label5.Visible = false;
             button1.Visible = true;
             listBox1.Visible = true;
             button9.Visible = true;
@@ -449,11 +450,17 @@ namespace WindowsFormsApp1
             button5.Visible = true;
             button2.Visible = true;
             button6.Visible = true;
+            button10.Visible = true;
             label2.Visible = false;
-            label5.Visible = true;
+            //label5.Visible = true;
             button1.Visible = false;
             listBox1.Visible = false;
             button9.Visible = false;
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

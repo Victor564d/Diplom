@@ -48,8 +48,6 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -114,6 +112,8 @@
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -313,8 +313,8 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.textBox10);
-            this.groupBox4.Controls.Add(this.textBox9);
+            this.groupBox4.Controls.Add(this.maskedTextBox2);
+            this.groupBox4.Controls.Add(this.maskedTextBox1);
             this.groupBox4.Controls.Add(this.label10);
             this.groupBox4.Controls.Add(this.label9);
             this.groupBox4.Location = new System.Drawing.Point(15, 21);
@@ -323,20 +323,6 @@
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Координаты:";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(70, 53);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(86, 22);
-            this.textBox10.TabIndex = 9;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(70, 25);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(86, 22);
-            this.textBox9.TabIndex = 8;
             // 
             // label10
             // 
@@ -858,7 +844,7 @@
             // вводДополнительныхДанныхToolStripMenuItem
             // 
             this.вводДополнительныхДанныхToolStripMenuItem.Name = "вводДополнительныхДанныхToolStripMenuItem";
-            this.вводДополнительныхДанныхToolStripMenuItem.Size = new System.Drawing.Size(329, 22);
+            this.вводДополнительныхДанныхToolStripMenuItem.Size = new System.Drawing.Size(396, 22);
             this.вводДополнительныхДанныхToolStripMenuItem.Text = "Показать/скрыть дополнительные данные";
             this.вводДополнительныхДанныхToolStripMenuItem.Click += new System.EventHandler(this.вводДополнительныхДанныхToolStripMenuItem_Click);
             // 
@@ -933,6 +919,22 @@
             this.groupBox9.Text = "Данные о судне:";
             this.groupBox9.Enter += new System.EventHandler(this.groupBox9_Enter);
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(67, 25);
+            this.maskedTextBox1.Mask = "00°00′ L. ш.";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(89, 22);
+            this.maskedTextBox1.TabIndex = 10;
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Location = new System.Drawing.Point(67, 53);
+            this.maskedTextBox2.Mask = "00°00′ L. д.";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(89, 22);
+            this.maskedTextBox2.TabIndex = 11;
+            // 
             // Catch_Record_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -999,8 +1001,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
@@ -1065,5 +1065,7 @@
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.ToolStripMenuItem отменаToolStripMenuItem;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }
