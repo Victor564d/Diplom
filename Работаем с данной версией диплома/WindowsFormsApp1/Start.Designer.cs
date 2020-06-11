@@ -259,7 +259,7 @@
             // 
             this.label5.AutoEllipsis = true;
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Cursor = System.Windows.Forms.Cursors.Default;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.Location = new System.Drawing.Point(257, 84);
