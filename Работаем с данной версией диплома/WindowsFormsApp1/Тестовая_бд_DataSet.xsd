@@ -1519,7 +1519,7 @@ WHERE        (CathID = ?)</CommandText>
               <Mapping SourceColumn="DataFile" DataSetColumn="DataFile" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="БА" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="BioAnalysisInd" Modifier="Public" Name="BioAnalysisInd" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy25" UserSourceName="BioAnalysisInd">
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="БА" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="BioAnalysisInd" Modifier="Public" Name="BioAnalysisInd" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="BioAnalysisInd">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        SampleID, COUNT(IndID) AS Expr1
@@ -1532,7 +1532,7 @@ HAVING        (SampleID = ?)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="CalculTL" Modifier="Public" Name="CalculTL" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy19" UserSourceName="CalculTL">
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="CalculTL" Modifier="Public" Name="CalculTL" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="CalculTL">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        AVG([Calculated TL% 2017]) AS Expr1
@@ -1546,7 +1546,7 @@ HAVING        (SampleID = ?)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DW_samples" Modifier="Public" Name="DW_samples" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy21" UserSourceName="DW_samples">
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DW_samples" Modifier="Public" Name="DW_samples" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="DW_samples">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        COUNT(GrossDW) AS Expr1
@@ -1560,7 +1560,7 @@ HAVING        (SampleID = ?)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DWInd" Modifier="Public" Name="DWInd" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy23" UserSourceName="DWInd">
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DWInd" Modifier="Public" Name="DWInd" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="DWInd">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        COUNT([DW%]) AS Expr1
@@ -1574,7 +1574,7 @@ HAVING        (SampleID = ?)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="Уловы" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FiillMMBE" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FiillMMBE" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FiillMMBE">
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="Уловы" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FiillMMBE" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FiillMMBE" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="FiillMMBE">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        CathID, SamplID, DD, MM, YYYY, Region, Area, Location, Latitude, Longitude, Depth, WaterTemperature, Gear, Vessel, Catch, DateOfProc, Condition, LengthRange, Mode, MeanLength, [Number of ind], [WetWeight, g], 
@@ -1588,7 +1588,7 @@ WHERE        (MM &gt;= ?) AND (CathID LIKE ?)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="Уловы" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fillall" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Fillall" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="Fillall">
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="Уловы" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fillall" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Fillall" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="Fillall">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT CathID, SamplID, DD, MM, YYYY, Region, Area, Location, Latitude, Longitude, Depth, WaterTemperature, Gear, Vessel, Catch, DateOfProc, Condition, LengthRange, Mode, MeanLength, [Number of ind], [WetWeight, g], [MeanWW, g], MeanDW, [Mean_TL%], [Calculated_TL%], SizeClasses, DW_Samples, TL_Samples, DW_Ind, TL_Ind, BioAnalyses_Ind, Comments, DataSource, DataFile FROM Уловы</CommandText>
@@ -1596,7 +1596,7 @@ WHERE        (MM &gt;= ?) AND (CathID LIKE ?)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="Уловы" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillBy">
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="Уловы" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        CathID, SamplID, DD, MM, YYYY, Region, Area, Location, Latitude, Longitude, Depth, WaterTemperature, Gear, Vessel, Catch, DateOfProc, Condition, LengthRange, Mode, MeanLength, [Number of ind], [WetWeight, g], 
@@ -1609,7 +1609,7 @@ WHERE        (CathID LIKE ?)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="Уловы" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByDate" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByDate" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="FillByDate">
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="Уловы" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByDate" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByDate" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy7" UserSourceName="FillByDate">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        CathID, SamplID, DD, MM, YYYY, Region, Area, Location, Latitude, Longitude, Depth, WaterTemperature, Gear, Vessel, Catch, DateOfProc, Condition, LengthRange, Mode, MeanLength, [Number of ind], [WetWeight, g], 
@@ -1624,7 +1624,7 @@ WHERE        (DD = ?) OR (MM = ?) OR (YYYY = ?)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="Уловы" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillDDBE" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillDDBE" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="FillDDBE">
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="Уловы" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillDDBE" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillDDBE" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy8" UserSourceName="FillDDBE">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        CathID, SamplID, DD, MM, YYYY, Region, Area, Location, Latitude, Longitude, Depth, WaterTemperature, Gear, Vessel, Catch, DateOfProc, Condition, LengthRange, Mode, MeanLength, [Number of ind], [WetWeight, g], 
@@ -1638,7 +1638,7 @@ WHERE        (YYYY &gt;= ?) AND (CathID LIKE ?)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="Уловы" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillDDE" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillDDE" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="FillDDE">
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="Уловы" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillDDE" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillDDE" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy9" UserSourceName="FillDDE">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        CathID, SamplID, DD, MM, YYYY, Region, Area, Location, Latitude, Longitude, Depth, WaterTemperature, Gear, Vessel, Catch, DateOfProc, Condition, LengthRange, Mode, MeanLength, [Number of ind], [WetWeight, g], 
@@ -1652,7 +1652,7 @@ WHERE        (YYYY = ?) AND (CathID LIKE ?)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="Уловы" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillDDME" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillDDME" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="FillDDME">
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="Уловы" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillDDME" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillDDME" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy10" UserSourceName="FillDDME">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        CathID, SamplID, DD, MM, YYYY, Region, Area, Location, Latitude, Longitude, Depth, WaterTemperature, Gear, Vessel, Catch, DateOfProc, Condition, LengthRange, Mode, MeanLength, [Number of ind], [WetWeight, g], 
@@ -1666,7 +1666,7 @@ WHERE        (YYYY &lt;= ?) AND (CathID LIKE ?)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="Уловы" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillMME" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillMME" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy7" UserSourceName="FillMME">
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="Уловы" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillMME" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillMME" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy11" UserSourceName="FillMME">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        CathID, SamplID, DD, MM, YYYY, Region, Area, Location, Latitude, Longitude, Depth, WaterTemperature, Gear, Vessel, Catch, DateOfProc, Condition, LengthRange, Mode, MeanLength, [Number of ind], [WetWeight, g], 
@@ -1680,7 +1680,7 @@ WHERE        (MM = ?) AND (CathID LIKE ?)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="Уловы" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillMMME" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillMMME" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy8" UserSourceName="FillMMME">
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="Уловы" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillMMME" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillMMME" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy12" UserSourceName="FillMMME">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        CathID, SamplID, DD, MM, YYYY, Region, Area, Location, Latitude, Longitude, Depth, WaterTemperature, Gear, Vessel, Catch, DateOfProc, Condition, LengthRange, Mode, MeanLength, [Number of ind], [WetWeight, g], 
@@ -1694,7 +1694,7 @@ WHERE        (MM &lt;= ?) AND (CathID LIKE ?)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="Уловы" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillRegAll" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillRegAll" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy9" UserSourceName="FillRegAll">
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="Уловы" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillRegAll" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillRegAll" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy13" UserSourceName="FillRegAll">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        CathID, SamplID, DD, MM, YYYY, Region, Area, Location, Latitude, Longitude, Depth, WaterTemperature, Gear, Vessel, Catch, DateOfProc, Condition, LengthRange, Mode, MeanLength, [Number of ind], [WetWeight, g], 
@@ -1710,7 +1710,7 @@ WHERE        (Region LIKE ?) AND (Area LIKE ?) AND (Location LIKE ?) AND (CathID
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="MeanDW" Modifier="Public" Name="MeanDW" QueryType="Scalar" ScalarCallRetval="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy17" UserSourceName="MeanDW">
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="MeanDW" Modifier="Public" Name="MeanDW" QueryType="Scalar" ScalarCallRetval="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy14" UserSourceName="MeanDW">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        AVG([DW%]) AS Expr1
@@ -1724,7 +1724,7 @@ HAVING        (SampleID = ?)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="MeanLength" Modifier="Public" Name="MeanLength" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy12" UserSourceName="MeanLength">
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="MeanLength" Modifier="Public" Name="MeanLength" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy15" UserSourceName="MeanLength">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        AVG(MidSize) AS Expr1
@@ -1737,7 +1737,7 @@ HAVING        (SampleID = ?) AND (AVG(MidSize) &gt; 0)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="MeanTL" Modifier="Public" Name="MeanTL" QueryType="Scalar" ScalarCallRetval="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy18" UserSourceName="MeanTL">
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="MeanTL" Modifier="Public" Name="MeanTL" QueryType="Scalar" ScalarCallRetval="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy16" UserSourceName="MeanTL">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        AVG([TL%WW]) AS Expr1
@@ -1751,7 +1751,7 @@ HAVING        (SampleID = ?)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ModaMax" Modifier="Public" Name="ModaMax" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy14" UserSourceName="ModaMax">
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ModaMax" Modifier="Public" Name="ModaMax" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy17" UserSourceName="ModaMax">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        MIN(Size2) AS Expr1
@@ -1766,7 +1766,7 @@ HAVING        (SampleID = ?) AND (MIN(Size2) &gt; 0)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ModaMin" Modifier="Public" Name="ModaMin" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy13" UserSourceName="ModaMin">
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ModaMin" Modifier="Public" Name="ModaMin" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy18" UserSourceName="ModaMin">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        MAX(Size1) AS Expr1
@@ -1781,7 +1781,7 @@ HAVING        (SampleID = ?) AND (MAX(Size1) &gt; 0)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="Пробы" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="NumOfInd" Modifier="Public" Name="NumOfInd" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy15" UserSourceName="NumOfInd">
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="Пробы" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="NumOfInd" Modifier="Public" Name="NumOfInd" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy19" UserSourceName="NumOfInd">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        SampleID, SUM(FishNumber) AS Expr1
@@ -1794,7 +1794,7 @@ HAVING        (SampleID = ?) AND (SUM(FishNumber) &gt; 0)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Size1" Modifier="Public" Name="Size1" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy10" UserSourceName="Size1">
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Size1" Modifier="Public" Name="Size1" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy20" UserSourceName="Size1">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        MIN(Size1) AS Expr1
@@ -1807,7 +1807,7 @@ HAVING        (SampleID = ?) AND (MIN(Size1) &gt; 0)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Size2" Modifier="Public" Name="Size2" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy11" UserSourceName="Size2">
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Size2" Modifier="Public" Name="Size2" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy21" UserSourceName="Size2">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        MAX(Size2) AS Expr1
@@ -1820,7 +1820,7 @@ HAVING        (SampleID = ?) AND (MAX(Size2) &gt; 0)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SizeClasses" Modifier="Public" Name="SizeClasses" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy20" UserSourceName="SizeClasses">
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SizeClasses" Modifier="Public" Name="SizeClasses" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy22" UserSourceName="SizeClasses">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        COUNT(RecordID) AS Expr1
@@ -1833,7 +1833,7 @@ HAVING        (SampleID = ?)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="TLind" Modifier="Public" Name="TLind" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy24" UserSourceName="TLind">
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="TLind" Modifier="Public" Name="TLind" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy23" UserSourceName="TLind">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        COUNT([TL%WW]) AS Expr1
@@ -1847,7 +1847,7 @@ HAVING        (SampleID = ?)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="Пробы" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="TLSamples" Modifier="Public" Name="TLSamples" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy22" UserSourceName="TLSamples">
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectName="Пробы" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="TLSamples" Modifier="Public" Name="TLSamples" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy24" UserSourceName="TLSamples">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        SampleID, COUNT([TL%WW]) AS Expr1
@@ -1861,7 +1861,7 @@ HAVING        (SampleID = ?)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="WetWEightPR" Modifier="Public" Name="WetWEightPR" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy16" UserSourceName="WetWEightPR">
+              <DbSource ConnectionRef="Тестовая_бд_ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="WetWEightPR" Modifier="Public" Name="WetWEightPR" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy25" UserSourceName="WetWEightPR">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        SUM(WetWeigh) AS Expr1
@@ -1885,7 +1885,7 @@ HAVING        (SampleID = ?)</CommandText>
   <xs:element name="Тестовая_бд_DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Тестовая_бд_DataSet" msprop:Generator_UserDSName="Тестовая_бд_DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="БА" msprop:Generator_TableClassName="БАDataTable" msprop:Generator_TableVarName="tableБА" msprop:Generator_RowChangedName="БАRowChanged" msprop:Generator_TablePropName="БА" msprop:Generator_RowDeletingName="БАRowDeleting" msprop:Generator_RowChangingName="БАRowChanging" msprop:Generator_RowEvHandlerName="БАRowChangeEventHandler" msprop:Generator_RowDeletedName="БАRowDeleted" msprop:Generator_RowClassName="БАRow" msprop:Generator_UserTableName="БА" msprop:Generator_RowEvArgName="БАRowChangeEvent">
+        <xs:element name="БА" msprop:Generator_TableClassName="БАDataTable" msprop:Generator_TableVarName="tableБА" msprop:Generator_TablePropName="БА" msprop:Generator_RowDeletingName="БАRowDeleting" msprop:Generator_RowChangingName="БАRowChanging" msprop:Generator_RowEvHandlerName="БАRowChangeEventHandler" msprop:Generator_RowDeletedName="БАRowDeleted" msprop:Generator_UserTableName="БА" msprop:Generator_RowChangedName="БАRowChanged" msprop:Generator_RowEvArgName="БАRowChangeEvent" msprop:Generator_RowClassName="БАRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="SampleID" msprop:Generator_ColumnVarNameInTable="columnSampleID" msprop:Generator_ColumnPropNameInRow="SampleID" msprop:Generator_ColumnPropNameInTable="SampleIDColumn" msprop:Generator_UserColumnName="SampleID" minOccurs="0">
@@ -1947,7 +1947,7 @@ HAVING        (SampleID = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Пробы" msprop:Generator_TableClassName="ПробыDataTable" msprop:Generator_TableVarName="tableПробы" msprop:Generator_RowChangedName="ПробыRowChanged" msprop:Generator_TablePropName="Пробы" msprop:Generator_RowDeletingName="ПробыRowDeleting" msprop:Generator_RowChangingName="ПробыRowChanging" msprop:Generator_RowEvHandlerName="ПробыRowChangeEventHandler" msprop:Generator_RowDeletedName="ПробыRowDeleted" msprop:Generator_RowClassName="ПробыRow" msprop:Generator_UserTableName="Пробы" msprop:Generator_RowEvArgName="ПробыRowChangeEvent">
+        <xs:element name="Пробы" msprop:Generator_TableClassName="ПробыDataTable" msprop:Generator_TableVarName="tableПробы" msprop:Generator_TablePropName="Пробы" msprop:Generator_RowDeletingName="ПробыRowDeleting" msprop:Generator_RowChangingName="ПробыRowChanging" msprop:Generator_RowEvHandlerName="ПробыRowChangeEventHandler" msprop:Generator_RowDeletedName="ПробыRowDeleted" msprop:Generator_UserTableName="Пробы" msprop:Generator_RowChangedName="ПробыRowChanged" msprop:Generator_RowEvArgName="ПробыRowChangeEvent" msprop:Generator_RowClassName="ПробыRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="SampleID" msprop:Generator_ColumnVarNameInTable="columnSampleID" msprop:Generator_ColumnPropNameInRow="SampleID" msprop:Generator_ColumnPropNameInTable="SampleIDColumn" msprop:Generator_UserColumnName="SampleID" minOccurs="0">
@@ -1996,7 +1996,7 @@ HAVING        (SampleID = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Уловы" msprop:Generator_TableClassName="УловыDataTable" msprop:Generator_TableVarName="tableУловы" msprop:Generator_RowChangedName="УловыRowChanged" msprop:Generator_TablePropName="Уловы" msprop:Generator_RowDeletingName="УловыRowDeleting" msprop:Generator_RowChangingName="УловыRowChanging" msprop:Generator_RowEvHandlerName="УловыRowChangeEventHandler" msprop:Generator_RowDeletedName="УловыRowDeleted" msprop:Generator_RowClassName="УловыRow" msprop:Generator_UserTableName="Уловы" msprop:Generator_RowEvArgName="УловыRowChangeEvent">
+        <xs:element name="Уловы" msprop:Generator_TableClassName="УловыDataTable" msprop:Generator_TableVarName="tableУловы" msprop:Generator_TablePropName="Уловы" msprop:Generator_RowDeletingName="УловыRowDeleting" msprop:Generator_RowChangingName="УловыRowChanging" msprop:Generator_RowEvHandlerName="УловыRowChangeEventHandler" msprop:Generator_RowDeletedName="УловыRowDeleted" msprop:Generator_UserTableName="Уловы" msprop:Generator_RowChangedName="УловыRowChanged" msprop:Generator_RowEvArgName="УловыRowChangeEvent" msprop:Generator_RowClassName="УловыRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CathID" msprop:Generator_ColumnVarNameInTable="columnCathID" msprop:Generator_ColumnPropNameInRow="CathID" msprop:Generator_ColumnPropNameInTable="CathIDColumn" msprop:Generator_UserColumnName="CathID">
@@ -2156,8 +2156,8 @@ HAVING        (SampleID = ?)</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="ПробыУловы" msdata:parent="Пробы" msdata:child="Уловы" msdata:parentkey="SampleID" msdata:childkey="SamplID" msprop:Generator_UserChildTable="Уловы" msprop:Generator_ChildPropName="GetУловыRows" msprop:Generator_UserRelationName="ПробыУловы" msprop:Generator_RelationVarName="relationПробыУловы" msprop:Generator_UserParentTable="Пробы" msprop:Generator_ParentPropName="ПробыRow" />
-      <msdata:Relationship name="УловыБА" msdata:parent="Уловы" msdata:child="БА" msdata:parentkey="CathID" msdata:childkey="SampleID" msprop:Generator_UserChildTable="БА" msprop:Generator_ChildPropName="GetБАRows" msprop:Generator_UserRelationName="УловыБА" msprop:Generator_ParentPropName="УловыRow" msprop:Generator_RelationVarName="relationУловыБА" msprop:Generator_UserParentTable="Уловы" />
+      <msdata:Relationship name="ПробыУловы" msdata:parent="Пробы" msdata:child="Уловы" msdata:parentkey="SampleID" msdata:childkey="SamplID" msprop:Generator_UserChildTable="Уловы" msprop:Generator_ChildPropName="GetУловыRows" msprop:Generator_UserRelationName="ПробыУловы" msprop:Generator_ParentPropName="ПробыRow" msprop:Generator_RelationVarName="relationПробыУловы" msprop:Generator_UserParentTable="Пробы" />
+      <msdata:Relationship name="УловыБА" msdata:parent="Уловы" msdata:child="БА" msdata:parentkey="CathID" msdata:childkey="SampleID" msprop:Generator_UserChildTable="БА" msprop:Generator_ChildPropName="GetБАRows" msprop:Generator_UserRelationName="УловыБА" msprop:Generator_RelationVarName="relationУловыБА" msprop:Generator_UserParentTable="Уловы" msprop:Generator_ParentPropName="УловыRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
