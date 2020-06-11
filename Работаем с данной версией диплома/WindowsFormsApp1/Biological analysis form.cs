@@ -45,14 +45,18 @@ namespace WindowsFormsApp1
         {
             err = false;
             errs = "";
-            if (textBox13.Text != "")
-                if ((Convert.ToDouble(textBox13.Text) > Convert.ToDouble(pars[1])) || ((Convert.ToDouble(textBox13.Text) < Convert.ToDouble(pars[2]))))
+            if (comboBox1.Text != "")
+            {
+                if (Convert.ToDouble(comboBox1.Text) > Convert.ToDouble(comboBox2.Text)) { errs += "Минимальный размер не может привышать максимальный ! " + Convert.ToChar(13); } // проверка размеров рыбы (Я)
+
+                if ((Convert.ToDouble(comboBox1.Text) > Convert.ToDouble(pars[1])) || ((Convert.ToDouble(comboBox1.Text) < Convert.ToDouble(pars[2]))))
                 {
                     err = true;
                     errs += "Поле 'Минимальная длина' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[1]) + ", мин значение - " + Convert.ToString(pars[2]) + Convert.ToChar(13);
                 }
-            if (textBox12.Text != "")
-                if ((Convert.ToDouble(textBox12.Text) > Convert.ToDouble(pars[1])) || ((Convert.ToDouble(textBox12.Text) < Convert.ToDouble(pars[2]))))
+            }
+            if (comboBox2.Text != "")
+                if ((Convert.ToDouble(comboBox2.Text) > Convert.ToDouble(pars[1])) || ((Convert.ToDouble(comboBox2.Text) < Convert.ToDouble(pars[2]))))
                 {
                     err = true;
                     errs += "Поле 'Максимальная длина' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[1]) + ", мин значение - " + Convert.ToString(pars[2]) + Convert.ToChar(13);
@@ -64,17 +68,25 @@ namespace WindowsFormsApp1
                 errs += "Поле 'Общая длина' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[1]) + ", мин значение - " + Convert.ToString(pars[2]) + Convert.ToChar(13);
             }
             if (textBox4.Text != "")
+            {
+                if (Convert.ToDouble(textBox4.Text) >= Convert.ToDouble(textBox7.Text)) { errs += "Длина до развилки (FL) не может привышать или быть равной общей длине (TL)" + Convert.ToChar(13); }
+
                 if ((Convert.ToDouble(textBox4.Text) > Convert.ToDouble(pars[1])) || ((Convert.ToDouble(textBox4.Text) < Convert.ToDouble(pars[2]))))
                 {
                     err = true;
                     errs += "Поле 'Длина до развилки' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[1]) + ", мин значение - " + Convert.ToString(pars[2]) + Convert.ToChar(13);
                 }
+            }
             if (textBox17.Text != "")
+            {
+                if (((Convert.ToDouble(textBox17.Text) > Convert.ToDouble(textBox4.Text)) || (Convert.ToDouble(textBox17.Text) > Convert.ToDouble(textBox7.Text)))) { errs += "Стандартная длина не может быть больше длины до развилки или общей длины ! " ; }
+
                 if ((Convert.ToDouble(textBox17.Text) > Convert.ToDouble(pars[1])) || ((Convert.ToDouble(textBox17.Text) < Convert.ToDouble(pars[2]))))
                 {
                     err = true;
                     errs += "Поле 'Стандартная длина' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[1]) + ", мин значение - " + Convert.ToString(pars[2]) + Convert.ToChar(13);
                 }
+            }
             if (textBox22.Text != "")
             {
                 // проверка веса бюкса (Я)
@@ -113,8 +125,8 @@ namespace WindowsFormsApp1
                 zapis[0] = textBox1.Text; //ид пробы	
                 zapis[1] = textBox2.Text;//ид записи	
                 zapis[2] = textBox5.Text;//порядковый номер	
-                zapis[3] = textBox13.Text;//размер1	
-                zapis[4] = textBox12.Text;//размер2	
+                zapis[3] = comboBox1.Text;//размер1	
+                zapis[4] = comboBox2.Text;//размер2	
                 zapis[5] = textBox7.Text;//Общая длина	
                 zapis[6] = textBox4.Text;//Длина до развилки	
                 zapis[7] = textBox17.Text;//Стандартная длина	
@@ -148,8 +160,8 @@ namespace WindowsFormsApp1
             textBox1.Text = Convert.ToString(zapis[0]); //ид пробы
             textBox2.Text = Convert.ToString(zapis[1]);//ид записи
             textBox5.Text = Convert.ToString(zapis[2]);//порядковый номер
-            textBox13.Text = Convert.ToString(zapis[3]);//размер1
-            textBox12.Text = Convert.ToString(zapis[4]);//размер2
+            comboBox1.Text = Convert.ToString(zapis[3]);//размер1
+            comboBox2.Text = Convert.ToString(zapis[4]);//размер2
             textBox7.Text = Convert.ToString(zapis[5]);//Общая длина
             textBox4.Text = Convert.ToString(zapis[6]);//Длина до развилки
             textBox17.Text = Convert.ToString(zapis[7]);//Стандартная длина

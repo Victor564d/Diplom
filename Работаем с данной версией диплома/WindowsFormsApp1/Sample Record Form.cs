@@ -63,19 +63,19 @@ namespace WindowsFormsApp1
             errs = "";
             if (comboBox1.Text != "")
             {
-                if (Convert.ToDouble(comboBox1.Text) > Convert.ToDouble(comboBox2.Text)) { errs += "Минимальный размер не может привышать максимальный ! "; } // проверка размеров рыбы (Я)
+                if (Convert.ToDouble(comboBox1.Text) > Convert.ToDouble(comboBox2.Text)) { errs += "Минимальный размер не может привышать максимальный ! " + Convert.ToChar(13); } // проверка размеров рыбы (Я)
                 
                 if ((Convert.ToDouble(comboBox1.Text) > Convert.ToDouble(pars[1])) || ((Convert.ToDouble(comboBox1.Text) < Convert.ToDouble(pars[2])))) 
                 {
                     err = true;
-                    errs += "Поле 'Минимальная длина' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[1]) + ", мин значение - " + Convert.ToString(pars[2]) + Convert.ToChar(13);
+                    errs += "Поле 'Минимальная длина' не соответствует ограничениям (макс значение - " + Convert.ToString(pars[1]) + ", мин значение - " + Convert.ToString(pars[2]) + ")" + Convert.ToChar(13);
                 }
             }
             if (comboBox2.Text != "")
                 if ((Convert.ToDouble(comboBox2.Text) > Convert.ToDouble(pars[1])) || ((Convert.ToDouble(comboBox2.Text) < Convert.ToDouble(pars[2]))))
             {
                 err = true;
-                errs += "Поле 'Максимальная длина' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[1]) + ", мин значение - " + Convert.ToString(pars[2]) + Convert.ToChar(13);
+                errs += "Поле 'Максимальная длина' не соответствует ограничениям (макс значение - " + Convert.ToString(pars[1]) + ", мин значение - " + Convert.ToString(pars[2]) + ")" + Convert.ToChar(13);
             }
             /* if (textBox11.Text != "")
                  if ((Convert.ToDouble(textBox11.Text) > Convert.ToDouble(pars[13])) || ((Convert.ToDouble(textBox11.Text) < Convert.ToDouble(pars[14]))))
@@ -98,8 +98,8 @@ namespace WindowsFormsApp1
             if (textBox14.Text != "")
             {
                 // проверка веса бюкса (Я)
-                if ((Convert.ToDouble(textBox14.Text) >= Convert.ToDouble(textBox15.Text)) || (Convert.ToDouble(textBox14.Text) >= Convert.ToDouble(textBox16.Text))) { errs += "Вес пустого бюкса не может быть больше веса бюкса с сырой навеской или Бюкса с сухой навеской ! "; }
-                if (Convert.ToDouble(textBox16.Text) >= Convert.ToDouble(textBox15.Text)) { errs += "Вес бюкса с сухой навеской не может быть больше веса бюкса с сырой навеской ! "; }
+                if ((Convert.ToDouble(textBox14.Text) >= Convert.ToDouble(textBox15.Text)) || (Convert.ToDouble(textBox14.Text) >= Convert.ToDouble(textBox16.Text))) { errs += "Вес пустого бюкса не может быть больше веса бюкса с сырой навеской или Бюкса с сухой навеской ! " + Convert.ToChar(13); }
+                if (Convert.ToDouble(textBox16.Text) >= Convert.ToDouble(textBox15.Text)) { errs += "Вес бюкса с сухой навеской не может быть больше веса бюкса с сырой навеской ! " + Convert.ToChar(13); }
 
                 if ((Convert.ToDouble(textBox14.Text) > Convert.ToDouble(pars[7])) || ((Convert.ToDouble(textBox14.Text) < Convert.ToDouble(pars[8]))))
                 {

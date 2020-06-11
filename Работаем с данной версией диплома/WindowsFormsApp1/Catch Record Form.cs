@@ -89,8 +89,8 @@ namespace WindowsFormsApp1
             textBox6.Text = Convert.ToString(zapis[5]);
             textBox7.Text = Convert.ToString(zapis[6]);
             textBox8.Text = Convert.ToString(zapis[7]);
-            textBox9.Text = Convert.ToString(zapis[8]);
-            textBox10.Text = Convert.ToString(zapis[9]);
+            maskedTextBox1.Text = Convert.ToString(zapis[8]);
+            maskedTextBox2.Text = Convert.ToString(zapis[9]);
             textBox14.Text = Convert.ToString(zapis[10]);
             textBox13.Text = Convert.ToString(zapis[11]);
             textBox15.Text = Convert.ToString(zapis[12]);
@@ -213,8 +213,8 @@ namespace WindowsFormsApp1
                 zapis[5] = textBox6.Text;
                 zapis[6] = textBox7.Text;
                 zapis[7] = textBox8.Text;
-                zapis[8] = textBox9.Text;
-                zapis[9] = textBox10.Text;
+                zapis[8] = maskedTextBox1.Text;
+                zapis[9] = maskedTextBox2.Text;
                 zapis[10] = textBox14.Text;
                 zapis[11] = textBox13.Text;
                 zapis[12] = textBox15.Text;
