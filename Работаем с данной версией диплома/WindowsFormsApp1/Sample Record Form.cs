@@ -204,7 +204,10 @@ namespace WindowsFormsApp1
         }
         string idnt ;
         private void Sample_Record_Form_Load(object sender, EventArgs e)
-        {
+        { if (mainform.readOnl)
+            {
+                записатьToolStripMenuItem.Enabled = false;
+            }
             textBox1.Text = Convert.ToString(zapis[0]); //ид пробы
             textBox2.Text = Convert.ToString(zapis[1]);// ид записи
             textBox5.Text = Convert.ToString(zapis[2]);//порядковый номер

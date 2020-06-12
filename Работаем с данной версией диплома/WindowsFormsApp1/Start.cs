@@ -142,6 +142,12 @@ namespace WindowsFormsApp1
 
                 }
             }
+            if (System.IO.File.Exists("IDNTFParams.dat") == false) // если же файл не доступен (файл не найден)
+            {
+                MessageBox.Show("Не удалось найти файл конфигурации ограничений . Будет создан файл с стандартными ограничениями "); // выдаем сообщение об ошибке 
+                try { File.Copy("DefaulthParams.dat", "IDNTFParams.dat"); }
+                catch { MessageBox.Show("Не удалось создать файл конфигурации ограничений. Пожалуйста , создайте его вручную через настройки параметров", "Ошибка!", MessageBoxButtons.OK,MessageBoxIcon.Error) ; }
+            }
         }
 
         private void бАBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -391,7 +397,9 @@ namespace WindowsFormsApp1
         {
             idnt = indt.Count - 1;
             Hamsa subForm = new Hamsa(this);
+            subForm.readOnl = true;
             subForm.Show();
+            
             this.Visible = false;
 
         }

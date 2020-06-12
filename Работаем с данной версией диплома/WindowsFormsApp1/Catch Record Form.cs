@@ -81,6 +81,10 @@ namespace WindowsFormsApp1
 
         private void Catch_Record_Form_Load(object sender, EventArgs e)
         {
+            if (mainform.readOnl)
+            {
+                записатьToolStripMenuItem.Enabled = false;
+            }
             textBox1.Text = Convert.ToString(zapis[0]);
             textBox2.Text = Convert.ToString(zapis[1]);
             textBox3.Text = Convert.ToString(zapis[2]);

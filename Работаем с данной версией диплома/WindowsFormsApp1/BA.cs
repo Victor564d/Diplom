@@ -315,12 +315,20 @@ namespace WindowsFormsApp1
         public string idnt;
         ArrayList erlli = new ArrayList();
         ArrayList erll = new ArrayList();
+        public bool readOnl = false;
         private void BA_Load(object sender, EventArgs e)
         {
             cells = mainform.cells;
             tableAdapterManager.Connection.ConnectionString = mainform.Conn;
             idnt = mainform.idnt;
-
+            if (mainform.readOnl)
+            {
+                readOnl = mainform.readOnl;
+                бАDataGridView.ReadOnly = readOnl;
+                button1.Enabled = false;
+                bindingNavigatorDeleteItem.Enabled = false;
+                бАBindingNavigatorSaveItem.Enabled = false;
+            }
             try
             {
                 this.бАTableAdapter.FillBy(this.тестовая_бд_DataSet.БА,

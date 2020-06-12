@@ -253,9 +253,17 @@ namespace WindowsFormsApp1
             this.пробыBindingSource1.EndEdit();
             this.tableAdapterManager.UpdateAll(this.тестовая_бд_DataSet);
         }
-
+        public bool readOnl = false;
         private void Form4_Load(object sender, EventArgs e)// выполняется при загрузке
         {
+            if (mainform.readOnl)
+            {
+                readOnl = mainform.readOnl;
+                button1.Enabled = false;
+                bindingNavigatorDeleteItem.Enabled = false;
+                пробыDataGridView.ReadOnly = true;
+                пробыBindingNavigatorSaveItem.Enabled = false;
+            }
             idnt = mainform.idnt;
             cells = mainform.cells; //получение значения ячеек для соответствующей фильтрации записей
             tableAdapterManager.Connection.ConnectionString = mainform.Conn; //полуыение строки подключения к базе

@@ -47,7 +47,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.бАBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.бАBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.тестовая_бд_DataSet = new WindowsFormsApp1.Тестовая_бд_DataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -113,7 +112,7 @@
             // 
             // бАBindingNavigator
             // 
-            this.бАBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.бАBindingNavigator.AddNewItem = null;
             this.бАBindingNavigator.BindingSource = this.бАBindingSource;
             this.бАBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.бАBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
@@ -128,7 +127,6 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.бАBindingNavigatorSaveItem});
             this.бАBindingNavigator.Location = new System.Drawing.Point(0, 441);
@@ -141,15 +139,6 @@
             this.бАBindingNavigator.Size = new System.Drawing.Size(1195, 25);
             this.бАBindingNavigator.TabIndex = 0;
             this.бАBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
             // 
             // бАBindingSource
             // 
@@ -204,7 +193,6 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -651,6 +639,8 @@
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximumSize = new System.Drawing.Size(1211, 505);
+            this.MinimumSize = new System.Drawing.Size(1211, 505);
             this.Name = "BA";
             this.Text = "Биологический анализ";
             this.Load += new System.EventHandler(this.BA_Load);
@@ -672,7 +662,6 @@
         private System.Windows.Forms.BindingSource бАBindingSource;
         private Тестовая_бд_DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator бАBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;

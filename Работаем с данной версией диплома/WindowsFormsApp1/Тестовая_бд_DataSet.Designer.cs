@@ -16960,10 +16960,10 @@ WHERE        (RecordID = ?)";
             this._commandCollection[5].CommandText = @"SELECT        CathID, SamplID, DD, MM, YYYY, Region, Area, Location, Latitude, Longitude, Depth, WaterTemperature, Gear, Vessel, Catch, DateOfProc, Condition, LengthRange, Mode, MeanLength, [Number of ind], [WetWeight, g], 
                          [MeanWW, g], MeanDW, [Mean_TL%], [Calculated_TL%], SizeClasses, DW_Samples, TL_Samples, DW_Ind, TL_Ind, BioAnalyses_Ind, Comments, DataSource, DataFile
 FROM            Уловы
-WHERE        (MM >= ?) AND (CathID LIKE ?)";
+WHERE        (MM >= ?) AND (SamplID LIKE ?)";
             this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("MM", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "MM", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CathID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CathID", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SamplID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SamplID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[6] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[6].Connection = this.Connection;
             this._commandCollection[6].CommandText = @"SELECT CathID, SamplID, DD, MM, YYYY, Region, Area, Location, Latitude, Longitude, Depth, WaterTemperature, Gear, Vessel, Catch, DateOfProc, Condition, LengthRange, Mode, MeanLength, [Number of ind], [WetWeight, g], [MeanWW, g], MeanDW, [Mean_TL%], [Calculated_TL%], SizeClasses, DW_Samples, TL_Samples, DW_Ind, TL_Ind, BioAnalyses_Ind, Comments, DataSource, DataFile FROM Уловы";
@@ -16973,17 +16973,20 @@ WHERE        (MM >= ?) AND (CathID LIKE ?)";
             this._commandCollection[7].CommandText = @"SELECT        CathID, SamplID, DD, MM, YYYY, Region, Area, Location, Latitude, Longitude, Depth, WaterTemperature, Gear, Vessel, Catch, DateOfProc, Condition, LengthRange, Mode, MeanLength, [Number of ind], [WetWeight, g], 
                          [MeanWW, g], MeanDW, [Mean_TL%], [Calculated_TL%], SizeClasses, DW_Samples, TL_Samples, DW_Ind, TL_Ind, BioAnalyses_Ind, Comments, DataSource, DataFile
 FROM            Уловы
-WHERE        (CathID LIKE ?)";
+WHERE        (SamplID LIKE ?)";
             this._commandCollection[7].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[7].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CathID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CathID", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[7].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SamplID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SamplID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[8] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[8].Connection = this.Connection;
             this._commandCollection[8].CommandText = @"SELECT        CathID, SamplID, DD, MM, YYYY, Region, Area, Location, Latitude, Longitude, Depth, WaterTemperature, Gear, Vessel, Catch, DateOfProc, Condition, LengthRange, Mode, MeanLength, [Number of ind], [WetWeight, g], 
                          [MeanWW, g], MeanDW, [Mean_TL%], [Calculated_TL%], SizeClasses, DW_Samples, TL_Samples, DW_Ind, TL_Ind, BioAnalyses_Ind, Comments, DataSource, DataFile
 FROM            Уловы
-WHERE        (DD = ?) OR (MM = ?) OR (YYYY = ?)";
+WHERE        (DD = ?) AND (SamplID LIKE ?) OR
+                         (MM = ?) OR
+                         (YYYY = ?)";
             this._commandCollection[8].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[8].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DD", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DD", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[8].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SamplID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SamplID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[8].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("MM", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "MM", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[8].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("YYYY", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "YYYY", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[9] = new global::System.Data.OleDb.OleDbCommand();
@@ -16991,57 +16994,57 @@ WHERE        (DD = ?) OR (MM = ?) OR (YYYY = ?)";
             this._commandCollection[9].CommandText = @"SELECT        CathID, SamplID, DD, MM, YYYY, Region, Area, Location, Latitude, Longitude, Depth, WaterTemperature, Gear, Vessel, Catch, DateOfProc, Condition, LengthRange, Mode, MeanLength, [Number of ind], [WetWeight, g], 
                          [MeanWW, g], MeanDW, [Mean_TL%], [Calculated_TL%], SizeClasses, DW_Samples, TL_Samples, DW_Ind, TL_Ind, BioAnalyses_Ind, Comments, DataSource, DataFile
 FROM            Уловы
-WHERE        (YYYY >= ?) AND (CathID LIKE ?)";
+WHERE        (YYYY >= ?) AND (SamplID LIKE ?)";
             this._commandCollection[9].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[9].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("YYYY", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "YYYY", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[9].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CathID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CathID", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SamplID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SamplID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[10] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[10].Connection = this.Connection;
             this._commandCollection[10].CommandText = @"SELECT        CathID, SamplID, DD, MM, YYYY, Region, Area, Location, Latitude, Longitude, Depth, WaterTemperature, Gear, Vessel, Catch, DateOfProc, Condition, LengthRange, Mode, MeanLength, [Number of ind], [WetWeight, g], 
                          [MeanWW, g], MeanDW, [Mean_TL%], [Calculated_TL%], SizeClasses, DW_Samples, TL_Samples, DW_Ind, TL_Ind, BioAnalyses_Ind, Comments, DataSource, DataFile
 FROM            Уловы
-WHERE        (YYYY = ?) AND (CathID LIKE ?)";
+WHERE        (YYYY = ?) AND (SamplID LIKE ?)";
             this._commandCollection[10].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[10].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("YYYY", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "YYYY", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[10].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CathID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CathID", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[10].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SamplID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SamplID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[11] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[11].Connection = this.Connection;
             this._commandCollection[11].CommandText = @"SELECT        CathID, SamplID, DD, MM, YYYY, Region, Area, Location, Latitude, Longitude, Depth, WaterTemperature, Gear, Vessel, Catch, DateOfProc, Condition, LengthRange, Mode, MeanLength, [Number of ind], [WetWeight, g], 
                          [MeanWW, g], MeanDW, [Mean_TL%], [Calculated_TL%], SizeClasses, DW_Samples, TL_Samples, DW_Ind, TL_Ind, BioAnalyses_Ind, Comments, DataSource, DataFile
 FROM            Уловы
-WHERE        (YYYY <= ?) AND (CathID LIKE ?)";
+WHERE        (YYYY <= ?) AND (SamplID LIKE ?)";
             this._commandCollection[11].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[11].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("YYYY", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "YYYY", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[11].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CathID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CathID", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[11].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SamplID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SamplID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[12] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[12].Connection = this.Connection;
             this._commandCollection[12].CommandText = @"SELECT        CathID, SamplID, DD, MM, YYYY, Region, Area, Location, Latitude, Longitude, Depth, WaterTemperature, Gear, Vessel, Catch, DateOfProc, Condition, LengthRange, Mode, MeanLength, [Number of ind], [WetWeight, g], 
                          [MeanWW, g], MeanDW, [Mean_TL%], [Calculated_TL%], SizeClasses, DW_Samples, TL_Samples, DW_Ind, TL_Ind, BioAnalyses_Ind, Comments, DataSource, DataFile
 FROM            Уловы
-WHERE        (MM = ?) AND (CathID LIKE ?)";
+WHERE        (MM = ?) AND (SamplID LIKE ?)";
             this._commandCollection[12].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[12].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("MM", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "MM", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[12].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CathID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CathID", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[12].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SamplID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SamplID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[13] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[13].Connection = this.Connection;
             this._commandCollection[13].CommandText = @"SELECT        CathID, SamplID, DD, MM, YYYY, Region, Area, Location, Latitude, Longitude, Depth, WaterTemperature, Gear, Vessel, Catch, DateOfProc, Condition, LengthRange, Mode, MeanLength, [Number of ind], [WetWeight, g], 
                          [MeanWW, g], MeanDW, [Mean_TL%], [Calculated_TL%], SizeClasses, DW_Samples, TL_Samples, DW_Ind, TL_Ind, BioAnalyses_Ind, Comments, DataSource, DataFile
 FROM            Уловы
-WHERE        (MM <= ?) AND (CathID LIKE ?)";
+WHERE        (MM <= ?) AND (SamplID LIKE ?)";
             this._commandCollection[13].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[13].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("MM", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "MM", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[13].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CathID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CathID", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[13].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SamplID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SamplID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[14] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[14].Connection = this.Connection;
             this._commandCollection[14].CommandText = @"SELECT        CathID, SamplID, DD, MM, YYYY, Region, Area, Location, Latitude, Longitude, Depth, WaterTemperature, Gear, Vessel, Catch, DateOfProc, Condition, LengthRange, Mode, MeanLength, [Number of ind], [WetWeight, g], 
                          [MeanWW, g], MeanDW, [Mean_TL%], [Calculated_TL%], SizeClasses, DW_Samples, TL_Samples, DW_Ind, TL_Ind, BioAnalyses_Ind, Comments, DataSource, DataFile
 FROM            Уловы
-WHERE        (Region LIKE ?) AND (Area LIKE ?) AND (Location LIKE ?) AND (CathID LIKE ?)";
+WHERE        (Region LIKE ?) AND (Area LIKE ?) AND (Location LIKE ?) AND (SamplID LIKE ?)";
             this._commandCollection[14].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[14].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Region", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Region", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[14].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Area", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Area", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[14].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Location", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Location", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[14].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CathID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CathID", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[14].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SamplID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SamplID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[15] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[15].Connection = this.Connection;
             this._commandCollection[15].CommandText = "SELECT        AVG([DW%]) AS Expr1\r\nFROM            Пробы\r\nWHERE        ([DW%] > 0" +
@@ -17169,7 +17172,7 @@ WHERE        (CathID = ?)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FiillMMBE(Тестовая_бд_DataSet.УловыDataTable dataTable, global::System.Nullable<short> MM, string CathID) {
+        public virtual int FiillMMBE(Тестовая_бд_DataSet.УловыDataTable dataTable, global::System.Nullable<short> MM, string SamplID) {
             this.Adapter.SelectCommand = this.CommandCollection[5];
             if ((MM.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((short)(MM.Value));
@@ -17177,11 +17180,11 @@ WHERE        (CathID = ?)";
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((CathID == null)) {
-                throw new global::System.ArgumentNullException("CathID");
+            if ((SamplID == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(CathID));
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(SamplID));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -17207,13 +17210,13 @@ WHERE        (CathID = ?)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(Тестовая_бд_DataSet.УловыDataTable dataTable, string CathID) {
+        public virtual int FillBy(Тестовая_бд_DataSet.УловыDataTable dataTable, string SamplID) {
             this.Adapter.SelectCommand = this.CommandCollection[7];
-            if ((CathID == null)) {
-                throw new global::System.ArgumentNullException("CathID");
+            if ((SamplID == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(CathID));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(SamplID));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -17226,7 +17229,7 @@ WHERE        (CathID = ?)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByDate(Тестовая_бд_DataSet.УловыDataTable dataTable, global::System.Nullable<short> DD, global::System.Nullable<short> MM, global::System.Nullable<short> YYYY) {
+        public virtual int FillByDate(Тестовая_бд_DataSet.УловыDataTable dataTable, global::System.Nullable<short> DD, string SamplID, global::System.Nullable<short> MM, global::System.Nullable<short> YYYY) {
             this.Adapter.SelectCommand = this.CommandCollection[8];
             if ((DD.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((short)(DD.Value));
@@ -17234,17 +17237,23 @@ WHERE        (CathID = ?)";
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((MM.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((short)(MM.Value));
-            }
-            else {
+            if ((SamplID == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((YYYY.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((short)(YYYY.Value));
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(SamplID));
+            }
+            if ((MM.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((short)(MM.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((YYYY.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((short)(YYYY.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -17257,7 +17266,7 @@ WHERE        (CathID = ?)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillDDBE(Тестовая_бд_DataSet.УловыDataTable dataTable, global::System.Nullable<short> YYYY, string CathID) {
+        public virtual int FillDDBE(Тестовая_бд_DataSet.УловыDataTable dataTable, global::System.Nullable<short> YYYY, string SamplID) {
             this.Adapter.SelectCommand = this.CommandCollection[9];
             if ((YYYY.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((short)(YYYY.Value));
@@ -17265,11 +17274,11 @@ WHERE        (CathID = ?)";
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((CathID == null)) {
-                throw new global::System.ArgumentNullException("CathID");
+            if ((SamplID == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(CathID));
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(SamplID));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -17282,7 +17291,7 @@ WHERE        (CathID = ?)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillDDE(Тестовая_бд_DataSet.УловыDataTable dataTable, global::System.Nullable<short> YYYY, string CathID) {
+        public virtual int FillDDE(Тестовая_бд_DataSet.УловыDataTable dataTable, global::System.Nullable<short> YYYY, string SamplID) {
             this.Adapter.SelectCommand = this.CommandCollection[10];
             if ((YYYY.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((short)(YYYY.Value));
@@ -17290,11 +17299,11 @@ WHERE        (CathID = ?)";
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((CathID == null)) {
-                throw new global::System.ArgumentNullException("CathID");
+            if ((SamplID == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(CathID));
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(SamplID));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -17307,7 +17316,7 @@ WHERE        (CathID = ?)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillDDME(Тестовая_бд_DataSet.УловыDataTable dataTable, global::System.Nullable<short> YYYY, string CathID) {
+        public virtual int FillDDME(Тестовая_бд_DataSet.УловыDataTable dataTable, global::System.Nullable<short> YYYY, string SamplID) {
             this.Adapter.SelectCommand = this.CommandCollection[11];
             if ((YYYY.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((short)(YYYY.Value));
@@ -17315,11 +17324,11 @@ WHERE        (CathID = ?)";
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((CathID == null)) {
-                throw new global::System.ArgumentNullException("CathID");
+            if ((SamplID == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(CathID));
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(SamplID));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -17332,7 +17341,7 @@ WHERE        (CathID = ?)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillMME(Тестовая_бд_DataSet.УловыDataTable dataTable, global::System.Nullable<short> MM, string CathID) {
+        public virtual int FillMME(Тестовая_бд_DataSet.УловыDataTable dataTable, global::System.Nullable<short> MM, string SamplID) {
             this.Adapter.SelectCommand = this.CommandCollection[12];
             if ((MM.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((short)(MM.Value));
@@ -17340,11 +17349,11 @@ WHERE        (CathID = ?)";
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((CathID == null)) {
-                throw new global::System.ArgumentNullException("CathID");
+            if ((SamplID == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(CathID));
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(SamplID));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -17357,7 +17366,7 @@ WHERE        (CathID = ?)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillMMME(Тестовая_бд_DataSet.УловыDataTable dataTable, global::System.Nullable<short> MM, string CathID) {
+        public virtual int FillMMME(Тестовая_бд_DataSet.УловыDataTable dataTable, global::System.Nullable<short> MM, string SamplID) {
             this.Adapter.SelectCommand = this.CommandCollection[13];
             if ((MM.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((short)(MM.Value));
@@ -17365,11 +17374,11 @@ WHERE        (CathID = ?)";
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((CathID == null)) {
-                throw new global::System.ArgumentNullException("CathID");
+            if ((SamplID == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(CathID));
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(SamplID));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -17382,7 +17391,7 @@ WHERE        (CathID = ?)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillRegAll(Тестовая_бд_DataSet.УловыDataTable dataTable, string Region, string Area, string Location, string CathID) {
+        public virtual int FillRegAll(Тестовая_бд_DataSet.УловыDataTable dataTable, string Region, string Area, string Location, string SamplID) {
             this.Adapter.SelectCommand = this.CommandCollection[14];
             if ((Region == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -17402,11 +17411,11 @@ WHERE        (CathID = ?)";
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = ((string)(Location));
             }
-            if ((CathID == null)) {
-                throw new global::System.ArgumentNullException("CathID");
+            if ((SamplID == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(CathID));
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(SamplID));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
