@@ -95,11 +95,18 @@ namespace WindowsFormsApp1
                  err = true;
                  errs += "Поле 'Расчетное содержание липидов' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[15]) + ", мин значение - " + Convert.ToString(pars[16]) + Convert.ToChar(13);
              }*/
+            if (textBox15.Text != "" && textBox14.Text != "")
+            {
+                if (Convert.ToDouble(textBox16.Text) >= Convert.ToDouble(textBox15.Text)) { errs += "Вес бюкса с сухой навеской не может быть больше веса бюкса с сырой навеской ! " + Convert.ToChar(13); err = true; }
+            }
+            if (textBox15.Text != "" && textBox14.Text != "" && textBox16.Text != "")
+            {
+                if ((Convert.ToDouble(textBox14.Text) >= Convert.ToDouble(textBox15.Text)) || (Convert.ToDouble(textBox14.Text) >= Convert.ToDouble(textBox16.Text))) { errs += "Вес пустого бюкса не может быть больше веса бюкса с сырой навеской или Бюкса с сухой навеской ! " + Convert.ToChar(13); err = true; }
+            }
             if (textBox14.Text != "")
             {
                 // проверка веса бюкса (Я)
-                if ((Convert.ToDouble(textBox14.Text) >= Convert.ToDouble(textBox15.Text)) || (Convert.ToDouble(textBox14.Text) >= Convert.ToDouble(textBox16.Text))) { errs += "Вес пустого бюкса не может быть больше веса бюкса с сырой навеской или Бюкса с сухой навеской ! " + Convert.ToChar(13); err = true; }
-                if (Convert.ToDouble(textBox16.Text) >= Convert.ToDouble(textBox15.Text)) { errs += "Вес бюкса с сухой навеской не может быть больше веса бюкса с сырой навеской ! " + Convert.ToChar(13); err = true; }
+               
 
                 if ((Convert.ToDouble(textBox14.Text) > Convert.ToDouble(pars[7])) || ((Convert.ToDouble(textBox14.Text) < Convert.ToDouble(pars[8]))))
                 {
@@ -107,17 +114,17 @@ namespace WindowsFormsApp1
                     errs += "Поле 'Вес бюкса' не соответствует ограничениям (макс значение - " + Convert.ToString(pars[7]) + ", мин значение - " + Convert.ToString(pars[8]) + ")" + Convert.ToChar(13);
                 }
             }
-            if (textBox15.Text != "")
+            if (textBox15.Text != "" && textBox14.Text != "")
                 if (((Convert.ToDouble(textBox15.Text) - Convert.ToDouble(textBox14.Text)) > Convert.ToDouble(pars[9])) || ((Convert.ToDouble(textBox15.Text) - Convert.ToDouble(textBox15.Text)) < Convert.ToDouble(pars[10])))
             {
                 err = true;
-                errs += "Поле 'Сырая масса бюкса с навеской' не соответствует ограничениям (макс значение - " + Convert.ToString(pars[9]) + ", мин значение - " + Convert.ToString(pars[10]) + ")" + Convert.ToChar(13);
+                errs += "Поле 'Сырая масса бюкса с навеской' не соответствует ограничениям (макс значение - " + Convert.ToString(Convert.ToDouble(pars[9])+ Convert.ToDouble(textBox14.Text)) + ", мин значение - " + Convert.ToString(Convert.ToDouble(pars[10])+ Convert.ToDouble(textBox14.Text)) + ")" + Convert.ToChar(13);
             }
-            if (textBox16.Text != "")
+            if (textBox16.Text != "" && textBox14.Text!="")
                 if (((Convert.ToDouble(textBox16.Text) - Convert.ToDouble(textBox14.Text)) > Convert.ToDouble(pars[11])) || ((Convert.ToDouble(textBox16.Text) - (Convert.ToDouble(textBox14.Text)) < Convert.ToDouble(pars[12]))))
             {
                 err = true;
-                errs += "Поле 'Сухая масса бюкса с навеской' не соответствует ограничениям (макс значение - " + Convert.ToString(pars[11]) + ", мин значение - " + Convert.ToString(pars[12]) + ")" + Convert.ToChar(13);
+                errs += "Поле 'Сухая масса бюкса с навеской' не соответствует ограничениям (макс значение - " + Convert.ToString(Convert.ToDouble(pars[11])+ Convert.ToDouble(textBox14.Text)) + ", мин значение - " + Convert.ToString(Convert.ToDouble(pars[12])+ Convert.ToDouble(textBox14.Text)) + ")" + Convert.ToChar(13);
             }
             if (err)
             {
