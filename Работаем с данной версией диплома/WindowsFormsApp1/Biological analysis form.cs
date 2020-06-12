@@ -47,7 +47,7 @@ namespace WindowsFormsApp1
             errs = "";
             if (comboBox1.Text != "")
             {
-                if (Convert.ToDouble(comboBox1.Text) > Convert.ToDouble(comboBox2.Text)) { errs += "Минимальный размер не может привышать максимальный ! " + Convert.ToChar(13); } // проверка размеров рыбы (Я)
+                if (Convert.ToDouble(comboBox1.Text) > Convert.ToDouble(comboBox2.Text)) { errs += "Минимальный размер не может привышать максимальный ! " + Convert.ToChar(13); err = true; } // проверка размеров рыбы (Я)
 
                 if ((Convert.ToDouble(comboBox1.Text) > Convert.ToDouble(pars[1])) || ((Convert.ToDouble(comboBox1.Text) < Convert.ToDouble(pars[2]))))
                 {
@@ -90,8 +90,8 @@ namespace WindowsFormsApp1
             if (textBox22.Text != "")
             {
                 // проверка веса бюкса (Я)
-                if ((Convert.ToDouble(textBox22.Text) >= Convert.ToDouble(textBox21.Text)) || (Convert.ToDouble(textBox22.Text) >= Convert.ToDouble(textBox20.Text))) { errs += "Вес пустого бюкса не может быть больше веса бюкса с сырой навеской или Бюкса с сухой навеской ! "; }
-                if (Convert.ToDouble(textBox20.Text) >= Convert.ToDouble(textBox21.Text)) { errs += "Вес бюкса с сухой навеской не может быть больше веса бюкса с сырой навеской ! "; }
+                if ((Convert.ToDouble(textBox22.Text) >= Convert.ToDouble(textBox21.Text)) || (Convert.ToDouble(textBox22.Text) >= Convert.ToDouble(textBox20.Text))) { errs += "Вес пустого бюкса не может быть больше веса бюкса с сырой навеской или Бюкса с сухой навеской ! "; err = true; }
+                if (Convert.ToDouble(textBox20.Text) >= Convert.ToDouble(textBox21.Text)) { errs += "Вес бюкса с сухой навеской не может быть больше веса бюкса с сырой навеской ! "; err = true; }
 
                 if ((Convert.ToDouble(textBox22.Text) > Convert.ToDouble(pars[7])) || ((Convert.ToDouble(textBox22.Text) < Convert.ToDouble(pars[8]))))
                 {
