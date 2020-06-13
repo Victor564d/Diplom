@@ -61,6 +61,21 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.бАBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.бАDataGridView = new System.Windows.Forms.DataGridView();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.импортToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.экспортToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.фильтрToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отключитьФильтрToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.фильтрПоTLFLSLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.фильтрпПоПолувозрастугенерацииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.видToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.настройкиОтображенияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.OpFile = new System.Windows.Forms.OpenFileDialog();
+            this.SaveFile = new System.Windows.Forms.SaveFileDialog();
+            this.бАTableAdapter = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.БАTableAdapter();
+            this.tableAdapterManager = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.TableAdapterManager();
+            this.button1 = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -87,21 +102,6 @@
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.импортToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.экспортToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.фильтрToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отключитьФильтрToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.фильтрПоTLFLSLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.фильтрпПоПолувозрастугенерацииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.видToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.настройкиОтображенияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.OpFile = new System.Windows.Forms.OpenFileDialog();
-            this.SaveFile = new System.Windows.Forms.SaveFileDialog();
-            this.бАTableAdapter = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.БАTableAdapter();
-            this.tableAdapterManager = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.TableAdapterManager();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.бАBindingNavigator)).BeginInit();
             this.бАBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.бАBindingSource)).BeginInit();
@@ -276,19 +276,128 @@
             this.бАDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.бАDataGridView_CellContentClick);
             this.бАDataGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.бАDataGridView_CellContentDoubleClick);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.файлToolStripMenuItem,
+            this.фильтрToolStripMenuItem,
+            this.видToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1195, 24);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            // 
+            // файлToolStripMenuItem
+            // 
+            this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.импортToolStripMenuItem,
+            this.экспортToolStripMenuItem});
+            this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
+            this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.файлToolStripMenuItem.Text = "Файл";
+            this.файлToolStripMenuItem.Click += new System.EventHandler(this.файлToolStripMenuItem_Click);
+            // 
+            // импортToolStripMenuItem
+            // 
+            this.импортToolStripMenuItem.Name = "импортToolStripMenuItem";
+            this.импортToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.импортToolStripMenuItem.Text = "Импорт";
+            this.импортToolStripMenuItem.Click += new System.EventHandler(this.импортToolStripMenuItem_Click);
+            // 
+            // экспортToolStripMenuItem
+            // 
+            this.экспортToolStripMenuItem.Name = "экспортToolStripMenuItem";
+            this.экспортToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.экспортToolStripMenuItem.Text = "Экспорт";
+            this.экспортToolStripMenuItem.Click += new System.EventHandler(this.экспортToolStripMenuItem_Click);
+            // 
+            // фильтрToolStripMenuItem
+            // 
+            this.фильтрToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.отключитьФильтрToolStripMenuItem,
+            this.фильтрПоTLFLSLToolStripMenuItem,
+            this.фильтрпПоПолувозрастугенерацииToolStripMenuItem});
+            this.фильтрToolStripMenuItem.Name = "фильтрToolStripMenuItem";
+            this.фильтрToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.фильтрToolStripMenuItem.Text = "Фильтр";
+            // 
+            // отключитьФильтрToolStripMenuItem
+            // 
+            this.отключитьФильтрToolStripMenuItem.Name = "отключитьФильтрToolStripMenuItem";
+            this.отключитьФильтрToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
+            this.отключитьФильтрToolStripMenuItem.Text = "Отключить фильтр";
+            this.отключитьФильтрToolStripMenuItem.Click += new System.EventHandler(this.отключитьФильтрToolStripMenuItem_Click);
+            // 
+            // фильтрПоTLFLSLToolStripMenuItem
+            // 
+            this.фильтрПоTLFLSLToolStripMenuItem.Name = "фильтрПоTLFLSLToolStripMenuItem";
+            this.фильтрПоTLFLSLToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
+            this.фильтрПоTLFLSLToolStripMenuItem.Text = "Фильтр по TL/FL/SL";
+            this.фильтрПоTLFLSLToolStripMenuItem.Click += new System.EventHandler(this.фильтрПоTLFLSLToolStripMenuItem_Click);
+            // 
+            // фильтрпПоПолувозрастугенерацииToolStripMenuItem
+            // 
+            this.фильтрпПоПолувозрастугенерацииToolStripMenuItem.Name = "фильтрпПоПолувозрастугенерацииToolStripMenuItem";
+            this.фильтрпПоПолувозрастугенерацииToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
+            this.фильтрпПоПолувозрастугенерацииToolStripMenuItem.Text = "Фильтрп по полу/возрасту/генерации";
+            this.фильтрпПоПолувозрастугенерацииToolStripMenuItem.Click += new System.EventHandler(this.фильтрпПоПолувозрастугенерацииToolStripMenuItem_Click);
+            // 
+            // видToolStripMenuItem
+            // 
+            this.видToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.настройкиОтображенияToolStripMenuItem});
+            this.видToolStripMenuItem.Name = "видToolStripMenuItem";
+            this.видToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.видToolStripMenuItem.Text = "Вид";
+            // 
+            // настройкиОтображенияToolStripMenuItem
+            // 
+            this.настройкиОтображенияToolStripMenuItem.Name = "настройкиОтображенияToolStripMenuItem";
+            this.настройкиОтображенияToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.настройкиОтображенияToolStripMenuItem.Text = "Настройки отображения ";
+            this.настройкиОтображенияToolStripMenuItem.Click += new System.EventHandler(this.настройкиОтображенияToolStripMenuItem_Click);
+            // 
+            // OpFile
+            // 
+            this.OpFile.FileName = "openFileDialog1";
+            // 
+            // бАTableAdapter
+            // 
+            this.бАTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.UpdateOrder = WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.БАTableAdapter = this.бАTableAdapter;
+            this.tableAdapterManager.ПробыTableAdapter = null;
+            this.tableAdapterManager.уловыTableAdapter = null;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(283, 442);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Добавить";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "SampleID";
             this.dataGridViewTextBoxColumn1.HeaderText = "Код пробы";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 79;
+            this.dataGridViewTextBoxColumn1.Width = 86;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "IndID";
             this.dataGridViewTextBoxColumn2.HeaderText = "Код записи";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 83;
+            this.dataGridViewTextBoxColumn2.Width = 90;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -389,7 +498,7 @@
             dataGridViewCellStyle7.Format = "N1";
             dataGridViewCellStyle7.NullValue = null;
             this.dataGridViewTextBoxColumn13.DefaultCellStyle = dataGridViewCellStyle7;
-            this.dataGridViewTextBoxColumn13.HeaderText = "К-т упитонности";
+            this.dataGridViewTextBoxColumn13.HeaderText = "К-т упитанности";
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             this.dataGridViewTextBoxColumn13.Width = 104;
             // 
@@ -518,115 +627,6 @@
             this.dataGridViewTextBoxColumn26.HeaderText = "Комментарий";
             this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
             this.dataGridViewTextBoxColumn26.Width = 102;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.файлToolStripMenuItem,
-            this.фильтрToolStripMenuItem,
-            this.видToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1195, 24);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
-            // 
-            // файлToolStripMenuItem
-            // 
-            this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.импортToolStripMenuItem,
-            this.экспортToolStripMenuItem});
-            this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.файлToolStripMenuItem.Text = "Файл";
-            this.файлToolStripMenuItem.Click += new System.EventHandler(this.файлToolStripMenuItem_Click);
-            // 
-            // импортToolStripMenuItem
-            // 
-            this.импортToolStripMenuItem.Name = "импортToolStripMenuItem";
-            this.импортToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
-            this.импортToolStripMenuItem.Text = "Импорт";
-            this.импортToolStripMenuItem.Click += new System.EventHandler(this.импортToolStripMenuItem_Click);
-            // 
-            // экспортToolStripMenuItem
-            // 
-            this.экспортToolStripMenuItem.Name = "экспортToolStripMenuItem";
-            this.экспортToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
-            this.экспортToolStripMenuItem.Text = "Экспорт";
-            this.экспортToolStripMenuItem.Click += new System.EventHandler(this.экспортToolStripMenuItem_Click);
-            // 
-            // фильтрToolStripMenuItem
-            // 
-            this.фильтрToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.отключитьФильтрToolStripMenuItem,
-            this.фильтрПоTLFLSLToolStripMenuItem,
-            this.фильтрпПоПолувозрастугенерацииToolStripMenuItem});
-            this.фильтрToolStripMenuItem.Name = "фильтрToolStripMenuItem";
-            this.фильтрToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.фильтрToolStripMenuItem.Text = "Фильтр";
-            // 
-            // отключитьФильтрToolStripMenuItem
-            // 
-            this.отключитьФильтрToolStripMenuItem.Name = "отключитьФильтрToolStripMenuItem";
-            this.отключитьФильтрToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
-            this.отключитьФильтрToolStripMenuItem.Text = "Отключить фильтр";
-            this.отключитьФильтрToolStripMenuItem.Click += new System.EventHandler(this.отключитьФильтрToolStripMenuItem_Click);
-            // 
-            // фильтрПоTLFLSLToolStripMenuItem
-            // 
-            this.фильтрПоTLFLSLToolStripMenuItem.Name = "фильтрПоTLFLSLToolStripMenuItem";
-            this.фильтрПоTLFLSLToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
-            this.фильтрПоTLFLSLToolStripMenuItem.Text = "Фильтр по TL/FL/SL";
-            this.фильтрПоTLFLSLToolStripMenuItem.Click += new System.EventHandler(this.фильтрПоTLFLSLToolStripMenuItem_Click);
-            // 
-            // фильтрпПоПолувозрастугенерацииToolStripMenuItem
-            // 
-            this.фильтрпПоПолувозрастугенерацииToolStripMenuItem.Name = "фильтрпПоПолувозрастугенерацииToolStripMenuItem";
-            this.фильтрпПоПолувозрастугенерацииToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
-            this.фильтрпПоПолувозрастугенерацииToolStripMenuItem.Text = "Фильтрп по полу/возрасту/генерации";
-            this.фильтрпПоПолувозрастугенерацииToolStripMenuItem.Click += new System.EventHandler(this.фильтрпПоПолувозрастугенерацииToolStripMenuItem_Click);
-            // 
-            // видToolStripMenuItem
-            // 
-            this.видToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.настройкиОтображенияToolStripMenuItem});
-            this.видToolStripMenuItem.Name = "видToolStripMenuItem";
-            this.видToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
-            this.видToolStripMenuItem.Text = "Вид";
-            // 
-            // настройкиОтображенияToolStripMenuItem
-            // 
-            this.настройкиОтображенияToolStripMenuItem.Name = "настройкиОтображенияToolStripMenuItem";
-            this.настройкиОтображенияToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
-            this.настройкиОтображенияToolStripMenuItem.Text = "Настройки отображения ";
-            this.настройкиОтображенияToolStripMenuItem.Click += new System.EventHandler(this.настройкиОтображенияToolStripMenuItem_Click);
-            // 
-            // OpFile
-            // 
-            this.OpFile.FileName = "openFileDialog1";
-            // 
-            // бАTableAdapter
-            // 
-            this.бАTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.UpdateOrder = WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.БАTableAdapter = this.бАTableAdapter;
-            this.tableAdapterManager.ПробыTableAdapter = null;
-            this.tableAdapterManager.уловыTableAdapter = null;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(283, 442);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Добавить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // BA
             // 

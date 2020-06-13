@@ -63,6 +63,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap kisspng_fishing_computer_icons_pisces_5ac1cde695beb1_2163333415226505986134 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-fishing-computer-icons-pisces-5ac1cde695beb1.2163333415226505986134", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Рисунок1 {
             get {
                 object obj = ResourceManager.GetObject("Рисунок1", resourceCulture);
