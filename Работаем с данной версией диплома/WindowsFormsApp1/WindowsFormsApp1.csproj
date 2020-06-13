@@ -97,6 +97,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About the program.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About the program.Designer.cs">
+      <DependentUpon>About the program.cs</DependentUpon>
+    </Compile>
     <Compile Include="BA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +227,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Тестовая_бд_DataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="About the program.resx">
+      <DependentUpon>About the program.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BA.resx">
       <DependentUpon>BA.cs</DependentUpon>
     </EmbeddedResource>
@@ -315,6 +324,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Рисунок1.jpg" />
+    <None Include="Resources\kisspng-fishing-computer-icons-pisces-5ac1cde695beb1.2163333415226505986134.ico" />
     <Content Include="БДРЫБА.mdb" />
   </ItemGroup>
   <ItemGroup>

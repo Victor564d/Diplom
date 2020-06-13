@@ -470,5 +470,12 @@ namespace WindowsFormsApp1
         {
             this.Close();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            About_the_program About_pr = new About_the_program();
+            About_pr.Show();
+            
+        }
     }
 }

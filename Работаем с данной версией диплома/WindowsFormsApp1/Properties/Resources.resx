@@ -121,4 +121,7 @@
   <data name="Рисунок1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Рисунок1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="kisspng-fishing-computer-icons-pisces-5ac1cde695beb1.2163333415226505986134" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-fishing-computer-icons-pisces-5ac1cde695beb1.2163333415226505986134.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

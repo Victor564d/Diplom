@@ -53,6 +53,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.уловыBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.уловыBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.тестовая_бд_DataSet = new WindowsFormsApp1.Тестовая_бд_DataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -83,8 +85,10 @@
             this.датеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.регионуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.обновитьВычесляемыеПараметрыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
             this.обновитьЗначенияВыбранногоУловаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
+            this.уловыTableAdapter = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.уловыTableAdapter();
+            this.tableAdapterManager = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.TableAdapterManager();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -120,16 +124,12 @@
             this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.уловыBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.тестовая_бд_DataSet = new WindowsFormsApp1.Тестовая_бд_DataSet();
-            this.уловыTableAdapter = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.уловыTableAdapter();
-            this.tableAdapterManager = new WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.уловыBindingNavigator)).BeginInit();
             this.уловыBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.уловыDataGridView)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.уловыBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.тестовая_бд_DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.уловыDataGridView)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // уловыBindingNavigator
@@ -162,6 +162,16 @@
             this.уловыBindingNavigator.TabIndex = 0;
             this.уловыBindingNavigator.Text = "bindingNavigator1";
             this.уловыBindingNavigator.RefreshItems += new System.EventHandler(this.уловыBindingNavigator_RefreshItems);
+            // 
+            // уловыBindingSource
+            // 
+            this.уловыBindingSource.DataMember = "Уловы";
+            this.уловыBindingSource.DataSource = this.тестовая_бд_DataSet;
+            // 
+            // тестовая_бд_DataSet
+            // 
+            this.тестовая_бд_DataSet.DataSetName = "Тестовая_бд_DataSet";
+            this.тестовая_бд_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -458,6 +468,13 @@
             this.обновитьВычесляемыеПараметрыToolStripMenuItem.Text = "Обновить вычисляемые параметры";
             this.обновитьВычесляемыеПараметрыToolStripMenuItem.Click += new System.EventHandler(this.обновитьВычесляемыеПараметрыToolStripMenuItem_Click);
             // 
+            // обновитьЗначенияВыбранногоУловаToolStripMenuItem
+            // 
+            this.обновитьЗначенияВыбранногоУловаToolStripMenuItem.Name = "обновитьЗначенияВыбранногоУловаToolStripMenuItem";
+            this.обновитьЗначенияВыбранногоУловаToolStripMenuItem.Size = new System.Drawing.Size(233, 20);
+            this.обновитьЗначенияВыбранногоУловаToolStripMenuItem.Text = "Обновить значения выбранного улова";
+            this.обновитьЗначенияВыбранногоУловаToolStripMenuItem.Click += new System.EventHandler(this.обновитьЗначенияВыбранногоУловаToolStripMenuItem_Click);
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(262, 467);
@@ -468,26 +485,31 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_3);
             // 
-            // обновитьЗначенияВыбранногоУловаToolStripMenuItem
+            // уловыTableAdapter
             // 
-            this.обновитьЗначенияВыбранногоУловаToolStripMenuItem.Name = "обновитьЗначенияВыбранногоУловаToolStripMenuItem";
-            this.обновитьЗначенияВыбранногоУловаToolStripMenuItem.Size = new System.Drawing.Size(233, 20);
-            this.обновитьЗначенияВыбранногоУловаToolStripMenuItem.Text = "Обновить значения выбранного улова";
-            this.обновитьЗначенияВыбранногоУловаToolStripMenuItem.Click += new System.EventHandler(this.обновитьЗначенияВыбранногоУловаToolStripMenuItem_Click);
+            this.уловыTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.UpdateOrder = WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.БАTableAdapter = null;
+            this.tableAdapterManager.ПробыTableAdapter = null;
+            this.tableAdapterManager.уловыTableAdapter = this.уловыTableAdapter;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "CathID";
             this.dataGridViewTextBoxColumn1.HeaderText = "Код улова";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 77;
+            this.dataGridViewTextBoxColumn1.Width = 83;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "SamplID";
             this.dataGridViewTextBoxColumn2.HeaderText = "Код пробы";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 79;
+            this.dataGridViewTextBoxColumn2.Width = 86;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -543,7 +565,7 @@
             this.dataGridViewTextBoxColumn8.DataPropertyName = "Location";
             this.dataGridViewTextBoxColumn8.HeaderText = "Место лова";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 84;
+            this.dataGridViewTextBoxColumn8.Width = 91;
             // 
             // dataGridViewTextBoxColumn9
             // 
@@ -657,7 +679,7 @@
             // dataGridViewTextBoxColumn22
             // 
             this.dataGridViewTextBoxColumn22.DataPropertyName = "WetWeight, g";
-            dataGridViewCellStyle12.Format = "N3";
+            dataGridViewCellStyle12.Format = "N1";
             dataGridViewCellStyle12.NullValue = null;
             this.dataGridViewTextBoxColumn22.DefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridViewTextBoxColumn22.HeaderText = "Масса, г";
@@ -667,7 +689,7 @@
             // dataGridViewTextBoxColumn23
             // 
             this.dataGridViewTextBoxColumn23.DataPropertyName = "MeanWW, g";
-            dataGridViewCellStyle13.Format = "N3";
+            dataGridViewCellStyle13.Format = "N2";
             dataGridViewCellStyle13.NullValue = null;
             this.dataGridViewTextBoxColumn23.DefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridViewTextBoxColumn23.HeaderText = "Средняя масса, г";
@@ -761,9 +783,9 @@
             // dataGridViewTextBoxColumn33
             // 
             this.dataGridViewTextBoxColumn33.DataPropertyName = "Comments";
-            this.dataGridViewTextBoxColumn33.HeaderText = "Коментарий";
+            this.dataGridViewTextBoxColumn33.HeaderText = "Комментарий";
             this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
-            this.dataGridViewTextBoxColumn33.Width = 94;
+            this.dataGridViewTextBoxColumn33.Width = 102;
             // 
             // dataGridViewTextBoxColumn34
             // 
@@ -778,28 +800,6 @@
             this.dataGridViewTextBoxColumn35.HeaderText = "Файл информации";
             this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
             this.dataGridViewTextBoxColumn35.Width = 117;
-            // 
-            // уловыBindingSource
-            // 
-            this.уловыBindingSource.DataMember = "Уловы";
-            this.уловыBindingSource.DataSource = this.тестовая_бд_DataSet;
-            // 
-            // тестовая_бд_DataSet
-            // 
-            this.тестовая_бд_DataSet.DataSetName = "Тестовая_бд_DataSet";
-            this.тестовая_бд_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // уловыTableAdapter
-            // 
-            this.уловыTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.UpdateOrder = WindowsFormsApp1.Тестовая_бд_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.БАTableAdapter = null;
-            this.tableAdapterManager.ПробыTableAdapter = null;
-            this.tableAdapterManager.уловыTableAdapter = this.уловыTableAdapter;
             // 
             // Hamsa
             // 
@@ -825,11 +825,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.уловыBindingNavigator)).EndInit();
             this.уловыBindingNavigator.ResumeLayout(false);
             this.уловыBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.уловыBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.тестовая_бд_DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.уловыDataGridView)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.уловыBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.тестовая_бд_DataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -871,6 +871,8 @@
         public System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem открытьВсеУловыToolStripMenuItem;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem обновитьВычесляемыеПараметрыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem обновитьЗначенияВыбранногоУловаToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -906,7 +908,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
-        private System.Windows.Forms.ToolStripMenuItem обновитьВычесляемыеПараметрыToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem обновитьЗначенияВыбранногоУловаToolStripMenuItem;
     }
 }
