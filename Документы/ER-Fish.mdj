@@ -1524,16 +1524,16 @@
 									},
 									"font": "Arial;13;0",
 									"left": 209,
-									"top": 231,
+									"top": 223,
 									"width": 125.708984375,
 									"height": 13,
-									"alpha": -1.5182137900458477,
-									"distance": 19.026297590440446,
+									"alpha": -1.5337765807839858,
+									"distance": 27.018512172212592,
 									"hostEdge": {
 										"$ref": "AAAAAAFyrfg9WTbhwLo="
 									},
 									"edgePosition": 1,
-									"text": "SampleID - SampleID"
+									"text": "SampleID - SamplID"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -1686,7 +1686,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFyqg4tRhUIEZ8="
 							},
-							"name": "SampleID - SampleID",
+							"name": "SampleID - SamplID",
 							"end1": {
 								"_type": "ERDRelationshipEnd",
 								"_id": "AAAAAAFyrfg9WDbeHQA=",
