@@ -473,9 +473,9 @@ namespace WindowsFormsApp1
 
         private void button8_Click(object sender, EventArgs e)
         {
-            About_the_program About_pr = new About_the_program();
+            About_the_program About_pr = new About_the_program(this);
             About_pr.Show();
-            
+            this.Hide();
         }
     }
 }
