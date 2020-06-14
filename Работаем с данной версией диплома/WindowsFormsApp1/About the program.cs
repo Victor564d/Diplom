@@ -12,8 +12,10 @@ namespace WindowsFormsApp1
 {
     public partial class About_the_program : Form
     {
-        public About_the_program()
+        Vibor mainform;
+        public About_the_program(Vibor mainform)
         {
+            this.mainform = mainform;
             InitializeComponent();
         }
 
@@ -34,9 +36,8 @@ namespace WindowsFormsApp1
 
         private void button11_Click(object sender, EventArgs e)
         {
-            //Start st = new Start();
-            //st.Show();
-            this.Hide();
+            mainform.Show();
+            this.Dispose();
         }
     }
 }
