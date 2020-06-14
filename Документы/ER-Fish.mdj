@@ -1524,16 +1524,16 @@
 									},
 									"font": "Arial;13;0",
 									"left": 209,
-									"top": 231,
+									"top": 223,
 									"width": 125.708984375,
 									"height": 13,
-									"alpha": -1.5182137900458477,
-									"distance": 19.026297590440446,
+									"alpha": -1.5337765807839858,
+									"distance": 27.018512172212592,
 									"hostEdge": {
 										"$ref": "AAAAAAFyrfg9WTbhwLo="
 									},
 									"edgePosition": 1,
-									"text": "SampleID - SampleID"
+									"text": "SampleID - SamplID"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -1605,17 +1605,17 @@
 										"$ref": "AAAAAAFyrgC3ljb2Utg="
 									},
 									"font": "Arial;13;0",
-									"left": 530,
-									"top": 253,
-									"width": 109.0908203125,
+									"left": 522,
+									"top": 240,
+									"width": 125.708984375,
 									"height": 13,
-									"alpha": 1.5707963267948966,
-									"distance": 15,
+									"alpha": 1.5707959696520395,
+									"distance": 28,
 									"hostEdge": {
 										"$ref": "AAAAAAFyrgC3ljb2Utg="
 									},
 									"edgePosition": 1,
-									"text": "CathID - SampleID"
+									"text": "SamplID - SampleID"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -1686,7 +1686,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFyqg4tRhUIEZ8="
 							},
-							"name": "SampleID - SampleID",
+							"name": "SampleID - SamplID",
 							"end1": {
 								"_type": "ERDRelationshipEnd",
 								"_id": "AAAAAAFyrfg9WDbeHQA=",
@@ -1715,7 +1715,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFyqg4tRhUIEZ8="
 							},
-							"name": "CathID - SampleID",
+							"name": "SamplID - SampleID",
 							"end1": {
 								"_type": "ERDRelationshipEnd",
 								"_id": "AAAAAAFyrgC3lDbzvYM=",
