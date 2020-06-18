@@ -35,6 +35,7 @@ namespace WindowsFormsApp1
         int count = 0; bool nuls = false;
         private void SettingsIDNTF_Load(object sender, EventArgs e)
         {
+            //listBox1.Size.Height = 235;
             indt = mainform.indt; 
             listBox1.Items.Clear();
             listBox1.Items.AddRange(mainform.listBox1.Items);
@@ -252,6 +253,7 @@ namespace WindowsFormsApp1
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             //тут код смены --------------------------------------------------------
             try
             {
