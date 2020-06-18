@@ -288,3 +288,4 @@ F:\Репозитории\TEst\Работаем с данной версией �
 E:\Diplom\Работаем с данной версией диплома\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.StatsMassFL.resources
 E:\Diplom\Работаем с данной версией диплома\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.StatsTLDW.resources
 E:\Diplom\Работаем с данной версией диплома\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.About_the_program.resources
+F:\Репозитории\TEst\Работаем с данной версией диплома\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.About_the_program.resources
