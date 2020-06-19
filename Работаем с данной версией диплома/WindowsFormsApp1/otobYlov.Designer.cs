@@ -288,7 +288,7 @@
             // checkBox22
             // 
             this.checkBox22.AutoSize = true;
-            this.checkBox22.Location = new System.Drawing.Point(290, 157);
+            this.checkBox22.Location = new System.Drawing.Point(318, 157);
             this.checkBox22.Name = "checkBox22";
             this.checkBox22.Size = new System.Drawing.Size(98, 17);
             this.checkBox22.TabIndex = 25;
@@ -299,7 +299,7 @@
             // checkBox23
             // 
             this.checkBox23.AutoSize = true;
-            this.checkBox23.Location = new System.Drawing.Point(290, 134);
+            this.checkBox23.Location = new System.Drawing.Point(318, 134);
             this.checkBox23.Name = "checkBox23";
             this.checkBox23.Size = new System.Drawing.Size(114, 17);
             this.checkBox23.TabIndex = 24;
@@ -310,7 +310,7 @@
             // checkBox24
             // 
             this.checkBox24.AutoSize = true;
-            this.checkBox24.Location = new System.Drawing.Point(290, 88);
+            this.checkBox24.Location = new System.Drawing.Point(318, 88);
             this.checkBox24.Name = "checkBox24";
             this.checkBox24.Size = new System.Drawing.Size(60, 17);
             this.checkBox24.TabIndex = 23;
@@ -321,7 +321,7 @@
             // checkBox25
             // 
             this.checkBox25.AutoSize = true;
-            this.checkBox25.Location = new System.Drawing.Point(290, 65);
+            this.checkBox25.Location = new System.Drawing.Point(318, 65);
             this.checkBox25.Name = "checkBox25";
             this.checkBox25.Size = new System.Drawing.Size(66, 17);
             this.checkBox25.TabIndex = 22;
@@ -332,7 +332,7 @@
             // checkBox26
             // 
             this.checkBox26.AutoSize = true;
-            this.checkBox26.Location = new System.Drawing.Point(290, 42);
+            this.checkBox26.Location = new System.Drawing.Point(318, 42);
             this.checkBox26.Name = "checkBox26";
             this.checkBox26.Size = new System.Drawing.Size(85, 17);
             this.checkBox26.TabIndex = 21;
@@ -343,7 +343,7 @@
             // checkBox27
             // 
             this.checkBox27.AutoSize = true;
-            this.checkBox27.Location = new System.Drawing.Point(290, 19);
+            this.checkBox27.Location = new System.Drawing.Point(318, 19);
             this.checkBox27.Name = "checkBox27";
             this.checkBox27.Size = new System.Drawing.Size(91, 17);
             this.checkBox27.TabIndex = 20;
@@ -354,7 +354,7 @@
             // checkBox21
             // 
             this.checkBox21.AutoSize = true;
-            this.checkBox21.Location = new System.Drawing.Point(290, 111);
+            this.checkBox21.Location = new System.Drawing.Point(318, 111);
             this.checkBox21.Name = "checkBox21";
             this.checkBox21.Size = new System.Drawing.Size(104, 17);
             this.checkBox21.TabIndex = 26;
@@ -364,7 +364,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(155, 250);
+            this.button1.Location = new System.Drawing.Point(26, 260);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 31);
             this.button1.TabIndex = 27;
@@ -374,9 +374,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(290, 188);
+            this.button2.Location = new System.Drawing.Point(307, 260);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(140, 23);
+            this.button2.Size = new System.Drawing.Size(140, 31);
             this.button2.TabIndex = 28;
             this.button2.Text = "Отключить все поля ";
             this.button2.UseVisualStyleBackColor = true;
@@ -384,9 +384,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(290, 217);
+            this.button3.Location = new System.Drawing.Point(161, 260);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(140, 23);
+            this.button3.Size = new System.Drawing.Size(140, 31);
             this.button3.TabIndex = 29;
             this.button3.Text = "Включить все поля ";
             this.button3.UseVisualStyleBackColor = true;
@@ -396,7 +396,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 303);
+            this.ClientSize = new System.Drawing.Size(467, 303);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);

@@ -54,10 +54,10 @@
             "TL",
             "FL",
             "SL"});
-            this.comboBox1.Location = new System.Drawing.Point(153, 17);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Location = new System.Drawing.Point(137, 17);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(181, 24);
+            this.comboBox1.Size = new System.Drawing.Size(202, 24);
             this.comboBox1.TabIndex = 1;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -84,7 +84,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(55, 73);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(119, 22);
             this.textBox1.TabIndex = 4;
@@ -94,7 +94,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(220, 73);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(119, 22);
             this.textBox2.TabIndex = 5;
@@ -114,7 +114,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FiltBA";
             this.Text = "Фильтр по размеру";
             this.Load += new System.EventHandler(this.FiltBA_Load);

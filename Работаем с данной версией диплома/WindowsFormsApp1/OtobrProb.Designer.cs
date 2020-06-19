@@ -55,7 +55,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(184, 28);
+            this.checkBox2.Location = new System.Drawing.Point(206, 28);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(106, 24);
@@ -77,7 +77,7 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(184, 62);
+            this.checkBox4.Location = new System.Drawing.Point(206, 62);
             this.checkBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(106, 24);
@@ -99,7 +99,7 @@
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(184, 96);
+            this.checkBox6.Location = new System.Drawing.Point(206, 96);
             this.checkBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(106, 24);
@@ -110,7 +110,7 @@
             // checkBox7
             // 
             this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(132, 130);
+            this.checkBox7.Location = new System.Drawing.Point(32, 130);
             this.checkBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.Size = new System.Drawing.Size(106, 24);
@@ -120,7 +120,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(165, 192);
+            this.button1.Location = new System.Drawing.Point(44, 192);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(109, 32);
             this.button1.TabIndex = 12;
@@ -131,9 +131,9 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(272, 162);
+            this.button2.Location = new System.Drawing.Point(291, 192);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(154, 24);
+            this.button2.Size = new System.Drawing.Size(126, 32);
             this.button2.TabIndex = 13;
             this.button2.Text = "Отключить все ";
             this.button2.UseVisualStyleBackColor = true;
@@ -142,9 +142,9 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(12, 162);
+            this.button3.Location = new System.Drawing.Point(159, 192);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(154, 24);
+            this.button3.Size = new System.Drawing.Size(126, 32);
             this.button3.TabIndex = 14;
             this.button3.Text = "Включить все";
             this.button3.UseVisualStyleBackColor = true;
@@ -154,7 +154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(438, 233);
+            this.ClientSize = new System.Drawing.Size(467, 233);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
