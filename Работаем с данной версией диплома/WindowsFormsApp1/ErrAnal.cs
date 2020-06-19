@@ -317,7 +317,7 @@ namespace WindowsFormsApp1
         string err;
         private void button2_Click(object sender, EventArgs e)
         {
-            if (patch == null) { MessageBox.Show("Откройте файл для анализа", "Предуприждение"); }else 
+            if (patch == null) { MessageBox.Show("Откройте файл для анализа", "Предупреждение"); }else 
             if (Convert.ToString(MessageBox.Show("Вы действительно хотите начать анализ ошибок? При обработке ошибок работа с основной программой будет заблокирована", "Предуприждение !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)) == "Yes")
             {
                 counterr = 0;
@@ -410,7 +410,7 @@ namespace WindowsFormsApp1
                         lines.Clear();
                         if (counterr >= 15)
                         {
-                            if (Convert.ToString(MessageBox.Show("Найдено более 15 однотипных ошибок. Прекратить проверку файла на ошибки?", "Предуприждение !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)) == "Yes")
+                            if (Convert.ToString(MessageBox.Show("Найдено более 15 однотипных ошибок. Прекратить проверку файла на ошибки?", "Предупреждение !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)) == "Yes")
                             {
                                 break;
                             } else

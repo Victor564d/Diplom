@@ -184,7 +184,7 @@ namespace WindowsFormsApp1
 
         private void Vibor_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (Convert.ToString(MessageBox.Show("Вы действительно хотите выйти из программы ?", "Предуприждение", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)) == "Yes")
+            if (Convert.ToString(MessageBox.Show("Вы действительно хотите выйти из программы ?", "Предупреждение", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)) == "Yes")
             {
                 System.Diagnostics.Process.GetCurrentProcess().Kill();
             }
