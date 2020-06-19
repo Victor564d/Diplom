@@ -101,8 +101,9 @@ namespace WindowsFormsApp1
                     Convert.ToString(mainform.cells[78]),
                     Convert.ToString(mainform.cells[79]));
         }
-        public void upd(ArrayList lines, ArrayList orig) // эт для вставки 
+        public void upd(ArrayList lines, ArrayList orig,Sample_Record_Form form) // эт для вставки 
         {
+            bool err = false;
             try // проверяем те значения которые являются числом, если оно пустое, то запишем туда -999
             {
                 if (Convert.ToString(lines[2]) == "") lines[2] = -999;
@@ -151,27 +152,25 @@ namespace WindowsFormsApp1
             catch (System.Exception ex) // если возникла ошибка 
             {
                 MessageBox.Show("Возникла ошибка записи, проверьте поля. Текст ошибки: " + ex.Message, "Ошибка записи", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                string errr="";
-                for (int i =0;i<=18; i++)
+                err = true;
+            }
+            if (!err)
+            {
+                form.Close();
+                try
                 {
-                    errr += Convert.ToString(i) + "     :" + lines[i];
-
+                    reload();
                 }
-                errr = errr + "    orig    " + orig[0] + "     orig   " + orig[1];
-                MessageBox.Show(errr);
-            }
-            try
-            {
-                reload();
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message, "Ошибка"); //если возникла ошибка при обновлении 
+                catch (System.Exception ex)
+                {
+                    System.Windows.Forms.MessageBox.Show(ex.Message, "Ошибка"); //если возникла ошибка при обновлении 
+                }
             }
         }
 
-        public void ins(ArrayList lines)
+        public void ins(ArrayList lines, Sample_Record_Form form)
         {
+            bool err = false;
             try // проверяем те значения которые являются числом, если оно пустое, то запишем туда -999
             {
                 if (Convert.ToString(lines[2]) == "") lines[2] = -999;
@@ -218,22 +217,19 @@ namespace WindowsFormsApp1
             catch (System.Exception ex) // если возникла ошибка 
             {
                 MessageBox.Show("Возникла ошибка записи, проверьте поля. Текст ошибки: " + ex.Message, "Ошибка записи", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                string errr = "";
-                for (int i = 0; i <= 18; i++)
+                err = true;
+            }
+            if (!err)
+            {
+                form.Close();
+                try
                 {
-                    errr=errr+ Convert.ToString(i) + "     :" + lines[i];
-
+                    reload();
                 }
-                
-                MessageBox.Show(errr);
-            }
-            try
-            {
-                reload();
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message, "Ошибка"); //если возникла ошибка при обновлении 
+                catch (System.Exception ex)
+                {
+                    System.Windows.Forms.MessageBox.Show(ex.Message, "Ошибка"); //если возникла ошибка при обновлении 
+                }
             }
         }
 

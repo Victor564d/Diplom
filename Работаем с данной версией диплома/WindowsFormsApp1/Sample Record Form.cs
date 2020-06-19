@@ -115,7 +115,7 @@ namespace WindowsFormsApp1
                 }
             }
             if (textBox15.Text != "" && textBox14.Text != "")
-                if (((Convert.ToDouble(textBox15.Text) - Convert.ToDouble(textBox14.Text)) > Convert.ToDouble(pars[9])) || ((Convert.ToDouble(textBox15.Text) - Convert.ToDouble(textBox15.Text)) < Convert.ToDouble(pars[10])))
+                if (((Convert.ToDouble(textBox15.Text) - Convert.ToDouble(textBox14.Text)) > Convert.ToDouble(pars[9])) || ((Convert.ToDouble(textBox15.Text) - Convert.ToDouble(textBox14.Text)) < Convert.ToDouble(pars[10])))
             {
                 err = true;
                 errs += "Поле 'Сырая масса бюкса с навеской' не соответствует ограничениям (макс значение - " + Convert.ToString(Convert.ToDouble(pars[9])+ Convert.ToDouble(textBox14.Text)) + ", мин значение - " + Convert.ToString(Convert.ToDouble(pars[10])+ Convert.ToDouble(textBox14.Text)) + ")" + Convert.ToChar(13);
@@ -152,9 +152,8 @@ namespace WindowsFormsApp1
                 zapis[16] = textBox10.Text;//содержание липидов
                 zapis[17] = textBox12.Text;//содержание липидов расчетное
                 zapis[18] = richTextBox1.Text;//комментарий  
-                if (operation == "Redact") mainform.upd(zapis, orig);
-                if (operation == "New") mainform.ins(zapis);
-                this.Close();
+                if (operation == "Redact") mainform.upd(zapis, orig,this);
+                if (operation == "New") mainform.ins(zapis,this);
             }
             /*
              idntparams.Add(idnt);

@@ -10,8 +10,9 @@ namespace WindowsFormsApp1
     public partial class Hamsa : Form
     {
         public  bool readOnl = false;
-        public void upd(ArrayList lines, ArrayList orig) // эт для вставки 
+        public void upd(ArrayList lines, ArrayList orig,Catch_Record_Form form) // эт для вставки 
         {
+            bool err = false;
             try // проверяем те значения которые являются числом, если оно пустое, то запишем туда -999
             {
                 if (Convert.ToString(lines[2]) == "") lines[2] = -999;
@@ -80,19 +81,25 @@ namespace WindowsFormsApp1
             catch (System.Exception ex) // если возникла ошибка 
             {
                 MessageBox.Show("Возникла ошибка записи, проверьте поля. Текст ошибки: " + ex.Message, "Ошибка записи", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                err = true;
             }
-            try
+            if (!err)
             {
-                this.уловыTableAdapter.FillBy(this.тестовая_бд_DataSet.Уловы, Convert.ToString(idnt)); //обновляем список на экране
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message, "Ошибка"); //если возникла ошибка при обновлении 
+                form.Close();
+                try
+                {
+                    this.уловыTableAdapter.FillBy(this.тестовая_бд_DataSet.Уловы, Convert.ToString(idnt)); //обновляем список на экране
+                }
+                catch (System.Exception ex)
+                {
+                    System.Windows.Forms.MessageBox.Show(ex.Message, "Ошибка"); //если возникла ошибка при обновлении 
+                }
             }
         }
 
-        public void ins(ArrayList lines)
+        public void ins(ArrayList lines, Catch_Record_Form form)
         {
+            bool err = false;
             try // проверяем те значения которые являются числом, если оно пустое, то запишем туда -999
             {
                 if (Convert.ToString(lines[2]) == "") lines[2] = -999;
@@ -158,14 +165,19 @@ namespace WindowsFormsApp1
             catch (System.Exception ex) // если возникла ошибка 
             {
                 MessageBox.Show("Возникла ошибка записи, проверьте поля. Текст ошибки: " + ex.Message, "Ошибка записи", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                err = true;
             }
-            try
+            if (!err)
             {
-                this.уловыTableAdapter.FillBy(this.тестовая_бд_DataSet.Уловы, Convert.ToString(idnt)); //обновляем список на экране
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message, "Ошибка"); //если возникла ошибка при обновлении 
+                form.Close();
+                try
+                {
+                    this.уловыTableAdapter.FillBy(this.тестовая_бд_DataSet.Уловы, Convert.ToString(idnt)); //обновляем список на экране
+                }
+                catch (System.Exception ex)
+                {
+                    System.Windows.Forms.MessageBox.Show(ex.Message, "Ошибка"); //если возникла ошибка при обновлении 
+                }
             }
         }
 
@@ -230,8 +242,8 @@ namespace WindowsFormsApp1
 
         private void Hamsa_ResizeEnd(object sender, EventArgs e) //Это подгон размера таблицы под размер формы 
         {
-            уловыDataGridView.Width = this.Width - 36; //Это подгон размера таблицы 
-            уловыDataGridView.Height = this.Height - 74; //Это подгон размера таблицы 
+          //  уловыDataGridView.Width = this.Width - 36; //Это подгон размера таблицы 
+          //  уловыDataGridView.Height = this.Height - 74; //Это подгон размера таблицы 
         }
 
         private void toolStripLabel1_Click(object sender, EventArgs e)

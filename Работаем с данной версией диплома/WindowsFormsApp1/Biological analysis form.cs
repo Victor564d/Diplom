@@ -45,18 +45,18 @@ namespace WindowsFormsApp1
         {
             err = false;
             errs = "";
-            if (comboBox1.Text != "")
+            if (comboBox2.Text != "" && comboBox3.Text!="")
             {
-                if (Convert.ToDouble(comboBox1.Text) > Convert.ToDouble(comboBox2.Text)) { errs += "Минимальный размер не может привышать максимальный ! " + Convert.ToChar(13); err = true; } // проверка размеров рыбы (Я)
-
-                if ((Convert.ToDouble(comboBox1.Text) > Convert.ToDouble(pars[1])) || ((Convert.ToDouble(comboBox1.Text) < Convert.ToDouble(pars[2]))))
-                {
-                    err = true;
-                    errs += "Поле 'Минимальная длина' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[1]) + ", мин значение - " + Convert.ToString(pars[2]) + Convert.ToChar(13);
-                }
+                if (Convert.ToDouble(comboBox2.Text) > Convert.ToDouble(comboBox3.Text)) { errs += "Минимальный размер не может привышать максимальный ! " + Convert.ToChar(13); err = true; } // проверка размеров рыбы (Я)               
             }
             if (comboBox2.Text != "")
-                if ((Convert.ToDouble(comboBox2.Text) > Convert.ToDouble(pars[1])) || ((Convert.ToDouble(comboBox2.Text) < Convert.ToDouble(pars[2]))))
+            if ((Convert.ToDouble(comboBox2.Text) > Convert.ToDouble(pars[1])) || ((Convert.ToDouble(comboBox2.Text) < Convert.ToDouble(pars[2]))))
+            {
+                err = true;
+                errs += "Поле 'Минимальная длина' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[1]) + ", мин значение - " + Convert.ToString(pars[2]) + Convert.ToChar(13);
+            }
+            if (comboBox3.Text != "")
+                if ((Convert.ToDouble(comboBox3.Text) > Convert.ToDouble(pars[1])) || ((Convert.ToDouble(comboBox3.Text) < Convert.ToDouble(pars[2]))))
                 {
                     err = true;
                     errs += "Поле 'Максимальная длина' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[1]) + ", мин значение - " + Convert.ToString(pars[2]) + Convert.ToChar(13);
@@ -100,16 +100,16 @@ namespace WindowsFormsApp1
                 }
             }
             if (textBox21.Text != "")
-                if ((Convert.ToDouble(textBox21.Text) > Convert.ToDouble(pars[5])) || ((Convert.ToDouble(textBox21.Text) < Convert.ToDouble(pars[6]))))
+                if (((Convert.ToDouble(textBox21.Text)- Convert.ToDouble(textBox22.Text)) > Convert.ToDouble(pars[5]))|| ((Convert.ToDouble(textBox21.Text)- Convert.ToDouble(textBox22.Text)) < Convert.ToDouble(pars[6])))
                 {
                     err = true;
-                    errs += "Поле 'Сырая масса бюкса с навеской' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[5]) + ", мин значение - " + Convert.ToString(pars[6]) + Convert.ToChar(13);
+                    errs += "Поле 'Сырая масса бюкса с навеской' не соответствует ограничениям(макс значение - " + Convert.ToString((Convert.ToDouble(pars[5]) + Convert.ToDouble(textBox22.Text))) + ", мин значение - " + Convert.ToString((Convert.ToDouble(pars[6]) + Convert.ToDouble(textBox22.Text))) + Convert.ToChar(13);
                 }
             if (textBox20.Text != "")
-                if ((Convert.ToDouble(textBox20.Text) > Convert.ToDouble(pars[5])) || ((Convert.ToDouble(textBox20.Text) < Convert.ToDouble(pars[6]))))
+                if (((Convert.ToDouble(textBox20.Text) - Convert.ToDouble(textBox22.Text)) > Convert.ToDouble(pars[5])) || ((Convert.ToDouble(textBox20.Text)- Convert.ToDouble(textBox22.Text)) < Convert.ToDouble(pars[6])))
                 {
                     err = true;
-                    errs += "Поле 'Сухая масса бюкса с навеской' не соответствует ограничениям(макс значение - " + Convert.ToString(pars[5]) + ", мин значение - " + Convert.ToString(pars[6]) + Convert.ToChar(13);
+                    errs += "Поле 'Сухая масса бюкса с навеской' не соответствует ограничениям(макс значение - " + Convert.ToString((Convert.ToDouble(pars[5]) + Convert.ToDouble(textBox22.Text))) + ", мин значение - " + Convert.ToString((Convert.ToDouble(pars[6]) + Convert.ToDouble(textBox22.Text))) + Convert.ToChar(13);
                 }
             
 
@@ -125,8 +125,8 @@ namespace WindowsFormsApp1
                 zapis[0] = textBox1.Text; //ид пробы	
                 zapis[1] = textBox2.Text;//ид записи	
                 zapis[2] = textBox5.Text;//порядковый номер	
-                zapis[3] = comboBox1.Text;//размер1	
-                zapis[4] = comboBox2.Text;//размер2	
+                zapis[3] = comboBox2.Text;//размер1	
+                zapis[4] = comboBox3.Text;//размер2	
                 zapis[5] = textBox7.Text;//Общая длина	
                 zapis[6] = textBox4.Text;//Длина до развилки	
                 zapis[7] = textBox17.Text;//Стандартная длина	
@@ -149,9 +149,9 @@ namespace WindowsFormsApp1
                 zapis[24] = textBox14.Text;//расчетное сл	
                 zapis[25] = richTextBox1.Text;//комментарий 	
 
-                if (operation == "Redact") mainform.upd(zapis, orig);
-                if (operation == "New") mainform.ins(zapis);
-                this.Close();
+                if (operation == "Redact") mainform.upd(zapis, orig,this);
+                if (operation == "New") mainform.ins(zapis,this);
+           
             }
         }
 
@@ -265,6 +265,11 @@ namespace WindowsFormsApp1
         private void видToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void отменаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void label12_Click(object sender, EventArgs e)

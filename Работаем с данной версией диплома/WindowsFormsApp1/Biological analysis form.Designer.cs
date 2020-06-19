@@ -86,14 +86,14 @@
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -149,6 +149,7 @@
             this.отменаToolStripMenuItem.Name = "отменаToolStripMenuItem";
             this.отменаToolStripMenuItem.Size = new System.Drawing.Size(65, 21);
             this.отменаToolStripMenuItem.Text = "Отмена";
+            this.отменаToolStripMenuItem.Click += new System.EventHandler(this.отменаToolStripMenuItem_Click);
             // 
             // выполнитьРасчетПараметровToolStripMenuItem
             // 
@@ -667,6 +668,112 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Размерности:";
             // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "0",
+            "5",
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "35",
+            "40",
+            "45",
+            "50",
+            "55",
+            "60",
+            "65",
+            "70",
+            "75",
+            "80",
+            "85",
+            "90",
+            "95",
+            "100",
+            "105",
+            "110",
+            "115",
+            "120",
+            "125",
+            "130",
+            "135",
+            "140",
+            "145",
+            "150",
+            "155",
+            "160",
+            "165",
+            "170",
+            "175",
+            "180",
+            "185",
+            "190",
+            "195",
+            "200",
+            "205",
+            "210",
+            "215"});
+            this.comboBox3.Location = new System.Drawing.Point(172, 55);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(100, 24);
+            this.comboBox3.TabIndex = 14;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "0",
+            "5",
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "35",
+            "40",
+            "45",
+            "50",
+            "55",
+            "60",
+            "65",
+            "70",
+            "75",
+            "80",
+            "85",
+            "90",
+            "95",
+            "100",
+            "105",
+            "110",
+            "115",
+            "120",
+            "125",
+            "130",
+            "135",
+            "140",
+            "145",
+            "150",
+            "155",
+            "160",
+            "165",
+            "170",
+            "175",
+            "180",
+            "185",
+            "190",
+            "195",
+            "200",
+            "205",
+            "210",
+            "215"});
+            this.comboBox2.Location = new System.Drawing.Point(172, 26);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(100, 24);
+            this.comboBox2.TabIndex = 13;
+            // 
             // label19
             // 
             this.label19.AutoSize = true;
@@ -722,112 +829,6 @@
             this.label14.Size = new System.Drawing.Size(147, 16);
             this.label14.TabIndex = 6;
             this.label14.Text = "Максимальная длина";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "0",
-            "5",
-            "10",
-            "15",
-            "20",
-            "25",
-            "30",
-            "35",
-            "40",
-            "45",
-            "50",
-            "55",
-            "60",
-            "65",
-            "70",
-            "75",
-            "80",
-            "85",
-            "90",
-            "95",
-            "100",
-            "105",
-            "110",
-            "115",
-            "120",
-            "125",
-            "130",
-            "135",
-            "140",
-            "145",
-            "150",
-            "155",
-            "160",
-            "165",
-            "170",
-            "175",
-            "180",
-            "185",
-            "190",
-            "195",
-            "200",
-            "205",
-            "210",
-            "215"});
-            this.comboBox2.Location = new System.Drawing.Point(172, 26);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(100, 24);
-            this.comboBox2.TabIndex = 13;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "0",
-            "5",
-            "10",
-            "15",
-            "20",
-            "25",
-            "30",
-            "35",
-            "40",
-            "45",
-            "50",
-            "55",
-            "60",
-            "65",
-            "70",
-            "75",
-            "80",
-            "85",
-            "90",
-            "95",
-            "100",
-            "105",
-            "110",
-            "115",
-            "120",
-            "125",
-            "130",
-            "135",
-            "140",
-            "145",
-            "150",
-            "155",
-            "160",
-            "165",
-            "170",
-            "175",
-            "180",
-            "185",
-            "190",
-            "195",
-            "200",
-            "205",
-            "210",
-            "215"});
-            this.comboBox3.Location = new System.Drawing.Point(172, 55);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(100, 24);
-            this.comboBox3.TabIndex = 14;
             // 
             // Biological_analysis_form
             // 

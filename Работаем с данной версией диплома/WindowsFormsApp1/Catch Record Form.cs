@@ -250,8 +250,8 @@ namespace WindowsFormsApp1
                 zapis[34] = textBox11.Text;
               
             }
-            if (operation == "Redact") mainform.upd(zapis, orig);
-            if (operation == "New") mainform.ins(zapis);
+            if (operation == "Redact") mainform.upd(zapis, orig,this);
+            if (operation == "New") mainform.ins(zapis,this);
         }
 
         private void label39_Click(object sender, EventArgs e)
