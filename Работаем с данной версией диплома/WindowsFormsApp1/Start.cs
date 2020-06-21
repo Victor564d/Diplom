@@ -449,6 +449,7 @@ namespace WindowsFormsApp1
             button1.Visible = true;
             listBox1.Visible = true;
             button9.Visible = true;
+            this.Text = "Выбор раздела";
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -464,6 +465,7 @@ namespace WindowsFormsApp1
             button1.Visible = false;
             listBox1.Visible = false;
             button9.Visible = false;
+            this.Text = "Менеджер";
         }
 
         private void button10_Click(object sender, EventArgs e)
