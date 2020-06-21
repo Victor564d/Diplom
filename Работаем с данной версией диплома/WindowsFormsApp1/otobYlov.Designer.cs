@@ -364,9 +364,10 @@
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(26, 260);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 31);
+            this.button1.Size = new System.Drawing.Size(135, 32);
             this.button1.TabIndex = 27;
             this.button1.Text = "Применить ";
             this.button1.UseVisualStyleBackColor = true;
@@ -374,21 +375,23 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(307, 260);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(308, 260);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(140, 31);
+            this.button2.Size = new System.Drawing.Size(135, 32);
             this.button2.TabIndex = 28;
-            this.button2.Text = "Отключить все поля ";
+            this.button2.Text = "Отключить все";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(161, 260);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.Location = new System.Drawing.Point(167, 260);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(140, 31);
+            this.button3.Size = new System.Drawing.Size(135, 32);
             this.button3.TabIndex = 29;
-            this.button3.Text = "Включить все поля ";
+            this.button3.Text = "Включить все";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -430,7 +433,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SettingsУл";
-            this.Text = "Настройки отображения таблицы \"Уловы\"";
+            this.Text = "Настройки отображения полей в уловах";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

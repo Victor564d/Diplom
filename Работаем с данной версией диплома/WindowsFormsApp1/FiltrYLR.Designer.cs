@@ -117,7 +117,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FiltrYLR";
-            this.Text = "Фильтр места лова";
+            this.Text = "Фильтр по месту лова";
             this.Load += new System.EventHandler(this.FiltrYLR_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

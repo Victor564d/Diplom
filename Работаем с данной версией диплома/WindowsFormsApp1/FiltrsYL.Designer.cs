@@ -42,7 +42,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "1"});
-            this.comboBox1.Location = new System.Drawing.Point(76, 28);
+            this.comboBox1.Location = new System.Drawing.Point(172, 28);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.MaximumSize = new System.Drawing.Size(180, 0);
             this.comboBox1.MinimumSize = new System.Drawing.Size(180, 0);
@@ -54,7 +54,7 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(76, 83);
+            this.comboBox2.Location = new System.Drawing.Point(172, 83);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(180, 26);
@@ -64,22 +64,24 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 6);
+            this.label1.Location = new System.Drawing.Point(52, 6);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 18);
             this.label1.TabIndex = 2;
             this.label1.Text = "Месяц";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 61);
+            this.label2.Location = new System.Drawing.Point(56, 61);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 18);
             this.label2.TabIndex = 3;
             this.label2.Text = "Год";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // comboBox3
             // 
@@ -92,7 +94,7 @@
             this.comboBox3.Location = new System.Drawing.Point(10, 28);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(53, 26);
+            this.comboBox3.Size = new System.Drawing.Size(154, 26);
             this.comboBox3.TabIndex = 5;
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
@@ -107,7 +109,7 @@
             this.comboBox4.Location = new System.Drawing.Point(10, 83);
             this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(53, 26);
+            this.comboBox4.Size = new System.Drawing.Size(154, 26);
             this.comboBox4.TabIndex = 6;
             this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
@@ -115,7 +117,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(276, 119);
+            this.ClientSize = new System.Drawing.Size(363, 119);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.label2);
