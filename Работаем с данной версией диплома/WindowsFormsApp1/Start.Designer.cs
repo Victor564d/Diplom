@@ -337,7 +337,7 @@
             this.MinimumSize = new System.Drawing.Size(721, 400);
             this.Name = "Vibor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Выбор раздела";
+            this.Text = "Менеджер";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Vibor_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Vibor_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
